@@ -576,16 +576,14 @@
       transform-origin: top left;
     }
 
-    /* Architecture background — raw asset so CSS blur is needed */
+    /* Architecture background — baked screenshot (blur already applied in Figma) */
     .s3__bg {
       position: absolute;
-      width: 1820px;
-      height: 1024px;
-      left: -110px;
-      top: -106px;
-      filter: blur(8.5px);
+      width: 1600px;
+      height: 593px;
+      left: 0;
+      top: -36px;
       pointer-events: none;
-      overflow: hidden;
     }
     .s3__bg img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
@@ -870,8 +868,8 @@
   <div class="s3-viewport">
   <section class="s3">
 
-    <!-- Architecture background -->
-    <div class="s3__bg"><img src="assets/s3-bg.png" alt=""></div>
+    <!-- Architecture background (baked screenshot, no CSS blur needed) -->
+    <div class="s3__bg"><img src="assets/s3-bg-baked.png" alt=""></div>
 
     <!-- Ellipse glows (CSS radial-gradient) -->
     <div class="s3__ellipse s3__ellipse--l"></div>
