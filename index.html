@@ -557,6 +557,173 @@
       color: #000;
       white-space: nowrap;
     }
+    /* ═══════════════════════════════════════════════════════════════
+       SECTION 3 — «Именно в этом — наша сила»  1600×520px
+    ═══════════════════════════════════════════════════════════════ */
+
+    .s3-viewport {
+      position: relative;
+      width: 100vw;
+      overflow: hidden;
+    }
+
+    .s3 {
+      position: absolute;
+      top: 0; left: 0;
+      width: 1600px;
+      height: 520px;
+      background: #fff;
+      transform-origin: top left;
+    }
+
+    /* Architecture background — raw asset so CSS blur is needed */
+    .s3__bg {
+      position: absolute;
+      width: 1820px;
+      height: 1024px;
+      left: -110px;
+      top: -106px;
+      filter: blur(8.5px);
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .s3__bg img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+    /* Ellipse glows */
+    .s3__ellipse { position: absolute; pointer-events: none; }
+    .s3__ellipse--l {
+      left: -487px; top: 173px;
+      width: 983px; height: 957px;
+      background: radial-gradient(ellipse at center, rgba(180,220,195,0.3) 0%, transparent 65%);
+    }
+    .s3__ellipse--c {
+      left: 109px; top: 0;
+      width: 983px; height: 957px;
+      background: radial-gradient(ellipse at center, rgba(255,255,255,0.82) 0%, rgba(255,255,255,0.45) 40%, transparent 68%);
+    }
+    .s3__ellipse--r {
+      left: 1215px; top: 96px;
+      width: 983px; height: 957px;
+      background: radial-gradient(ellipse at center, rgba(180,220,195,0.3) 0%, transparent 65%);
+    }
+
+    /* White fades — matching Figma gradient stops */
+    .s3__fade-top {
+      position: absolute;
+      left: -116px; top: 0;
+      width: 1833px; height: 364px;
+      background: linear-gradient(to bottom, #fff 0%, rgba(255,255,255,0.73) 38.5%, transparent 100%);
+      pointer-events: none;
+    }
+    .s3__fade-bottom {
+      position: absolute;
+      left: -116px; bottom: 0;
+      width: 1833px; height: 147px;
+      background: linear-gradient(to top, #fff 0%, rgba(255,255,255,0.73) 38.5%, transparent 100%);
+      pointer-events: none;
+    }
+
+    /* Title */
+    .s3__title {
+      position: absolute;
+      left: 0; top: 10px;
+      width: 1600px;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 44px;
+      font-weight: 700;
+      line-height: 1.2;
+      white-space: nowrap;
+      background: linear-gradient(to right, #378755, #2f2f48);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Green badge */
+    .s3__badge {
+      position: absolute;
+      left: 427px; top: 75px;
+      width: 746px; height: 65px;
+      border-radius: 15px;
+      background: linear-gradient(to right, #378755, #2f2f48);
+    }
+    .s3__badge-text {
+      position: absolute;
+      left: 0; top: 75px;
+      width: 1600px;
+      text-align: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 20px;
+      font-weight: 500;
+      color: #fff;
+      line-height: 65px;
+      white-space: nowrap;
+    }
+
+    /* Glass cards */
+    .s3__card {
+      position: absolute;
+      top: 206px;
+      width: 346px; height: 158px;
+      border-radius: 23px;
+      background: rgba(255,255,255,0.48);
+      border: 0.5px solid #c5c5c5;
+      backdrop-filter: blur(17.6px);
+      -webkit-backdrop-filter: blur(17.6px);
+    }
+    .s3__card--1 { left: 262px; }
+    .s3__card--2 { left: 627px; }
+    .s3__card--3 { left: 992px; }
+
+    /* Icons in cards */
+    .s3__icon {
+      position: absolute;
+      width: 30px; height: 30px;
+    }
+    .s3__icon img { display: block; width: auto; height: 100%; object-fit: contain; }
+    .s3__icon--graph    { left: 420px; top: 239px; }
+    .s3__icon--category { left: 785px; top: 239px; }
+    .s3__icon--user     { left: 1149px; top: 236px; width: 33px; height: 33px; }
+
+    /* Card text */
+    .s3__card-text {
+      position: absolute;
+      top: 280px;
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: #000;
+      text-align: center;
+      line-height: 1.351;
+    }
+    .s3__card-text--1 { left: 330px; width: 211px; }
+    .s3__card-text--2 { left: 673px; width: 254px; }
+    .s3__card-text--3 { left: 1028px; width: 274px; }
+
+    /* Bottom texts */
+    .s3__bottom-1 {
+      position: absolute;
+      left: 0; top: 424px;
+      width: 1600px;
+      text-align: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 22px;
+      font-weight: 500;
+      color: #000;
+      white-space: nowrap;
+    }
+    .s3__bottom-2 {
+      position: absolute;
+      left: 0; top: 458px;
+      width: 1600px;
+      text-align: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 22px;
+      font-weight: 500;
+      color: #f69a00;
+      white-space: nowrap;
+    }
   </style>
 </head>
 <body>
@@ -700,9 +867,54 @@
   </section>
   </div>
 
+  <div class="s3-viewport">
+  <section class="s3">
+
+    <!-- Architecture background -->
+    <div class="s3__bg"><img src="assets/s3-bg.png" alt=""></div>
+
+    <!-- Ellipse glows -->
+    <div class="s3__ellipse s3__ellipse--l"></div>
+    <div class="s3__ellipse s3__ellipse--c"></div>
+    <div class="s3__ellipse s3__ellipse--r"></div>
+
+    <!-- White fades -->
+    <div class="s3__fade-top"></div>
+    <div class="s3__fade-bottom"></div>
+
+    <!-- Title -->
+    <h2 class="s3__title">Именно в этом — наша сила</h2>
+
+    <!-- Green badge -->
+    <div class="s3__badge"></div>
+    <span class="s3__badge-text">Форум «Богатство семьи» — это система, которой у вас ещё не было</span>
+
+    <!-- Glass cards -->
+    <div class="s3__card s3__card--1"></div>
+    <div class="s3__card s3__card--2"></div>
+    <div class="s3__card s3__card--3"></div>
+
+    <!-- Icons -->
+    <div class="s3__icon s3__icon--graph">   <img src="assets/icon-graph.svg"    alt=""></div>
+    <div class="s3__icon s3__icon--category"><img src="assets/icon-category.svg" alt=""></div>
+    <div class="s3__icon s3__icon--user">    <img src="assets/icon-3user.svg"    alt=""></div>
+
+    <!-- Card labels -->
+    <p class="s3__card-text s3__card-text--1">Через осознанные решения</p>
+    <p class="s3__card-text s3__card-text--2">Через выстроенную стратегию</p>
+    <p class="s3__card-text s3__card-text--3">Через семью, которая работает как команда</p>
+
+    <!-- Bottom texts -->
+    <p class="s3__bottom-1">Мы выбираем думать поколениями — уже сейчас, уже сегодня</p>
+    <p class="s3__bottom-2">И этот форум — точка старта</p>
+
+  </section>
+  </div>
+
   <script>
     const HERO_W = 1600, HERO_H = 792;
     const S2_H   = 859;
+    const S3_H   = 520;
 
     function scaleAll() {
       const vw = window.innerWidth;
@@ -719,12 +931,14 @@
       // Viewport занимает ровно 100vh
       document.querySelector('.hero-viewport').style.height = vh + 'px';
 
-      // Section 2: scale by width, natural scroll height
+      // Section 2: scale by width
       const s2Scale = vw / HERO_W;
-      const s2 = document.querySelector('.s2');
-      s2.style.transform = `scale(${s2Scale})`;
-      // Viewport height = section height * scale
+      document.querySelector('.s2').style.transform = `scale(${s2Scale})`;
       document.querySelector('.s2-viewport').style.height = (S2_H * s2Scale) + 'px';
+
+      // Section 3: scale by width
+      document.querySelector('.s3').style.transform = `scale(${s2Scale})`;
+      document.querySelector('.s3-viewport').style.height = (S3_H * s2Scale) + 'px';
     }
 
     scaleAll();
