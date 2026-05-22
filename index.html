@@ -589,31 +589,37 @@
     }
     .s3__bg img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
-    /* Ellipse glows — actual Figma SVG (feGaussianBlur stdDeviation=150.6 on white ellipse)
-       Container sized to full SVG incl. blur overflow (1585×1559).
-       Positions = Figma container pos minus blur overflow (301px each side). */
+    /* Ellipse glows — CSS radial-gradient (feGaussianBlur SVG не рендерится через <img>) */
     .s3__ellipse { position: absolute; pointer-events: none; }
-    .s3__ellipse img { display: block; width: 100%; height: 100%; }
-    /* left:  container(-487,173) → img(-487-301, 173-301) = (-788, -128) */
-    .s3__ellipse--l { left: -788px; top: -128px; width: 1585px; height: 1559px; }
-    /* center: container(309,0) → img(309-301, 0-301) = (8, -301) */
-    .s3__ellipse--c { left: 8px;    top: -301px; width: 1585px; height: 1559px; }
-    /* right: container(1215,96) → img(1215-301, 96-301) = (914, -205) */
-    .s3__ellipse--r { left: 914px;  top: -205px; width: 1585px; height: 1559px; }
+    .s3__ellipse--l {
+      left: -487px; top: 173px;
+      width: 983px; height: 957px;
+      background: radial-gradient(ellipse at center, rgba(195,225,205,0.45) 0%, transparent 65%);
+    }
+    .s3__ellipse--c {
+      left: 109px; top: -150px;
+      width: 983px; height: 957px;
+      background: radial-gradient(ellipse at center, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.2) 50%, transparent 72%);
+    }
+    .s3__ellipse--r {
+      left: 1215px; top: 96px;
+      width: 983px; height: 957px;
+      background: radial-gradient(ellipse at center, rgba(195,225,205,0.45) 0%, transparent 65%);
+    }
 
-    /* White fades — matching Figma gradient stops */
+    /* White fades — укорочены чтобы не перекрывать фон полностью */
     .s3__fade-top {
       position: absolute;
-      left: -116px; top: 0;
-      width: 1833px; height: 364px;
-      background: linear-gradient(to bottom, #fff 0%, rgba(255,255,255,0.73) 38.5%, transparent 100%);
+      left: 0; top: 0;
+      width: 1600px; height: 130px;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.92) 0%, transparent 100%);
       pointer-events: none;
     }
     .s3__fade-bottom {
       position: absolute;
-      left: -116px; bottom: 0;
-      width: 1833px; height: 147px;
-      background: linear-gradient(to top, #fff 0%, rgba(255,255,255,0.73) 38.5%, transparent 100%);
+      left: 0; bottom: 0;
+      width: 1600px; height: 100px;
+      background: linear-gradient(to top, rgba(255,255,255,0.92) 0%, transparent 100%);
       pointer-events: none;
     }
 
@@ -867,10 +873,10 @@
     <!-- Architecture background -->
     <div class="s3__bg"><img src="assets/s3-bg.png" alt=""></div>
 
-    <!-- Ellipse glows (feGaussianBlur white, semi-transparent by nature) -->
-    <div class="s3__ellipse s3__ellipse--l"><img src="assets/s3-ellipse.svg" alt=""></div>
-    <div class="s3__ellipse s3__ellipse--c"><img src="assets/s3-ellipse.svg" alt=""></div>
-    <div class="s3__ellipse s3__ellipse--r"><img src="assets/s3-ellipse.svg" alt=""></div>
+    <!-- Ellipse glows (CSS radial-gradient) -->
+    <div class="s3__ellipse s3__ellipse--l"></div>
+    <div class="s3__ellipse s3__ellipse--c"></div>
+    <div class="s3__ellipse s3__ellipse--r"></div>
 
     <!-- White fades -->
     <div class="s3__fade-top"></div>
