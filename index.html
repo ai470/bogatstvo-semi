@@ -946,6 +946,568 @@
       color: #fff; text-transform: uppercase; letter-spacing: 0.05em;
       text-align: center; pointer-events: none;
     }
+
+    /* ─── Section 5: Модель «4 капитала семьи» ─── */
+    .s5-viewport { position: relative; width: 100vw; overflow: hidden; }
+    .s5 {
+      position: absolute; width: 1600px; height: 2040px;
+      transform-origin: top left;
+      background: linear-gradient(124.35deg, #378755 4.66%, #2f483d 91.98%);
+    }
+    .s5__texture {
+      position: absolute; width: 1846px; height: 2306px;
+      left: calc(50% - 923px); top: 0;
+      mix-blend-mode: luminosity; opacity: 0.2; pointer-events: none;
+    }
+    .s5__texture img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .s5__pill {
+      position: absolute; width: 880px; height: 115px;
+      left: calc(50% - 440px); top: 186px;
+      background: #ffdb9f; border: 1px solid white; border-radius: 22px; opacity: 0.3;
+    }
+    .s5__title {
+      position: absolute; left: 800px; top: 102px; transform: translateX(-50%);
+      font-family: 'Playfair Display', serif; font-weight: 700; font-size: 43px; line-height: 1.2;
+      background: linear-gradient(to right, #ffe2ac, #fff2d9);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      white-space: nowrap; text-align: center; margin: 0;
+    }
+    .s5__subtitle {
+      position: absolute; left: 800px; top: 216px; transform: translateX(-50%);
+      width: 813px; font-family: 'Inter', sans-serif; font-weight: 600;
+      font-size: 20px; line-height: 1.351; color: #fff2d9; text-align: center;
+    }
+    .s5__subtitle p { margin: 0; }
+    .s5__desc {
+      position: absolute; left: 800px; top: 333px; transform: translateX(-50%);
+      width: 625px; font-family: 'Inter', sans-serif; font-weight: 400;
+      font-size: 20px; line-height: 1.351; color: #fff2d9; text-align: center; margin: 0;
+    }
+    /* Tabs */
+    .s5__tab {
+      position: absolute; width: 70px; height: 67px; border-radius: 14px;
+      background: linear-gradient(to bottom, white, #e4e4e4);
+    }
+    .s5__tab--01 { left: 307px; top: 451px; }
+    .s5__tab--02 { left: 865px; top: 451px; }
+    .s5__tab--03 { left: 307px; top: 1198px; }
+    .s5__tab--04 { left: 865px; top: 1198px; }
+    /* Numbers */
+    .s5__num {
+      position: absolute; font-family: 'Playfair Display', serif;
+      font-weight: 500; font-size: 28.2px; line-height: 1.2; margin: 0;
+    }
+    .s5__num--01 { left: 328px; top: 450px; color: #f39801; }
+    .s5__num--02 {
+      left: 884px; top: 450px;
+      background: linear-gradient(to right, #378755, #2f2f48);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .s5__num--03 {
+      left: 326px; top: 1197px;
+      background: linear-gradient(to right, #818194, #2f2f48);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .s5__num--04 {
+      left: 884px; top: 1197px;
+      background: linear-gradient(to right, #a89060, #746439);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    /* White card backgrounds */
+    .s5__card { position: absolute; background: white; border-radius: 36px; width: 527px; }
+    .s5__card--01 { left: 256px; top: 491px; height: 675px; }
+    .s5__card--02 { left: 814px; top: 491px; height: 675px; }
+    .s5__card--03 { left: 256px; top: 1238px; height: 741px; }
+    .s5__card--04 { left: 814px; top: 1238px; height: 741px; }
+    /* Icons */
+    .s5__icon { position: absolute; width: 32px; height: 32px; pointer-events: none; }
+    .s5__icon img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    /* Card titles */
+    .s5__card-title {
+      position: absolute; font-family: 'Playfair Display', serif;
+      font-weight: 700; font-size: 31px; line-height: 1.2; margin: 0;
+      white-space: nowrap;
+    }
+    .s5__card-title--01 { left: 347px; top: 529px; color: #f39801; }
+    .s5__card-title--02 { left: 905px; top: 529px; color: #378755; }
+    .s5__card-title--03 { left: 347px; top: 1276px; color: #6f6f85; white-space: normal; width: 330px; }
+    .s5__card-title--04 { left: 905px; top: 1276px; color: #a89060; white-space: normal; width: 282px; }
+    /* Card tags */
+    .s5__card-tag {
+      position: absolute; font-family: 'Inter', sans-serif;
+      font-weight: 600; font-size: 20px; line-height: 1.351; margin: 0;
+    }
+    .s5__card-tag--01 { left: 305px; top: 588px; color: #f39801; white-space: nowrap; }
+    .s5__card-tag--02 { left: 862px; top: 588px; color: #378655; width: 404px; }
+    .s5__card-tag--03 { left: 304px; top: 1372px; color: #6f6f85; width: 298px; }
+    .s5__card-tag--04 { left: 862px; top: 1372px; color: #a89060; width: 298px; }
+    /* Card descriptions */
+    .s5__card-desc {
+      position: absolute; font-family: 'Inter', sans-serif;
+      font-weight: 400; font-size: 16px; line-height: 1.351; color: black; margin: 0;
+    }
+    .s5__card-desc--01 { left: 305px; top: 635px; width: 431px; }
+    .s5__card-desc--02 { left: 862px; top: 662px; width: 431px; }
+    .s5__card-desc--03 { left: 304px; top: 1448px; width: 417px; }
+    .s5__card-desc--04a { left: 862px; top: 1419px; width: 400px; }
+    .s5__card-desc--04b { left: 862px; top: 1496px; }
+    /* Session/Exit boxes */
+    .s5__box { position: absolute; width: 431px; border-radius: 18px; }
+    .s5__box--s01 { left: 304px; top: 736px; height: 200px; border: 0.906px solid #f39801; }
+    .s5__box--s02 { left: 862px; top: 764px; height: 195px; border: 0.906px solid #378655; }
+    .s5__box--s03 { left: 304px; top: 1618px; height: 156px; border: 0.906px solid #6f6f85; }
+    .s5__box--s04 { left: 862px; top: 1618px; height: 156px; border: 0.906px solid #a89060; }
+    .s5__box--e01 { left: 304px; top: 954px; height: 140px; background: rgba(243,152,1,0.2); }
+    .s5__box--e02 { left: 862px; top: 977px; height: 140px; background: rgba(55,134,85,0.2); }
+    .s5__box--e03 { left: 304px; top: 1792px; height: 140px; background: rgba(111,111,133,0.2); }
+    .s5__box--e04 { left: 862px; top: 1792px; height: 122px; background: rgba(168,144,96,0.2); }
+    .s5__box-head {
+      position: absolute; top: 20px; left: 28px;
+      font-family: 'Inter', sans-serif; font-weight: 600; font-size: 18px;
+      line-height: 1.351; white-space: nowrap; margin: 0;
+    }
+    .s5__box-head--01 { color: #f39801; }
+    .s5__box-head--02 { color: #378655; }
+    .s5__box-head--03 { color: #6f6f85; }
+    .s5__box-head--04 { color: #a89060; }
+    .s5__box-icon { position: absolute; top: 54px; left: 26px; width: 22px; height: 22px; }
+    .s5__box-icon img { display: block; width: 100%; height: 100%; }
+    .s5__box-text {
+      position: absolute; top: 54px; left: 59px;
+      font-family: 'Inter', sans-serif; font-weight: 400; font-size: 15px;
+      line-height: 1.351; color: black; margin: 0;
+    }
+    .s5__box--s01 .s5__box-text { width: 326px; }
+    .s5__box--s02 .s5__box-text { width: 326px; }
+    .s5__box--s03 .s5__box-text { width: 294px; }
+    .s5__box--s04 .s5__box-text { width: 351px; }
+    .s5__box--e01 .s5__box-text { width: 312px; }
+    .s5__box--e02 .s5__box-text { width: 314px; }
+    .s5__box--e03 .s5__box-text { width: 314px; }
+    .s5__box--e04 .s5__box-text { width: 314px; }
+
+      /* ─── Section 6: Игра «Дельта» ─── */
+    .s6-viewport { position: relative; width: 100vw; overflow: hidden; }
+    .s6 {
+      position: absolute; width: 1600px; height: 1600px;
+      transform-origin: top left; background: white; overflow: hidden;
+    }
+    .s6__texture {
+      position: absolute; width: 2009px; height: 2510px;
+      left: calc(50% - 1004.5px); bottom: 0;
+      mix-blend-mode: hard-light; opacity: 0.2; pointer-events: none;
+    }
+    .s6__texture img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .s6__fade {
+      position: absolute; width: 1611px; height: 730px;
+      left: calc(50% - 805.5px); top: 932px;
+      background: linear-gradient(to bottom, rgba(255,255,255,0), white);
+      pointer-events: none;
+    }
+    .s6__title {
+      position: absolute; left: 800px; top: 100px; transform: translateX(-50%);
+      font-family: 'Playfair Display', serif; font-weight: 700; font-size: 44px; line-height: 1.2;
+      color: #378755; text-align: center; white-space: nowrap; margin: 0;
+    }
+    .s6__subtitle {
+      position: absolute; left: 800px; top: 230px; transform: translateX(-50%);
+      width: 561px; font-family: 'Inter', sans-serif; font-weight: 500;
+      font-size: 22px; line-height: normal; color: black; text-align: center; margin: 0;
+    }
+    .s6__subtitle .green { color: #1e8856; }
+    .s6__card {
+      position: absolute; top: 341px; height: 534px; width: 527px; border-radius: 36px;
+    }
+    .s6__card--left  { left: 257px; border: 1px solid #f39801; }
+    .s6__card--right { left: 815px; border: 1px solid #378655; }
+    .s6__card-icon { position: absolute; left: 305px; top: 380px; width: 35px; height: 35px; }
+    .s6__card-icon img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    .s6__card-title {
+      position: absolute; top: 379px;
+      font-family: 'Playfair Display', serif; font-weight: 700; font-size: 31px; line-height: 1.2;
+      white-space: nowrap; margin: 0;
+    }
+    .s6__card-title--left  { left: 353px; color: #f39801; }
+    .s6__card-title--right { left: 863px; color: #378755; }
+    .s6__card-desc {
+      position: absolute; left: 305px; top: 442px; width: 380px;
+      font-family: 'Inter', sans-serif; font-weight: 400; font-size: 16px; line-height: 1.351;
+      color: black; margin: 0;
+    }
+    .s6__game-bg {
+      position: absolute; left: 321px; top: 556px; width: 410px; height: 265px;
+      opacity: 0.5; overflow: hidden; pointer-events: none;
+    }
+    .s6__game-bg img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .s6__game-box {
+      position: absolute; left: 385px; top: 581px; width: 265px; height: 265px; pointer-events: none;
+    }
+    .s6__game-box img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .s6__tick-icon { position: absolute; left: 863px; width: 22px; height: 22px; }
+    .s6__tick-icon img { display: block; width: 100%; height: 100%; }
+    .s6__tick-head {
+      position: absolute; left: 896px; width: 314px;
+      font-family: 'Inter', sans-serif; font-weight: 600; font-size: 18px; line-height: 1.351;
+      color: black; margin: 0;
+    }
+    .s6__tick-desc {
+      position: absolute; left: 896px; width: 373px;
+      font-family: 'Inter', sans-serif; font-weight: 400; font-size: 15px; line-height: 1.351;
+      color: black; opacity: 0.5; margin: 0;
+    }
+    .s6__tick-icon--1 { top: 445px; } .s6__tick-head--1 { top: 444px; } .s6__tick-desc--1 { top: 475px; }
+    .s6__tick-icon--2 { top: 553px; } .s6__tick-head--2 { top: 552px; } .s6__tick-desc--2 { top: 583px; }
+    .s6__tick-icon--3 { top: 661px; } .s6__tick-head--3 { top: 660px; } .s6__tick-desc--3 { top: 691px; }
+    .s6__tick-icon--4 { top: 749px; } .s6__tick-head--4 { top: 748px; } .s6__tick-desc--4 { top: 779px; width: 400px; }
+    .s6__gold-box {
+      position: absolute; left: 257px; top: 932px; width: 1085px; height: 371px;
+      background: linear-gradient(to right, #ffdb9f, #faaf32);
+      border: 1px solid #f69a00; border-radius: 22px; opacity: 0.3;
+    }
+    .s6__gold-title {
+      position: absolute; left: 800px; top: 982px; transform: translateX(-50%);
+      font-family: 'Inter', sans-serif; font-weight: 600; font-size: 22px; line-height: normal;
+      color: black; white-space: nowrap; text-align: center; margin: 0;
+    }
+    .s6__sub-card {
+      position: absolute; top: 1052px; height: 187px;
+      background: rgba(255,255,255,0.55); border-radius: 19px;
+    }
+    .s6__sub-card--1 { left: 319px; width: 309px; }
+    .s6__sub-card--2 { left: 645px; width: 310px; }
+    .s6__sub-card--3 { left: 971px; width: 309px; }
+    .s6__sub-ellipse { position: absolute; top: 1041px; width: 91px; height: 91px; }
+    .s6__sub-ellipse img { display: block; width: 100%; height: 100%; }
+    .s6__sub-ellipse--1 { left: 428px; } .s6__sub-ellipse--2 { left: 755px; } .s6__sub-ellipse--3 { left: 1080px; }
+    .s6__sub-icon { position: absolute; }
+    .s6__sub-icon img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    .s6__sub-icon--paper { left: 454px; top: 1036px; width: 39px; height: 39px; }
+    .s6__sub-icon--forum { left: 769px; top: 1031px; width: 63px; height: 31px; }
+    .s6__sub-icon--game  { left: 1106px; top: 1027px; width: 39px; height: 38px; }
+    .s6__sub-label {
+      position: absolute; top: 1158px;
+      font-family: 'Inter', sans-serif; font-weight: 600; font-size: 16px; line-height: 1.351;
+      color: black; white-space: nowrap; text-align: center; margin: 0;
+    }
+    .s6__sub-label--1 { left: 473.5px; transform: translateX(-50%); }
+    .s6__sub-label--2 { left: 800px;   transform: translateX(-50%); }
+    .s6__sub-label--3 { left: 1126px;  transform: translateX(-50%); }
+    .s6__sub-text {
+      position: absolute; top: 1183px;
+      font-family: 'Inter', sans-serif; font-weight: 400; font-size: 14px; line-height: 1.351;
+      color: black; white-space: nowrap; text-align: center; margin: 0;
+    }
+    .s6__sub-text--1 { left: 474px;   transform: translateX(-50%); }
+    .s6__sub-text--2 { left: 800.5px; transform: translateX(-50%); }
+    .s6__sub-text--3 { left: 1126px;  transform: translateX(-50%); }
+    .s6__pricing-1 {
+      position: absolute; left: 570px; top: 1352px;
+      font-family: 'Inter', sans-serif; font-weight: 600; font-size: 18px; line-height: normal;
+      color: black; white-space: nowrap; margin: 0;
+    }
+    .s6__pricing-1 .green { color: #1e8856; }
+    .s6__pricing-2 {
+      position: absolute; left: 504px; top: 1380px;
+      font-family: 'Inter', sans-serif; font-weight: 400; font-size: 18px; line-height: 1.351;
+      color: black; white-space: nowrap; margin: 0;
+    }
+    .s6__cta { position: absolute; left: 650px; top: 1443px; width: 300px; height: 77px; }
+    .s6__cta img { display: block; width: 100%; height: 100%; }
+    .s6__cta-text {
+      position: absolute; left: 800px; top: 1473px; transform: translateX(-50%);
+      width: 213px; font-family: 'Inter', sans-serif; font-weight: 800; font-size: 15px;
+      line-height: normal; color: white; text-align: center;
+      letter-spacing: 0.75px; text-transform: uppercase; pointer-events: none; margin: 0;
+    }
+
+    .s5-viewport { position: relative; width: 100vw; overflow: hidden; }    .s5__box--e04 .s5__box-text { width: 314px; }
+
+    /* ══════════════════════════════════════════════════════════════════════
+         SECTION 7 — Что вы заберёте с форума / Для кого этот форум
+    ══════════════════════════════════════════════════════════════════════ */
+    .s7-viewport { position: relative; width: 100vw; overflow: hidden; }
+    .s7 { position: absolute; width: 1600px; height: 1950px; background: #fffcf5; overflow: hidden; transform-origin: top left; }
+
+    .s7__texture { position: absolute; left: 0; top: 0; width: 1600px; height: 1950px; pointer-events: none; }
+    .s7__texture img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .s7__fade { position: absolute; left: calc(50% - 805.5px); top: 1439px; width: 1611px; height: 511px; background: linear-gradient(to bottom, rgba(255,252,245,0), #fffcf5); pointer-events: none; }
+
+    /* Titles */
+    .s7__title-1 { position: absolute; left: 0; top: 123px; width: 1600px; text-align: center; font-family: 'Playfair Display', serif; font-weight: 700; font-size: 44px; line-height: 1.2; color: #c87d01; white-space: nowrap; margin: 0; }
+    .s7__subtitle { position: absolute; left: 799.5px; top: 196px; width: 561px; transform: translateX(-50%); text-align: center; font-family: 'Inter', sans-serif; font-weight: 500; font-size: 22px; color: #000; line-height: normal; margin: 0; }
+    .s7__title-2 { position: absolute; left: 0; top: 896px; width: 1600px; text-align: center; font-family: 'Playfair Display', serif; font-weight: 700; font-size: 44px; line-height: 1.2; color: #c87d01; white-space: nowrap; margin: 0; }
+    .s7__subtitle-2 { position: absolute; left: calc(50% - 90px); top: 969px; font-family: 'Inter', sans-serif; font-weight: 500; font-size: 22px; color: #000; white-space: nowrap; margin: 0; }
+
+    /* Result cards */
+    .s7__rcard { position: absolute; width: 557px; height: 233px; border-radius: 28px; border: 1px solid; }
+    .s7__rcard--01 { left: 228px; top: 277px; border-color: #f39801; }
+    .s7__rcard--02 { left: 814px; top: 277px; border-color: #378655; }
+    .s7__rcard--03 { left: 228px; top: 539px; border-color: #378655; }
+    .s7__rcard--04 { left: 814px; top: 539px; border-color: #f39801; }
+
+    .s7__remoji { position: absolute; font-size: 34px; line-height: 1; }
+    .s7__remoji--01 { left: 263px; top: 310px; }
+    .s7__remoji--02 { left: 849px; top: 310px; }
+    .s7__remoji--03 { left: 263px; top: 572px; }
+    .s7__remoji--04 { left: 849px; top: 572px; }
+
+    .s7__rnum { position: absolute; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 18px; line-height: 1.351; white-space: nowrap; text-align: right; }
+    .s7__rnum--01 { right: 851px; top: 449px; color: #f39801; }
+    .s7__rnum--02 { right: 265px; top: 449px; color: #378655; }
+    .s7__rnum--03 { right: 851px; top: 711px; color: #378655; }
+    .s7__rnum--04 { left: 1311px; top: 711px; color: #f39801; }
+
+    .s7__rtitle { position: absolute; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 18px; line-height: 1.351; color: #000; margin: 0; }
+    .s7__rtitle--01 { left: 331px; top: 314px; width: 195px; }
+    .s7__rtitle--02 { left: 917px; top: 314px; width: 226px; }
+    .s7__rtitle--03 { left: 331px; top: 576px; width: 117px; }
+    .s7__rtitle--04 { left: 917px; top: 576px; width: 230px; }
+    .s7__rtitle-sub { font-weight: 300; font-style: italic; font-size: 13px; }
+
+    .s7__rdesc { position: absolute; font-family: 'Inter', sans-serif; font-weight: 400; font-size: 15px; line-height: 1.351; color: #000; margin: 0; }
+    .s7__rdesc--01 { left: 263px; top: 382px; width: 455px; }
+    .s7__rdesc--02 { left: 849px; top: 382px; width: 467px; }
+    .s7__rdesc--03 { left: 263px; top: 644px; width: 433px; }
+    .s7__rdesc--04 { left: 849px; top: 644px; width: 473px; }
+    .s7__rdesc-note { position: absolute; left: 849px; top: 714px; font-family: 'Inter', sans-serif; font-style: italic; font-weight: 300; font-size: 13px; line-height: 1.351; color: #000; opacity: 0.5; white-space: nowrap; margin: 0; }
+
+    /* Audience cards */
+    .s7__acard { position: absolute; border-radius: 19px; background: rgba(187,176,165,0.16); }
+    .s7__acard--1 { left: 228px; top: 1049px; width: 559px; height: 303px; }
+    .s7__acard--2 { left: 812px; top: 1049px; width: 559px; height: 303px; }
+    .s7__acard--3 { left: 228px; top: 1377px; width: 559px; height: 355px; }
+    .s7__acard--4 { left: 812px; top: 1377px; width: 559px; height: 355px; }
+
+    .s7__aphoto { position: absolute; border-radius: 12px; overflow: hidden; width: 212px; height: 115px; }
+    .s7__aphoto img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .s7__aphoto--1 { left: 265px; top: 1086px; }
+    .s7__aphoto--2 { left: 849px; top: 1086px; }
+    .s7__aphoto--3 { left: 265px; top: 1414px; }
+    .s7__aphoto--4 { left: 849px; top: 1416px; }
+
+    .s7__anum { position: absolute; font-family: 'Inter', sans-serif; font-weight: 400; font-size: 18px; line-height: 1.351; color: #000; opacity: 0.5; white-space: nowrap; margin: 0; }
+    .s7__anum--1 { left: 511px; top: 1125px; }
+    .s7__anum--2 { left: 1095px; top: 1125px; }
+    .s7__anum--3 { left: 511px; top: 1420px; }
+    .s7__anum--4 { left: 1095px; top: 1434px; }
+
+    .s7__atitle { position: absolute; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 18px; line-height: 1.351; color: #000; margin: 0; }
+    .s7__atitle--1 { left: 511px; top: 1156px; width: 226px; }
+    .s7__atitle--2 { left: 1095px; top: 1156px; width: 226px; }
+    .s7__atitle--3 { left: 511px; top: 1451px; width: 245px; }
+    .s7__atitle--4 { left: 1095px; top: 1465px; width: 226px; }
+
+    .s7__adesc { position: absolute; font-family: 'Inter', sans-serif; font-weight: 400; font-size: 15px; line-height: 1.351; color: #000; margin: 0; }
+    .s7__adesc--1 { left: 265px; top: 1232px; width: 462px; }
+    .s7__adesc--2 { left: 849px; top: 1232px; width: 481px; }
+    .s7__adesc--3 { left: 265px; top: 1560px; width: 472px; }
+    .s7__adesc--4 { left: 849px; top: 1560px; width: 472px; }
+
+    .s7__bottom { position: absolute; left: 0; top: 1794px; width: 1600px; text-align: center; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 22px; line-height: 1.351; color: #000; margin: 0; }
+    .s7__bottom-accent { color: #c87d01; }
+
+      .s7__bottom-accent { color: #c87d01; }
+
+    /* ══════════════════════════════════════════════════════════════════════
+         SECTION 8 — Люди, которые проходят этот путь сами
+    ══════════════════════════════════════════════════════════════════════ */
+    .s8-viewport { position: relative; width: 100vw; overflow: hidden; }
+    .s8 { position: absolute; width: 1600px; height: 760px; background: white; overflow: hidden; transform-origin: top left; }
+
+    /* Left: text */
+    .s8__title { position: absolute; left: 228px; top: 132px; width: 535px; font-family: 'Playfair Display', serif; font-weight: 700; font-size: 44px; line-height: 1.2; color: #378755; margin: 0; }
+    .s8__author { position: absolute; left: 228px; top: 262px; font-family: 'Inter', sans-serif; font-weight: 500; font-size: 22px; color: #000; white-space: nowrap; margin: 0; }
+
+    /* Bullet items */
+    .s8__bullet { position: absolute; left: 228px; display: flex; align-items: flex-start; gap: 14px; }
+    .s8__bullet--1 { top: 326px; }
+    .s8__bullet--2 { top: 414px; }
+    .s8__bullet-icon { flex-shrink: 0; width: 22px; height: 22px; margin-top: 2px; }
+    .s8__bullet-icon img { display: block; width: 100%; height: 100%; }
+    .s8__bullet-text { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 16px; line-height: 1.351; color: #000; margin: 0; }
+    .s8__bullet-text--1 { width: 433px; }
+    .s8__bullet-text--2 { width: 566px; }
+
+    .s8__bold { position: absolute; left: 228px; top: 506px; width: 611px; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 16px; line-height: 1.351; color: #000; margin: 0; }
+
+    /* Gold box */
+    .s8__gold-box { position: absolute; left: 228px; top: 596px; width: 601px; height: 96px; background: linear-gradient(to right, #ffdb9f, #faaf32); border: 1px solid #f69a00; border-radius: 22px; opacity: 0.3; }
+    .s8__star { position: absolute; left: 264px; top: 628px; width: 32px; height: 32px; opacity: 0.5; }
+    .s8__star img { display: block; width: 100%; height: 100%; }
+    .s8__gold-text { position: absolute; left: 324px; top: 614px; width: 410px; font-family: 'Inter', sans-serif; font-weight: 400; font-size: 21px; line-height: 1.351; color: #000; margin: 0; }
+
+    /* Right: photo card */
+    .s8__photo-card { position: absolute; left: 911px; top: 152px; width: 460px; height: 540px; border-radius: 29px; overflow: hidden; background: #f9f9f9; }
+    .s8__photo-gradient { position: absolute; left: -483px; top: -3px; width: 980px; height: 547px; background: linear-gradient(135.12deg, #378755 21%, #806f43 113%); filter: blur(6px); }
+    .s8__photo-subtract { position: absolute; left: -69px; top: 24px; width: 413px; height: 516px; }
+    .s8__photo-subtract img { display: block; width: 100%; height: 100%; }
+    .s8__photo-img { position: absolute; left: 111px; top: 14px; width: 349px; height: 526px; object-fit: cover; object-position: top center; }
+
+      .s8__photo-img { position: absolute; left: 111px; top: 14px; width: 349px; height: 526px; object-fit: cover; object-position: top center; }
+
+    /* ══════════════════════════════════════════════════════════════════════
+         SECTION 9 — Эксперты форума
+    ══════════════════════════════════════════════════════════════════════ */
+    .s9-viewport { position: relative; width: 100vw; overflow: hidden; }
+    .s9 { position: absolute; width: 1600px; height: 1650px; background: white; overflow: hidden; transform-origin: top left; }
+
+    /* Title */
+    .s9__title { position: absolute; left: 0; top: 0; width: 1600px; text-align: center; font-family: 'Playfair Display', serif; font-weight: 700; font-size: 44px; line-height: 1.2; color: #378755; white-space: nowrap; margin: 0; }
+
+    /* Background cards */
+    .s9__bg { position: absolute; }
+    .s9__bg img { display: block; width: 100%; height: 100%; }
+    .s9__bg--tatiana { left: 211px; top: 109px; width: 1180px; height: 810px; }
+    .s9__bg--dmitry  { left: 211px; top: 970px; width: 1180px; height: 647px; }
+
+    /* Green question boxes */
+    .s9__qbox { position: absolute; width: 391px; height: 97px; background: #1e8856; border-radius: 24px; }
+    .s9__qbox--tatiana { left: 931px; top: 98px; }
+    .s9__qbox--dmitry  { left: 931px; top: 959px; }
+    .s9__qtext { position: absolute; font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 16px; line-height: 1.3; color: white; margin: 0; }
+    .s9__qtext--tatiana { left: 969px; top: 112px; width: 329px; }
+    .s9__qtext--dmitry  { left: 969px; top: 973px; width: 312px; }
+
+    /* Expert name + subtitle */
+    .s9__name { position: absolute; font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 30px; line-height: 1.1; color: #000; white-space: nowrap; margin: 0; }
+    .s9__name--tatiana { left: 278px; top: 168px; }
+    .s9__name--dmitry  { left: 279px; top: 1036px; }
+    .s9__subtitle { position: absolute; left: 278px; top: 209px; font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 19px; line-height: normal; color: #000; white-space: nowrap; margin: 0; }
+
+    /* Stat pills */
+    .s9__pill { position: absolute; width: 343px; border: 0.735px solid black; border-radius: 21px; opacity: 0.2; }
+    .s9__star { position: absolute; width: 12px; height: 11px; }
+    .s9__star img { display: block; width: 100%; height: 100%; }
+    .s9__ptext { position: absolute; font-family: 'Manrope', sans-serif; font-weight: 400; font-size: 14px; line-height: 1.4; color: #000; margin: 0; }
+    .s9__ptext b { font-weight: 700; }
+
+    /* Tatiana pills — left col */
+    .s9__pill--t1 { left: 279px; top: 263px; height: 85px; }
+    .s9__pill--t2 { left: 279px; top: 363px; height: 137px; }
+    .s9__pill--t3 { left: 279px; top: 515px; height: 85px; }
+    .s9__pill--t4 { left: 279px; top: 615px; height: 85px; }
+    /* Tatiana pills — right col */
+    .s9__pill--t5 { left: 637px; top: 263px; height: 85px; }
+    .s9__pill--t6 { left: 637px; top: 363px; height: 137px; }
+    .s9__pill--t7 { left: 637px; top: 515px; height: 85px; }
+
+    /* Dmitry pills — left col */
+    .s9__pill--d1 { left: 279px; top: 1124px; height: 85px; }
+    .s9__pill--d2 { left: 279px; top: 1224px; height: 119px; }
+    .s9__pill--d3 { left: 279px; top: 1358px; height: 85px; }
+    .s9__pill--d4 { left: 279px; top: 1458px; height: 85px; }
+    /* Dmitry pills — right col */
+    .s9__pill--d5 { left: 637px; top: 1124px; height: 85px; }
+    .s9__pill--d6 { left: 637px; top: 1224px; height: 119px; }
+    .s9__pill--d7 { left: 637px; top: 1358px; height: 85px; }
+    .s9__pill--d8 { left: 637px; top: 1458px; height: 85px; }
+
+    /* Tatiana photo */
+    .s9__photo-wrap { position: absolute; border-radius: 33px; overflow: hidden; }
+    .s9__photo-wrap--tatiana { left: 937px; top: 239px; width: 370px; height: 455px; background: linear-gradient(to bottom, #c6c8c5, #d4d4d4); }
+    .s9__photo-wrap--dmitry  { left: 891px; top: 1039px; width: 481px; height: 575px; background: linear-gradient(to bottom, #c6c8c5, #d4d4d4); }
+    .s9__photo { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+
+    /* Mission text (Tatiana) */
+    .s9__mission { position: absolute; left: 1050px; top: 547px; width: 254px; font-family: 'Inter', sans-serif; font-size: 14px; font-style: italic; line-height: 1.4; color: #1e8856; margin: 0; }
+    .s9__mission b { font-weight: 700; }
+
+    /* Media logos row */
+    .s9__logo-card { position: absolute; top: 751px; height: 115px; background: white; border: 1px solid rgba(0,0,0,0.06); border-radius: 21px; display: flex; align-items: center; justify-content: center; }
+    .s9__logo-card--1 { left: 279px; width: 200px; }
+    .s9__logo-card--2 { left: 489px; width: 201px; }
+    .s9__logo-card--3 { left: 701px; width: 201px; }
+    .s9__logo-card--4 { left: 912px; width: 201px; }
+    .s9__logo-card--5 { left: 1123px; width: 200px; }
+    .s9__logo-card img { display: block; max-width: 80%; max-height: 70%; object-fit: contain; }
+
+  
+
+    /* ── S10 ── */
+    .s10-viewport { position: relative; width: 100vw; overflow: hidden; }
+    .s10 { position: absolute; width: 1600px; height: 5174px; background: linear-gradient(105.85deg, #378755 4.66%, #2f483d 91.98%); overflow: hidden; transform-origin: top left; }
+    .s10__bg { position: absolute; left: 0; top: 0; width: 1600px; height: 5174px; pointer-events: none; }
+    .s10__bg img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .s10__sup { position: absolute; left: 0; width: 1600px; text-align: center; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 20px; color: #fff2d9; margin: 0; top: 134px; }
+    .s10__h { position: absolute; left: 0; width: 1600px; text-align: center; font-family: 'Playfair Display', serif; font-weight: 700; font-size: 43px; color: #ffe2ac; margin: 0; }
+    .s10__h--1 { top: 161px; } .s10__h--2 { top: 922px; } .s10__h--3 { top: 3331px; }
+    .s10__icard { position: absolute; background: white; border-radius: 25px; }
+    .s10__icard--1 { left: 233px; top: 284px; width: 554px; height: 147px; }
+    .s10__icard--2 { left: 813px; top: 284px; width: 554px; height: 147px; }
+    .s10__icard--3 { left: 233px; top: 457px; width: 554px; height: 172px; }
+    .s10__icard--4 { left: 813px; top: 457px; width: 554px; height: 172px; }
+    .s10__icon { position: absolute; background: #1e8856; border-radius: 14px; width: 59px; height: 59px; overflow: hidden; }
+    .s10__icon img { display: block; width: 100%; height: 100%; }
+    .s10__icon--1 { left: 273px; top: 328px; } .s10__icon--2 { left: 853px; top: 328px; }
+    .s10__icon--3 { left: 273px; top: 500px; } .s10__icon--4 { left: 853px; top: 500px; }
+    .s10__ctext { position: absolute; font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.351; margin: 0; color: #000; }
+    .s10__ctext--1 { left: 364px; top: 325px; width: 377px; } .s10__ctext--2 { left: 944px; top: 325px; width: 396px; }
+    .s10__ctext--3 { left: 364px; top: 497px; width: 377px; } .s10__ctext--4 { left: 944px; top: 497px; width: 320px; font-weight: 600; }
+    .s10__photo { position: absolute; border-radius: 30px; overflow: hidden; background: rgba(0,0,0,0.35); }
+    .s10__photo--timing { left: 233px; top: 791px; width: 1134px; height: 338px; }
+    .s10__photo--heirs  { left: 233px; top: 3191px; width: 1134px; height: 338px; }
+    .s10__photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: bottom; }
+    .s10__glow { position: absolute; left: 450px; top: 3305px; width: 700px; height: 120px; background: rgba(0,0,0,0.9); border-radius: 50%; filter: blur(40px); pointer-events: none; }
+    .s10__tbox { position: absolute; background: rgba(255,255,255,0.04); border-radius: 49px; left: 233px; width: 1134px; }
+    .s10__tbox--1 { top: 1184px; height: 1846px; } .s10__tbox--2 { top: 3584px; height: 1267px; }
+    .s10__div { position: absolute; left: 342px; width: 915px; height: 1px; background: rgba(255,255,255,0.3); }
+    .s10__badge { position: absolute; left: 342px; width: 159px; height: 49px; background: white; border-radius: 12px; display: flex; align-items: center; justify-content: center; }
+    .s10__time { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 20px; color: #000; line-height: 1.351; white-space: nowrap; }
+    .s10__etext { position: absolute; left: 533px; font-family: 'Inter', sans-serif; font-weight: 400; font-size: 20px; line-height: 1.351; color: white; margin: 0; }
+    .s10__etitle { position: absolute; left: 533px; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 20px; color: #ffeac4; line-height: 1.351; white-space: nowrap; margin: 0; }
+    .s10__edesc  { position: absolute; left: 533px; font-family: 'Inter', sans-serif; font-size: 20px; color: white; line-height: 1.351; margin: 0; }
+    .s10__edesc--muted { color: rgba(255,255,255,0.5); }
+    .s10__footer { position: absolute; left: 0; top: 4933px; width: 1600px; text-align: center; margin: 0; }
+    .s10__footer-title { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 25px; color: white; line-height: 1.55; margin: 0; }
+    .s10__footer-sub   { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 20px; color: white; line-height: 1.55; margin: 0; }
+
+    /* ── S11 Тарифы ── */
+    .s11-viewport { position: relative; width: 100vw; overflow: hidden; }
+    .s11 { position: absolute; width: 1600px; height: 1020px; background: white; overflow: hidden; transform-origin: top left; }
+    .s11__bg { position: absolute; left: 0; top: 0; width: 1600px; height: 100%; pointer-events: none; }
+    .s11__bg img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+    .s11__title { position: absolute; left: 0; top: 123px; width: 1600px; text-align: center; font-family: 'Playfair Display', serif; font-weight: 700; font-size: 44px; line-height: 1.2; color: #378755; margin: 0; }
+    .s11__sub { position: absolute; left: 484px; top: 260px; width: 632px; text-align: center; font-family: 'Inter', sans-serif; font-size: 20px; line-height: 1.351; color: #000; margin: 0; }
+    .s11__sub b { font-weight: 600; color: #1e8856; }
+    .s11__card { position: absolute; top: 400px; width: 332px; height: 582px; border-radius: 32px; overflow: hidden; }
+    .s11__card--1 { left: 104px; background: #f7f7f7; }
+    .s11__card--2 { left: 457px; }
+    .s11__card--3 { left: 810px; }
+    .s11__card--4 { left: 1163px; }
+    .s11__card img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .s11__badge-wrap { position: absolute; top: 376px; height: 37px; border-radius: 8px; display: flex; align-items: center; gap: 6px; padding: 0 14px 0 10px; }
+    .s11__badge-wrap--hot { left: 901px; background: #fee801; }
+    .s11__badge-wrap--rec { left: 1234px; background: #d33c52; }
+    .s11__badge-icon { width: 16px; height: 21px; flex-shrink: 0; }
+    .s11__badge-icon img { display: block; width: 100%; height: 100%; }
+    .s11__badge-text { font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 17px; color: #0d0d0d; white-space: nowrap; }
+    .s11__badge-wrap--rec .s11__badge-text { color: white; }
+    .s11__tlabel { position: absolute; font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 14px; line-height: 1.24; top: 430px; margin: 0; }
+    .s11__tname  { position: absolute; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 22px; line-height: 1.24; top: 453px; text-transform: uppercase; white-space: nowrap; margin: 0; }
+    .s11__divider { position: absolute; top: 501px; height: 1px; width: 269px; opacity: 0.5; border-radius: 2px; }
+    .s11__what { position: absolute; top: 525px; font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 14px; line-height: 1.24; white-space: nowrap; margin: 0; }
+    .s11__tlabel--1,.s11__what--1 { color: #000; } .s11__tname--1 { color: #2b406d; } .s11__divider--1 { background: #384f80; }
+    .s11__tlabel--2,.s11__tlabel--3,.s11__tlabel--4,.s11__tname--2,.s11__tname--3,.s11__tname--4,.s11__what--2,.s11__what--3,.s11__what--4 { color: white; }
+    .s11__divider--2,.s11__divider--3,.s11__divider--4 { background: white; }
+    .s11__features { position: absolute; top: 553px; display: flex; flex-direction: column; gap: 6px; }
+    .s11__feature  { display: flex; align-items: flex-start; gap: 7px; }
+    .s11__tick { flex-shrink: 0; width: 16px; height: 16px; margin-top: 2px; }
+    .s11__tick img { display: block; width: 100%; height: 100%; }
+    .s11__ftext { font-family: 'Manrope', sans-serif; font-weight: 400; font-size: 14px; line-height: 1.24; margin: 0; }
+    .s11__features--1 { left: 135px; color: #000; } .s11__features--2 { left: 489px; color: white; }
+    .s11__features--3 { left: 842px; color: white; width: 255px; } .s11__features--4 { left: 1194px; color: white; width: 255px; }
+    .s11__price { position: absolute; top: 760px; font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 22px; white-space: nowrap; text-align: center; transform: translateX(-50%); margin: 0; }
+    .s11__price--1 { left: 270px; color: #2b406d; } .s11__price--2 { left: 623px; color: #fff2d9; }
+    .s11__price--3 { left: 976px; color: #fff2d9; } .s11__price--4 { left: 1328px; color: #fff2d9; }
+    .s11__btn { position: absolute; width: 208px; height: 55px; border-radius: 999px; display: flex; align-items: center; justify-content: center; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.25px; text-transform: uppercase; box-sizing: border-box; }
+    .s11__btn--primary-1 { left: 166px; top: 807px; background: linear-gradient(157deg,#172545,#2e416b,#172646); border: 1px solid white; color: white; }
+    .s11__btn--outline-1 { left: 166px; top: 873px; background: transparent; border: 1px solid #2b406d; color: #2b406d; }
+    .s11__btn--primary-2 { left: 519px; top: 807px; background: linear-gradient(251deg,#ffe2ac,#fff1d8,#ffe2ac); border: 1px solid white; color: #4f411b; }
+    .s11__btn--outline-2 { left: 519px; top: 873px; background: transparent; border: 1px solid #ffe2ac; color: #ffe2ac; }
+    .s11__btn--primary-3 { left: 872px; top: 807px; background: linear-gradient(251deg,#ffe2ac,#fff1d8,#ffe2ac); border: 1px solid white; color: #4f411b; }
+    .s11__btn--outline-3 { left: 872px; top: 873px; background: transparent; border: 1px solid #ffe2ac; color: #ffe2ac; }
+    .s11__btn--primary-4 { left: 1224px; top: 807px; background: linear-gradient(251deg,#ffe2ac,#fff1d8,#ffe2ac); border: 1px solid white; color: #4f411b; }
+    .s11__btn--outline-4 { left: 1224px; top: 873px; background: transparent; border: 1px solid #ffe2ac; color: #ffe2ac; }
   </style>
 </head>
 <body>
@@ -1214,11 +1776,571 @@
   </section>
   </div>
 
+  <!-- ══════════════════════════════════════════════════════════════════════
+       SECTION 5 — Модель «4 капитала семьи»
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="s5-viewport">
+  <section class="s5">
+
+    <div class="s5__texture"><img src="assets/s5-bg-texture.png" alt=""></div>
+    <div class="s5__pill"></div>
+    <h2 class="s5__title">Модель «4 капитала семьи»</h2>
+    <div class="s5__subtitle">
+      <p>Богатство семьи — это четыре капитала, которые усиливают друг друга.</p>
+      <p>Когда все четыре капитала работают вместе — семья становится устойчивой</p>
+    </div>
+    <p class="s5__desc">На форуме вы пройдёте через каждый из них — с экспертами, практиками и конкретными инструментами</p>
+
+    <div class="s5__tab s5__tab--01"></div>
+    <div class="s5__tab s5__tab--02"></div>
+    <div class="s5__tab s5__tab--03"></div>
+    <div class="s5__tab s5__tab--04"></div>
+
+    <p class="s5__num s5__num--01">01</p>
+    <p class="s5__num s5__num--02">02</p>
+    <p class="s5__num s5__num--03">03</p>
+    <p class="s5__num s5__num--04">04</p>
+
+    <div class="s5__card s5__card--01"></div>
+    <div class="s5__card s5__card--02"></div>
+    <div class="s5__card s5__card--03"></div>
+    <div class="s5__card s5__card--04"></div>
+
+    <!-- CARD 01: Социальный капитал (orange) -->
+    <div class="s5__icon" style="left:304px;top:532px;"><img src="assets/s5-icon-social.svg" alt=""></div>
+    <p class="s5__card-title s5__card-title--01">Социальный капитал</p>
+    <p class="s5__card-tag s5__card-tag--01">→ Фамилия как валюта</p>
+    <p class="s5__card-desc s5__card-desc--01">Репутация и связи — единственный актив, который усиливается при передаче следующему поколению. Каждое знакомство родителей — это дверь, которая откроется для их детей</p>
+    <div class="s5__box s5__box--s01">
+      <p class="s5__box-head s5__box-head--01">Что будет на сессии:</p>
+      <div class="s5__box-icon"><img src="assets/s5-arrow1.svg" alt="" style="transform:rotate(-90deg)"></div>
+      <p class="s5__box-text">живой диалог с экспертом о том, как создавать связи, которые переживут любой кризис. Двухраундовый нетворкинг: сначала — знакомство за пределами должностей и статусов. Потом — обмен возможностями и идеями</p>
+    </div>
+    <div class="s5__box s5__box--e01">
+      <p class="s5__box-head s5__box-head--01">Вы уйдёте с:</p>
+      <div class="s5__box-icon"><img src="assets/s5-tick1.svg" alt=""></div>
+      <p class="s5__box-text">первыми контактами людей, которые мыслят так же. Это фундамент вашего социального капитала</p>
+    </div>
+
+    <!-- CARD 02: Финансовый капитал (green) -->
+    <div class="s5__icon" style="left:862px;top:532px;"><img src="assets/s5-icon-wallet1.svg" alt=""></div>
+    <p class="s5__card-title s5__card-title--02">Финансовый капитал</p>
+    <p class="s5__card-tag s5__card-tag--02">→ Формула богатства вместо формулы бедности</p>
+    <p class="s5__card-desc s5__card-desc--02">Богатство создаётся, когда разница между доходами и расходами систематически направляется в активы. Каждый месяц, каждый год, каждое десятилетие</p>
+    <div class="s5__box s5__box--s02">
+      <p class="s5__box-head s5__box-head--02">Что будет на сессии:</p>
+      <div class="s5__box-icon"><img src="assets/s5-arrow2.svg" alt="" style="transform:rotate(-90deg)"></div>
+      <p class="s5__box-text">диалог с финансовым экспертом: сложный процент, архитектура пассивного дохода, финансовое воспитание детей — с какого возраста и каким языком</p>
+    </div>
+    <div class="s5__box s5__box--e02">
+      <p class="s5__box-head s5__box-head--02">Вы уйдёте с:</p>
+      <div class="s5__box-icon"><img src="assets/s5-tick2.svg" alt=""></div>
+      <p class="s5__box-text">ясным пониманием своей формулы — и конкретным планом, как переключить её в режим накопления</p>
+    </div>
+
+    <!-- CARD 03: Интеллектуальный капитал (gray) -->
+    <div class="s5__icon" style="left:304px;top:1279px;"><img src="assets/s5-icon-wallet2.svg" alt=""></div>
+    <p class="s5__card-title s5__card-title--03">Интеллектуальный капитал</p>
+    <p class="s5__card-tag s5__card-tag--03">→ Опыт, который передаётся по наследству</p>
+    <p class="s5__card-desc s5__card-desc--03">Оцифрованный опыт побед и провалов, культурный код, способ принимать решения в кризисе. Всё, что обычно остаётся «в голове» у старшего поколения — и уходит вместе с ним</p>
+    <div class="s5__box s5__box--s03">
+      <p class="s5__box-head s5__box-head--03">Что будет на сессии:</p>
+      <div class="s5__box-icon"><img src="assets/s5-arrow3.svg" alt="" style="transform:rotate(-90deg)"></div>
+      <p class="s5__box-text">диалог с экспертом: как восстановить историю рода, найти скрытые ресурсы семьи, перевести интуитивные знания в понятные правила</p>
+    </div>
+    <div class="s5__box s5__box--e03">
+      <p class="s5__box-head s5__box-head--03">Вы уйдёте с:</p>
+      <div class="s5__box-icon"><img src="assets/s5-tick3.svg" alt=""></div>
+      <p class="s5__box-text">картой интеллектуального капитала вашего рода — сильные стороны, паттерны, точки развития</p>
+    </div>
+
+    <!-- CARD 04: Человеческий капитал (gold) -->
+    <div class="s5__icon" style="left:862px;top:1279px;"><img src="assets/s5-icon-wallet3.svg" alt=""></div>
+    <p class="s5__card-title s5__card-title--04">Человеческий капитал</p>
+    <p class="s5__card-tag s5__card-tag--04">→ Люди — основа всего</p>
+    <p class="s5__card-desc s5__card-desc--04a">Здоровье, энергия, отношения внутри семьи, способность каждого найти своё призвание. Это ядро, которое питает все остальные капиталы</p>
+    <p class="s5__card-desc s5__card-desc--04b">Когда семья становится местом, где можно снять броню, услышать и быть услышанным — рождается сила, которую невозможно купить за деньги</p>
+    <div class="s5__box s5__box--s04">
+      <p class="s5__box-head s5__box-head--04">Что будет на сессии:</p>
+      <div class="s5__box-icon"><img src="assets/s5-arrow4.svg" alt="" style="transform:rotate(-90deg)"></div>
+      <p class="s5__box-text">диалог с экспертом: здоровье как стратегический актив, роли и призвание каждого в семье, культура открытого диалога</p>
+    </div>
+    <div class="s5__box s5__box--e04">
+      <p class="s5__box-head s5__box-head--04">Вы уйдёте с:</p>
+      <div class="s5__box-icon"><img src="assets/s5-tick4.svg" alt=""></div>
+      <p class="s5__box-text">черновиком Конституции вашей семьи. Первым — и самым важным</p>
+    </div>
+
+  </section>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       SECTION 6 — Игра «Дельта»
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="s6-viewport">
+  <section class="s6">
+
+    <div class="s6__texture"><img src="assets/s6-bg-texture.png" alt=""></div>
+    <div class="s6__fade"></div>
+
+    <h2 class="s6__title">Форум закончится.<br>Игра останется с вашей семьёй</h2>
+    <p class="s6__subtitle"><span class="green">«Дельта»</span> — настольная игра, которая превращает идеи форума в семейную практику</p>
+
+    <!-- Cards -->
+    <div class="s6__card s6__card--left"></div>
+    <div class="s6__card s6__card--right"></div>
+
+    <!-- Left card: Что это -->
+    <div class="s6__card-icon"><img src="assets/s6-icon-game.svg" alt=""></div>
+    <p class="s6__card-title s6__card-title--left">Что это:</p>
+    <p class="s6__card-desc">Настольная игра для всей семьи — от детей до родителей. Не викторина и не монополия. Это симулятор семейных финансовых решений, где каждый ход — совместный выбор</p>
+    <div class="s6__game-bg"><img src="assets/s6-game-img-bg.png" alt=""></div>
+    <div class="s6__game-box"><img src="assets/s6-game-box.png" alt=""></div>
+
+    <!-- Right card: Зачем она нужна -->
+    <p class="s6__card-title s6__card-title--right">Зачем она нужна:</p>
+
+    <div class="s6__tick-icon s6__tick-icon--1"><img src="assets/s6-icon-tick.svg" alt=""></div>
+    <p class="s6__tick-head s6__tick-head--1">Закрепляет</p>
+    <p class="s6__tick-desc s6__tick-desc--1">Всё, что вы узнали на форуме — модель 4 капиталов, принципы стратегии — проживается заново за игровым столом</p>
+
+    <div class="s6__tick-icon s6__tick-icon--2"><img src="assets/s6-icon-tick.svg" alt=""></div>
+    <p class="s6__tick-head s6__tick-head--2">Вовлекает наследников</p>
+    <p class="s6__tick-desc s6__tick-desc--2">Дети, которые были в зале преемников, продолжают разговор дома — но уже через игру, а не через лекцию</p>
+
+    <div class="s6__tick-icon s6__tick-icon--3"><img src="assets/s6-icon-tick.svg" alt=""></div>
+    <p class="s6__tick-head s6__tick-head--3">Возвращает к теме</p>
+    <p class="s6__tick-desc s6__tick-desc--3">Одна партия — и вы снова внутри семейной стратегии. Без усилий, без назначенных встреч</p>
+
+    <div class="s6__tick-icon s6__tick-icon--4"><img src="assets/s6-icon-tick.svg" alt=""></div>
+    <p class="s6__tick-head s6__tick-head--4">Учит решать вместе</p>
+    <p class="s6__tick-desc s6__tick-desc--4">Каждый ход требует обсуждения. Семья учится договариваться — на ставках, которые пока игровые</p>
+
+    <!-- Gold section -->
+    <div class="s6__gold-box"></div>
+    <p class="s6__gold-title">Три продукта — одна система. Каждый усиливает остальные</p>
+
+    <div class="s6__sub-card s6__sub-card--1"></div>
+    <div class="s6__sub-card s6__sub-card--2"></div>
+    <div class="s6__sub-card s6__sub-card--3"></div>
+
+    <div class="s6__sub-ellipse s6__sub-ellipse--1"><img src="assets/s6-icon-ellipse.svg" alt=""></div>
+    <div class="s6__sub-ellipse s6__sub-ellipse--2"><img src="assets/s6-icon-ellipse.svg" alt=""></div>
+    <div class="s6__sub-ellipse s6__sub-ellipse--3"><img src="assets/s6-icon-ellipse.svg" alt=""></div>
+
+    <div class="s6__sub-icon s6__sub-icon--paper"><img src="assets/s6-icon-paper.svg" alt=""></div>
+    <div class="s6__sub-icon s6__sub-icon--forum"><img src="assets/s6-icon-forum.svg" alt=""></div>
+    <div class="s6__sub-icon s6__sub-icon--game"><img src="assets/s6-icon-game2.svg" alt=""></div>
+
+    <p class="s6__sub-label s6__sub-label--1">Книга «Богатство семьи»</p>
+    <p class="s6__sub-label s6__sub-label--2">Форум «Богатство семьи»</p>
+    <p class="s6__sub-label s6__sub-label--3">Игра «Дельта»</p>
+    <p class="s6__sub-text s6__sub-text--1">→ формирует понимание</p>
+    <p class="s6__sub-text s6__sub-text--2">→ создаёт опыт</p>
+    <p class="s6__sub-text s6__sub-text--3">→ закрепляет практику</p>
+
+    <!-- Pricing & CTA -->
+    <p class="s6__pricing-1">Игра входит в тарифы <span class="green">«Архитектор» и «Династия»</span></p>
+    <p class="s6__pricing-2">В тарифах «Участник» и «Основатель» — можно добавить к заказу</p>
+
+    <div class="s6__cta"><img src="assets/s6-btn.svg" alt=""></div>
+    <p class="s6__cta-text">перейти к тарифам</p>
+
+  </section>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       SECTION 7 — Что вы заберёте с форума / Для кого этот форум
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="s7-viewport">
+  <section class="s7">
+
+    <div class="s7__texture"><img src="assets/s7-bg.png" alt=""></div>
+    <div class="s7__fade"></div>
+
+    <!-- Title block 1 -->
+    <p class="s7__title-1">Что вы заберёте с форума</p>
+    <p class="s7__subtitle">Один день — шесть конкретных результатов</p>
+
+    <!-- Result cards -->
+    <div class="s7__rcard s7__rcard--01"></div>
+    <div class="s7__rcard s7__rcard--02"></div>
+    <div class="s7__rcard s7__rcard--03"></div>
+    <div class="s7__rcard s7__rcard--04"></div>
+
+    <span class="s7__remoji s7__remoji--01">📜</span>
+    <span class="s7__remoji s7__remoji--02">🤝</span>
+    <span class="s7__remoji s7__remoji--03">💬</span>
+    <span class="s7__remoji s7__remoji--04">📋</span>
+
+    <p class="s7__rnum s7__rnum--01">01</p>
+    <p class="s7__rnum s7__rnum--02">02</p>
+    <p class="s7__rnum s7__rnum--03">03</p>
+    <p class="s7__rnum s7__rnum--04">04</p>
+
+    <p class="s7__rtitle s7__rtitle--01">Конституция вашей семьи: Версия 1.0</p>
+    <p class="s7__rtitle s7__rtitle--02">Новые связи с семьями, которые мыслят так же</p>
+    <p class="s7__rtitle s7__rtitle--03">Общий язык с партнёром</p>
+    <p class="s7__rtitle s7__rtitle--04">Книга «Богатство семьи» <span class="s7__rtitle-sub">с автографами авторов*</span></p>
+
+    <p class="s7__rdesc s7__rdesc--01">Главные ценности, правила, традиции, способ решения конфликтов — первый документ вашей династии, созданный вместе с партнёром прямо на форуме</p>
+    <p class="s7__rdesc s7__rdesc--02">Два раунда нетворкинга, обмен контактами, видео-кружочки друг другу в мессенджер. Ваш социальный капитал начинает расти уже в первый день</p>
+    <p class="s7__rdesc s7__rdesc--03">После форума вы будете говорить об одном и том же — одними словами. Это самый ценный результат дня</p>
+    <p class="s7__rdesc s7__rdesc--04">Полная концепция четырёх капиталов в одном издании. Фундамент, к которому вы будете возвращаться снова и снова</p>
+    <p class="s7__rdesc-note">*Входит в тариф 3 и 4</p>
+
+    <!-- Title block 2 -->
+    <p class="s7__title-2">Для кого этот форум</p>
+    <p class="s7__subtitle-2">Вы узнаете себя</p>
+
+    <!-- Audience cards -->
+    <div class="s7__acard s7__acard--1"></div>
+    <div class="s7__acard s7__acard--2"></div>
+    <div class="s7__acard s7__acard--3"></div>
+    <div class="s7__acard s7__acard--4"></div>
+
+    <div class="s7__aphoto s7__aphoto--1"><img src="assets/s7-photo-1.jpg" alt=""></div>
+    <div class="s7__aphoto s7__aphoto--2"><img src="assets/s7-photo-2.jpg" alt=""></div>
+    <div class="s7__aphoto s7__aphoto--3"><img src="assets/s7-photo-3.jpg" alt=""></div>
+    <div class="s7__aphoto s7__aphoto--4"><img src="assets/s7-photo-4.jpg" alt=""></div>
+
+    <p class="s7__anum s7__anum--1">// 1</p>
+    <p class="s7__anum s7__anum--2">// 2</p>
+    <p class="s7__anum s7__anum--3">// 3</p>
+    <p class="s7__anum s7__anum--4">// 4</p>
+
+    <p class="s7__atitle s7__atitle--1">Вы уже построили</p>
+    <p class="s7__atitle s7__atitle--2">Вы чувствуете: пора</p>
+    <p class="s7__atitle s7__atitle--3">Вы в начале пути — и хотите сделать правильно с первого раза</p>
+    <p class="s7__atitle s7__atitle--4">Вашему ребёнку 14–21 год</p>
+
+    <p class="s7__adesc s7__adesc--1">Бизнес, карьера, доход — всё на месте. Сейчас пришло время превратить заработанное в систему, которая будет работать и через 30, и через 50 лет. Вы готовы мыслить масштабом династии — и ищете модель, как это сделать</p>
+    <p class="s7__adesc s7__adesc--2">Пора говорить с партнёром о ценностях, стратегии, будущем — открыто и на одном языке. Вы знаете, что ваша семья способна на большее. Вам нужно пространство, где этот разговор произойдёт естественно — и приведёт к конкретным решениям</p>
+    <p class="s7__adesc s7__adesc--3">Капитал ещё впереди, но мышление уже работает на долгую дистанцию. Вы хотите заложить фундамент семьи, в которой о деньгах, ценностях и будущем говорят открыто — с самого начала. Пока другие «разберутся потом», вы начинаете сейчас</p>
+    <p class="s7__adesc s7__adesc--4">Он уже принимает решения — но пока не понимает, как устроена семья как система. Вы не хотите однажды просто «передать активы». Вы хотите, чтобы он пришёл к этому моменту готовым — с пониманием, ответственностью и своей ролью. Два зала форума — это место, где вы начинаете этот разговор. Не за кухонным столом, а в среде, где это естественно</p>
+
+    <!-- Bottom text -->
+    <p class="s7__bottom">Вы на разных этапах. Вопрос — один.<br><span class="s7__bottom-accent">Этот форум — место, где ответ находит вся семья</span></p>
+
+  </section>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       SECTION 8 — Люди, которые проходят этот путь сами
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="s8-viewport">
+  <section class="s8">
+
+    <!-- Left: text -->
+    <p class="s8__title">Люди, которые проходят этот путь сами</p>
+    <p class="s8__author">Татьяна Волкова и Дмитрий Тарасов</p>
+
+    <div class="s8__bullet s8__bullet--1">
+      <div class="s8__bullet-icon"><img src="assets/s8-arrow.svg" alt=""></div>
+      <p class="s8__bullet-text s8__bullet-text--1">Соавторы книги «Богатство семьи». Бизнес-партнёры, которые объединили экспертизу в одну модель — и проверили её на собственных семьях</p>
+    </div>
+    <div class="s8__bullet s8__bullet--2">
+      <div class="s8__bullet-icon"><img src="assets/s8-arrow.svg" alt=""></div>
+      <p class="s8__bullet-text s8__bullet-text--2">Дмитрий строит династийную стратегию со своей семьёй. Татьяна — со своей. Каждый прошёл этот путь изнутри: от первых вопросов «что мы оставим детям?» до работающей системы четырёх капиталов</p>
+    </div>
+
+    <p class="s8__bold">Именно потому что за моделью стоят две разные семьи с разным укладом, разным опытом и разными вызовами — она работает универсально</p>
+
+    <!-- Gold box -->
+    <div class="s8__gold-box"></div>
+    <div class="s8__star"><img src="assets/s8-star.svg" alt=""></div>
+    <p class="s8__gold-text">На форуме — открывают день, задают рамку и представляют книгу</p>
+
+    <!-- Right: photo -->
+    <div class="s8__photo-card">
+      <div class="s8__photo-gradient"></div>
+      <div class="s8__photo-subtract"><img src="assets/s8-subtract.png" alt=""></div>
+      <img class="s8__photo-img" src="assets/s8-photo.jpg" alt="Татьяна Волкова и Дмитрий Тарасов">
+    </div>
+
+  </section>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       SECTION 9 — Эксперты форума
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="s9-viewport">
+  <section class="s9">
+
+    <p class="s9__title">Эксперты форума</p>
+
+    <!-- Background images -->
+    <div class="s9__bg s9__bg--tatiana"><img src="assets/s9-bg-tatiana.png" alt=""></div>
+    <div class="s9__bg s9__bg--dmitry"><img src="assets/s9-bg-dmitry.png" alt=""></div>
+
+    <!-- Green question boxes -->
+    <div class="s9__qbox s9__qbox--tatiana"></div>
+    <p class="s9__qtext s9__qtext--tatiana">Ключевой вопрос сессии: «Как запустить формулу богатства, которая будет работать поколениями?»</p>
+
+    <div class="s9__qbox s9__qbox--dmitry"></div>
+    <p class="s9__qtext s9__qtext--dmitry">Ключевой вопрос сессии: «Как превратить фамилию в актив, который откроет двери вашим детям?»</p>
+
+    <!-- ── Татьяна Волкова ── -->
+    <p class="s9__name s9__name--tatiana">Татьяна Волкова</p>
+    <p class="s9__subtitle">Эксперт по созданию личного капитала</p>
+
+    <!-- Pills left col (Tatiana) -->
+    <div class="s9__pill s9__pill--t1"></div>
+    <div class="s9__star" style="left:301px;top:289px"><img src="assets/s9-star.svg" alt=""></div>
+    <p class="s9__ptext" style="left:323px;top:285px;width:259px"><b>Более 12 лет</b> занимается финансовым образованием населения</p>
+
+    <div class="s9__pill s9__pill--t2"></div>
+    <div class="s9__star" style="left:301px;top:389px"><img src="assets/s9-star.svg" alt=""></div>
+    <p class="s9__ptext" style="left:323px;top:385px;width:251px">Серийный предприниматель, инвестор в ценные бумаги, недвижимость и криптовалюту</p>
+
+    <div class="s9__pill s9__pill--t3"></div>
+    <div class="s9__star" style="left:301px;top:541px"><img src="assets/s9-star.svg" alt=""></div>
+    <p class="s9__ptext" style="left:323px;top:537px;width:251px"><b>Более 20 источников</b> пассивного дохода</p>
+
+    <div class="s9__pill s9__pill--t4"></div>
+    <div class="s9__star" style="left:301px;top:641px"><img src="assets/s9-star.svg" alt=""></div>
+    <p class="s9__ptext" style="left:323px;top:637px;width:224px"><b>Автор мгновенного бестселлера «5 капиталов»</b></p>
+
+    <!-- Pills right col (Tatiana) -->
+    <div class="s9__pill s9__pill--t5"></div>
+    <div class="s9__star" style="left:659px;top:289px"><img src="assets/s9-star.svg" alt=""></div>
+    <p class="s9__ptext" style="left:681px;top:285px;width:259px">Эксперт по созданию личного капитала, <b>более 70 000 выпускников</b></p>
+
+    <div class="s9__pill s9__pill--t6"></div>
+    <div class="s9__star" style="left:659px;top:389px"><img src="assets/s9-star.svg" alt=""></div>
+    <p class="s9__ptext" style="left:681px;top:385px;width:261px"><b>Эксперт федеральных СМИ —</b> Первый канал, Москва24, РБК, «Известия», «Коммерсант», Газета.Ru, Lenta.Ru, Российская газета, Аргументы и факты, РИА Новости и др.</p>
+
+    <div class="s9__pill s9__pill--t7"></div>
+    <div class="s9__star" style="left:659px;top:541px"><img src="assets/s9-star.svg" alt=""></div>
+    <p class="s9__ptext" style="left:681px;top:537px;width:290px">За 2025 год вышло <b>более 2 500 материалов</b> в СМИ с комментариями Татьяны Волковой</p>
+
+    <!-- Tatiana photo -->
+    <div class="s9__photo-wrap s9__photo-wrap--tatiana">
+      <img class="s9__photo" src="assets/s9-photo-tatiana.jpg" alt="Татьяна Волкова">
+    </div>
+    <p class="s9__mission"><b>Миссия:</b> Сделать сложные финансовые инструменты доступными и понятными для каждого</p>
+
+    <!-- Media logos -->
+    <div class="s9__logo-card s9__logo-card--1"><img src="assets/s9-logo-1.png" alt="Первый канал"></div>
+    <div class="s9__logo-card s9__logo-card--2"><img src="assets/s9-logo-2.png" alt="Москва24"></div>
+    <div class="s9__logo-card s9__logo-card--3"><img src="assets/s9-logo-3.png" alt="РБК"></div>
+    <div class="s9__logo-card s9__logo-card--4"><img src="assets/s9-logo-4.png" alt="РИА Новости"></div>
+    <div class="s9__logo-card s9__logo-card--5"><img src="assets/s9-logo-5.png" alt="Коммерсант"></div>
+
+    <!-- ── Дмитрий Тарасов ── -->
+    <p class="s9__name s9__name--dmitry">Дмитрий Тарасов</p>
+
+    <!-- Pills left col (Dmitry) -->
+    <div class="s9__pill s9__pill--d1"></div>
+    <div class="s9__star" style="left:301px;top:1141px"><img src="assets/s9-star.svg" alt=""></div>
+    <p class="s9__ptext" style="left:323px;top:1137px;width:259px">Начальник Федерального штаба, первый заместитель исполнительного директора ВОО «СОЮЗ ОТЦОВ»</p>
+
+    <div class="s9__pill s9__pill--d2"></div>
+    <div class="s9__star" style="left:301px;top:1250px"><img src="assets/s9-star.svg" alt=""></div>
+    <p class="s9__ptext" style="left:323px;top:1246px;width:251px">Член Российского общества «Знание»</p>
+
+    <div class="s9__pill s9__pill--d3"></div>
+    <div class="s9__star" style="left:301px;top:1395px"><img src="assets/s9-star.svg" alt=""></div>
+    <p class="s9__ptext" style="left:323px;top:1391px;width:251px">Отец пятерых детей</p>
+
+    <div class="s9__pill s9__pill--d4"></div>
+    <div class="s9__star" style="left:301px;top:1484px"><img src="assets/s9-star.svg" alt=""></div>
+    <p class="s9__ptext" style="left:323px;top:1480px;width:215px">Автор бестселлера «От золота до биткоина»</p>
+
+    <!-- Pills right col (Dmitry) -->
+    <div class="s9__pill s9__pill--d5"></div>
+    <div class="s9__star" style="left:659px;top:1141px"><img src="assets/s9-star.svg" alt=""></div>
+    <p class="s9__ptext" style="left:681px;top:1137px;width:259px">Руководитель рабочей группы Всероссийского родительского комитета (профориентация)</p>
+
+    <div class="s9__pill s9__pill--d6"></div>
+    <div class="s9__star" style="left:659px;top:1250px"><img src="assets/s9-star.svg" alt=""></div>
+    <p class="s9__ptext" style="left:681px;top:1246px;width:270px">Преподаватель экономического факультета МГУ им. М.В. Ломоносова (приватный банкинг, прямые и венчурные инвестиции)</p>
+
+    <div class="s9__pill s9__pill--d7"></div>
+    <div class="s9__star" style="left:659px;top:1384px"><img src="assets/s9-star.svg" alt=""></div>
+    <p class="s9__ptext" style="left:681px;top:1380px;width:251px">Член Русского географического общества (РГО)</p>
+
+    <div class="s9__pill s9__pill--d8"></div>
+    <div class="s9__star" style="left:659px;top:1484px"><img src="assets/s9-star.svg" alt=""></div>
+    <p class="s9__ptext" style="left:681px;top:1480px;width:272px">Почётный лектор Российского общества «Знание»</p>
+
+    <!-- Dmitry photo -->
+    <div class="s9__photo-wrap s9__photo-wrap--dmitry">
+      <img class="s9__photo" src="assets/s9-photo-dmitry.jpg" alt="Дмитрий Тарасов">
+    </div>
+
+  </section>
+  </div>
+
+  <!-- S10 -->
+  <div class="s10-viewport">
+  <section class="s10">
+    <div class="s10__bg"><img src="assets/s10-bg-texture.png" alt=""></div>
+    <p class="s10__sup">Один день от первого кофе до Конституции семьи:</p>
+    <p class="s10__h s10__h--1">Как устроен форум</p>
+    <div class="s10__icard s10__icard--1"></div><div class="s10__icard s10__icard--2"></div>
+    <div class="s10__icard s10__icard--3"></div><div class="s10__icard s10__icard--4"></div>
+    <div class="s10__icon s10__icon--1"><img src="assets/s10-icon-megaphone.png" alt=""></div>
+    <div class="s10__icon s10__icon--2"><img src="assets/s10-icon-pen.png" alt=""></div>
+    <div class="s10__icon s10__icon--3"><img src="assets/s10-icon-group.png" alt=""></div>
+    <div class="s10__icon s10__icon--4"><img src="assets/s10-icon-notebook.png" alt=""></div>
+    <p class="s10__ctext s10__ctext--1"><b>Каждая сессия — живой диалог эксперта и интервьюера.</b> Вы слышите историю, задаёте вопросы, включаетесь в дискуссию</p>
+    <p class="s10__ctext s10__ctext--2"><b>После каждого диалога — практика в парах и группах:</b> вы работаете с воркбуком, заполняете карту, создаёте документы своей семьи</p>
+    <p class="s10__ctext s10__ctext--3">После каждой сессии вы меняетесь местами в зале — <b>к вечеру вы познакомитесь с максимальным количеством семей.</b> У каждого участника — именной бейдж, воркбук и ручка</p>
+    <p class="s10__ctext s10__ctext--4">День завершается презентацией книги «Богатство семьи», автограф-сессией и камерной концертной программой</p>
+    <div class="s10__photo s10__photo--timing"><img src="assets/s10-photo-timing.png" alt=""></div>
+    <p class="s10__h s10__h--2">Тайминг форума</p>
+    <div class="s10__tbox s10__tbox--1"></div>
+    <div class="s10__div" style="top:1372px"></div><div class="s10__div" style="top:1523px"></div>
+    <div class="s10__div" style="top:1739px"></div><div class="s10__div" style="top:1885px"></div>
+    <div class="s10__div" style="top:2047px"></div><div class="s10__div" style="top:2193px"></div>
+    <div class="s10__div" style="top:2355px"></div><div class="s10__div" style="top:2501px"></div>
+    <div class="s10__div" style="top:2663px"></div><div class="s10__div" style="top:2825px"></div>
+    <div class="s10__badge" style="top:1275px"><span class="s10__time">10:00</span></div>
+    <p class="s10__etext" style="top:1286px">Сбор гостей, регистрация участников, приветственный кофе</p>
+    <div class="s10__badge" style="top:1423px"><span class="s10__time">10:30</span></div>
+    <p class="s10__etext" style="top:1421px"><b>Открытие форума.</b><br>Приветственное слово Дмитрия Тарасова и Татьяны Волковой</p>
+    <p class="s10__etitle" style="top:1572px">Сессия 1. Социальный капитал (60 минут)</p>
+    <div class="s10__badge" style="top:1607px"><span class="s10__time">11:30</span></div>
+    <p class="s10__edesc" style="top:1610px;width:677px;white-space:normal">Формат: живой диалог эксперта и интервьюера <span class="s10__edesc--muted">(журналист / медийная персона)</span>, обсуждение ключевой проблемы темы и поиск решений. Ответы на вопросы аудитории</p>
+    <div class="s10__badge" style="top:1788px"><span class="s10__time">12:30–12:45</span></div>
+    <p class="s10__etext" style="top:1799px">Перерыв</p>
+    <p class="s10__etitle" style="top:1934px">Сессия 2. Финансовый капитал (60 минут)</p>
+    <div class="s10__badge" style="top:1942px"><span class="s10__time">11:30</span></div>
+    <p class="s10__edesc" style="top:1972px">Формат: живой диалог эксперта и интервьюера + вопросы аудитории</p>
+    <div class="s10__badge" style="top:2096px"><span class="s10__time">13:45</span></div>
+    <p class="s10__etext" style="top:2107px">Обеденный перерыв</p>
+    <p class="s10__etitle" style="top:2242px">Сессия 3. Интеллектуальный капитал (60 минут)</p>
+    <div class="s10__badge" style="top:2250px"><span class="s10__time">15:00</span></div>
+    <p class="s10__edesc" style="top:2280px">Формат: открытый диалог эксперта и интервьюера + вопросы аудитории</p>
+    <div class="s10__badge" style="top:2404px"><span class="s10__time">16:00–16:15</span></div>
+    <p class="s10__etext" style="top:2415px">Перерыв</p>
+    <p class="s10__etitle" style="top:2550px">Сессия 4. Человеческий капитал (60 минут)</p>
+    <div class="s10__badge" style="top:2558px"><span class="s10__time">16:15</span></div>
+    <p class="s10__edesc" style="top:2588px">Формат: живой диалог эксперта и интервьюера</p>
+    <p class="s10__etitle" style="top:2712px">Презентация книги «Богатство семьи»</p>
+    <div class="s10__badge" style="top:2720px"><span class="s10__time">17:15–17:30</span></div>
+    <p class="s10__edesc" style="top:2750px">Выступают: Дмитрий Тарасов и Татьяна Волкова</p>
+    <p class="s10__etitle" style="top:2874px">Концертная программа и завершение форума</p>
+    <div class="s10__badge" style="top:2882px"><span class="s10__time">17:30</span></div>
+    <p class="s10__edesc" style="top:2912px">Формат форума: живые диалоги экспертов и интервьюеров</p>
+    <div class="s10__photo s10__photo--heirs"><img src="assets/s10-photo-heirs.png" alt=""></div>
+    <div class="s10__glow"></div>
+    <p class="s10__h s10__h--3">Зал преемников</p>
+    <div class="s10__tbox s10__tbox--2"></div>
+    <div class="s10__div" style="top:3772px"></div><div class="s10__div" style="top:3918px"></div>
+    <div class="s10__div" style="top:4064px"></div><div class="s10__div" style="top:4210px"></div>
+    <div class="s10__div" style="top:4356px"></div><div class="s10__div" style="top:4502px"></div>
+    <div class="s10__div" style="top:4648px"></div>
+    <div class="s10__badge" style="top:3675px"><span class="s10__time">09:30</span></div>
+    <p class="s10__etext" style="top:3686px">Знакомство. Кто такой преемник?</p>
+    <div class="s10__badge" style="top:3821px"><span class="s10__time">10:00</span></div>
+    <p class="s10__etext" style="top:3832px">Как устроены деньги в семье</p>
+    <div class="s10__badge" style="top:3967px"><span class="s10__time">11:15</span></div>
+    <p class="s10__etext" style="top:3978px">Решения, от которых зависят другие</p>
+    <div class="s10__badge" style="top:4113px"><span class="s10__time">12:30</span></div>
+    <p class="s10__etext" style="top:4124px">Обед вместе с родителями</p>
+    <div class="s10__badge" style="top:4259px"><span class="s10__time">11:30</span></div>
+    <p class="s10__etext" style="top:4270px">Окружение и связи: твой первый капитал</p>
+    <div class="s10__badge" style="top:4405px"><span class="s10__time">14:45</span></div>
+    <p class="s10__etext" style="top:4416px">Мой первый финансовый план</p>
+    <div class="s10__badge" style="top:4551px"><span class="s10__time">16:00</span></div>
+    <p class="s10__etext" style="top:4562px">Совместная сессия с родителями</p>
+    <div class="s10__badge" style="top:4697px"><span class="s10__time">16:00–16:15</span></div>
+    <p class="s10__etext" style="top:4708px">Перерыв</p>
+    <div class="s10__footer">
+      <p class="s10__footer-title">Полный день — с 10:00 до 18:30</p>
+      <p class="s10__footer-sub">Обед, кофе-брейки и все материалы включены в стоимость билета</p>
+    </div>
+  </section>
+  </div>
+
+  <!-- S11 Тарифы -->
+  <div class="s11-viewport">
+  <section class="s11">
+    <div class="s11__bg"><img src="assets/s11-bg.png" alt=""></div>
+    <p class="s11__title">Выберите свой<br>формат участия</p>
+    <p class="s11__sub">Форум создан для совместного опыта. Поэтому каждый <b>второй билет — на 30% дешевле.</b> Для партнёра, друга, брата, коллеги — любого, с кем вы хотите пройти этот день</p>
+    <div class="s11__card s11__card--1"></div>
+    <div class="s11__card s11__card--2"><img src="assets/s11-card-2.png" alt=""></div>
+    <div class="s11__card s11__card--3"><img src="assets/s11-card-3.png" alt=""></div>
+    <div class="s11__card s11__card--4"><img src="assets/s11-card-4.png" alt=""></div>
+    <div class="s11__badge-wrap s11__badge-wrap--hot">
+      <div class="s11__badge-icon"><img src="assets/s11-icon-fire.svg" alt=""></div>
+      <span class="s11__badge-text">Хит продаж</span>
+    </div>
+    <div class="s11__badge-wrap s11__badge-wrap--rec">
+      <div class="s11__badge-icon" style="width:17px;height:16px"><img src="assets/s11-icon-heart.svg" alt=""></div>
+      <span class="s11__badge-text">Рекомендуемый</span>
+    </div>
+    <p class="s11__tlabel s11__tlabel--1" style="left:135px">Тариф 1</p>
+    <p class="s11__tname  s11__tname--1"  style="left:135px">Основатель</p>
+    <div class="s11__divider s11__divider--1" style="left:136px"></div>
+    <p class="s11__what s11__what--1" style="left:135px">Что входит:</p>
+    <div class="s11__features s11__features--1">
+      <div class="s11__feature"><div class="s11__tick"><img src="assets/s11-tick-dark.svg" alt=""></div><p class="s11__ftext">Участие во всех 4 сессиях форума</p></div>
+      <div class="s11__feature"><div class="s11__tick"><img src="assets/s11-tick-dark.svg" alt=""></div><p class="s11__ftext">Именной бейдж</p></div>
+      <div class="s11__feature"><div class="s11__tick"><img src="assets/s11-tick-dark.svg" alt=""></div><p class="s11__ftext">Персональный воркбук</p></div>
+      <div class="s11__feature"><div class="s11__tick"><img src="assets/s11-tick-dark.svg" alt=""></div><p class="s11__ftext">Кофе-брейки</p></div>
+      <div class="s11__feature"><div class="s11__tick"><img src="assets/s11-tick-dark.svg" alt=""></div><p class="s11__ftext">Участие в нетворкинге</p></div>
+      <div class="s11__feature"><div class="s11__tick"><img src="assets/s11-tick-dark.svg" alt=""></div><p class="s11__ftext">Доступ в закрытый Telegram-чат участников</p></div>
+    </div>
+    <p class="s11__price s11__price--1">0 000 ₽</p>
+    <div class="s11__btn s11__btn--primary-1">Забронировать</div>
+    <div class="s11__btn s11__btn--outline-1">Оформить в рассрочку</div>
+    <p class="s11__tlabel s11__tlabel--2" style="left:488px">Тариф 2</p>
+    <p class="s11__tname  s11__tname--2"  style="left:488px">Стратег</p>
+    <div class="s11__divider s11__divider--2" style="left:489px"></div>
+    <p class="s11__what s11__what--2" style="left:489px">Всё из тарифа «Участник», плюс:</p>
+    <div class="s11__features s11__features--2">
+      <div class="s11__feature"><div class="s11__tick"><img src="assets/s11-tick-light.svg" alt=""></div><p class="s11__ftext">Книга «Богатство семьи» с автографами авторов</p></div>
+      <div class="s11__feature"><div class="s11__tick"><img src="assets/s11-tick-light.svg" alt=""></div><p class="s11__ftext">Обед в зоне форума</p></div>
+      <div class="s11__feature"><div class="s11__tick"><img src="assets/s11-tick-light.svg" alt=""></div><p class="s11__ftext">Приоритетные места в зале</p></div>
+    </div>
+    <p class="s11__price s11__price--2">0 000 ₽</p>
+    <div class="s11__btn s11__btn--primary-2">Получить доступ</div>
+    <div class="s11__btn s11__btn--outline-2">Оформить в рассрочку</div>
+    <p class="s11__tlabel s11__tlabel--3" style="left:841px">Тариф 3</p>
+    <p class="s11__tname  s11__tname--3"  style="left:841px">Наследие</p>
+    <div class="s11__divider s11__divider--3" style="left:842px"></div>
+    <p class="s11__what s11__what--3" style="left:842px">Всё из тарифа «Основатель», плюс:</p>
+    <div class="s11__features s11__features--3">
+      <div class="s11__feature"><div class="s11__tick"><img src="assets/s11-tick-light.svg" alt=""></div><p class="s11__ftext">Места в первом ряду</p></div>
+      <div class="s11__feature"><div class="s11__tick"><img src="assets/s11-tick-light.svg" alt=""></div><p class="s11__ftext">Фото с авторами и экспертами</p></div>
+      <div class="s11__feature"><div class="s11__tick"><img src="assets/s11-tick-light.svg" alt=""></div><p class="s11__ftext">Персональная 15-минутная консультация с одним из экспертов после форума</p></div>
+      <div class="s11__feature"><div class="s11__tick"><img src="assets/s11-tick-light.svg" alt=""></div><p class="s11__ftext">Именное упоминание в закрытом сообществе форума</p></div>
+    </div>
+    <p class="s11__price s11__price--3">0 000 ₽</p>
+    <div class="s11__btn s11__btn--primary-3">Получить доступ</div>
+    <div class="s11__btn s11__btn--outline-3">Оформить в рассрочку</div>
+    <p class="s11__tlabel s11__tlabel--4" style="left:1194px">Тариф 4</p>
+    <p class="s11__tname  s11__tname--4"  style="left:1194px">Династия</p>
+    <div class="s11__divider s11__divider--4" style="left:1195px"></div>
+    <p class="s11__what s11__what--4" style="left:1194px">Всё из тарифа «Архитектор», плюс:</p>
+    <div class="s11__features s11__features--4">
+      <div class="s11__feature"><div class="s11__tick"><img src="assets/s11-tick-gray.svg" alt=""></div><p class="s11__ftext">Места в первом ряду</p></div>
+      <div class="s11__feature"><div class="s11__tick"><img src="assets/s11-tick-gray.svg" alt=""></div><p class="s11__ftext">Фото с авторами и экспертами</p></div>
+      <div class="s11__feature"><div class="s11__tick"><img src="assets/s11-tick-gray.svg" alt=""></div><p class="s11__ftext">Персональная 15-минутная консультация с одним из экспертов после форума</p></div>
+      <div class="s11__feature"><div class="s11__tick"><img src="assets/s11-tick-gray.svg" alt=""></div><p class="s11__ftext">Именное упоминание в закрытом сообществе форума</p></div>
+    </div>
+    <p class="s11__price s11__price--4">0 000 ₽</p>
+    <div class="s11__btn s11__btn--primary-4">Получить доступ</div>
+    <div class="s11__btn s11__btn--outline-4">Оформить в рассрочку</div>
+  </section>
+  </div>
+
   <script>
     const HERO_W = 1600, HERO_H = 792;
     const S2_H   = 859;
     const S3_H   = 520;
     const S4_H   = 1800;
+    const S5_H   = 2040;
+    const S6_H   = 1600;
+    const S7_H   = 1950;
+    const S8_H   = 760;
+    const S9_H   = 1650;
+    const S10_H  = 5174;
+    const S11_H  = 1020;
 
     function scaleAll() {
       const vw = window.innerWidth;
@@ -1247,6 +2369,34 @@
       // Section 4
       document.querySelector('.s4').style.transform = `scale(${s2Scale})`;
       document.querySelector('.s4-viewport').style.height = (S4_H * s2Scale) + 'px';
+
+      // Section 5
+      document.querySelector('.s5').style.transform = `scale(${s2Scale})`;
+      document.querySelector('.s5-viewport').style.height = (S5_H * s2Scale) + 'px';
+
+      // Section 6
+      document.querySelector('.s6').style.transform = `scale(${s2Scale})`;
+      document.querySelector('.s6-viewport').style.height = (S6_H * s2Scale) + 'px';
+
+      // Section 7
+      document.querySelector('.s7').style.transform = `scale(${s2Scale})`;
+      document.querySelector('.s7-viewport').style.height = (S7_H * s2Scale) + 'px';
+
+      // Section 8
+      document.querySelector('.s8').style.transform = `scale(${s2Scale})`;
+      document.querySelector('.s8-viewport').style.height = (S8_H * s2Scale) + 'px';
+
+      // Section 9
+      document.querySelector('.s9').style.transform = `scale(${s2Scale})`;
+      document.querySelector('.s9-viewport').style.height = (S9_H * s2Scale) + 'px';
+
+      // Section 10
+      document.querySelector('.s10').style.transform = `scale(${s2Scale})`;
+      document.querySelector('.s10-viewport').style.height = (S10_H * s2Scale) + 'px';
+
+      // Section 11
+      document.querySelector('.s11').style.transform = `scale(${s2Scale})`;
+      document.querySelector('.s11-viewport').style.height = (S11_H * s2Scale) + 'px';
     }
 
     scaleAll();
