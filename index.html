@@ -1472,7 +1472,7 @@
 
     /* ── S11 Тарифы ── */
     .s11-viewport { position: relative; width: 100vw; overflow: hidden; }
-    .s11 { position: absolute; width: 1600px; height: 1020px; background: white; overflow: hidden; transform-origin: top left; }
+    .s11 { position: absolute; width: 1600px; height: 1150px; background: white; overflow: hidden; transform-origin: top left; }
     .s11__bg { position: absolute; left: 0; top: 0; width: 1600px; height: 100%; pointer-events: none; }
     .s11__bg img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
     .s11__title { position: absolute; left: 0; top: 123px; width: 1600px; text-align: center; font-family: 'Playfair Display', serif; font-weight: 700; font-size: 44px; line-height: 1.2; color: #378755; margin: 0; }
@@ -1503,7 +1503,7 @@
     .s11__tick { flex-shrink: 0; width: 16px; height: 16px; margin-top: 2px; }
     .s11__tick img { display: block; width: 100%; height: 100%; }
     .s11__ftext { font-family: 'Manrope', sans-serif; font-weight: 400; font-size: 14px; line-height: 1.24; margin: 0; }
-    .s11__features--1 { left: 135px; color: #000; } .s11__features--2 { left: 489px; color: white; }
+    .s11__features--1 { left: 135px; color: #000; width: 255px; } .s11__features--2 { left: 489px; color: white; width: 255px; }
     .s11__features--3 { left: 842px; color: white; width: 255px; } .s11__features--4 { left: 1194px; color: white; width: 255px; }
     .s11__price { position: absolute; top: 760px; font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 22px; white-space: nowrap; text-align: center; transform: translateX(-50%); margin: 0; }
     .s11__price--1 { left: 270px; color: #2b406d; } .s11__price--2 { left: 623px; color: #fff2d9; }
@@ -1517,6 +1517,72 @@
     .s11__btn--outline-3 { left: 872px; top: 873px; background: transparent; border: 1px solid #ffe2ac; color: #ffe2ac; }
     .s11__btn--primary-4 { left: 1224px; top: 807px; background: linear-gradient(251deg,#ffe2ac,#fff1d8,#ffe2ac); border: 1px solid white; color: #4f411b; }
     .s11__btn--outline-4 { left: 1224px; top: 873px; background: transparent; border: 1px solid #ffe2ac; color: #ffe2ac; }
+
+  /* ═══════════════════════════════════════════════════════════════════
+     MOBILE — max-width: 767px   (base 390px, scale = vw/390)
+  ═══════════════════════════════════════════════════════════════════ */
+  @media (max-width: 767px) {
+
+    /* ─── HERO ─── */
+    .hero { width: 390px; height: 750px; }
+
+    /* Overlay — darkens the whole hero so text stays readable */
+    .overlay { left: -10px; top: -20px; width: 440px; height: 810px; opacity: 0.8; }
+
+    /* Glow orbs — follow portrait area */
+    .glow--1 { left: 180px; top: 100px; width: 130px; height: 110px; }
+    .glow--2 { left: 250px; top: 90px;  width: 130px; height: 110px; }
+
+    /* Portraits — right side, clip beyond 390px */
+    .portrait-dmitry  { left: 100px; top: 50px;  width: 250px; height: 400px; }
+    .portrait-tatyana { left: 140px; top: 60px;  width: 280px; height: 360px; }
+
+    /* Ellipse glow below portraits */
+    .ellipse-glow { left: 110px; top: 360px; width: 230px; height: 110px; }
+
+    /* Wave */
+    .wave { left: calc(50% + 0px); width: 560px; height: 110px; }
+
+    /* Badge */
+    .badge { left: 20px; top: 48px; width: 186px; height: 34px; }
+    .badge__text { left: 34px; top: 58px; font-size: 11.5px; }
+
+    /* Logo */
+    .logo { left: 20px; top: 94px; width: 195px; height: 57px; }
+
+    /* Tagline */
+    .tagline { left: 20px; top: 164px; width: 205px; font-size: 14.5px; }
+
+    /* CTA */
+    .cta-glow { left: 10px; top: 285px; width: 150px; height: 36px; }
+    .cta-btn  { left: 20px; top: 267px; width: 196px; height: 56px; border-radius: 12px; }
+    .cta-label { left: 36px; top: 286px; font-size: 11.5px; letter-spacing: 0.5px; }
+
+    /* Seats */
+    .seats-icon { left: 20px; top: 332px; width: 19px; height: 19px; }
+    .seats-text  { left: 44px; top: 333px; font-size: 12.5px; }
+
+    /* Speaker cards — stacked on left below seats */
+    .card-rect { width: 200px; height: 68px; }
+    .card-rect--tatyana { left: 18px; top: 400px; }
+    .card-rect--dmitry  { left: 18px; top: 516px; }
+
+    .card-icon--tatyana { left: 34px; top: 420px; }
+    .card-name--tatyana { left: 55px;  top: 415px; font-size: 12.5px; }
+    .card-role--tatyana { left: 34px;  top: 436px; font-size: 11px; }
+
+    .card-icon--dmitry  { left: 34px; top: 536px; }
+    .card-name--dmitry  { left: 55px;  top: 531px; font-size: 12.5px; }
+    .card-role--dmitry  { left: 34px;  top: 552px; font-size: 11px; }
+
+    /* Section title — centered at bottom */
+    .section-title {
+      left: 0; width: 390px; text-align: center;
+      transform: none; top: 638px;
+      font-size: 22px; white-space: normal;
+    }
+  }
+
   </style>
 </head>
 <body>
@@ -2327,63 +2393,81 @@
     const S8_H   = 760;
     const S9_H   = 1650;
     const S10_H  = 5174;
-    const S11_H  = 1020;
+    const S11_H  = 1150;
+
+    const MOBILE_W  = 390;
+    const M_HERO_H  = 750;
 
     function scaleAll() {
-      const vw = window.innerWidth;
-      const vh = window.innerHeight;
+      const vw  = window.innerWidth;
+      const vh  = window.innerHeight;
+      const mob = vw <= 767;
 
-      // Hero: cover — заполняет весь первый экран
-      const heroScale = Math.max(vw / HERO_W, vh / HERO_H);
-      const hero = document.querySelector('.hero');
-      const scaledHeroW = HERO_W * heroScale;
-      const scaledHeroH = HERO_H * heroScale;
-      hero.style.transform = `scale(${heroScale})`;
-      hero.style.left = ((vw - scaledHeroW) / 2) + 'px';
-      hero.style.top  = ((vh - scaledHeroH) / 2) + 'px';
-      // Viewport занимает ровно 100vh
-      document.querySelector('.hero-viewport').style.height = vh + 'px';
+      if (mob) {
+        // ── Mobile ──────────────────────────────────────────────────
+        const ms   = vw / MOBILE_W;
+        const hero = document.querySelector('.hero');
+        hero.style.transform = `scale(${ms})`;
+        hero.style.left = '0px';
+        hero.style.top  = '0px';
+        document.querySelector('.hero-viewport').style.height = (M_HERO_H * ms) + 'px';
 
-      // Section 2: scale by width
-      const s2Scale = vw / HERO_W;
-      document.querySelector('.s2').style.transform = `scale(${s2Scale})`;
-      document.querySelector('.s2-viewport').style.height = (S2_H * s2Scale) + 'px';
+        // S2–S11 пока без мобильного макета — масштабируем по десктопной ширине
+        const ds = vw / HERO_W;
+        document.querySelector('.s2').style.transform  = `scale(${ds})`;
+        document.querySelector('.s2-viewport').style.height = (S2_H  * ds) + 'px';
+        document.querySelector('.s3').style.transform  = `scale(${ds})`;
+        document.querySelector('.s3-viewport').style.height = (S3_H  * ds) + 'px';
+        document.querySelector('.s4').style.transform  = `scale(${ds})`;
+        document.querySelector('.s4-viewport').style.height = (S4_H  * ds) + 'px';
+        document.querySelector('.s5').style.transform  = `scale(${ds})`;
+        document.querySelector('.s5-viewport').style.height = (S5_H  * ds) + 'px';
+        document.querySelector('.s6').style.transform  = `scale(${ds})`;
+        document.querySelector('.s6-viewport').style.height = (S6_H  * ds) + 'px';
+        document.querySelector('.s7').style.transform  = `scale(${ds})`;
+        document.querySelector('.s7-viewport').style.height = (S7_H  * ds) + 'px';
+        document.querySelector('.s8').style.transform  = `scale(${ds})`;
+        document.querySelector('.s8-viewport').style.height = (S8_H  * ds) + 'px';
+        document.querySelector('.s9').style.transform  = `scale(${ds})`;
+        document.querySelector('.s9-viewport').style.height = (S9_H  * ds) + 'px';
+        document.querySelector('.s10').style.transform = `scale(${ds})`;
+        document.querySelector('.s10-viewport').style.height = (S10_H * ds) + 'px';
+        document.querySelector('.s11').style.transform = `scale(${ds})`;
+        document.querySelector('.s11-viewport').style.height = (S11_H * ds) + 'px';
 
-      // Section 3
-      document.querySelector('.s3').style.transform = `scale(${s2Scale})`;
-      document.querySelector('.s3-viewport').style.height = (S3_H * s2Scale) + 'px';
+      } else {
+        // ── Desktop ─────────────────────────────────────────────────
+        const heroScale  = Math.max(vw / HERO_W, vh / HERO_H);
+        const hero       = document.querySelector('.hero');
+        const scaledHeroW = HERO_W * heroScale;
+        const scaledHeroH = HERO_H * heroScale;
+        hero.style.transform = `scale(${heroScale})`;
+        hero.style.left = ((vw - scaledHeroW) / 2) + 'px';
+        hero.style.top  = ((vh - scaledHeroH) / 2) + 'px';
+        document.querySelector('.hero-viewport').style.height = vh + 'px';
 
-      // Section 4
-      document.querySelector('.s4').style.transform = `scale(${s2Scale})`;
-      document.querySelector('.s4-viewport').style.height = (S4_H * s2Scale) + 'px';
-
-      // Section 5
-      document.querySelector('.s5').style.transform = `scale(${s2Scale})`;
-      document.querySelector('.s5-viewport').style.height = (S5_H * s2Scale) + 'px';
-
-      // Section 6
-      document.querySelector('.s6').style.transform = `scale(${s2Scale})`;
-      document.querySelector('.s6-viewport').style.height = (S6_H * s2Scale) + 'px';
-
-      // Section 7
-      document.querySelector('.s7').style.transform = `scale(${s2Scale})`;
-      document.querySelector('.s7-viewport').style.height = (S7_H * s2Scale) + 'px';
-
-      // Section 8
-      document.querySelector('.s8').style.transform = `scale(${s2Scale})`;
-      document.querySelector('.s8-viewport').style.height = (S8_H * s2Scale) + 'px';
-
-      // Section 9
-      document.querySelector('.s9').style.transform = `scale(${s2Scale})`;
-      document.querySelector('.s9-viewport').style.height = (S9_H * s2Scale) + 'px';
-
-      // Section 10
-      document.querySelector('.s10').style.transform = `scale(${s2Scale})`;
-      document.querySelector('.s10-viewport').style.height = (S10_H * s2Scale) + 'px';
-
-      // Section 11
-      document.querySelector('.s11').style.transform = `scale(${s2Scale})`;
-      document.querySelector('.s11-viewport').style.height = (S11_H * s2Scale) + 'px';
+        const s2Scale = vw / HERO_W;
+        document.querySelector('.s2').style.transform  = `scale(${s2Scale})`;
+        document.querySelector('.s2-viewport').style.height = (S2_H  * s2Scale) + 'px';
+        document.querySelector('.s3').style.transform  = `scale(${s2Scale})`;
+        document.querySelector('.s3-viewport').style.height = (S3_H  * s2Scale) + 'px';
+        document.querySelector('.s4').style.transform  = `scale(${s2Scale})`;
+        document.querySelector('.s4-viewport').style.height = (S4_H  * s2Scale) + 'px';
+        document.querySelector('.s5').style.transform  = `scale(${s2Scale})`;
+        document.querySelector('.s5-viewport').style.height = (S5_H  * s2Scale) + 'px';
+        document.querySelector('.s6').style.transform  = `scale(${s2Scale})`;
+        document.querySelector('.s6-viewport').style.height = (S6_H  * s2Scale) + 'px';
+        document.querySelector('.s7').style.transform  = `scale(${s2Scale})`;
+        document.querySelector('.s7-viewport').style.height = (S7_H  * s2Scale) + 'px';
+        document.querySelector('.s8').style.transform  = `scale(${s2Scale})`;
+        document.querySelector('.s8-viewport').style.height = (S8_H  * s2Scale) + 'px';
+        document.querySelector('.s9').style.transform  = `scale(${s2Scale})`;
+        document.querySelector('.s9-viewport').style.height = (S9_H  * s2Scale) + 'px';
+        document.querySelector('.s10').style.transform = `scale(${s2Scale})`;
+        document.querySelector('.s10-viewport').style.height = (S10_H * s2Scale) + 'px';
+        document.querySelector('.s11').style.transform = `scale(${s2Scale})`;
+        document.querySelector('.s11-viewport').style.height = (S11_H * s2Scale) + 'px';
+      }
     }
 
     scaleAll();
