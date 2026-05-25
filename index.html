@@ -339,6 +339,14 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
+    /* ─── HERO CONTENT WRAPPER (desktop: transparent, mobile: flex) ── */
+    .hero__content  { position: absolute; top: 0; left: 0; width: 1600px; height: 792px; }
+    .hero__badge    { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    .hero__cta-wrap { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    .hero__seats    { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    .hero__cards    { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    .hero__card     { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
     /* ═══════════════════════════════════════════════════════════════════
        SECTION 2 — Только малая часть семей
     ═══════════════════════════════════════════════════════════════════ */
@@ -1519,67 +1527,181 @@
     .s11__btn--outline-4 { left: 1224px; top: 873px; background: transparent; border: 1px solid #ffe2ac; color: #ffe2ac; }
 
   /* ═══════════════════════════════════════════════════════════════════
-     MOBILE — max-width: 767px   (base 390px, scale = vw/390)
+     MOBILE — max-width: 767px   (true flex layout, no JS scaling)
   ═══════════════════════════════════════════════════════════════════ */
   @media (max-width: 767px) {
 
-    /* ─── HERO ─── */
-    .hero { width: 390px; height: 750px; }
+    /* ─── HERO: switch to flow, JS transform disabled ─── */
+    .hero-viewport { height: auto !important; }
 
-    /* Overlay — darkens the whole hero so text stays readable */
-    .overlay { left: -10px; top: -20px; width: 440px; height: 810px; opacity: 0.8; }
+    .hero {
+      position: relative !important;
+      width: 100% !important;
+      height: auto !important;
+      transform: none !important;
+      left: 0 !important;
+      top: 0 !important;
+      overflow: hidden;
+    }
 
-    /* Glow orbs — follow portrait area */
-    .glow--1 { left: 180px; top: 100px; width: 130px; height: 110px; }
-    .glow--2 { left: 250px; top: 90px;  width: 130px; height: 110px; }
+    /* Decorative — stay absolute but repositioned for 390px */
+    .overlay {
+      left: 0; top: 0; width: 100%; height: 100%;
+      background: linear-gradient(to right, rgba(1,12,6,0.95) 35%, rgba(1,12,6,0.25));
+    }
+    .glow--1 { right: 20vw; left: auto; top: 5vw;  width: 22vw; height: 20vw; }
+    .glow--2 { right: 5vw;  left: auto; top: 3vw;  width: 22vw; height: 20vw; }
+    .portrait-dmitry  { left: auto; right: -30px; top: 0;   width: 64vw; height: auto; }
+    .portrait-tatyana { left: auto; right: -15px; top: 10px; width: 70vw; height: auto; }
+    .ellipse-glow     { left: auto; right: -10px; top: auto; bottom: 60px; width: 55vw; }
+    .wave { left: 50%; transform: translateX(-50%); width: 150%; height: 70px; }
 
-    /* Portraits — right side, clip beyond 390px */
-    .portrait-dmitry  { left: 100px; top: 50px;  width: 250px; height: 400px; }
-    .portrait-tatyana { left: 140px; top: 60px;  width: 280px; height: 360px; }
+    /* Content wrapper — flex column, full-screen min-height */
+    .hero__content {
+      position: relative !important;
+      width: 100% !important;
+      height: auto !important;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 52px 20px 44px;
+      min-height: 100svh;
+      box-sizing: border-box;
+    }
 
-    /* Ellipse glow below portraits */
-    .ellipse-glow { left: 110px; top: 360px; width: 230px; height: 110px; }
-
-    /* Wave */
-    .wave { left: calc(50% + 0px); width: 560px; height: 110px; }
-
-    /* Badge */
-    .badge { left: 20px; top: 48px; width: 186px; height: 34px; }
-    .badge__text { left: 34px; top: 58px; font-size: 11.5px; }
+    /* Badge group — row with border */
+    .hero__badge {
+      position: relative !important;
+      top: auto !important; left: auto !important;
+      width: auto !important; height: auto !important;
+      display: inline-flex;
+      align-items: center;
+      border: 1.5px solid rgba(255, 204, 100, 0.25);
+      border-radius: 10px;
+      backdrop-filter: blur(20px);
+      padding: 0 12px;
+      height: 34px;
+      margin-bottom: 14px;
+    }
+    .badge { display: none !important; }
+    .badge__text {
+      position: relative !important;
+      left: auto !important; top: auto !important;
+      font-size: 12px;
+    }
 
     /* Logo */
-    .logo { left: 20px; top: 94px; width: 195px; height: 57px; }
+    .logo {
+      position: relative !important;
+      left: auto !important; top: auto !important;
+      width: 185px !important; height: 54px !important;
+      margin-bottom: 14px;
+    }
 
     /* Tagline */
-    .tagline { left: 20px; top: 164px; width: 205px; font-size: 14.5px; }
+    .tagline {
+      position: relative !important;
+      left: auto !important; top: auto !important;
+      width: 55vw !important;
+      font-size: 15px !important;
+      line-height: 1.45;
+      margin-bottom: 22px;
+    }
 
-    /* CTA */
-    .cta-glow { left: 10px; top: 285px; width: 150px; height: 36px; }
-    .cta-btn  { left: 20px; top: 267px; width: 196px; height: 56px; border-radius: 12px; }
-    .cta-label { left: 36px; top: 286px; font-size: 11.5px; letter-spacing: 0.5px; }
+    /* CTA wrap — relative block, label centered over button */
+    .hero__cta-wrap {
+      position: relative !important;
+      top: auto !important; left: auto !important;
+      width: auto !important; height: auto !important;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+    .cta-glow { display: none !important; }
+    .cta-btn {
+      position: relative !important;
+      left: auto !important; top: auto !important;
+      width: 196px !important; height: 54px !important;
+      border-radius: 12px !important;
+      display: block;
+    }
+    .cta-label {
+      position: absolute !important;
+      left: 50% !important; top: 50% !important;
+      transform: translate(-50%, -50%) !important;
+      font-size: 11.5px !important;
+      letter-spacing: 0.5px !important;
+      white-space: nowrap;
+    }
 
-    /* Seats */
-    .seats-icon { left: 20px; top: 332px; width: 19px; height: 19px; }
-    .seats-text  { left: 44px; top: 333px; font-size: 12.5px; }
+    /* Seats row */
+    .hero__seats {
+      position: relative !important;
+      top: auto !important; left: auto !important;
+      width: auto !important; height: auto !important;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 28px;
+    }
+    .seats-icon {
+      position: relative !important;
+      left: auto !important; top: auto !important;
+      width: 18px !important; height: 18px !important;
+      flex-shrink: 0;
+    }
+    .seats-text {
+      position: relative !important;
+      left: auto !important; top: auto !important;
+      font-size: 13px !important;
+      white-space: nowrap;
+    }
 
-    /* Speaker cards — stacked on left below seats */
-    .card-rect { width: 200px; height: 68px; }
-    .card-rect--tatyana { left: 18px; top: 400px; }
-    .card-rect--dmitry  { left: 18px; top: 516px; }
+    /* Speaker cards — stacked column */
+    .hero__cards {
+      position: relative !important;
+      top: auto !important; left: auto !important;
+      width: auto !important; height: auto !important;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+    .hero__card {
+      position: relative !important;
+      top: auto !important; left: auto !important;
+      width: 200px !important; height: 66px !important;
+    }
+    .card-rect {
+      position: absolute !important;
+      left: 0 !important; top: 0 !important;
+      width: 100% !important; height: 100% !important;
+    }
+    .card-icon {
+      position: absolute !important;
+      left: 16px !important; top: 27px !important;
+    }
+    .card-name {
+      position: absolute !important;
+      left: 37px !important; top: 16px !important;
+      font-size: 12.5px !important;
+      white-space: nowrap !important;
+    }
+    .card-role {
+      position: absolute !important;
+      left: 16px !important; top: 40px !important;
+      font-size: 11px !important;
+      white-space: nowrap !important;
+    }
 
-    .card-icon--tatyana { left: 34px; top: 420px; }
-    .card-name--tatyana { left: 55px;  top: 415px; font-size: 12.5px; }
-    .card-role--tatyana { left: 34px;  top: 436px; font-size: 11px; }
-
-    .card-icon--dmitry  { left: 34px; top: 536px; }
-    .card-name--dmitry  { left: 55px;  top: 531px; font-size: 12.5px; }
-    .card-role--dmitry  { left: 34px;  top: 552px; font-size: 11px; }
-
-    /* Section title — centered at bottom */
+    /* Section title */
     .section-title {
-      left: 0; width: 390px; text-align: center;
-      transform: none; top: 638px;
-      font-size: 22px; white-space: normal;
+      position: relative !important;
+      left: auto !important; top: auto !important;
+      transform: none !important;
+      width: 100% !important;
+      text-align: center !important;
+      font-size: 22px !important;
+      white-space: normal !important;
     }
   }
 
@@ -1624,47 +1746,60 @@
       </svg>
     </div>
 
-    <!-- Date badge -->
-    <div class="badge"></div>
-    <span class="badge__text">17 июля в 10:00 мск / город</span>
+    <!-- ─── Content wrapper (desktop: absolute overlay; mobile: flex column) ─── -->
+    <div class="hero__content">
 
-    <!-- Logo -->
-    <div class="logo">
-      <img src="assets/logo.svg" alt="Богатство Семьи Форум">
-    </div>
+      <!-- Badge -->
+      <div class="hero__badge">
+        <div class="badge"></div>
+        <span class="badge__text">17 июля в 10:00 мск / город</span>
+      </div>
 
-    <!-- Tagline -->
-    <p class="tagline">
-      Один день, который задаст финансовую траекторию вашей семьи на 50 лет вперёд
-    </p>
+      <!-- Logo -->
+      <div class="logo">
+        <img src="assets/logo.svg" alt="Богатство Семьи Форум">
+      </div>
 
-    <!-- CTA: glow + button image + label -->
-    <div class="cta-glow"></div>
-    <button class="cta-btn" type="button">
-      <img src="assets/cta-btn.svg" alt="">
-    </button>
-    <span class="cta-label">Забронировать место</span>
+      <!-- Tagline -->
+      <p class="tagline">
+        Один день, который задаст финансовую траекторию вашей семьи на 50 лет вперёд
+      </p>
 
-    <!-- Seats -->
-    <div class="seats-icon">
-      <img src="assets/user-icon.svg" alt="">
-    </div>
-    <span class="seats-text">Количество мест ограничено</span>
+      <!-- CTA: glow + button + label -->
+      <div class="hero__cta-wrap">
+        <div class="cta-glow"></div>
+        <button class="cta-btn" type="button">
+          <img src="assets/cta-btn.svg" alt="">
+        </button>
+        <span class="cta-label">Забронировать место</span>
+      </div>
 
-    <!-- Speaker card: Tatyana -->
-    <div class="card-rect card-rect--tatyana"></div>
-    <img class="card-icon card-icon--tatyana" src="assets/star.svg" alt="">
-    <span class="card-name card-name--tatyana">Татьяна Волкова</span>
-    <span class="card-role card-role--tatyana">эксперт по личному капиталу</span>
+      <!-- Seats -->
+      <div class="hero__seats">
+        <div class="seats-icon"><img src="assets/user-icon.svg" alt=""></div>
+        <span class="seats-text">Количество мест ограничено</span>
+      </div>
 
-    <!-- Speaker card: Dmitry -->
-    <div class="card-rect card-rect--dmitry"></div>
-    <img class="card-icon card-icon--dmitry" src="assets/star.svg" alt="">
-    <span class="card-name card-name--dmitry">Дмитрий Тарасов</span>
-    <span class="card-role card-role--dmitry">профессиональный инвестор</span>
+      <!-- Speaker cards -->
+      <div class="hero__cards">
+        <div class="hero__card hero__card--tatyana">
+          <div class="card-rect card-rect--tatyana"></div>
+          <img class="card-icon card-icon--tatyana" src="assets/star.svg" alt="">
+          <span class="card-name card-name--tatyana">Татьяна Волкова</span>
+          <span class="card-role card-role--tatyana">эксперт по личному капиталу</span>
+        </div>
+        <div class="hero__card hero__card--dmitry">
+          <div class="card-rect card-rect--dmitry"></div>
+          <img class="card-icon card-icon--dmitry" src="assets/star.svg" alt="">
+          <span class="card-name card-name--dmitry">Дмитрий Тарасов</span>
+          <span class="card-role card-role--dmitry">профессиональный инвестор</span>
+        </div>
+      </div>
 
-    <!-- Section title -->
-    <h2 class="section-title">Организаторы форума</h2>
+      <!-- Section title -->
+      <h2 class="section-title">Организаторы форума</h2>
+
+    </div><!-- /hero__content -->
 
   </section>
   </div>
@@ -2405,12 +2540,12 @@
 
       if (mob) {
         // ── Mobile ──────────────────────────────────────────────────
-        const ms   = vw / MOBILE_W;
+        // Hero: CSS flex handles layout, no JS transform needed
         const hero = document.querySelector('.hero');
-        hero.style.transform = `scale(${ms})`;
-        hero.style.left = '0px';
-        hero.style.top  = '0px';
-        document.querySelector('.hero-viewport').style.height = (M_HERO_H * ms) + 'px';
+        hero.style.transform = 'none';
+        hero.style.left = '0';
+        hero.style.top  = '0';
+        document.querySelector('.hero-viewport').style.height = 'auto';
 
         // S2–S11 пока без мобильного макета — масштабируем по десктопной ширине
         const ds = vw / HERO_W;
