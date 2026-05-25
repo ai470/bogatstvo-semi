@@ -1547,14 +1547,11 @@
     /* Decorative — stay absolute but repositioned for 390px */
     .overlay {
       left: 0; top: 0; width: 100%; height: 100%;
-      background: linear-gradient(to right, rgba(1,12,6,0.95) 35%, rgba(1,12,6,0.25));
+      background: linear-gradient(to bottom, rgba(1,12,6,0.85) 40%, rgba(1,12,6,0.4));
     }
-    .glow--1 { right: 20vw; left: auto; top: 5vw;  width: 22vw; height: 20vw; }
-    .glow--2 { right: 5vw;  left: auto; top: 3vw;  width: 22vw; height: 20vw; }
-    .portrait-dmitry  { left: auto; right: -30px; top: 0;   width: 64vw; height: auto; }
-    .portrait-tatyana { left: auto; right: -15px; top: 10px; width: 70vw; height: auto; }
-    .ellipse-glow     { left: auto; right: -10px; top: auto; bottom: 60px; width: 55vw; }
-    .wave { left: 50%; transform: translateX(-50%); width: 150%; height: 70px; }
+    .glow--1, .glow--2 { display: none; }
+    .ellipse-glow { display: none; }
+    .wave { left: 50%; transform: translateX(-50%); width: 150%; height: 70px; z-index: 10; }
 
     /* Content wrapper — flex column, full-screen min-height */
     .hero__content {
@@ -1641,7 +1638,7 @@
       display: flex;
       align-items: center;
       gap: 8px;
-      margin-bottom: 28px;
+      margin-bottom: 0;
     }
     .seats-icon {
       position: relative !important;
@@ -1656,44 +1653,7 @@
       white-space: nowrap;
     }
 
-    /* Speaker cards — stacked column */
-    .hero__cards {
-      position: relative !important;
-      top: auto !important; left: auto !important;
-      width: auto !important; height: auto !important;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-bottom: 28px;
-    }
-    .hero__card {
-      position: relative !important;
-      top: auto !important; left: auto !important;
-      width: 200px !important; height: 66px !important;
-    }
-    .card-rect {
-      position: absolute !important;
-      left: 0 !important; top: 0 !important;
-      width: 100% !important; height: 100% !important;
-    }
-    .card-icon {
-      position: absolute !important;
-      left: 16px !important; top: 27px !important;
-    }
-    .card-name {
-      position: absolute !important;
-      left: 37px !important; top: 16px !important;
-      font-size: 12.5px !important;
-      white-space: nowrap !important;
-    }
-    .card-role {
-      position: absolute !important;
-      left: 16px !important; top: 40px !important;
-      font-size: 11px !important;
-      white-space: nowrap !important;
-    }
-
-    /* Section title */
+    /* Section title — pushed to bottom via margin-top: auto */
     .section-title {
       position: relative !important;
       left: auto !important; top: auto !important;
@@ -1702,6 +1662,71 @@
       text-align: center !important;
       font-size: 22px !important;
       white-space: normal !important;
+      margin-top: auto !important;
+      padding-bottom: 16px;
+    }
+
+    /* Speaker cards — full-width row, portraits at bottom overlapping wave */
+    .hero__cards {
+      position: relative !important;
+      top: auto !important; left: auto !important;
+      width: calc(100% + 40px) !important;
+      height: 280px !important;
+      margin: 0 -20px !important;
+      display: flex !important;
+      flex-direction: row !important;
+      gap: 0 !important;
+      overflow: visible;
+    }
+    .hero__card {
+      position: relative !important;
+      top: auto !important; left: auto !important;
+      flex: 1 !important;
+      width: 50% !important;
+      height: 100% !important;
+      overflow: visible;
+    }
+
+    /* Portrait — pinned to bottom of card, extends into wave */
+    .portrait-tatyana,
+    .portrait-dmitry {
+      position: absolute !important;
+      left: 50% !important;
+      bottom: 0 !important;
+      top: auto !important;
+      transform: translateX(-50%) !important;
+      width: 120% !important;
+      height: auto !important;
+    }
+
+    /* Card info overlay — top of each card column */
+    .card-rect {
+      position: absolute !important;
+      left: 8px !important; top: 8px !important;
+      right: 8px !important; width: auto !important;
+      height: 62px !important;
+      z-index: 2;
+    }
+    .card-icon {
+      position: absolute !important;
+      left: 22px !important; top: 27px !important;
+      z-index: 2;
+    }
+    .card-name {
+      position: absolute !important;
+      left: 42px !important; top: 16px !important;
+      font-size: 12px !important;
+      white-space: normal !important;
+      line-height: 1.3 !important;
+      z-index: 2;
+    }
+    .card-role {
+      position: absolute !important;
+      left: 22px !important; top: 40px !important;
+      font-size: 10.5px !important;
+      white-space: normal !important;
+      line-height: 1.2 !important;
+      z-index: 2;
     }
   }
 
@@ -1722,16 +1747,6 @@
     <!-- Glow orbs -->
     <div class="glow glow--1"></div>
     <div class="glow glow--2"></div>
-
-    <!-- Dmitry portrait (behind Tatyana) -->
-    <div class="portrait-dmitry">
-      <img src="assets/dmitry.png" alt="Дмитрий Тарасов">
-    </div>
-
-    <!-- Tatyana portrait (masked, on top) -->
-    <div class="portrait-tatyana">
-      <img src="assets/tatyana.png" alt="Татьяна Волкова">
-    </div>
 
     <!-- Bottom ellipse glow -->
     <div class="ellipse-glow">
@@ -1787,12 +1802,14 @@
           <img class="card-icon card-icon--tatyana" src="assets/star.svg" alt="">
           <span class="card-name card-name--tatyana">Татьяна Волкова</span>
           <span class="card-role card-role--tatyana">эксперт по личному капиталу</span>
+          <div class="portrait-tatyana"><img src="assets/tatyana.png" alt="Татьяна Волкова"></div>
         </div>
         <div class="hero__card hero__card--dmitry">
           <div class="card-rect card-rect--dmitry"></div>
           <img class="card-icon card-icon--dmitry" src="assets/star.svg" alt="">
           <span class="card-name card-name--dmitry">Дмитрий Тарасов</span>
           <span class="card-role card-role--dmitry">профессиональный инвестор</span>
+          <div class="portrait-dmitry"><img src="assets/dmitry.png" alt="Дмитрий Тарасов"></div>
         </div>
       </div>
 
