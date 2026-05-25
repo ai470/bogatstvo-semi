@@ -1666,17 +1666,18 @@
       padding-bottom: 16px;
     }
 
-    /* Speaker cards — full-width row, portraits at bottom overlapping wave */
+    /* Speaker cards — full-width row at very bottom, portrait fills column */
     .hero__cards {
       position: relative !important;
       top: auto !important; left: auto !important;
       width: calc(100% + 40px) !important;
-      height: 280px !important;
+      height: 230px !important;
       margin: 0 -20px !important;
       display: flex !important;
       flex-direction: row !important;
       gap: 0 !important;
-      overflow: visible;
+      overflow: hidden;
+      flex-shrink: 0;
     }
     .hero__card {
       position: relative !important;
@@ -1684,37 +1685,40 @@
       flex: 1 !important;
       width: 50% !important;
       height: 100% !important;
-      overflow: visible;
+      overflow: hidden;
     }
 
-    /* Portrait — pinned to bottom of card, extends into wave */
+    /* Portrait fills card, bottom-anchored, feet hidden behind wave */
     .portrait-tatyana,
     .portrait-dmitry {
       position: absolute !important;
       left: 50% !important;
-      bottom: 0 !important;
+      bottom: -30px !important;
       top: auto !important;
       transform: translateX(-50%) !important;
-      width: 120% !important;
+      width: 100% !important;
       height: auto !important;
     }
 
-    /* Card info overlay — top of each card column */
+    /* Card info overlay — bottom of each card, above portrait */
     .card-rect {
       position: absolute !important;
-      left: 8px !important; top: 8px !important;
-      right: 8px !important; width: auto !important;
-      height: 62px !important;
+      left: 6px !important; bottom: 8px !important;
+      top: auto !important;
+      right: 6px !important; width: auto !important;
+      height: 58px !important;
       z-index: 2;
     }
     .card-icon {
       position: absolute !important;
-      left: 22px !important; top: 27px !important;
+      left: 20px !important; bottom: 24px !important;
+      top: auto !important;
       z-index: 2;
     }
     .card-name {
       position: absolute !important;
-      left: 42px !important; top: 16px !important;
+      left: 40px !important; bottom: 36px !important;
+      top: auto !important;
       font-size: 12px !important;
       white-space: normal !important;
       line-height: 1.3 !important;
@@ -1722,7 +1726,8 @@
     }
     .card-role {
       position: absolute !important;
-      left: 22px !important; top: 40px !important;
+      left: 20px !important; bottom: 14px !important;
+      top: auto !important;
       font-size: 10.5px !important;
       white-space: normal !important;
       line-height: 1.2 !important;
@@ -1795,26 +1800,26 @@
         <span class="seats-text">Количество мест ограничено</span>
       </div>
 
+      <!-- Section title -->
+      <h2 class="section-title">Организаторы форума</h2>
+
       <!-- Speaker cards -->
       <div class="hero__cards">
         <div class="hero__card hero__card--tatyana">
+          <div class="portrait-tatyana"><img src="assets/tatyana.png" alt="Татьяна Волкова"></div>
           <div class="card-rect card-rect--tatyana"></div>
           <img class="card-icon card-icon--tatyana" src="assets/star.svg" alt="">
           <span class="card-name card-name--tatyana">Татьяна Волкова</span>
           <span class="card-role card-role--tatyana">эксперт по личному капиталу</span>
-          <div class="portrait-tatyana"><img src="assets/tatyana.png" alt="Татьяна Волкова"></div>
         </div>
         <div class="hero__card hero__card--dmitry">
+          <div class="portrait-dmitry"><img src="assets/dmitry.png" alt="Дмитрий Тарасов"></div>
           <div class="card-rect card-rect--dmitry"></div>
           <img class="card-icon card-icon--dmitry" src="assets/star.svg" alt="">
           <span class="card-name card-name--dmitry">Дмитрий Тарасов</span>
           <span class="card-role card-role--dmitry">профессиональный инвестор</span>
-          <div class="portrait-dmitry"><img src="assets/dmitry.png" alt="Дмитрий Тарасов"></div>
         </div>
       </div>
-
-      <!-- Section title -->
-      <h2 class="section-title">Организаторы форума</h2>
 
     </div><!-- /hero__content -->
 
