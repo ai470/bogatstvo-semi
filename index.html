@@ -350,6 +350,9 @@
     /* Mobile-only speaker badges — hidden by default, shown via @media */
     .m-speaker-badges { display: none; }
 
+    /* Mobile-only tariff cards — hidden by default, shown via @media */
+    .m-s11-cards { display: none; }
+
     /* ═══════════════════════════════════════════════════════════════════
        SECTION 2 — Только малая часть семей
     ═══════════════════════════════════════════════════════════════════ */
@@ -2092,6 +2095,800 @@
       font-size: 11px !important;
     }
 
+    /* ── S5 ─────────────────────────────────────────────────────────────── */
+    .s5-viewport { height: auto !important; }
+    .s5 {
+      position: relative !important;
+      width: 100% !important; height: auto !important;
+      transform: none !important;
+      display: flex; flex-direction: column; align-items: center;
+      padding: 40px 20px;
+      box-sizing: border-box;
+    }
+    .s5__texture {
+      position: absolute !important;
+      width: 100% !important; height: 100% !important;
+      left: 0 !important; top: 0 !important;
+    }
+    .s5__pill { display: none !important; }
+    .s5__tab  { display: none !important; }
+    .s5__num  { display: none !important; } /* числа через ::before на card-title */
+    .s5__card { display: none !important; } /* белые фоны карточек */
+
+    /* Header */
+    .s5__title, .s5__subtitle, .s5__desc {
+      position: relative !important; left: auto !important; top: auto !important;
+      transform: none !important; width: 100% !important;
+    }
+    .s5__title {
+      font-size: 26px !important; white-space: normal !important;
+      text-align: center; margin-bottom: 14px;
+    }
+    .s5__subtitle {
+      font-size: 14px !important; text-align: center; margin-bottom: 10px;
+    }
+    .s5__desc {
+      font-size: 13px !important; text-align: center; margin-bottom: 36px; margin: 0 0 36px;
+    }
+
+    /* Icons — top of white card block, rounded top corners */
+    .s5__icon {
+      position: relative !important;
+      left: auto !important; top: auto !important;
+      width: 100% !important; height: auto !important;
+      padding: 20px 16px 0;
+      margin-top: 24px; margin-bottom: 0;
+      background: white;
+      border-radius: 20px 20px 0 0;
+      display: flex !important;
+      align-items: center;
+    }
+    .s5__icon img { width: 28px !important; height: 28px !important; }
+
+    /* Card titles с номером через ::before */
+    .s5__card-title {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 100% !important;
+      font-size: 22px !important; white-space: normal !important;
+      margin: 0; padding: 10px 16px 4px;
+      background: white;
+    }
+    .s5__card-title::before {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-size: 16px; font-weight: 500;
+      margin-bottom: 4px; opacity: 0.7;
+    }
+    .s5__card-title--01::before { content: '01'; color: #f39801; }
+    .s5__card-title--02::before { content: '02'; color: #378755; }
+    .s5__card-title--03::before { content: '03'; color: #6f6f85; }
+    .s5__card-title--04::before { content: '04'; color: #a89060; }
+
+    /* Tags */
+    .s5__card-tag {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 100% !important;
+      font-size: 13px !important; margin: 0;
+      padding: 0 16px 8px; background: white;
+    }
+
+    /* Descriptions */
+    .s5__card-desc {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 100% !important;
+      font-size: 13px !important; line-height: 1.55 !important;
+      color: rgba(0,0,0,0.7) !important;
+      margin: 0; padding: 0 16px 12px; background: white;
+    }
+
+    /* Inner boxes */
+    .s5__box {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 100% !important; height: auto !important;
+      padding: 14px 16px; margin: 0;
+      border-radius: 0 !important; box-sizing: border-box;
+    }
+    /* Session + exit boxes — white bg */
+    .s5__box--s01, .s5__box--s02,
+    .s5__box--s03, .s5__box--s04 { background: white !important; }
+    .s5__box--e01, .s5__box--e02,
+    .s5__box--e03, .s5__box--e04 {
+      border-radius: 0 0 20px 20px !important;
+      margin-bottom: 0;
+      background: white !important;
+    }
+
+    /* ── Continuous colored left border per card ── */
+    /* Each card: icon (top, rounded TL) → title → tag → desc → session box → exit box (bottom, rounded BL) */
+    /* Card 01 — orange */
+    .s5__icon--01,
+    .s5__card-title--01, .s5__card-tag--01, .s5__card-desc--01,
+    .s5__box--s01, .s5__box--e01 {
+      border-left: 3px solid #f39801 !important;
+    }
+    /* Card 02 — green */
+    .s5__icon--02,
+    .s5__card-title--02, .s5__card-tag--02, .s5__card-desc--02,
+    .s5__box--s02, .s5__box--e02 {
+      border-left: 3px solid #378655 !important;
+    }
+    /* Card 03 — grey */
+    .s5__icon--03,
+    .s5__card-title--03, .s5__card-tag--03, .s5__card-desc--03,
+    .s5__box--s03, .s5__box--e03 {
+      border-left: 3px solid #6f6f85 !important;
+    }
+    /* Card 04 — gold */
+    .s5__icon--04,
+    .s5__card-title--04, .s5__card-tag--04, .s5__card-desc--04a, .s5__card-desc--04b,
+    .s5__box--s04, .s5__box--e04 {
+      border-left: 3px solid #a89060 !important;
+    }
+    /* Icon — rounded top-left only; exit box already has border-radius 0 0 20px 20px */
+    .s5__icon--01, .s5__icon--02, .s5__icon--03, .s5__icon--04 {
+      border-radius: 20px 20px 0 0 !important;
+    }
+
+    .s5__box-head {
+      position: relative !important; left: auto !important; top: auto !important;
+      font-size: 13px !important; margin-bottom: 6px;
+    }
+    .s5__box-icon { display: none !important; }
+    .s5__box-text {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 100% !important;
+      font-size: 12px !important; line-height: 1.5 !important;
+    }
+
+    /* ─── S6 mobile ──────────────────────────────────────────────────────── */
+    .s6-viewport { height: auto !important; }
+    .s6 {
+      position: relative !important; width: 100% !important; height: auto !important;
+      transform: none !important; display: flex; flex-direction: column;
+      align-items: center; padding: 40px 20px 40px; box-sizing: border-box;
+      background: white; overflow: visible;
+    }
+    .s6__texture, .s6__fade { display: none !important; }
+
+    /* Title + subtitle */
+    .s6__title {
+      position: relative !important; left: auto !important; top: auto !important;
+      transform: none !important; white-space: normal !important;
+      font-size: 26px !important; text-align: center; width: 100%; margin-bottom: 12px;
+      order: 1;
+    }
+    .s6__subtitle {
+      position: relative !important; left: auto !important; top: auto !important;
+      transform: none !important; width: 100% !important;
+      font-size: 15px !important; text-align: center; margin-bottom: 20px;
+      order: 2;
+    }
+
+    /* Card backgrounds — hide */
+    .s6__card { display: none !important; }
+
+    /* Left card: "Что это" */
+    .s6__card-icon {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 32px !important; height: 32px !important;
+      align-self: flex-start; margin-bottom: 4px; order: 3;
+    }
+    .s6__card-title {
+      position: relative !important; left: auto !important; top: auto !important;
+      white-space: normal !important; font-size: 20px !important;
+      align-self: flex-start; margin-bottom: 8px;
+    }
+    .s6__card-title--left { order: 4; }
+    .s6__card-desc {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 100% !important; font-size: 14px !important; margin-bottom: 16px;
+      order: 5;
+    }
+
+    /* Game images */
+    .s6__game-bg { display: none !important; }
+    .s6__game-box {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 160px !important; height: 160px !important;
+      align-self: center; margin-bottom: 24px; order: 6;
+    }
+
+    /* Right card: ticks */
+    .s6__card-title--right { font-size: 20px !important; margin-bottom: 12px; order: 7; }
+    /* Hide SVG tick icons — use ::before on heads instead */
+    .s6__tick-icon { display: none !important; }
+    .s6__tick-head {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 100% !important; font-size: 15px !important; font-weight: 600;
+      margin-bottom: 2px; padding-left: 22px;
+    }
+    .s6__tick-head::before {
+      content: '✓'; position: absolute; left: 0;
+      color: #378755; font-weight: 700; font-size: 15px;
+    }
+    .s6__tick-desc {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 100% !important; font-size: 13px !important; margin-bottom: 14px;
+      opacity: 0.6; padding-left: 22px;
+    }
+    .s6__tick-head--1 { order: 8; }  .s6__tick-desc--1 { order: 9; }
+    .s6__tick-head--2 { order: 10; } .s6__tick-desc--2 { order: 11; }
+    .s6__tick-head--3 { order: 12; } .s6__tick-desc--3 { order: 13; }
+    .s6__tick-head--4 { order: 14; } .s6__tick-desc--4 { order: 15; }
+
+    /* Gold "Три продукта" section */
+    .s6__gold-box { display: none !important; }
+    .s6__gold-title {
+      position: relative !important; left: auto !important; top: auto !important;
+      transform: none !important; white-space: normal !important;
+      font-size: 15px !important; text-align: center;
+      width: 100%; margin-top: 8px; margin-bottom: 12px;
+      order: 16; /* after ticks */
+    }
+    /* Hide sub-cards, ellipses, icons — text items styled directly */
+    .s6__sub-card  { display: none !important; }
+    .s6__sub-ellipse { display: none !important; }
+    .s6__sub-icon  { display: none !important; }
+
+    /* Labels as mini-rows with gold left border */
+    .s6__sub-label {
+      position: relative !important; left: auto !important; top: auto !important;
+      transform: none !important; white-space: normal !important;
+      font-size: 14px !important; font-weight: 600; text-align: left !important;
+      display: block !important; width: 100%;
+      padding: 10px 12px 2px; border-left: 3px solid #f39801;
+      background: rgba(255,219,159,0.18);
+    }
+    .s6__sub-label--1 { order: 17; }
+    .s6__sub-label--2 { order: 19; }
+    .s6__sub-label--3 { order: 21; }
+
+    .s6__sub-text {
+      position: relative !important; left: auto !important; top: auto !important;
+      transform: none !important; white-space: normal !important;
+      font-size: 12px !important; text-align: left !important;
+      display: block !important; width: 100%;
+      padding: 0 12px 10px; border-left: 3px solid #f39801;
+      background: rgba(255,219,159,0.18); margin-bottom: 6px;
+    }
+    .s6__sub-text--1 { order: 18; }
+    .s6__sub-text--2 { order: 20; }
+    .s6__sub-text--3 { order: 22; }
+
+    /* Pricing + CTA */
+    .s6__pricing-1, .s6__pricing-2 {
+      position: relative !important; left: auto !important; top: auto !important;
+      white-space: normal !important; font-size: 14px !important;
+      text-align: center; width: 100%; margin-bottom: 8px;
+    }
+    .s6__pricing-1 { margin-top: 24px; font-weight: 600; order: 23; }
+    .s6__pricing-2 { order: 24; }
+    .s6__cta {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 240px !important; height: 62px !important; margin-top: 16px;
+      order: 25;
+    }
+    .s6__cta-text {
+      position: relative !important; left: auto !important; top: auto !important;
+      transform: none !important; width: 100% !important;
+      font-size: 13px !important; text-align: center;
+      margin-top: -46px; order: 26; pointer-events: none;
+    }
+
+    /* ─── S7 mobile ──────────────────────────────────────────────────────── */
+    .s7-viewport { height: auto !important; }
+    .s7 {
+      position: relative !important; width: 100% !important; height: auto !important;
+      transform: none !important; display: flex; flex-direction: column;
+      padding: 40px 20px; box-sizing: border-box;
+      background: #fffcf5; overflow: visible;
+    }
+    .s7__texture, .s7__fade { display: none !important; }
+
+    /* ── Block 1: результаты ── */
+    .s7__title-1 {
+      position: relative !important; left: auto !important; top: auto !important;
+      white-space: normal !important; font-size: 26px !important;
+      text-align: center; width: 100%; margin-bottom: 6px; order: 1;
+    }
+    .s7__subtitle {
+      position: relative !important; left: auto !important; top: auto !important;
+      transform: none !important; width: 100% !important;
+      font-size: 14px !important; text-align: center; margin-bottom: 20px; order: 2;
+    }
+    /* rcard bg divs — hidden */
+    .s7__rcard { display: none !important; }
+    /* rnum — hidden on mobile (clutter) */
+    .s7__rnum { display: none !important; }
+
+    /* Result card elements — reorder into per-card groups */
+    .s7__remoji {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 36px !important; height: 36px !important;
+      margin-top: 20px; margin-bottom: 4px; align-self: flex-start;
+    }
+    .s7__remoji--01 { order: 3;  margin-top: 0; }
+    .s7__remoji--02 { order: 7;  }
+    .s7__remoji--03 { order: 11; }
+    .s7__remoji--04 { order: 15; }
+
+    .s7__rtitle {
+      position: relative !important; left: auto !important; top: auto !important;
+      font-size: 16px !important; font-weight: 600; width: 100%; margin-bottom: 4px;
+    }
+    .s7__rtitle--01 { order: 4;  }
+    .s7__rtitle--02 { order: 8;  }
+    .s7__rtitle--03 { order: 12; }
+    .s7__rtitle--04 { order: 16; }
+
+    .s7__rdesc {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 100% !important; font-size: 13px !important;
+      color: rgba(0,0,0,0.7); padding-bottom: 20px;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+    .s7__rdesc--01 { order: 5;  }
+    .s7__rdesc--02 { order: 9;  }
+    .s7__rdesc--03 { order: 13; }
+    .s7__rdesc--04 { order: 17; border-bottom: none; padding-bottom: 4px; }
+
+    .s7__rdesc-note {
+      position: relative !important; left: auto !important; top: auto !important;
+      white-space: normal !important; font-size: 12px !important;
+      order: 18; margin-bottom: 20px; padding-bottom: 20px;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+
+    /* ── Block 2: аудитория ── */
+    .s7__title-2 {
+      position: relative !important; left: auto !important; top: auto !important;
+      white-space: normal !important; font-size: 26px !important;
+      text-align: center; width: 100%; margin-top: 12px; margin-bottom: 6px; order: 19;
+    }
+    .s7__subtitle-2 {
+      position: relative !important; left: auto !important; top: auto !important;
+      white-space: normal !important; font-size: 14px !important;
+      text-align: center; width: 100%; margin-bottom: 20px; order: 20;
+    }
+    /* acard bg divs — hidden */
+    .s7__acard { display: none !important; }
+
+    .s7__aphoto {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 100% !important; height: 160px !important;
+      border-radius: 12px !important; overflow: hidden; margin-top: 20px;
+    }
+    .s7__aphoto--1 { order: 21; margin-top: 0; }
+    .s7__aphoto--2 { order: 25; }
+    .s7__aphoto--3 { order: 29; }
+    .s7__aphoto--4 { order: 33; }
+
+    .s7__anum {
+      position: relative !important; left: auto !important; top: auto !important;
+      white-space: normal !important; font-size: 12px !important;
+      margin-top: 10px; margin-bottom: 2px;
+    }
+    .s7__anum--1 { order: 22; }
+    .s7__anum--2 { order: 26; }
+    .s7__anum--3 { order: 30; }
+    .s7__anum--4 { order: 34; }
+
+    .s7__atitle {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 100% !important; font-size: 16px !important; font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .s7__atitle--1 { order: 23; }
+    .s7__atitle--2 { order: 27; }
+    .s7__atitle--3 { order: 31; }
+    .s7__atitle--4 { order: 35; }
+
+    .s7__adesc {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 100% !important; font-size: 13px !important;
+      color: rgba(0,0,0,0.7); padding-bottom: 20px;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+    .s7__adesc--1 { order: 24; }
+    .s7__adesc--2 { order: 28; }
+    .s7__adesc--3 { order: 32; }
+    .s7__adesc--4 { order: 36; border-bottom: none; }
+
+    .s7__bottom {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 100% !important; font-size: 15px !important;
+      text-align: center; margin-top: 24px; order: 37;
+    }
+
+    /* ─── S8 mobile ──────────────────────────────────────────────────────── */
+    .s8-viewport { height: auto !important; }
+    .s8 {
+      position: relative !important; width: 100% !important; height: auto !important;
+      transform: none !important; display: flex; flex-direction: column;
+      align-items: center; padding: 40px 20px 0; box-sizing: border-box; background: white;
+    }
+
+    /* Text block */
+    .s8__title {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 100% !important; font-size: 26px !important;
+      margin-bottom: 8px; text-align: center;
+    }
+    .s8__author {
+      position: relative !important; left: auto !important; top: auto !important;
+      white-space: normal !important; font-size: 15px !important;
+      margin-bottom: 20px; color: rgba(0,0,0,0.6); text-align: center;
+    }
+    .s8__bullet {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 100% !important; margin-bottom: 14px;
+    }
+    .s8__bullet-text { width: auto !important; font-size: 14px !important; }
+    .s8__bold {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 100% !important; font-size: 14px !important; margin-bottom: 20px;
+    }
+
+    /* Gold box — no decorative div, just styled text */
+    .s8__gold-box { display: none !important; }
+    .s8__star { display: none !important; }
+    .s8__gold-text {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 100% !important; font-size: 15px !important;
+      padding: 14px 16px;
+      background: linear-gradient(to right, rgba(255,219,159,0.55), rgba(250,175,50,0.35));
+      border: 1px solid rgba(246,154,0,0.3); border-radius: 14px;
+      margin-bottom: 32px;
+    }
+
+    .s8__photo-card { display: none !important; }
+
+    /* ─── S9 mobile ──────────────────────────────────────────────────────── */
+    .s9-viewport { height: auto !important; }
+    .s9 {
+      position: relative !important; width: 100% !important; height: auto !important;
+      transform: none !important; display: flex; flex-direction: column;
+      align-items: stretch; padding: 40px 20px; box-sizing: border-box; background: white;
+    }
+
+    /* Hide desktop decorations */
+    .s9__bg, .s9__qbox, .s9__pill { display: none !important; }
+    .s9__star { display: none !important; }
+
+    /* Section title */
+    .s9__title {
+      position: relative !important; left: auto !important; top: auto !important;
+      white-space: normal !important; font-size: 28px !important;
+      text-align: center; margin-bottom: 28px; order: 1;
+    }
+
+    /* ── Татьяна ── */
+    .s9__photo-wrap--tatiana {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 180px !important; height: 220px !important;
+      border-radius: 24px !important; align-self: center;
+      order: 2; margin-bottom: 12px;
+    }
+    .s9__name--tatiana {
+      position: relative !important; left: auto !important; top: auto !important;
+      white-space: normal !important; font-size: 22px !important;
+      text-align: center; order: 3; margin-bottom: 2px;
+    }
+    .s9__subtitle {
+      position: relative !important; left: auto !important; top: auto !important;
+      white-space: normal !important; font-size: 13px !important;
+      text-align: center; color: rgba(0,0,0,0.5); order: 4; margin-bottom: 12px;
+    }
+    .s9__qtext--tatiana {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 100% !important; font-size: 13px !important;
+      padding: 10px 14px; background: #1e8856; border-radius: 12px;
+      margin-bottom: 14px; order: 5;
+    }
+    /* Все ptexts по умолчанию — Татьянины (идут первыми в DOM) */
+    .s9__ptext {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 100% !important; font-size: 13px !important; line-height: 1.5;
+      padding: 8px 0 8px 18px; border-bottom: 1px solid rgba(0,0,0,0.06);
+      order: 6;
+    }
+    .s9__ptext::before {
+      content: '★'; position: absolute; left: 0; top: 9px;
+      color: #378755; font-size: 10px;
+    }
+    .s9__mission {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 100% !important; font-size: 13px !important;
+      padding: 12px 0; color: #1e8856; order: 7; font-style: italic;
+    }
+    /* Логотипы СМИ — горизонтальная полоса */
+    .s9__logo-card {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 100% !important; height: 52px !important;
+      border-radius: 12px !important; order: 8; margin-bottom: 6px;
+    }
+
+    /* ── Дмитрий: фото → имя → цитата → info ── */
+    /* photo в DOM после name — ~ работает, ставим order 17 (раньше имени) */
+    .s9__name--dmitry ~ .s9__photo-wrap {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 180px !important; height: 220px !important;
+      border-radius: 24px !important; align-self: center;
+      order: 17;
+      margin-top: 32px; padding-top: 28px;
+      border-top: 1px solid rgba(0,0,0,0.1);
+    }
+    .s9__name--dmitry {
+      position: relative !important; left: auto !important; top: auto !important;
+      white-space: normal !important; font-size: 22px !important;
+      text-align: center; order: 18;
+      margin-top: 12px; margin-bottom: 14px;
+    }
+    /* qtext--dmitry в DOM до name — явный order без ~ */
+    .s9__qtext--dmitry {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 100% !important; font-size: 13px !important;
+      padding: 10px 14px; background: #1e8856; border-radius: 12px;
+      margin-bottom: 14px; order: 19;
+    }
+    /* ptexts после name в DOM — ~ ставит их после цитаты */
+    .s9__name--dmitry ~ .s9__ptext { order: 23; }
+
+    /* ─── S10 mobile ─────────────────────────────────────────────────────── */
+    .s10-viewport { height: auto !important; }
+    .s10 {
+      position: relative !important; width: 100% !important; height: auto !important;
+      transform: none !important; display: flex; flex-direction: row; flex-wrap: wrap;
+      align-items: flex-start; padding: 40px 20px; box-sizing: border-box;
+    }
+    /* Push everything to end by default — named items get explicit order */
+    .s10 > * { order: 100; width: 100%; }
+
+    /* Hide decorative desktop-only elements */
+    .s10__bg, .s10__icard, .s10__tbox, .s10__div, .s10__glow { display: none !important; }
+
+    /* ── "Как устроен форум" ── */
+    .s10__sup {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 100% !important; font-size: 13px !important; text-align: center;
+      margin-bottom: 4px; order: 1;
+    }
+    .s10__h--1 {
+      position: relative !important; left: auto !important; top: auto !important;
+      white-space: normal !important; font-size: 26px !important; text-align: center;
+      margin-bottom: 20px; order: 2;
+    }
+    /* Format card pairs: icon → text */
+    .s10__icon {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 44px !important; height: 44px !important;
+      border-radius: 12px !important; margin-top: 16px; flex-shrink: 0;
+    }
+    .s10__ctext {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: calc(100% - 56px) !important; font-size: 14px !important;
+      color: rgba(255,255,255,0.9) !important; margin-bottom: 4px;
+      align-self: center; margin-left: 12px;
+    }
+    /* Одинаковый order → иконка и текст в одну строку */
+    .s10__icon--1 { order: 3;  margin-top: 0; } .s10__ctext--1 { order: 3;  margin-top: 0; }
+    .s10__icon--2 { order: 5;  }                .s10__ctext--2 { order: 5;  }
+    .s10__icon--3 { order: 7;  }                .s10__ctext--3 { order: 7;  }
+    .s10__icon--4 { order: 9;  }                .s10__ctext--4 { order: 9;  }
+
+    .s10__photo {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 100% !important; height: 180px !important;
+      border-radius: 16px !important; overflow: hidden;
+    }
+    .s10__photo--timing { order: 11; margin-top: 20px; }
+
+    /* ── "Тайминг форума" ── */
+    .s10__h--2 {
+      position: relative !important; left: auto !important; top: auto !important;
+      white-space: normal !important; font-size: 26px !important; text-align: center;
+      margin-top: 32px; margin-bottom: 8px; order: 20;
+    }
+    /* Timeline items — flow in DOM order within order tier 30 */
+    .s10__badge {
+      position: relative !important; left: auto !important; top: auto !important;
+      display: inline-flex !important; width: auto !important; height: auto !important;
+      margin-top: 14px; padding: 5px 12px;
+      background: white; border-radius: 10px;
+      order: 30;
+    }
+    .s10__time { font-size: 15px !important; }
+    .s10__etext, .s10__etitle, .s10__edesc {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 100% !important; font-size: 13px !important;
+      white-space: normal !important; margin-bottom: 2px;
+      order: 30;
+    }
+    .s10__etext  { color: rgba(255,255,255,0.85) !important; }
+    .s10__etitle { color: #ffeac4 !important; font-weight: 600 !important; margin-top: 6px; }
+    .s10__edesc  { color: rgba(255,255,255,0.7) !important; }
+
+    /* ── "Зал преемников" (после s10__h--3 в DOM) ── */
+    .s10__h--3 {
+      position: relative !important; left: auto !important; top: auto !important;
+      white-space: normal !important; font-size: 26px !important; text-align: center;
+      margin-top: 32px; margin-bottom: 8px; order: 50;
+    }
+    .s10__photo--heirs { order: 51; margin-top: 12px; }
+    /* Heirs timeline: ~ combinator targets only items after h--3 in DOM */
+    .s10__h--3 ~ .s10__badge  { order: 60; }
+    .s10__h--3 ~ .s10__etext  { order: 60; }
+    .s10__h--3 ~ .s10__etitle { order: 60; }
+    .s10__h--3 ~ .s10__edesc  { order: 60; }
+
+    /* Footer */
+    .s10__footer {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 100% !important; margin-top: 32px; padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.2); order: 99;
+    }
+    .s10__footer-title { font-size: 16px !important; }
+    .s10__footer-sub   { font-size: 13px !important; }
+
+    /* ─── S11 mobile — карточки тарифов как на десктопе ────────────────── */
+    .s11-viewport { height: auto !important; }
+    .s11 {
+      position: relative !important; width: 100% !important; height: auto !important;
+      transform: none !important; display: flex; flex-direction: column;
+      align-items: center; padding: 40px 20px 40px; box-sizing: border-box;
+      background: white; overflow: hidden;
+    }
+
+    /* Заголовок и подзаголовок секции */
+    .s11__title {
+      position: relative !important; left: auto !important; top: auto !important;
+      white-space: normal !important; font-size: 26px !important;
+      text-align: center; width: 100%; margin-bottom: 10px; color: #378755;
+    }
+    .s11__sub {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 100% !important; font-size: 13px !important;
+      text-align: center; margin-bottom: 0; color: rgba(0,0,0,0.7);
+    }
+
+    /* Скрываем все оригинальные десктопные элементы карточек */
+    .s11__bg, .s11__card, .s11__divider,
+    .s11__badge-wrap, .s11__tlabel, .s11__tname,
+    .s11__what, .s11__features, .s11__price, .s11__btn { display: none !important; }
+
+    /* ── Мобильные карточки ── */
+    .m-s11-cards {
+      display: flex !important;
+      flex-direction: column;
+      width: 100%;
+      margin: 24px 0 0;
+      gap: 0;
+    }
+
+    .m-s11-card {
+      width: 100%;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+    .m-s11-card:last-child { margin-bottom: 0; }
+
+    /* Фоны карточек */
+    .m-s11-card--1 { background: #f7f7f7; border-radius: 24px; }
+    .m-s11-card--2 { background: url('assets/s11-card-2.png') center top / cover no-repeat; border-radius: 24px; }
+    .m-s11-card--3 { background: url('assets/s11-card-3.png') center top / cover no-repeat; border-radius: 24px; }
+    .m-s11-card--4 { background: url('assets/s11-card-4.png') center top / cover no-repeat; border-radius: 24px; }
+
+    /* Бейдж сверху карточки (Хит / Рекомендуемый) */
+    .m-s11-badge-top {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 12px 20px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      border-radius: 24px 24px 0 0;
+    }
+    .m-s11-badge-top--hot { background: #fee801; color: #0d0d0d; }
+    .m-s11-badge-top--rec { background: #d33c52; color: white; }
+    .m-s11-badge-icon { width: 16px; height: 16px; object-fit: contain; flex-shrink: 0; }
+
+    /* Если есть бейдж — карточка без верхних скруглений (бейдж их занял) */
+    .m-s11-card--2 { border-radius: 0 0 24px 24px; }
+    .m-s11-card--4 { border-radius: 0 0 24px 24px; }
+
+    /* Внутренний блок с контентом */
+    .m-s11-inner { padding: 24px 20px 28px; }
+
+    /* Label */
+    .m-s11-tlabel {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 600; font-size: 13px;
+      margin-bottom: 4px;
+    }
+    .m-s11-card--1 .m-s11-tlabel { color: rgba(0,0,0,0.45); }
+    .m-s11-card--2 .m-s11-tlabel,
+    .m-s11-card--3 .m-s11-tlabel,
+    .m-s11-card--4 .m-s11-tlabel { color: rgba(255,255,255,0.6); }
+
+    /* Name */
+    .m-s11-tname {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700; font-size: 28px;
+      text-transform: uppercase; margin-bottom: 16px;
+    }
+    .m-s11-card--1 .m-s11-tname { color: #2b406d; }
+    .m-s11-card--2 .m-s11-tname,
+    .m-s11-card--3 .m-s11-tname,
+    .m-s11-card--4 .m-s11-tname { color: white; }
+
+    /* Divider */
+    .m-s11-divider {
+      border: none; height: 1px; margin-bottom: 16px; opacity: 0.5;
+    }
+    .m-s11-card--1 .m-s11-divider { background: #384f80; }
+    .m-s11-card--2 .m-s11-divider,
+    .m-s11-card--3 .m-s11-divider,
+    .m-s11-card--4 .m-s11-divider { background: white; }
+
+    /* What */
+    .m-s11-what {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 600; font-size: 13px; margin-bottom: 12px;
+    }
+    .m-s11-card--1 .m-s11-what { color: #000; }
+    .m-s11-card--2 .m-s11-what,
+    .m-s11-card--3 .m-s11-what,
+    .m-s11-card--4 .m-s11-what { color: rgba(255,255,255,0.6); }
+
+    /* Features */
+    .m-s11-features {
+      list-style: none;
+      display: flex; flex-direction: column; gap: 10px;
+      margin-bottom: 24px;
+    }
+    .m-s11-features li {
+      display: flex; align-items: flex-start; gap: 8px;
+      font-family: 'Manrope', sans-serif; font-size: 14px; line-height: 1.4;
+    }
+    .m-s11-features li img { width: 16px; height: 16px; flex-shrink: 0; margin-top: 2px; }
+    .m-s11-card--1 .m-s11-features li { color: #000; }
+    .m-s11-card--2 .m-s11-features li,
+    .m-s11-card--3 .m-s11-features li,
+    .m-s11-card--4 .m-s11-features li { color: white; }
+
+    /* Price */
+    .m-s11-price {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 600; font-size: 26px; margin-bottom: 16px;
+    }
+    .m-s11-card--1 .m-s11-price { color: #2b406d; }
+    .m-s11-card--2 .m-s11-price,
+    .m-s11-card--3 .m-s11-price,
+    .m-s11-card--4 .m-s11-price { color: #fff2d9; }
+
+    /* Кнопки */
+    .m-s11-btn {
+      width: 100%; height: 50px; border-radius: 999px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Manrope', sans-serif; font-weight: 700;
+      font-size: 12px; letter-spacing: 0.25px; text-transform: uppercase;
+      box-sizing: border-box; margin-bottom: 12px; cursor: pointer;
+    }
+    .m-s11-btn:last-child { margin-bottom: 0; }
+
+    .m-s11-btn--primary-1 { background: linear-gradient(157deg,#172545,#2e416b,#172646); border: 1px solid rgba(255,255,255,0.2); color: white; }
+    .m-s11-btn--outline-1 { background: transparent; border: 1px solid #2b406d; color: #2b406d; }
+
+    .m-s11-btn--primary-2 { background: linear-gradient(251deg,#ffe2ac,#fff1d8,#ffe2ac); border: 1px solid rgba(255,255,255,0.5); color: #4f411b; }
+    .m-s11-btn--outline-2 { background: transparent; border: 1px solid rgba(255,226,172,0.5); color: #ffe2ac; }
+
+    .m-s11-btn--primary-3 { background: linear-gradient(251deg,#ffe2ac,#fff1d8,#ffe2ac); border: 1px solid rgba(255,255,255,0.5); color: #4f411b; }
+    .m-s11-btn--outline-3 { background: transparent; border: 1px solid rgba(255,226,172,0.5); color: #ffe2ac; }
+
+    .m-s11-btn--primary-4 { background: linear-gradient(251deg,#ffe2ac,#fff1d8,#ffe2ac); border: 1px solid rgba(255,255,255,0.5); color: #4f411b; }
+    .m-s11-btn--outline-4 { background: transparent; border: 1px solid rgba(255,226,172,0.5); color: #ffe2ac; }
+
     /* Hide original in-photo overlays — replaced by .m-speaker-badges row */
     .card-rect, .card-icon, .card-name, .card-role { display: none !important; }
 
@@ -2429,7 +3226,7 @@
     <div class="s5__card s5__card--04"></div>
 
     <!-- CARD 01: Социальный капитал (orange) -->
-    <div class="s5__icon" style="left:304px;top:532px;"><img src="assets/s5-icon-social.svg" alt=""></div>
+    <div class="s5__icon s5__icon--01" style="left:304px;top:532px;"><img src="assets/s5-icon-social.svg" alt=""></div>
     <p class="s5__card-title s5__card-title--01">Социальный капитал</p>
     <p class="s5__card-tag s5__card-tag--01">→ Фамилия как валюта</p>
     <p class="s5__card-desc s5__card-desc--01">Репутация и связи — единственный актив, который усиливается при передаче следующему поколению. Каждое знакомство родителей — это дверь, которая откроется для их детей</p>
@@ -2445,7 +3242,7 @@
     </div>
 
     <!-- CARD 02: Финансовый капитал (green) -->
-    <div class="s5__icon" style="left:862px;top:532px;"><img src="assets/s5-icon-wallet1.svg" alt=""></div>
+    <div class="s5__icon s5__icon--02" style="left:862px;top:532px;"><img src="assets/s5-icon-wallet1.svg" alt=""></div>
     <p class="s5__card-title s5__card-title--02">Финансовый капитал</p>
     <p class="s5__card-tag s5__card-tag--02">→ Формула богатства вместо формулы бедности</p>
     <p class="s5__card-desc s5__card-desc--02">Богатство создаётся, когда разница между доходами и расходами систематически направляется в активы. Каждый месяц, каждый год, каждое десятилетие</p>
@@ -2461,7 +3258,7 @@
     </div>
 
     <!-- CARD 03: Интеллектуальный капитал (gray) -->
-    <div class="s5__icon" style="left:304px;top:1279px;"><img src="assets/s5-icon-wallet2.svg" alt=""></div>
+    <div class="s5__icon s5__icon--03" style="left:304px;top:1279px;"><img src="assets/s5-icon-wallet2.svg" alt=""></div>
     <p class="s5__card-title s5__card-title--03">Интеллектуальный капитал</p>
     <p class="s5__card-tag s5__card-tag--03">→ Опыт, который передаётся по наследству</p>
     <p class="s5__card-desc s5__card-desc--03">Оцифрованный опыт побед и провалов, культурный код, способ принимать решения в кризисе. Всё, что обычно остаётся «в голове» у старшего поколения — и уходит вместе с ним</p>
@@ -2477,7 +3274,7 @@
     </div>
 
     <!-- CARD 04: Человеческий капитал (gold) -->
-    <div class="s5__icon" style="left:862px;top:1279px;"><img src="assets/s5-icon-wallet3.svg" alt=""></div>
+    <div class="s5__icon s5__icon--04" style="left:862px;top:1279px;"><img src="assets/s5-icon-wallet3.svg" alt=""></div>
     <p class="s5__card-title s5__card-title--04">Человеческий капитал</p>
     <p class="s5__card-tag s5__card-tag--04">→ Люди — основа всего</p>
     <p class="s5__card-desc s5__card-desc--04a">Здоровье, энергия, отношения внутри семьи, способность каждого найти своё призвание. Это ядро, которое питает все остальные капиталы</p>
@@ -2883,6 +3680,94 @@
     <div class="s11__bg"><img src="assets/s11-bg.png" alt=""></div>
     <p class="s11__title">Выберите свой<br>формат участия</p>
     <p class="s11__sub">Форум создан для совместного опыта. Поэтому каждый <b>второй билет — на 30% дешевле.</b> Для партнёра, друга, брата, коллеги — любого, с кем вы хотите пройти этот день</p>
+    <!-- Mobile-only tariff cards (desktop: display:none) -->
+    <div class="m-s11-cards">
+
+      <!-- Card 1: Основатель -->
+      <div class="m-s11-card m-s11-card--1">
+        <div class="m-s11-inner">
+          <p class="m-s11-tlabel">Тариф 1</p>
+          <h3 class="m-s11-tname">Основатель</h3>
+          <hr class="m-s11-divider">
+          <p class="m-s11-what">Что входит:</p>
+          <ul class="m-s11-features">
+            <li><img src="assets/s11-tick-dark.svg" alt=""><span>Участие во всех 4 сессиях форума</span></li>
+            <li><img src="assets/s11-tick-dark.svg" alt=""><span>Именной бейдж</span></li>
+            <li><img src="assets/s11-tick-dark.svg" alt=""><span>Персональный воркбук</span></li>
+            <li><img src="assets/s11-tick-dark.svg" alt=""><span>Кофе-брейки</span></li>
+            <li><img src="assets/s11-tick-dark.svg" alt=""><span>Участие в нетворкинге</span></li>
+            <li><img src="assets/s11-tick-dark.svg" alt=""><span>Доступ в закрытый Telegram-чат участников</span></li>
+          </ul>
+          <p class="m-s11-price">0 000 ₽</p>
+          <div class="m-s11-btn m-s11-btn--primary-1">Забронировать</div>
+          <div class="m-s11-btn m-s11-btn--outline-1">Оформить в рассрочку</div>
+        </div>
+      </div>
+
+      <!-- Card 2: Стратег (Хит продаж) -->
+      <div class="m-s11-card m-s11-card--2">
+        <div class="m-s11-badge-top m-s11-badge-top--hot">
+          <img src="assets/s11-icon-fire.svg" class="m-s11-badge-icon" alt=""><span>Хит продаж</span>
+        </div>
+        <div class="m-s11-inner">
+          <p class="m-s11-tlabel">Тариф 2</p>
+          <h3 class="m-s11-tname">Стратег</h3>
+          <hr class="m-s11-divider">
+          <p class="m-s11-what">Всё из тарифа «Участник», плюс:</p>
+          <ul class="m-s11-features">
+            <li><img src="assets/s11-tick-light.svg" alt=""><span>Книга «Богатство семьи» с автографами авторов</span></li>
+            <li><img src="assets/s11-tick-light.svg" alt=""><span>Обед в зоне форума</span></li>
+            <li><img src="assets/s11-tick-light.svg" alt=""><span>Приоритетные места в зале</span></li>
+          </ul>
+          <p class="m-s11-price">0 000 ₽</p>
+          <div class="m-s11-btn m-s11-btn--primary-2">Получить доступ</div>
+          <div class="m-s11-btn m-s11-btn--outline-2">Оформить в рассрочку</div>
+        </div>
+      </div>
+
+      <!-- Card 3: Наследие -->
+      <div class="m-s11-card m-s11-card--3">
+        <div class="m-s11-inner">
+          <p class="m-s11-tlabel">Тариф 3</p>
+          <h3 class="m-s11-tname">Наследие</h3>
+          <hr class="m-s11-divider">
+          <p class="m-s11-what">Всё из тарифа «Основатель», плюс:</p>
+          <ul class="m-s11-features">
+            <li><img src="assets/s11-tick-light.svg" alt=""><span>Места в первом ряду</span></li>
+            <li><img src="assets/s11-tick-light.svg" alt=""><span>Фото с авторами и экспертами</span></li>
+            <li><img src="assets/s11-tick-light.svg" alt=""><span>Персональная 15-минутная консультация с одним из экспертов после форума</span></li>
+            <li><img src="assets/s11-tick-light.svg" alt=""><span>Именное упоминание в закрытом сообществе форума</span></li>
+          </ul>
+          <p class="m-s11-price">0 000 ₽</p>
+          <div class="m-s11-btn m-s11-btn--primary-3">Получить доступ</div>
+          <div class="m-s11-btn m-s11-btn--outline-3">Оформить в рассрочку</div>
+        </div>
+      </div>
+
+      <!-- Card 4: Династия (Рекомендуемый) -->
+      <div class="m-s11-card m-s11-card--4">
+        <div class="m-s11-badge-top m-s11-badge-top--rec">
+          <img src="assets/s11-icon-heart.svg" class="m-s11-badge-icon" alt="" style="width:17px;height:16px"><span>Рекомендуемый</span>
+        </div>
+        <div class="m-s11-inner">
+          <p class="m-s11-tlabel">Тариф 4</p>
+          <h3 class="m-s11-tname">Династия</h3>
+          <hr class="m-s11-divider">
+          <p class="m-s11-what">Всё из тарифа «Архитектор», плюс:</p>
+          <ul class="m-s11-features">
+            <li><img src="assets/s11-tick-gray.svg" alt=""><span>Места в первом ряду</span></li>
+            <li><img src="assets/s11-tick-gray.svg" alt=""><span>Фото с авторами и экспертами</span></li>
+            <li><img src="assets/s11-tick-gray.svg" alt=""><span>Персональная 15-минутная консультация с одним из экспертов после форума</span></li>
+            <li><img src="assets/s11-tick-gray.svg" alt=""><span>Именное упоминание в закрытом сообществе форума</span></li>
+          </ul>
+          <p class="m-s11-price">0 000 ₽</p>
+          <div class="m-s11-btn m-s11-btn--primary-4">Получить доступ</div>
+          <div class="m-s11-btn m-s11-btn--outline-4">Оформить в рассрочку</div>
+        </div>
+      </div>
+
+    </div><!-- /m-s11-cards -->
+
     <div class="s11__card s11__card--1"></div>
     <div class="s11__card s11__card--2"><img src="assets/s11-card-2.png" alt=""></div>
     <div class="s11__card s11__card--3"><img src="assets/s11-card-3.png" alt=""></div>
