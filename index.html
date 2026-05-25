@@ -347,6 +347,9 @@
     .hero__cards    { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
     .hero__card     { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
+    /* Mobile-only speaker badges — hidden by default, shown via @media */
+    .m-speaker-badges { display: none; }
+
     /* ═══════════════════════════════════════════════════════════════════
        SECTION 2 — Только малая часть семей
     ═══════════════════════════════════════════════════════════════════ */
@@ -1553,16 +1556,15 @@
     .ellipse-glow { display: none; }
     .wave { left: 50%; transform: translateX(-50%); width: 150%; height: 70px; z-index: 10; }
 
-    /* Content wrapper — flex column, full-screen min-height */
+    /* Content wrapper — flex column */
     .hero__content {
       position: relative !important;
       width: 100% !important;
       height: auto !important;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
-      padding: 52px 20px 44px;
-      min-height: 100svh;
+      align-items: center;
+      padding: 52px 24px 0;
       box-sizing: border-box;
     }
 
@@ -1599,9 +1601,10 @@
     .tagline {
       position: relative !important;
       left: auto !important; top: auto !important;
-      width: 55vw !important;
-      font-size: 15px !important;
+      width: 100% !important;
+      font-size: 19px !important;
       line-height: 1.45;
+      text-align: center;
       margin-bottom: 22px;
     }
 
@@ -1653,7 +1656,7 @@
       white-space: nowrap;
     }
 
-    /* Section title — pushed to bottom via margin-top: auto */
+    /* Section title */
     .section-title {
       position: relative !important;
       left: auto !important; top: auto !important;
@@ -1662,17 +1665,17 @@
       text-align: center !important;
       font-size: 22px !important;
       white-space: normal !important;
-      margin-top: auto !important;
-      padding-bottom: 16px;
+      margin-top: 28px !important;
+      padding-bottom: 12px;
     }
 
     /* Speaker cards — full-width row at very bottom, portrait fills column */
     .hero__cards {
       position: relative !important;
       top: auto !important; left: auto !important;
-      width: calc(100% + 40px) !important;
+      width: calc(100% + 48px) !important;
       height: 230px !important;
-      margin: 0 -20px !important;
+      margin: 4px -24px 0 !important;
       display: flex !important;
       flex-direction: row !important;
       gap: 0 !important;
@@ -1688,50 +1691,439 @@
       overflow: hidden;
     }
 
-    /* Portrait fills card, bottom-anchored, feet hidden behind wave */
+    /* Portrait divs are now desktop-only (direct children of .hero, before wave) */
     .portrait-tatyana,
-    .portrait-dmitry {
-      position: absolute !important;
-      left: 50% !important;
-      bottom: -30px !important;
-      top: auto !important;
-      transform: translateX(-50%) !important;
-      width: 100% !important;
-      height: auto !important;
+    .portrait-dmitry { display: none !important; }
+
+    /* Mobile card photos via background-image */
+    .hero__card--tatyana {
+      background: url('assets/tatyana.png') top center / cover no-repeat;
+    }
+    .hero__card--dmitry {
+      background: url('assets/dmitry.png') top center / cover no-repeat;
     }
 
-    /* Card info overlay — bottom of each card, above portrait */
-    .card-rect {
-      position: absolute !important;
-      left: 6px !important; bottom: 8px !important;
-      top: auto !important;
-      right: 6px !important; width: auto !important;
-      height: 58px !important;
-      z-index: 2;
+    /* ── S2 ─────────────────────────────────────────────────────────────── */
+    .s2-viewport { height: auto !important; }
+    .s2 {
+      position: relative !important;
+      width: 100% !important;
+      height: auto !important;
+      transform: none !important;
+      padding: 40px 24px 0;
+      box-sizing: border-box;
+      overflow: hidden;
     }
-    .card-icon {
-      position: absolute !important;
-      left: 20px !important; bottom: 24px !important;
-      top: auto !important;
-      z-index: 2;
+
+    /* Decorative layers — hide or simplify */
+    .s2__greenery { display: none !important; }
+    .s2__ellipse  { display: none !important; }
+    .s2__fade-top, .s2__fade-right { display: none !important; }
+    .s2__fade-bottom {
+      height: 80px !important;
+      width: 100% !important;
     }
-    .card-name {
-      position: absolute !important;
-      left: 40px !important; bottom: 36px !important;
-      top: auto !important;
-      font-size: 12px !important;
+    .s2__gray-box   { display: none !important; }
+    .s2__gold-strip { display: none !important; }
+
+    /* Title */
+    .s2__title {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 100% !important;
+      font-size: 26px !important;
+      margin-bottom: 12px;
+    }
+
+    /* Subtitle */
+    .s2__subtitle {
+      position: relative !important; left: auto !important; top: auto !important;
+      font-size: 14px !important;
       white-space: normal !important;
-      line-height: 1.3 !important;
-      z-index: 2;
+      font-weight: 400 !important;
+      color: rgba(0,0,0,0.5);
+      margin-bottom: 20px;
     }
-    .card-role {
-      position: absolute !important;
-      left: 20px !important; bottom: 14px !important;
-      top: auto !important;
-      font-size: 10.5px !important;
+
+    /* Badge: hide rect div, style text as pill */
+    .s2__badge { display: none !important; }
+    .s2__badge-text {
+      position: relative !important; left: auto !important; top: auto !important;
+      display: inline-block;
+      background: linear-gradient(to right, #378755, #2f2f48);
+      color: #fff !important;
+      padding: 7px 14px;
+      border-radius: 10px;
+      font-size: 13px !important;
       white-space: normal !important;
-      line-height: 1.2 !important;
-      z-index: 2;
+      margin-bottom: 18px;
+    }
+
+    /* Left body */
+    .s2__body-left {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 100% !important;
+      font-size: 14px !important;
+      line-height: 1.6 !important;
+      color: rgba(0,0,0,0.7);
+      margin-bottom: 28px;
+    }
+
+    /* Right column */
+    .s2__location-icon {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 20px !important; height: 20px !important;
+      margin-bottom: 6px;
+    }
+    .s2__body-right-1 {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 100% !important;
+      font-size: 15px !important;
+      font-weight: 600 !important;
+      line-height: 1.4 !important;
+      margin-bottom: 10px;
+    }
+    .s2__body-right-2 {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 100% !important;
+      font-size: 14px !important;
+      line-height: 1.6 !important;
+      margin-bottom: 0;
+    }
+
+    /* Bottom callout: chart icon + tagline in golden strip */
+    .s2__chart-icon {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: 22px !important; height: 22px !important;
+      margin: 28px 0 -4px 0;
+      z-index: 1;
+    }
+    .s2__tagline {
+      position: relative !important; left: auto !important; top: auto !important;
+      width: calc(100% + 48px) !important;
+      margin: 0 -24px !important;
+      padding: 14px 24px 28px !important;
+      background: linear-gradient(to right, rgba(255,219,159,0.55), rgba(250,175,50,0.45)) !important;
+      border-top: 1px solid rgba(246,154,0,0.25);
+      font-size: 14px !important;
+      white-space: normal !important;
+      text-align: left !important;
+      font-style: italic;
+    }
+
+    /* ── S3 ─────────────────────────────────────────────────────────────── */
+    .s3-viewport { height: auto !important; }
+    .s3 {
+      position: relative !important;
+      width: 100% !important; height: auto !important;
+      transform: none !important;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 36px 24px 40px;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    /* BG: keep absolute, fill section */
+    .s3__bg {
+      position: absolute !important;
+      width: 100% !important; height: 100% !important;
+      left: 0 !important; top: 0 !important;
+    }
+
+    /* Decorative: hide fades */
+    .s3__fade-top, .s3__fade-bottom { display: none !important; }
+
+    /* Hide glass card backgrounds — replaced by icon styling */
+    .s3__card { display: none !important; }
+
+    /* All content → flex items */
+    .s3__title, .s3__badge, .s3__badge-text,
+    .s3__icon, .s3__card-text,
+    .s3__bottom-1, .s3__bottom-2 {
+      position: relative !important;
+      left: auto !important; top: auto !important;
+      right: auto !important;
+    }
+
+    /* Reorder: title → badge → [icon+text] × 3 → bottom */
+    .s3__title        { order: 1; }
+    .s3__badge        { order: 2; display: none !important; }
+    .s3__badge-text   { order: 2; }
+    .s3__icon--graph    { order: 3; }
+    .s3__card-text--1   { order: 4; }
+    .s3__icon--category { order: 5; }
+    .s3__card-text--2   { order: 6; }
+    .s3__icon--user     { order: 7; }
+    .s3__card-text--3   { order: 8; }
+    .s3__bottom-1     { order: 9; }
+    .s3__bottom-2     { order: 10; }
+
+    /* Title */
+    .s3__title {
+      width: 100% !important;
+      font-size: 28px !important;
+      white-space: normal !important;
+      text-align: center;
+      margin-bottom: 14px;
+    }
+
+    /* Badge text as pill */
+    .s3__badge-text {
+      display: inline-block;
+      background: linear-gradient(to right, #378755, #2f2f48);
+      color: #fff !important;
+      padding: 8px 16px;
+      border-radius: 10px;
+      font-size: 13px !important;
+      white-space: normal !important;
+      text-align: center;
+      line-height: 1.4 !important;
+      width: auto !important;
+      margin-bottom: 28px;
+    }
+
+    /* Icons: glass pill */
+    .s3__icon {
+      width: 60px !important; height: 60px !important;
+      background: rgba(255,255,255,0.7);
+      border: 0.5px solid rgba(197,197,197,0.8);
+      backdrop-filter: blur(17px);
+      -webkit-backdrop-filter: blur(17px);
+      border-radius: 16px;
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+    .s3__icon img { width: 26px !important; height: 26px !important; }
+    .s3__icon--user { width: 60px !important; height: 60px !important; }
+
+    /* Card texts */
+    .s3__card-text {
+      width: 100% !important;
+      font-size: 14px !important;
+      white-space: normal !important;
+      text-align: center !important;
+      margin-bottom: 24px;
+      line-height: 1.5 !important;
+    }
+    .s3__card-text--3 { margin-bottom: 32px; }
+
+    /* Bottom texts */
+    .s3__bottom-1 {
+      width: 100% !important;
+      font-size: 15px !important;
+      white-space: normal !important;
+      text-align: center !important;
+      margin-bottom: 6px;
+    }
+    .s3__bottom-2 {
+      width: 100% !important;
+      font-size: 15px !important;
+      white-space: normal !important;
+      text-align: center !important;
+    }
+
+    /* ── S4 ─────────────────────────────────────────────────────────────── */
+    .s4-viewport { height: auto !important; }
+    .s4 {
+      position: relative !important;
+      width: 100% !important; height: auto !important;
+      transform: none !important;
+      display: flex;
+      flex-direction: column;
+      padding: 40px 24px;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+    .s4__bg {
+      position: absolute !important;
+      width: 100% !important; height: 100% !important;
+      left: 0 !important; top: 0 !important;
+    }
+    .s4__gold-box  { display: none !important; }
+    .s4__dashed-box { display: none !important; }
+
+    /* All content → flow */
+    .s4__title, .s4__subtitle,
+    .s4__card, .s4__card-photo,
+    .s4__card-title, .s4__card-sub, .s4__card-body,
+    .s4__tick, .s4__tick-text,
+    .s4__section-head, .s4__icon-item,
+    .s4__why-text-1, .s4__user-icon, .s4__why-text-2,
+    .s4__book-photo, .s4__quote,
+    .s4__cta-wrap, .s4__cta-label {
+      position: relative !important;
+      left: auto !important; top: auto !important;
+      right: auto !important;
+    }
+
+    /* Title */
+    .s4__title {
+      width: 100% !important;
+      font-size: 28px !important;
+      white-space: normal !important;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    /* Subtitle */
+    .s4__subtitle {
+      width: 100% !important;
+      font-size: 14px !important;
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    /* Card bg divs — hide, content flows naturally */
+    .s4__card { display: none !important; }
+
+    /* Photos */
+    .s4__card-photo {
+      width: 100% !important; height: 200px !important;
+      border-radius: 16px;
+      margin-bottom: 14px;
+      overflow: hidden;
+    }
+
+    /* Card titles */
+    .s4__card-title {
+      width: 100% !important;
+      font-size: 20px !important;
+      margin-bottom: 6px;
+    }
+
+    /* Card subs */
+    .s4__card-sub {
+      width: 100% !important;
+      font-size: 13px !important;
+      margin-bottom: 10px;
+    }
+
+    /* Card body */
+    .s4__card-body {
+      width: 100% !important;
+      font-size: 14px !important;
+      line-height: 1.55 !important;
+      margin-bottom: 8px;
+    }
+
+    /* Tick: hide icon, style text with ✓ prefix */
+    .s4__tick { display: none !important; }
+    .s4__tick-text {
+      width: 100% !important;
+      font-size: 14px !important;
+      padding-left: 22px;
+      margin-bottom: 32px;
+    }
+    .s4__tick-text::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #378755;
+      font-weight: 700;
+    }
+
+    /* Section heads */
+    .s4__section-head {
+      width: 100% !important;
+      font-size: 16px !important;
+      text-align: left !important;
+      margin: 24px 0 12px;
+    }
+
+    /* 4 icon items → list rows */
+    .s4__icon-item {
+      width: 100% !important;
+      display: flex !important;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.07);
+    }
+    .s4__icon-item img {
+      width: 22px !important; height: 22px !important;
+      flex-shrink: 0;
+      margin: 2px 0 0 !important;
+    }
+    .s4__icon-item p { font-size: 14px !important; line-height: 1.45 !important; margin: 0; }
+    .s4__icon-shield { border-bottom: none !important; margin-bottom: 28px; }
+
+    /* Why section */
+    .s4__why-text-1 {
+      width: 100% !important;
+      font-size: 14px !important;
+      line-height: 1.6 !important;
+      margin-top: 10px; margin-bottom: 12px;
+    }
+    .s4__user-icon { display: none !important; }
+    .s4__why-text-2 {
+      width: 100% !important;
+      font-size: 14px !important;
+      line-height: 1.55 !important;
+      margin-bottom: 28px;
+    }
+    .s4__book-photo { display: none !important; }
+
+    /* Quote */
+    .s4__quote {
+      width: 100% !important;
+      font-size: 14px !important;
+      line-height: 1.55 !important;
+      text-align: center !important;
+      font-style: italic;
+      margin-bottom: 24px;
+    }
+
+    /* CTA */
+    .s4__cta-wrap {
+      width: 100% !important; height: auto !important;
+      display: flex !important;
+      justify-content: center;
+    }
+    .s4__cta-wrap img { width: 260px !important; height: 66px !important; object-fit: contain !important; }
+    .s4__cta-label {
+      position: absolute !important;
+      left: 50% !important; top: 50% !important;
+      transform: translate(-50%, -50%) !important;
+      width: max-content !important; height: auto !important;
+      font-size: 11px !important;
+    }
+
+    /* Hide original in-photo overlays — replaced by .m-speaker-badges row */
+    .card-rect, .card-icon, .card-name, .card-role { display: none !important; }
+
+    /* Mobile speaker badge row */
+    .m-speaker-badges {
+      display: flex !important;
+      flex-direction: row;
+      width: calc(100% + 48px);
+      margin: 0 -24px;
+      gap: 2px;
+      flex-shrink: 0;
+    }
+    .m-speaker-badge {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 12px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      backdrop-filter: blur(20px);
+    }
+    .m-badge-icon { width: 10px; height: 10px; flex-shrink: 0; }
+    .m-badge-name {
+      font-family: 'Manrope', sans-serif;
+      font-size: 11px; font-weight: 600; color: #fff;
+      display: block; line-height: 1.3;
+    }
+    .m-badge-role {
+      font-family: 'Manrope', sans-serif;
+      font-size: 10px; font-weight: 400;
+      color: rgba(255,255,255,0.65); display: block;
     }
   }
 
@@ -1757,6 +2149,10 @@
     <div class="ellipse-glow">
       <img src="assets/ellipse.svg" alt="">
     </div>
+
+    <!-- Portraits: BEFORE wave so wave renders on top of them -->
+    <div class="portrait-dmitry"><img src="assets/dmitry.png" alt="Дмитрий Тарасов"></div>
+    <div class="portrait-tatyana"><img src="assets/tatyana.png" alt="Татьяна Волкова"></div>
 
     <!-- Bottom wave: inline SVG — viewBox показывает только верхние 188px кривой -->
     <div class="wave">
@@ -1803,17 +2199,33 @@
       <!-- Section title -->
       <h2 class="section-title">Организаторы форума</h2>
 
+      <!-- Mobile-only speaker badges (desktop: display:none) -->
+      <div class="m-speaker-badges">
+        <div class="m-speaker-badge">
+          <img src="assets/star.svg" class="m-badge-icon" alt="">
+          <div class="m-badge-info">
+            <span class="m-badge-name">Татьяна Волкова</span>
+            <span class="m-badge-role">эксперт по личному капиталу</span>
+          </div>
+        </div>
+        <div class="m-speaker-badge">
+          <img src="assets/star.svg" class="m-badge-icon" alt="">
+          <div class="m-badge-info">
+            <span class="m-badge-name">Дмитрий Тарасов</span>
+            <span class="m-badge-role">профессиональный инвестор</span>
+          </div>
+        </div>
+      </div>
+
       <!-- Speaker cards -->
       <div class="hero__cards">
         <div class="hero__card hero__card--tatyana">
-          <div class="portrait-tatyana"><img src="assets/tatyana.png" alt="Татьяна Волкова"></div>
           <div class="card-rect card-rect--tatyana"></div>
           <img class="card-icon card-icon--tatyana" src="assets/star.svg" alt="">
           <span class="card-name card-name--tatyana">Татьяна Волкова</span>
           <span class="card-role card-role--tatyana">эксперт по личному капиталу</span>
         </div>
         <div class="hero__card hero__card--dmitry">
-          <div class="portrait-dmitry"><img src="assets/dmitry.png" alt="Дмитрий Тарасов"></div>
           <div class="card-rect card-rect--dmitry"></div>
           <img class="card-icon card-icon--dmitry" src="assets/star.svg" alt="">
           <span class="card-name card-name--dmitry">Дмитрий Тарасов</span>
