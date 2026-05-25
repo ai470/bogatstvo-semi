@@ -1794,16 +1794,11 @@
     }
 
     /* Bottom callout: chart icon + tagline in golden strip */
-    .s2__chart-icon {
-      position: relative !important; left: auto !important; top: auto !important;
-      width: 22px !important; height: 22px !important;
-      margin: 28px 0 -4px 0;
-      z-index: 1;
-    }
+    .s2__chart-icon { display: none !important; }
     .s2__tagline {
       position: relative !important; left: auto !important; top: auto !important;
       width: calc(100% + 48px) !important;
-      margin: 0 -24px !important;
+      margin: 28px -24px 0 !important;
       padding: 14px 24px 28px !important;
       background: linear-gradient(to right, rgba(255,219,159,0.55), rgba(250,175,50,0.45)) !important;
       border-top: 1px solid rgba(246,154,0,0.25);
@@ -1811,6 +1806,17 @@
       white-space: normal !important;
       text-align: left !important;
       font-style: italic;
+      display: flex !important;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .s2__tagline::before {
+      content: '';
+      display: block;
+      width: 22px; height: 22px;
+      background: url('assets/chart.svg') center / contain no-repeat;
+      flex-shrink: 0;
+      margin-top: 2px;
     }
 
     /* ── S3 ─────────────────────────────────────────────────────────────── */
