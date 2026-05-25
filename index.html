@@ -359,6 +359,21 @@
       background: #fff;
       transform-origin: top left;
     }
+    .s2__bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    .s2__bg img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
 
     /* ── Greenery background images ─── */
     .s2__greenery {
@@ -389,19 +404,13 @@
     .s2__ellipse--a {
       left: 1175px; top: -400px;
       width: 695px; height: 677px;
-      background: radial-gradient(ellipse at center, rgba(210,230,215,0.55) 0%, transparent 70%);
-    }
-    /* dominant center white wash */
-    .s2__ellipse--b {
-      left: 480px; top: 0;
-      width: 1120px; height: 1093px;
-      background: radial-gradient(ellipse at 50% 35%, #fff 0%, rgba(255,255,255,0.97) 25%, rgba(255,255,255,0.75) 50%, transparent 72%);
+      background: radial-gradient(ellipse at center, rgba(255,255,255,0.3) 0%, transparent 70%);
     }
     /* left soft glow */
     .s2__ellipse--c {
       left: -187px; top: -225px;
       width: 983px; height: 957px;
-      background: radial-gradient(ellipse at center, rgba(210,230,215,0.45) 0%, transparent 65%);
+      background: radial-gradient(ellipse at center, rgba(255,255,255,0.25) 0%, transparent 65%);
     }
 
     /* ── White gradient fades ─── */
@@ -1600,17 +1609,13 @@
   <div class="s2-viewport">
   <section class="s2">
 
-    <!-- Greenery backgrounds -->
-    <div class="s2__greenery s2__greenery--right">
-      <img src="assets/greenery.png" alt="">
-    </div>
-    <div class="s2__greenery s2__greenery--left">
-      <img src="assets/greenery.png" alt="">
+    <!-- Background image -->
+    <div class="s2__bg">
+      <img src="assets/s2-bg.png" alt="">
     </div>
 
     <!-- Ellipse glows (CSS radial gradients) -->
     <div class="s2__ellipse s2__ellipse--a"></div>
-    <div class="s2__ellipse s2__ellipse--b"></div>
     <div class="s2__ellipse s2__ellipse--c"></div>
 
     <!-- White fades -->
