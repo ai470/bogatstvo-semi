@@ -1386,7 +1386,7 @@
          SECTION 9 — Эксперты форума
     ══════════════════════════════════════════════════════════════════════ */
     .s9-viewport { position: relative; width: 100vw; overflow: hidden; }
-    .s9 { position: absolute; width: 1600px; height: 1650px; background: white; overflow: hidden; transform-origin: top left; }
+    .s9 { position: absolute; width: 1600px; height: 1820px; background: white; overflow: hidden; transform-origin: top left; }
 
     /* Title */
     .s9__title { position: absolute; left: 0; top: 0; width: 1600px; text-align: center; font-family: 'Playfair Display', serif; font-weight: 700; font-size: 44px; line-height: 1.2; color: #378755; white-space: nowrap; margin: 0; }
@@ -1428,15 +1428,15 @@
     .s9__pill--t7 { left: 637px; top: 538px; height: 105px; }
 
     /* Dmitry pills — left col */
-    .s9__pill--d1 { left: 279px; top: 1124px; height: 120px; }
-    .s9__pill--d2 { left: 279px; top: 1259px; height: 120px; }
-    .s9__pill--d3 { left: 279px; top: 1394px; height: 85px; }
-    .s9__pill--d4 { left: 279px; top: 1494px; height: 85px; }
+    .s9__pill--d1 { left: 279px; top: 1124px; height: 85px; }
+    .s9__pill--d2 { left: 279px; top: 1224px; height: 120px; }
+    .s9__pill--d3 { left: 279px; top: 1359px; height: 85px; }
+    .s9__pill--d4 { left: 279px; top: 1459px; height: 110px; }
     /* Dmitry pills — right col */
-    .s9__pill--d5 { left: 637px; top: 1124px; height: 120px; }
-    .s9__pill--d6 { left: 637px; top: 1259px; height: 120px; }
-    .s9__pill--d7 { left: 637px; top: 1394px; height: 85px; }
-    .s9__pill--d8 { left: 637px; top: 1494px; height: 85px; }
+    .s9__pill--d5 { left: 637px; top: 1124px; height: 85px; }
+    .s9__pill--d6 { left: 637px; top: 1224px; height: 120px; }
+    .s9__pill--d7 { left: 637px; top: 1359px; height: 85px; }
+    .s9__pill--d8 { left: 637px; top: 1459px; height: 110px; }
 
     /* Tatiana photo */
     .s9__photo-wrap { position: absolute; border-radius: 33px; overflow: hidden; }
@@ -1455,7 +1455,19 @@
     .s9__logo-card--3 { left: 701px; width: 201px; }
     .s9__logo-card--4 { left: 912px; width: 201px; }
     .s9__logo-card--5 { left: 1123px; width: 200px; }
+    /* Dmitry logos — 6 cards, 166px wide, 9px gap, aligned same horizontal span */
+    .s9__logo-card--d1 { left: 279px;  width: 166px; top: 1640px; }
+    .s9__logo-card--d2 { left: 454px;  width: 166px; top: 1640px; }
+    .s9__logo-card--d3 { left: 629px;  width: 166px; top: 1640px; }
+    .s9__logo-card--d4 { left: 804px;  width: 166px; top: 1640px; }
+    .s9__logo-card--d5 { left: 979px;  width: 166px; top: 1640px; }
+    .s9__logo-card--d6 { left: 1154px; width: 166px; top: 1640px; }
     .s9__logo-card img { display: block; max-width: 80%; max-height: 70%; object-fit: contain; }
+    .s9__logo-card--d1 img,
+    .s9__logo-card--d3 img,
+    .s9__logo-card--d4 img,
+    .s9__logo-card--d5 img,
+    .s9__logo-card--d6 img { max-width: 92%; max-height: 84%; }
 
   
 
@@ -2653,6 +2665,21 @@
     }
     /* ptexts после name в DOM — ~ ставит их после цитаты */
     .s9__name--dmitry ~ .s9__ptext { order: 23; }
+    /* logo cards после dmitry name — показываем после его ptexts */
+    .s9__name--dmitry ~ .s9__logo-card { order: 24; }
+    .s9__logo-card--d1,
+    .s9__logo-card--d2,
+    .s9__logo-card--d3,
+    .s9__logo-card--d4,
+    .s9__logo-card--d5,
+    .s9__logo-card--d6 { height: 100px !important; }
+    .s9__logo-card--d1 img,
+    .s9__logo-card--d3 img,
+    .s9__logo-card--d4 img,
+    .s9__logo-card--d5 img { max-width: 90%; max-height: 86%; }
+    .s9__logo-card--d1 img { max-width: 100%; max-height: 100%; transform: scale(1.18); }
+    .s9__logo-card--d2 img { max-width: 72%; max-height: 68%; }
+    .s9__logo-card--d6 img { max-width: 100%; max-height: 100%; }
 
     /* ─── S10 mobile ─────────────────────────────────────────────────────── */
     .s10-viewport { height: auto !important; }
@@ -3571,42 +3598,50 @@
 
     <!-- Pills left col (Dmitry) -->
     <div class="s9__pill s9__pill--d1"></div>
-    <div class="s9__star" style="left:301px;top:1141px"><img src="assets/s9-star.svg" alt=""></div>
-    <p class="s9__ptext" style="left:323px;top:1137px;width:259px">Начальник Федерального штаба, первый заместитель исполнительного директора ВОО «СОЮЗ ОТЦОВ»</p>
+    <div class="s9__star" style="left:301px;top:1150px"><img src="assets/s9-star.svg" alt=""></div>
+    <p class="s9__ptext" style="left:323px;top:1146px;width:279px"><b>25+ лет</b> профессиональный инвестор</p>
 
     <div class="s9__pill s9__pill--d2"></div>
-    <div class="s9__star" style="left:301px;top:1285px"><img src="assets/s9-star.svg" alt=""></div>
-    <p class="s9__ptext" style="left:323px;top:1281px;width:251px">Член Российского общества «Знание»</p>
+    <div class="s9__star" style="left:301px;top:1250px"><img src="assets/s9-star.svg" alt=""></div>
+    <p class="s9__ptext" style="left:323px;top:1246px;width:279px">Преподаватель экономического факультета МГУ им. М.В. Ломоносова (авторские курсы: приватный банкинг, прямые и венчурные инвестиции)</p>
 
     <div class="s9__pill s9__pill--d3"></div>
-    <div class="s9__star" style="left:301px;top:1420px"><img src="assets/s9-star.svg" alt=""></div>
-    <p class="s9__ptext" style="left:323px;top:1416px;width:251px">Отец пятерых детей</p>
+    <div class="s9__star" style="left:301px;top:1385px"><img src="assets/s9-star.svg" alt=""></div>
+    <p class="s9__ptext" style="left:323px;top:1381px;width:279px">Автор бестселлера «От золота до биткоина»</p>
 
     <div class="s9__pill s9__pill--d4"></div>
-    <div class="s9__star" style="left:301px;top:1520px"><img src="assets/s9-star.svg" alt=""></div>
-    <p class="s9__ptext" style="left:323px;top:1516px;width:215px">Автор бестселлера «От золота до биткоина»</p>
+    <div class="s9__star" style="left:301px;top:1485px"><img src="assets/s9-star.svg" alt=""></div>
+    <p class="s9__ptext" style="left:323px;top:1481px;width:279px">Почётный лектор Российского общества «Знание»</p>
 
     <!-- Pills right col (Dmitry) -->
     <div class="s9__pill s9__pill--d5"></div>
-    <div class="s9__star" style="left:659px;top:1141px"><img src="assets/s9-star.svg" alt=""></div>
-    <p class="s9__ptext" style="left:681px;top:1137px;width:259px">Руководитель рабочей группы Всероссийского родительского комитета (профориентация)</p>
+    <div class="s9__star" style="left:659px;top:1150px"><img src="assets/s9-star.svg" alt=""></div>
+    <p class="s9__ptext" style="left:681px;top:1146px;width:279px"><b>150+ млрд. рублей</b> под управлением</p>
 
     <div class="s9__pill s9__pill--d6"></div>
-    <div class="s9__star" style="left:659px;top:1285px"><img src="assets/s9-star.svg" alt=""></div>
-    <p class="s9__ptext" style="left:681px;top:1281px;width:270px">Преподаватель экономического факультета МГУ им. М.В. Ломоносова (приватный банкинг, прямые и венчурные инвестиции)</p>
+    <div class="s9__star" style="left:659px;top:1250px"><img src="assets/s9-star.svg" alt=""></div>
+    <p class="s9__ptext" style="left:681px;top:1246px;width:279px">Начальник Федерального штаба, ВОО «СОЮЗ ОТЦОВ»</p>
 
     <div class="s9__pill s9__pill--d7"></div>
-    <div class="s9__star" style="left:659px;top:1420px"><img src="assets/s9-star.svg" alt=""></div>
-    <p class="s9__ptext" style="left:681px;top:1416px;width:251px">Член Русского географического общества (РГО)</p>
+    <div class="s9__star" style="left:659px;top:1385px"><img src="assets/s9-star.svg" alt=""></div>
+    <p class="s9__ptext" style="left:681px;top:1381px;width:279px">Отец пятерых детей</p>
 
     <div class="s9__pill s9__pill--d8"></div>
-    <div class="s9__star" style="left:659px;top:1520px"><img src="assets/s9-star.svg" alt=""></div>
-    <p class="s9__ptext" style="left:681px;top:1516px;width:272px">Почётный лектор Российского общества «Знание»</p>
+    <div class="s9__star" style="left:659px;top:1485px"><img src="assets/s9-star.svg" alt=""></div>
+    <p class="s9__ptext" style="left:681px;top:1481px;width:279px">Руководитель рабочей группы Всероссийского родительского комитета (профориентация)</p>
 
     <!-- Dmitry photo -->
     <div class="s9__photo-wrap s9__photo-wrap--dmitry">
       <img class="s9__photo" src="assets/s9-photo-dmitry.png" alt="Дмитрий Тарасов">
     </div>
+
+    <!-- Dmitry org logos -->
+    <div class="s9__logo-card s9__logo-card--d1"><img src="assets/s9-dlogo-mgu.png"    alt="МГУ"></div>
+    <div class="s9__logo-card s9__logo-card--d2"><img src="assets/s9-dlogo-soyuz.png"  alt="СОЮЗ ОТЦОВ"></div>
+    <div class="s9__logo-card s9__logo-card--d3"><img src="assets/s9-dlogo-alpina.png" alt="Альпина"></div>
+    <div class="s9__logo-card s9__logo-card--d4"><img src="assets/s9-dlogo-znanie.png" alt="Знание"></div>
+    <div class="s9__logo-card s9__logo-card--d5"><img src="assets/s9-dlogo-vrk.png"    alt="ВРК"></div>
+    <div class="s9__logo-card s9__logo-card--d6"><img src="assets/s9-dlogo-infi.png"   alt="ИНФИ"></div>
 
   </section>
   </div>
@@ -3865,7 +3900,7 @@
     const S6_H   = 1600;
     const S7_H   = 1950;
     const S8_H   = 760;
-    const S9_H   = 1650;
+    const S9_H   = 1820;
     const S10_H  = 5174;
     const S11_H  = 1150;
 
