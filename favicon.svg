@@ -1,0 +1,32 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient: Rich Emerald Green to Deep Forest Black -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a4d27" />
+      <stop offset="50%" stop-color="#042613" />
+      <stop offset="100%" stop-color="#010c06" />
+    </linearGradient>
+    
+    <!-- Gold Polish Gradient for the Arches and Border -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE2AC" />
+      <stop offset="50%" stop-color="#FFCC64" />
+      <stop offset="100%" stop-color="#C2922F" />
+    </linearGradient>
+  </defs>
+
+  <!-- Premium Circular Background with Gold Border -->
+  <circle cx="64" cy="64" r="60" fill="url(#bgGrad)" stroke="url(#goldGrad)" stroke-width="2.5" />
+
+  <!-- Stylized Brand Symbol from logo.svg, perfectly centered -->
+  <g transform="translate(19, 41) scale(0.88)">
+    <!-- Base Wave Arches -->
+    <path d="M1.38278 30.8367L102.194 13.0601L100.664 21.9324C96.0734 21.9324 92.3176 25.6883 92.3176 30.2793V52.0684H83.9652V33.8593C83.9652 29.2689 80.2086 25.5124 75.6196 25.5124C71.0293 25.5124 67.2736 29.2683 67.2736 33.8593V52.0684H58.9276V38.2821C58.9276 33.6916 55.1716 29.9352 50.5825 29.9352C45.9921 29.9352 42.2365 33.691 42.2365 38.2821V52.0684H33.89V42.6986C33.89 38.1081 30.1347 34.3517 25.5449 34.3517C20.9552 34.3517 17.1984 38.1081 17.1984 42.6986V52.0684H8.85292V47.1145C8.85292 42.524 5.09696 38.7675 0.507848 38.7675C0.337673 38.7675 0.167673 38.7732 0 38.7832L1.38278 30.8367Z" fill="url(#goldGrad)" />
+    
+    <!-- Symmetrical Wealth Circles -->
+    <path d="M13.165 23.1673C15.8588 23.1673 18.0425 20.9835 18.0425 18.2896C18.0425 15.5957 15.8588 13.412 13.165 13.412C10.4711 13.412 8.28739 15.5957 8.28739 18.2896C8.28739 20.9835 10.4711 23.1673 13.165 23.1673Z" fill="url(#goldGrad)" />
+    <path d="M38.1722 18.9003C40.8661 18.9003 43.0498 16.7166 43.0498 14.0227C43.0498 11.3288 40.8661 9.14511 38.1722 9.14511C35.4784 9.14511 33.2947 11.3288 33.2947 14.0227C33.2947 16.7166 35.4784 18.9003 38.1722 18.9003Z" fill="url(#goldGrad)" />
+    <path d="M63.1621 14.0222C65.8559 14.0222 68.0396 11.8384 68.0396 9.14458C68.0396 6.4507 65.8559 4.26681 63.1621 4.26681C60.4683 4.26681 58.2845 6.4507 58.2845 9.14458C58.2845 11.8384 60.4683 14.0222 63.1621 14.0222Z" fill="url(#goldGrad)" />
+    <path d="M88.1561 9.75517C90.8498 9.75517 93.0336 7.57144 93.0336 4.87757C93.0336 2.18371 90.8498 0 88.1561 0C85.4624 0 83.2786 2.18371 83.2786 4.87757C83.2786 7.57144 85.4624 9.75517 88.1561 9.75517Z" fill="url(#goldGrad)" />
+  </g>
+</svg>
