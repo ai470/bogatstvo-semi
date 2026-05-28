@@ -1409,10 +1409,11 @@
     .s9__name--tatiana { left: 278px; top: 168px; }
     .s9__name--dmitry  { left: 279px; top: 1036px; }
     .s9__subtitle { position: absolute; left: 278px; top: 209px; font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 19px; line-height: normal; color: #000; white-space: nowrap; margin: 0; }
+    .s9__subtitle--dmitry { left: 279px; top: 1077px; }
 
     /* Stat pills */
     .s9__pill { position: absolute; width: 343px; border: 0.735px solid black; border-radius: 21px; opacity: 0.2; }
-    .s9__star { position: absolute; width: 12px; height: 11px; }
+    .s9__star { position: absolute; width: 16px; height: 16px; margin-left: -2px; margin-top: -2px; }
     .s9__star img { display: block; width: 100%; height: 100%; }
     .s9__ptext { position: absolute; font-family: 'Manrope', sans-serif; font-weight: 400; font-size: 14px; line-height: 1.4; color: #000; margin: 0; }
     .s9__ptext b { font-weight: 700; }
@@ -2621,13 +2622,31 @@
     .s9__ptext {
       position: relative !important; left: auto !important; top: auto !important;
       width: 100% !important; font-size: 13px !important; line-height: 1.5;
-      padding: 8px 0 8px 18px; border-bottom: 1px solid rgba(0,0,0,0.06);
+      padding: 8px 0 8px 22px; border-bottom: 1px solid rgba(0,0,0,0.06);
       order: 6;
     }
     .s9__ptext::before {
-      content: '★'; position: absolute; left: 0; top: 9px;
-      color: #378755; font-size: 10px;
+      content: ''; position: absolute; left: 0; top: 11px;
+      width: 14px; height: 14px;
+      background-size: contain;
+      background-repeat: no-repeat;
     }
+    .s9__ptext--t1::before { background-image: url('assets/s9-icon-12years.svg'); }
+    .s9__ptext--t2::before { background-image: url('assets/s9-icon-entrepreneur.svg'); }
+    .s9__ptext--t3::before { background-image: url('assets/s9-icon-sources.svg'); }
+    .s9__ptext--t4::before { background-image: url('assets/s9-icon-book.svg'); }
+    .s9__ptext--t5::before { background-image: url('assets/s9-icon-graduates.svg'); }
+    .s9__ptext--t6::before { background-image: url('assets/s9-icon-smi.svg'); }
+    .s9__ptext--t7::before { background-image: url('assets/s9-icon-materials.svg'); }
+
+    .s9__ptext--d1::before { background-image: url('assets/s9-icon-investor25.svg'); }
+    .s9__ptext--d2::before { background-image: url('assets/s9-icon-mgu.svg'); }
+    .s9__ptext--d3::before { background-image: url('assets/s9-icon-book-dmitry.svg'); }
+    .s9__ptext--d4::before { background-image: url('assets/s9-icon-znanie.svg'); }
+    .s9__ptext--d5::before { background-image: url('assets/s9-icon-mld150.svg'); }
+    .s9__ptext--d6::before { background-image: url('assets/s9-icon-union-fathers.svg'); }
+    .s9__ptext--d7::before { background-image: url('assets/s9-icon-5children.svg'); }
+    .s9__ptext--d8::before { background-image: url('assets/s9-icon-parents-committee.svg'); }
     .s9__mission {
       position: relative !important; left: auto !important; top: auto !important;
       width: 100% !important; font-size: 13px !important;
@@ -2661,7 +2680,10 @@
       position: relative !important; left: auto !important; top: auto !important;
       width: 100% !important; font-size: 13px !important;
       padding: 10px 14px; background: #1e8856; border-radius: 12px;
-      margin-bottom: 14px; order: 19;
+      margin-bottom: 14px; order: 20 !important;
+    }
+    .s9__subtitle--dmitry {
+      order: 19 !important;
     }
     /* ptexts после name в DOM — ~ ставит их после цитаты */
     .s9__name--dmitry ~ .s9__ptext { order: 23; }
@@ -2969,6 +2991,140 @@
       font-size: 10px; font-weight: 400;
       color: rgba(255,255,255,0.65); display: block;
     }
+
+    /* Footer responsive style */
+    .footer {
+      padding: 40px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .footer-container {
+      padding: 0 20px;
+    }
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    .footer-company {
+      margin-top: 16px;
+      padding: 16px;
+    }
+    .footer-company p {
+      font-size: 11.5px;
+    }
+  }
+
+  /* ─── FOOTER ────────────────────────────────────────────────────────── */
+  .footer {
+    padding: 60px 0;
+    background: #010c06; /* dark green matching the current site's brand */
+    color: #a3b5ab; /* sage gray-green */
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    font-family: 'Manrope', sans-serif;
+  }
+  .footer-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr 1fr;
+    gap: 50px;
+    align-items: start;
+  }
+  .footer-title {
+    margin: 0 0 20px;
+    color: #ffe2ac; /* gold/champagne highlight */
+    font-size: 15px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .footer-socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .footer-socials a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 44px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 0 16px;
+    background: rgba(255, 255, 255, 0.03);
+    color: #e2ede7;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+  }
+  .footer-socials a:hover {
+    border-color: #ffe2ac;
+    color: #ffe2ac;
+    background: rgba(255, 255, 255, 0.07);
+  }
+  .footer-socials svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+  }
+  .footer-documents,
+  .footer-contacts {
+    display: grid;
+    gap: 10px;
+  }
+  .footer-documents a,
+  .footer-contacts a {
+    color: #a3b5ab;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.15);
+    text-underline-offset: 4px;
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
+  }
+  .footer-documents a:hover,
+  .footer-contacts a:hover {
+    color: #ffe2ac;
+    text-decoration-color: #ffe2ac;
+  }
+  .footer-contacts .footer-link-tel {
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .footer-contacts .footer-link-tel:hover {
+    color: #ffe2ac;
+  }
+  .footer-contacts .footer-link-form {
+    color: #ffe2ac;
+    text-decoration-color: rgba(255, 226, 172, 0.4);
+    font-weight: 700;
+  }
+  .footer-contacts .footer-link-form:hover {
+    text-decoration-color: #ffe2ac;
+  }
+  .footer-company {
+    margin-top: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.02);
+  }
+  .footer-company p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 12.5px;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+  .footer-company p + p {
+    margin-top: 8px;
   }
 
   </style>
@@ -3058,14 +3214,14 @@
       <!-- Mobile-only speaker badges (desktop: display:none) -->
       <div class="m-speaker-badges">
         <div class="m-speaker-badge">
-          <img src="assets/star.svg" class="m-badge-icon" alt="">
+          <img src="assets/icon-speaker-tatyana.svg" class="m-badge-icon" alt="">
           <div class="m-badge-info">
             <span class="m-badge-name">Татьяна Волкова</span>
             <span class="m-badge-role">эксперт по личному капиталу</span>
           </div>
         </div>
         <div class="m-speaker-badge">
-          <img src="assets/star.svg" class="m-badge-icon" alt="">
+          <img src="assets/icon-speaker-dmitry.svg" class="m-badge-icon" alt="">
           <div class="m-badge-info">
             <span class="m-badge-name">Дмитрий Тарасов</span>
             <span class="m-badge-role">профессиональный инвестор</span>
@@ -3077,13 +3233,13 @@
       <div class="hero__cards">
         <div class="hero__card hero__card--tatyana">
           <div class="card-rect card-rect--tatyana"></div>
-          <img class="card-icon card-icon--tatyana" src="assets/star.svg" alt="">
+          <img class="card-icon card-icon--tatyana" src="assets/icon-speaker-tatyana.svg" alt="">
           <span class="card-name card-name--tatyana">Татьяна Волкова</span>
           <span class="card-role card-role--tatyana">эксперт по личному капиталу</span>
         </div>
         <div class="hero__card hero__card--dmitry">
           <div class="card-rect card-rect--dmitry"></div>
-          <img class="card-icon card-icon--dmitry" src="assets/star.svg" alt="">
+          <img class="card-icon card-icon--dmitry" src="assets/icon-speaker-dmitry.svg" alt="">
           <span class="card-name card-name--dmitry">Дмитрий Тарасов</span>
           <span class="card-role card-role--dmitry">профессиональный инвестор</span>
         </div>
@@ -3564,33 +3720,33 @@
 
     <!-- Pills left col (Tatiana) -->
     <div class="s9__pill s9__pill--t1"></div>
-    <div class="s9__star" style="left:301px;top:289px"><img src="assets/s9-star.svg" alt=""></div>
-    <p class="s9__ptext" style="left:323px;top:285px;width:259px"><b>Более 12 лет</b> занимается финансовым образованием населения</p>
+    <div class="s9__star" style="left:301px;top:289px"><img src="assets/s9-icon-12years.svg" alt=""></div>
+    <p class="s9__ptext s9__ptext--t1" style="left:323px;top:285px;width:259px"><b>Более 12 лет</b> занимается финансовым образованием населения</p>
 
     <div class="s9__pill s9__pill--t2"></div>
-    <div class="s9__star" style="left:301px;top:389px"><img src="assets/s9-star.svg" alt=""></div>
-    <p class="s9__ptext" style="left:323px;top:385px;width:251px">Серийный предприниматель, инвестор в ценные бумаги, недвижимость и криптовалюту</p>
+    <div class="s9__star" style="left:301px;top:389px"><img src="assets/s9-icon-entrepreneur.svg" alt=""></div>
+    <p class="s9__ptext s9__ptext--t2" style="left:323px;top:385px;width:251px">Серийный предприниматель, инвестор в ценные бумаги, недвижимость и криптовалюту</p>
 
     <div class="s9__pill s9__pill--t3"></div>
-    <div class="s9__star" style="left:301px;top:564px"><img src="assets/s9-star.svg" alt=""></div>
-    <p class="s9__ptext" style="left:323px;top:560px;width:251px"><b>Более 20 источников</b> пассивного дохода</p>
+    <div class="s9__star" style="left:301px;top:564px"><img src="assets/s9-icon-sources.svg" alt=""></div>
+    <p class="s9__ptext s9__ptext--t3" style="left:323px;top:560px;width:251px"><b>Более 20 источников</b> пассивного дохода</p>
 
     <div class="s9__pill s9__pill--t4"></div>
-    <div class="s9__star" style="left:301px;top:684px"><img src="assets/s9-star.svg" alt=""></div>
-    <p class="s9__ptext" style="left:323px;top:680px;width:224px"><b>Автор мгновенного бестселлера «5 капиталов»</b></p>
+    <div class="s9__star" style="left:301px;top:684px"><img src="assets/s9-icon-book.svg" alt=""></div>
+    <p class="s9__ptext s9__ptext--t4" style="left:323px;top:680px;width:224px"><b>Автор мгновенного бестселлера «5 капиталов»</b></p>
 
     <!-- Pills right col (Tatiana) -->
     <div class="s9__pill s9__pill--t5"></div>
-    <div class="s9__star" style="left:659px;top:289px"><img src="assets/s9-star.svg" alt=""></div>
-    <p class="s9__ptext" style="left:681px;top:285px;width:259px">Эксперт по созданию личного капитала, <b>более 70 000 выпускников</b></p>
+    <div class="s9__star" style="left:659px;top:289px"><img src="assets/s9-icon-graduates.svg" alt=""></div>
+    <p class="s9__ptext s9__ptext--t5" style="left:681px;top:285px;width:259px">Эксперт по созданию личного капитала, <b>более 70 000 выпускников</b></p>
 
     <div class="s9__pill s9__pill--t6"></div>
-    <div class="s9__star" style="left:659px;top:389px"><img src="assets/s9-star.svg" alt=""></div>
-    <p class="s9__ptext" style="left:681px;top:385px;width:261px"><b>Эксперт федеральных СМИ —</b> Первый канал, Москва24, РБК, «Известия», «Коммерсант», Газета.Ru, Lenta.Ru, Российская газета, Аргументы и факты, РИА Новости и др.</p>
+    <div class="s9__star" style="left:659px;top:389px"><img src="assets/s9-icon-smi.svg" alt=""></div>
+    <p class="s9__ptext s9__ptext--t6" style="left:681px;top:385px;width:261px"><b>Эксперт федеральных СМИ —</b> Первый канал, Москва24, РБК, «Известия», «Коммерсант», Газета.Ru, Lenta.Ru, Российская газета, Аргументы и факты, РИА Новости и др.</p>
 
     <div class="s9__pill s9__pill--t7"></div>
-    <div class="s9__star" style="left:659px;top:564px"><img src="assets/s9-star.svg" alt=""></div>
-    <p class="s9__ptext" style="left:681px;top:560px;width:290px">За 2025 год вышло <b>более 2 500 материалов</b> в СМИ с комментариями Татьяны Волковой</p>
+    <div class="s9__star" style="left:659px;top:564px"><img src="assets/s9-icon-materials.svg" alt=""></div>
+    <p class="s9__ptext s9__ptext--t7" style="left:681px;top:560px;width:290px">За 2025 год вышло <b>более 2 500 материалов</b> в СМИ с комментариями Татьяны Волковой</p>
 
     <!-- Tatiana photo -->
     <div class="s9__photo-wrap s9__photo-wrap--tatiana">
@@ -3607,40 +3763,41 @@
 
     <!-- ── Дмитрий Тарасов ── -->
     <p class="s9__name s9__name--dmitry">Дмитрий Тарасов</p>
+    <p class="s9__subtitle s9__subtitle--dmitry">Профессиональный инвестор</p>
 
     <!-- Pills left col (Dmitry) -->
     <div class="s9__pill s9__pill--d1"></div>
-    <div class="s9__star" style="left:301px;top:1150px"><img src="assets/s9-star.svg" alt=""></div>
-    <p class="s9__ptext" style="left:323px;top:1146px;width:279px"><b>25+ лет</b> профессиональный инвестор</p>
+    <div class="s9__star" style="left:301px;top:1150px"><img src="assets/s9-icon-investor25.svg" alt=""></div>
+    <p class="s9__ptext s9__ptext--d1" style="left:323px;top:1146px;width:279px"><b>25+ лет</b> профессиональный инвестор</p>
 
     <div class="s9__pill s9__pill--d2"></div>
-    <div class="s9__star" style="left:301px;top:1250px"><img src="assets/s9-star.svg" alt=""></div>
-    <p class="s9__ptext" style="left:323px;top:1246px;width:279px">Преподаватель экономического факультета МГУ им. М.В. Ломоносова (авторские курсы: приватный банкинг, прямые и венчурные инвестиции)</p>
+    <div class="s9__star" style="left:301px;top:1250px"><img src="assets/s9-icon-mgu.svg" alt=""></div>
+    <p class="s9__ptext s9__ptext--d2" style="left:323px;top:1246px;width:279px">Преподаватель экономического факультета МГУ им. М.В. Ломоносова (авторские курсы: приватный банкинг, прямые и венчурные инвестиции)</p>
 
     <div class="s9__pill s9__pill--d3"></div>
-    <div class="s9__star" style="left:301px;top:1385px"><img src="assets/s9-star.svg" alt=""></div>
-    <p class="s9__ptext" style="left:323px;top:1381px;width:279px">Автор бестселлера «От золота до биткоина»</p>
+    <div class="s9__star" style="left:301px;top:1385px"><img src="assets/s9-icon-book-dmitry.svg" alt=""></div>
+    <p class="s9__ptext s9__ptext--d3" style="left:323px;top:1381px;width:279px">Автор бестселлера «От золота до биткоина»</p>
 
     <div class="s9__pill s9__pill--d4"></div>
-    <div class="s9__star" style="left:301px;top:1485px"><img src="assets/s9-star.svg" alt=""></div>
-    <p class="s9__ptext" style="left:323px;top:1481px;width:279px">Почётный лектор Российского общества «Знание»</p>
+    <div class="s9__star" style="left:301px;top:1485px"><img src="assets/s9-icon-znanie.svg" alt=""></div>
+    <p class="s9__ptext s9__ptext--d4" style="left:323px;top:1481px;width:279px">Почётный лектор Российского общества «Знание»</p>
 
     <!-- Pills right col (Dmitry) -->
     <div class="s9__pill s9__pill--d5"></div>
-    <div class="s9__star" style="left:659px;top:1150px"><img src="assets/s9-star.svg" alt=""></div>
-    <p class="s9__ptext" style="left:681px;top:1146px;width:279px"><b>150+ млрд. рублей</b> под управлением</p>
+    <div class="s9__star" style="left:659px;top:1150px"><img src="assets/s9-icon-mld150.svg" alt=""></div>
+    <p class="s9__ptext s9__ptext--d5" style="left:681px;top:1146px;width:279px"><b>150+ млрд. рублей</b> под управлением</p>
 
     <div class="s9__pill s9__pill--d6"></div>
-    <div class="s9__star" style="left:659px;top:1250px"><img src="assets/s9-star.svg" alt=""></div>
-    <p class="s9__ptext" style="left:681px;top:1246px;width:279px">Начальник Федерального штаба, ВОО «СОЮЗ ОТЦОВ»</p>
+    <div class="s9__star" style="left:659px;top:1250px"><img src="assets/s9-icon-union-fathers.svg" alt=""></div>
+    <p class="s9__ptext s9__ptext--d6" style="left:681px;top:1246px;width:279px">Начальник Федерального штаба, ВОО «СОЮЗ ОТЦОВ»</p>
 
     <div class="s9__pill s9__pill--d7"></div>
-    <div class="s9__star" style="left:659px;top:1385px"><img src="assets/s9-star.svg" alt=""></div>
-    <p class="s9__ptext" style="left:681px;top:1381px;width:279px">Отец пятерых детей</p>
+    <div class="s9__star" style="left:659px;top:1385px"><img src="assets/s9-icon-5children.svg" alt=""></div>
+    <p class="s9__ptext s9__ptext--d7" style="left:681px;top:1381px;width:279px">Отец пятерых детей</p>
 
     <div class="s9__pill s9__pill--d8"></div>
-    <div class="s9__star" style="left:659px;top:1485px"><img src="assets/s9-star.svg" alt=""></div>
-    <p class="s9__ptext" style="left:681px;top:1481px;width:279px">Руководитель рабочей группы Всероссийского родительского комитета (профориентация)</p>
+    <div class="s9__star" style="left:659px;top:1485px"><img src="assets/s9-icon-parents-committee.svg" alt=""></div>
+    <p class="s9__ptext s9__ptext--d8" style="left:681px;top:1481px;width:279px">Руководитель рабочей группы Всероссийского родительского комитета (профориентация)</p>
 
     <!-- Dmitry photo -->
     <div class="s9__photo-wrap s9__photo-wrap--dmitry">
@@ -3902,6 +4059,60 @@
     <div class="s11__btn s11__btn--outline-4">Оформить в рассрочку</div>
   </section>
   </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-container footer-grid">
+      <div class="footer-col">
+        <p class="footer-title">Мы в соцсетях</p>
+        <div class="footer-socials">
+          <a href="https://vk.ru/club238168164" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24">
+              <path d="M13.2 17.5c-5.1 0-8-3.5-8.1-9.3h2.6c.1 4.2 1.9 6 3.4 6.4V8.2h2.5v3.7c1.5-.2 3-1.8 3.5-3.7h2.5a7 7 0 0 1-3.2 4.6 7.2 7.2 0 0 1 3.8 4.7h-2.8c-.5-1.8-1.9-3.2-3.8-3.4v3.4h-.4Z" />
+            </svg>
+            <span>VK</span>
+          </a>
+          <a href="https://t.me/family_wealth_forum" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24Zm5.6 7.9-1.8 8.5c-.1.6-.5.8-1 .5l-2.8-2.1-1.4 1.3c-.1.2-.3.3-.6.3l.2-2.9 5.2-4.7c.2-.2-.1-.3-.4-.1l-6.4 4-2.8-.9c-.6-.2-.6-.6.1-.8l10.9-4.2c.5-.2 1 .1.8 1.1Z" />
+            </svg>
+            <span>Telegram</span>
+          </a>
+          <a href="https://max.ru/volkovacapital" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 46 42">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M21.4701 41.58C17.3601 41.58 15.4501 40.98 12.1301 38.58C10.0301 41.28 3.38008 43.39 3.09008 39.78C3.09008 37.07 2.49008 34.78 1.81008 32.28C1.00008 29.2 0.0800781 25.77 0.0800781 20.8C0.0800781 8.93 9.82008 0 21.3601 0C32.9101 0 41.9601 9.37 41.9601 20.91C41.9787 26.3666 39.8316 31.6076 35.9902 35.4829C32.1487 39.3581 26.9266 41.5509 21.4701 41.58ZM21.6401 10.26C16.0201 9.97 11.6401 13.86 10.6701 19.96C9.87008 25.01 11.2901 31.16 12.5001 31.48C13.0801 31.62 14.5401 30.44 15.4501 29.53C16.9548 30.5695 18.7071 31.1938 20.5301 31.34C23.3293 31.4746 26.0697 30.5057 28.1622 28.6414C30.2546 26.777 31.5321 24.1662 31.7201 21.37C31.8295 18.568 30.8346 15.8351 28.9495 13.7592C27.0643 11.6833 24.4396 10.4303 21.6401 10.27V10.26Z" />
+            </svg>
+            <span>Макс</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-title">Документы</p>
+        <nav class="footer-documents">
+          <a href="https://sin-tera.ru/bogatstvo-semi/politika" target="_blank" rel="noopener">Политика обработки персональных данных</a>
+          <a href="https://sin-tera.ru/bogatstvo-semi/sog_per_dan" target="_blank" rel="noopener">Согласие на обработку персональных данных</a>
+          <a href="https://sin-tera.ru/bogatstvo-semi/sog_reklama" target="_blank" rel="noopener">Согласие на получение рекламы</a>
+        </nav>
+        <div class="footer-company">
+          <p>АНО ДПО «ИНСТИТУТ СОВРЕМЕННЫХ ТЕХНОЛОГИЙ И ФИНАНСОВ "МОНТЕРИУМ"»</p>
+          <p>ИНН: 9722112084</p>
+          <p>ОГРН: 1267700011094</p>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-title">Контакты</p>
+        <div class="footer-contacts">
+          <a href="tel:+79651366352" class="footer-link-tel">+7 965 136 63 52</a>
+          <a href="mailto:inbox@sintera.site">inbox@sintera.site</a>
+          <a href="https://t.me/+79651366352" target="_blank" rel="noopener">Telegram</a>
+          <a href="https://api.whatsapp.com/send/?phone=79651366352&text&type=phone_number&app_absent=0" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://tvolkova.bitrix24site.ru/crm_form_forsite/" target="_blank" rel="noopener" class="footer-link-form">Форма обратной связи</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script>
     const HERO_W = 1600, HERO_H = 792;
