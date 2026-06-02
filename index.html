@@ -1260,7 +1260,7 @@
       letter-spacing: 0.75px; text-transform: uppercase; pointer-events: none; margin: 0;
     }
 
-    .s5-viewport { position: relative; width: 100vw; overflow: hidden; }    .s5__box--e04 .s5__box-text { width: 314px; }
+    .s5__box--e04 .s5__box-text { width: 314px; }
 
     /* ══════════════════════════════════════════════════════════════════════
          SECTION 7 — Что вы заберёте с форума / Для кого этот форум
@@ -1383,8 +1383,6 @@
     .s8__photo-subtract { position: absolute; left: -69px; top: 24px; width: 413px; height: 516px; }
     .s8__photo-subtract img { display: block; width: 100%; height: 100%; }
     .s8__photo-img { position: absolute; left: 111px; top: 14px; width: 349px; height: 526px; object-fit: cover; object-position: top center; }
-
-      .s8__photo-img { position: absolute; left: 111px; top: 14px; width: 349px; height: 526px; object-fit: cover; object-position: top center; }
 
     /* ══════════════════════════════════════════════════════════════════════
          SECTION 9 — Эксперты форума
@@ -2167,7 +2165,7 @@
       font-size: 14px !important; text-align: center; margin-bottom: 10px;
     }
     .s5__desc {
-      font-size: 13px !important; text-align: center; margin-bottom: 36px; margin: 0 0 36px;
+      font-size: 13px !important; text-align: center; margin: 0 0 36px;
     }
 
     /* Icons — top of white card block, rounded top corners */
@@ -4133,8 +4131,25 @@
     const S10_H  = 5174;
     const S11_H  = 1150;
 
-    const MOBILE_W  = 390;
-    const M_HERO_H  = 750;
+    const sections = [
+      ['.s2', '.s2-viewport', S2_H],
+      ['.s3', '.s3-viewport', S3_H],
+      ['.s4', '.s4-viewport', S4_H],
+      ['.s5', '.s5-viewport', S5_H],
+      ['.s6', '.s6-viewport', S6_H],
+      ['.s7', '.s7-viewport', S7_H],
+      ['.s8', '.s8-viewport', S8_H],
+      ['.s9', '.s9-viewport', S9_H],
+      ['.s10', '.s10-viewport', S10_H],
+      ['.s11', '.s11-viewport', S11_H],
+    ];
+
+    function scaleSections(scale) {
+      sections.forEach(([sectionSelector, viewportSelector, height]) => {
+        document.querySelector(sectionSelector).style.transform = `scale(${scale})`;
+        document.querySelector(viewportSelector).style.height = (height * scale) + 'px';
+      });
+    }
 
     function scaleAll() {
       const vw  = window.innerWidth;
@@ -4152,26 +4167,7 @@
 
         // S2–S11 пока без мобильного макета — масштабируем по десктопной ширине
         const ds = vw / HERO_W;
-        document.querySelector('.s2').style.transform  = `scale(${ds})`;
-        document.querySelector('.s2-viewport').style.height = (S2_H  * ds) + 'px';
-        document.querySelector('.s3').style.transform  = `scale(${ds})`;
-        document.querySelector('.s3-viewport').style.height = (S3_H  * ds) + 'px';
-        document.querySelector('.s4').style.transform  = `scale(${ds})`;
-        document.querySelector('.s4-viewport').style.height = (S4_H  * ds) + 'px';
-        document.querySelector('.s5').style.transform  = `scale(${ds})`;
-        document.querySelector('.s5-viewport').style.height = (S5_H  * ds) + 'px';
-        document.querySelector('.s6').style.transform  = `scale(${ds})`;
-        document.querySelector('.s6-viewport').style.height = (S6_H  * ds) + 'px';
-        document.querySelector('.s7').style.transform  = `scale(${ds})`;
-        document.querySelector('.s7-viewport').style.height = (S7_H  * ds) + 'px';
-        document.querySelector('.s8').style.transform  = `scale(${ds})`;
-        document.querySelector('.s8-viewport').style.height = (S8_H  * ds) + 'px';
-        document.querySelector('.s9').style.transform  = `scale(${ds})`;
-        document.querySelector('.s9-viewport').style.height = (S9_H  * ds) + 'px';
-        document.querySelector('.s10').style.transform = `scale(${ds})`;
-        document.querySelector('.s10-viewport').style.height = (S10_H * ds) + 'px';
-        document.querySelector('.s11').style.transform = `scale(${ds})`;
-        document.querySelector('.s11-viewport').style.height = (S11_H * ds) + 'px';
+        scaleSections(ds);
 
       } else {
         // ── Desktop ─────────────────────────────────────────────────
@@ -4185,26 +4181,7 @@
         document.querySelector('.hero-viewport').style.height = vh + 'px';
 
         const s2Scale = vw / HERO_W;
-        document.querySelector('.s2').style.transform  = `scale(${s2Scale})`;
-        document.querySelector('.s2-viewport').style.height = (S2_H  * s2Scale) + 'px';
-        document.querySelector('.s3').style.transform  = `scale(${s2Scale})`;
-        document.querySelector('.s3-viewport').style.height = (S3_H  * s2Scale) + 'px';
-        document.querySelector('.s4').style.transform  = `scale(${s2Scale})`;
-        document.querySelector('.s4-viewport').style.height = (S4_H  * s2Scale) + 'px';
-        document.querySelector('.s5').style.transform  = `scale(${s2Scale})`;
-        document.querySelector('.s5-viewport').style.height = (S5_H  * s2Scale) + 'px';
-        document.querySelector('.s6').style.transform  = `scale(${s2Scale})`;
-        document.querySelector('.s6-viewport').style.height = (S6_H  * s2Scale) + 'px';
-        document.querySelector('.s7').style.transform  = `scale(${s2Scale})`;
-        document.querySelector('.s7-viewport').style.height = (S7_H  * s2Scale) + 'px';
-        document.querySelector('.s8').style.transform  = `scale(${s2Scale})`;
-        document.querySelector('.s8-viewport').style.height = (S8_H  * s2Scale) + 'px';
-        document.querySelector('.s9').style.transform  = `scale(${s2Scale})`;
-        document.querySelector('.s9-viewport').style.height = (S9_H  * s2Scale) + 'px';
-        document.querySelector('.s10').style.transform = `scale(${s2Scale})`;
-        document.querySelector('.s10-viewport').style.height = (S10_H * s2Scale) + 'px';
-        document.querySelector('.s11').style.transform = `scale(${s2Scale})`;
-        document.querySelector('.s11-viewport').style.height = (S11_H * s2Scale) + 'px';
+        scaleSections(s2Scale);
       }
     }
 
