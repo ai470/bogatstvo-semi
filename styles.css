@@ -1601,7 +1601,16 @@
       height: 34px;
       margin-bottom: 14px;
     }
-    .badge { display: none !important; }
+    .badge {
+      position: static !important;
+      display: flex !important;
+      width: auto !important;
+      height: auto !important;
+      padding: 0 !important;
+      border: 0 !important;
+      border-radius: 0 !important;
+      backdrop-filter: none !important;
+    }
     .badge__text {
       position: relative !important;
       left: auto !important; top: auto !important;
