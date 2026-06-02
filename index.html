@@ -1065,18 +1065,18 @@
 
     function initRevealMotion() {
       const selectors = [
-        '.hero__badge', '.logo', '.tagline', '.hero__cta-wrap', '.hero__seats', '.hero__cards', '.section-title',
-        '.s2__title', '.s2__subtitle', '.s2__desc', '.s2__text', '.s2__tick-text', '.s2__bottom-text',
-        '.s3__badge', '.s3__title', '.s3__subtitle', '.s3__icon', '.s3__card-text', '.s3__bottom-1', '.s3__bottom-2',
-        '.s4__title', '.s4__subtitle', '.s4__card-photo', '.s4__card-title', '.s4__card-sub', '.s4__card-body', '.s4__tick-text', '.s4__section-head', '.s4__icon-item', '.s4__why-text-1', '.s4__why-text-2', '.s4__book-photo', '.s4__quote', '.s4__cta-wrap',
-        '.s5__title', '.s5__subtitle', '.s5__desc', '.s5__icon', '.s5__card-title', '.s5__card-tag', '.s5__card-desc', '.s5__box',
-        '.s6__title', '.s6__subtitle', '.s6__card-icon', '.s6__card-title', '.s6__card-desc', '.s6__game-box', '.s6__tick-head', '.s6__tick-desc', '.s6__pricing-1', '.s6__pricing-2', '.s6__cta',
-        '.s7__title-1', '.s7__subtitle', '.s7__remoji', '.s7__rtitle', '.s7__rdesc', '.s7__aphoto', '.s7__title-2', '.s7__subtitle-2', '.s7__atitle', '.s7__adesc', '.s7__bottom',
-        '.s8__title', '.s8__author', '.s8__bullet', '.s8__bold', '.s8__gold-text', '.s8__photo-card',
-        '.s9__title', '.s9__photo-wrap', '.s9__name', '.s9__subtitle', '.s9__ptext', '.s9__logo-card', '.s9__mission',
-        '.s10__sup', '.s10__h', '.s10__icon', '.s10__ctext', '.s10__photo', '.s10__time', '.s10__etext', '.s10__etitle', '.s10__edesc', '.s10__footer',
-        '.s11__title', '.s11__sub', '.s11__card', '.s11__badge-wrap', '.s11__tlabel', '.s11__tname', '.s11__what', '.s11__features', '.s11__price', '.s11__btn', '.m-s11-card',
-        '.footer-col'
+        '.badge', '.logo', '.tagline', '.cta-btn', '.cta-label', '.seats-icon', '.seats-text', '.portrait-tatyana', '.portrait-dmitry', '.card-rect', '.card-icon', '.card-name', '.card-role', '.section-title', '.m-speaker-badge',
+        '.s2__title', '.s2__subtitle', '.s2__tagline', '.s2__badge', '.s2__body-left', '.s2__body-right-1', '.s2__body-right-2', '.s2__location-icon', '.s2__chart-icon',
+        '.s3__badge', '.s3__title', '.s3__card', '.s3__icon', '.s3__card-text', '.s3__bottom-1', '.s3__bottom-2',
+        '.s4__title', '.s4__subtitle', '.s4__card', '.s4__card-photo', '.s4__card-title', '.s4__card-sub', '.s4__card-body', '.s4__tick', '.s4__tick-text', '.s4__section-head', '.s4__icon-item', '.s4__why-text-1', '.s4__user-icon', '.s4__why-text-2', '.s4__book-photo', '.s4__quote', '.s4__cta-wrap',
+        '.s5__title', '.s5__subtitle', '.s5__desc', '.s5__pill', '.s5__tab', '.s5__num', '.s5__card', '.s5__icon', '.s5__card-title', '.s5__card-tag', '.s5__card-desc', '.s5__box', '.s5__box-head', '.s5__box-icon', '.s5__box-text',
+        '.s6__title', '.s6__subtitle', '.s6__card', '.s6__card-icon', '.s6__card-title', '.s6__card-desc', '.s6__game-bg', '.s6__game-box', '.s6__tick-icon', '.s6__tick-head', '.s6__tick-desc', '.s6__gold-box', '.s6__gold-title', '.s6__sub-card', '.s6__sub-icon', '.s6__sub-label', '.s6__sub-text', '.s6__pricing-1', '.s6__pricing-2', '.s6__cta', '.s6__cta-text',
+        '.s7__title-1', '.s7__subtitle', '.s7__rcard', '.s7__rnum', '.s7__remoji', '.s7__rtitle', '.s7__rdesc', '.s7__rdesc-note', '.s7__aphoto', '.s7__title-2', '.s7__subtitle-2', '.s7__acard', '.s7__anum', '.s7__atitle', '.s7__adesc', '.s7__bottom',
+        '.s8__title', '.s8__author', '.s8__bullet', '.s8__bold', '.s8__gold-box', '.s8__star', '.s8__gold-text', '.s8__photo-card',
+        '.s9__title', '.s9__qbox', '.s9__qtext', '.s9__star', '.s9__photo-wrap', '.s9__name', '.s9__subtitle', '.s9__pill', '.s9__ptext', '.s9__logo-card', '.s9__mission',
+        '.s10__sup', '.s10__h', '.s10__icard', '.s10__icon', '.s10__ctext', '.s10__photo', '.s10__tbox', '.s10__time', '.s10__etext', '.s10__etitle', '.s10__edesc', '.s10__footer', '.s10__footer-title', '.s10__footer-sub',
+        '.s11__title', '.s11__sub', '.s11__card', '.s11__badge-wrap', '.s11__badge-icon', '.s11__badge-text', '.s11__tlabel', '.s11__tname', '.s11__what', '.s11__feature', '.s11__tick', '.s11__ftext', '.s11__price', '.s11__btn', '.m-s11-badge-top', '.m-s11-card', '.m-s11-inner', '.m-s11-tlabel', '.m-s11-tname', '.m-s11-divider', '.m-s11-what', '.m-s11-features li', '.m-s11-price', '.m-s11-btn',
+        '.footer-col', '.footer-title', '.footer-socials a', '.footer-documents a', '.footer-contacts a', '.footer-company'
       ];
 
       const seen = new Set();
@@ -1084,7 +1084,7 @@
 
       selectors.forEach((selector) => {
         document.querySelectorAll(selector).forEach((element) => {
-          if (!seen.has(element)) {
+          if (!seen.has(element) && element.getClientRects().length > 0) {
             seen.add(element);
             elements.push(element);
           }
@@ -1094,10 +1094,20 @@
       if (!elements.length) return;
 
       const reveal = (element) => {
-        element.classList.add('is-visible');
-        element.addEventListener('transitionend', () => {
+        let cleaned = false;
+        const cleanup = () => {
+          if (cleaned) return;
+          cleaned = true;
           element.classList.remove('reveal', 'is-visible');
-        }, { once: true });
+          element.removeEventListener('transitionend', onTransitionEnd);
+        };
+        const onTransitionEnd = (event) => {
+          if (event.target === element) cleanup();
+        };
+
+        element.classList.add('is-visible');
+        element.addEventListener('transitionend', onTransitionEnd);
+        window.setTimeout(cleanup, 760);
       };
 
       elements.forEach((element) => element.classList.add('reveal'));

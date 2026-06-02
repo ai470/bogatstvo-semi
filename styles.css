@@ -3124,6 +3124,7 @@
     --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
     --motion-fast: 180ms;
     --motion-medium: 560ms;
+    --motion-hover: 260ms;
   }
 
   .reveal {
@@ -3141,26 +3142,67 @@
   }
 
   .cta-btn:not(.reveal),
+  .badge:not(.reveal),
+  .s2__badge:not(.reveal),
+  .s3__badge:not(.reveal),
+  .m-speaker-badge:not(.reveal),
   .s4__cta-wrap:not(.reveal),
   .s6__cta:not(.reveal),
+  .s10__badge:not(.reveal),
+  .s11__badge-wrap:not(.reveal),
   .s11__btn:not(.reveal),
+  .m-s11-badge-top:not(.reveal),
   .m-s11-btn:not(.reveal),
-  .footer-socials a:not(.reveal) {
+  .footer-socials a:not(.reveal),
+  .footer-documents a:not(.reveal),
+  .footer-contacts a:not(.reveal) {
     transition:
-      scale 240ms var(--motion-ease),
-      translate 240ms var(--motion-ease),
+      scale var(--motion-hover) var(--motion-ease),
+      translate var(--motion-hover) var(--motion-ease),
       opacity var(--motion-fast) ease,
       border-color var(--motion-fast) ease,
       color var(--motion-fast) ease,
       background-color var(--motion-fast) ease;
   }
 
+  .s2__location-icon:not(.reveal),
+  .s2__chart-icon:not(.reveal),
+  .s3__icon:not(.reveal),
+  .s4__icon-item:not(.reveal),
+  .s5__icon:not(.reveal),
+  .s5__box:not(.reveal),
+  .s6__card-icon:not(.reveal),
+  .s6__tick-icon:not(.reveal),
+  .s6__sub-icon:not(.reveal),
+  .s7__remoji:not(.reveal),
+  .s8__bullet:not(.reveal),
+  .s9__logo-card:not(.reveal),
+  .s10__icon:not(.reveal),
+  .s11__feature:not(.reveal),
+  .m-s11-features li:not(.reveal),
+  .footer-company:not(.reveal) {
+    transition:
+      scale var(--motion-hover) var(--motion-ease),
+      translate var(--motion-hover) var(--motion-ease),
+      opacity var(--motion-fast) ease,
+      border-color var(--motion-fast) ease,
+      background-color var(--motion-fast) ease;
+  }
+
+  .s3__card:not(.reveal),
   .s4__card-photo:not(.reveal),
   .s4__book-photo:not(.reveal),
+  .s6__card:not(.reveal),
+  .s6__game-box:not(.reveal),
+  .s6__sub-card:not(.reveal),
+  .s7__rcard:not(.reveal),
+  .s7__acard:not(.reveal),
   .s7__aphoto:not(.reveal),
   .s8__photo-card:not(.reveal),
   .s9__photo-wrap:not(.reveal),
   .s10__photo:not(.reveal),
+  .s10__icard:not(.reveal),
+  .s10__tbox:not(.reveal),
   .s11__card:not(.reveal),
   .m-s11-card:not(.reveal) {
     transition:
@@ -3171,25 +3213,72 @@
 
   @media (hover: hover) and (pointer: fine) {
     .cta-btn:hover,
+    .badge:hover,
+    .s2__badge:hover,
+    .s3__badge:hover,
+    .m-speaker-badge:hover,
     .s4__cta-wrap:hover,
     .s6__cta:hover,
+    .s10__badge:hover,
+    .s11__badge-wrap:hover,
     .s11__btn:hover,
+    .m-s11-badge-top:hover,
     .m-s11-btn:hover,
-    .footer-socials a:hover {
+    .footer-socials a:hover,
+    .footer-documents a:hover,
+    .footer-contacts a:hover {
       translate: 0 -2px;
       scale: 1.015;
     }
 
+    .s2__location-icon:hover,
+    .s2__chart-icon:hover,
+    .s3__icon:hover,
+    .s4__icon-item:hover,
+    .s5__icon:hover,
+    .s5__box:hover,
+    .s6__card-icon:hover,
+    .s6__tick-icon:hover,
+    .s6__sub-icon:hover,
+    .s7__remoji:hover,
+    .s8__bullet:hover,
+    .s9__logo-card:hover,
+    .s10__icon:hover,
+    .s11__feature:hover,
+    .m-s11-features li:hover,
+    .footer-company:hover {
+      translate: 0 -2px;
+      scale: 1.01;
+    }
+
+    .s3__card:hover,
     .s4__card-photo:hover,
     .s4__book-photo:hover,
+    .s6__card:hover,
+    .s6__game-box:hover,
+    .s6__sub-card:hover,
+    .s7__rcard:hover,
+    .s7__acard:hover,
     .s7__aphoto:hover,
     .s8__photo-card:hover,
     .s9__photo-wrap:hover,
     .s10__photo:hover,
+    .s10__icard:hover,
+    .s10__tbox:hover,
     .s11__card:hover,
     .m-s11-card:hover {
       translate: 0 -3px;
       scale: 1.012;
+    }
+
+    .cta-btn:active,
+    .s4__cta-wrap:active,
+    .s6__cta:active,
+    .s11__btn:active,
+    .m-s11-btn:active,
+    .footer-socials a:active {
+      translate: 0 0;
+      scale: 0.995;
     }
   }
 
