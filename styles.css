@@ -3118,3 +3118,89 @@
   .footer-company p + p {
     margin-top: 8px;
   }
+
+  /* Motion layer: opacity + individual transform properties only. */
+  :root {
+    --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+    --motion-fast: 180ms;
+    --motion-medium: 560ms;
+  }
+
+  .reveal {
+    opacity: 0;
+    translate: 0 16px;
+    transition:
+      opacity var(--motion-medium) var(--motion-ease),
+      translate var(--motion-medium) var(--motion-ease);
+    will-change: opacity, translate;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    translate: 0 0;
+  }
+
+  .cta-btn:not(.reveal),
+  .s4__cta-wrap:not(.reveal),
+  .s6__cta:not(.reveal),
+  .s11__btn:not(.reveal),
+  .m-s11-btn:not(.reveal),
+  .footer-socials a:not(.reveal) {
+    transition:
+      scale 240ms var(--motion-ease),
+      translate 240ms var(--motion-ease),
+      opacity var(--motion-fast) ease,
+      border-color var(--motion-fast) ease,
+      color var(--motion-fast) ease,
+      background-color var(--motion-fast) ease;
+  }
+
+  .s4__card-photo:not(.reveal),
+  .s4__book-photo:not(.reveal),
+  .s7__aphoto:not(.reveal),
+  .s8__photo-card:not(.reveal),
+  .s9__photo-wrap:not(.reveal),
+  .s10__photo:not(.reveal),
+  .s11__card:not(.reveal),
+  .m-s11-card:not(.reveal) {
+    transition:
+      scale 280ms var(--motion-ease),
+      translate 280ms var(--motion-ease),
+      opacity var(--motion-fast) ease;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .cta-btn:hover,
+    .s4__cta-wrap:hover,
+    .s6__cta:hover,
+    .s11__btn:hover,
+    .m-s11-btn:hover,
+    .footer-socials a:hover {
+      translate: 0 -2px;
+      scale: 1.015;
+    }
+
+    .s4__card-photo:hover,
+    .s4__book-photo:hover,
+    .s7__aphoto:hover,
+    .s8__photo-card:hover,
+    .s9__photo-wrap:hover,
+    .s10__photo:hover,
+    .s11__card:hover,
+    .m-s11-card:hover {
+      translate: 0 -3px;
+      scale: 1.012;
+    }
+  }
+
+  .cta-btn:focus-visible,
+  .s4__cta-wrap:focus-visible,
+  .s6__cta:focus-visible,
+  .s11__btn:focus-visible,
+  .m-s11-btn:focus-visible,
+  .footer-socials a:focus-visible,
+  .footer-documents a:focus-visible,
+  .footer-contacts a:focus-visible {
+    outline: 2px solid rgba(255, 226, 172, 0.75);
+    outline-offset: 4px;
+  }

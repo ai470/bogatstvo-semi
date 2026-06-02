@@ -1063,7 +1063,78 @@
       }
     }
 
+    function initRevealMotion() {
+      const selectors = [
+        '.hero__badge', '.logo', '.tagline', '.hero__cta-wrap', '.hero__seats', '.hero__cards', '.section-title',
+        '.s2__title', '.s2__subtitle', '.s2__desc', '.s2__text', '.s2__tick-text', '.s2__bottom-text',
+        '.s3__badge', '.s3__title', '.s3__subtitle', '.s3__icon', '.s3__card-text', '.s3__bottom-1', '.s3__bottom-2',
+        '.s4__title', '.s4__subtitle', '.s4__card-photo', '.s4__card-title', '.s4__card-sub', '.s4__card-body', '.s4__tick-text', '.s4__section-head', '.s4__icon-item', '.s4__why-text-1', '.s4__why-text-2', '.s4__book-photo', '.s4__quote', '.s4__cta-wrap',
+        '.s5__title', '.s5__subtitle', '.s5__desc', '.s5__icon', '.s5__card-title', '.s5__card-tag', '.s5__card-desc', '.s5__box',
+        '.s6__title', '.s6__subtitle', '.s6__card-icon', '.s6__card-title', '.s6__card-desc', '.s6__game-box', '.s6__tick-head', '.s6__tick-desc', '.s6__pricing-1', '.s6__pricing-2', '.s6__cta',
+        '.s7__title-1', '.s7__subtitle', '.s7__remoji', '.s7__rtitle', '.s7__rdesc', '.s7__aphoto', '.s7__title-2', '.s7__subtitle-2', '.s7__atitle', '.s7__adesc', '.s7__bottom',
+        '.s8__title', '.s8__author', '.s8__bullet', '.s8__bold', '.s8__gold-text', '.s8__photo-card',
+        '.s9__title', '.s9__photo-wrap', '.s9__name', '.s9__subtitle', '.s9__ptext', '.s9__logo-card', '.s9__mission',
+        '.s10__sup', '.s10__h', '.s10__icon', '.s10__ctext', '.s10__photo', '.s10__time', '.s10__etext', '.s10__etitle', '.s10__edesc', '.s10__footer',
+        '.s11__title', '.s11__sub', '.s11__card', '.s11__badge-wrap', '.s11__tlabel', '.s11__tname', '.s11__what', '.s11__features', '.s11__price', '.s11__btn', '.m-s11-card',
+        '.footer-col'
+      ];
+
+      const seen = new Set();
+      const elements = [];
+
+      selectors.forEach((selector) => {
+        document.querySelectorAll(selector).forEach((element) => {
+          if (!seen.has(element)) {
+            seen.add(element);
+            elements.push(element);
+          }
+        });
+      });
+
+      if (!elements.length) return;
+
+      const reveal = (element) => {
+        element.classList.add('is-visible');
+        element.addEventListener('transitionend', () => {
+          element.classList.remove('reveal', 'is-visible');
+        }, { once: true });
+      };
+
+      elements.forEach((element) => element.classList.add('reveal'));
+
+      if (!('IntersectionObserver' in window)) {
+        elements.forEach(reveal);
+        return;
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            reveal(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        rootMargin: '0px 0px -10% 0px',
+        threshold: 0.08
+      });
+
+      requestAnimationFrame(() => {
+        elements.forEach((element) => {
+          const rect = element.getBoundingClientRect();
+          const inViewport = rect.top < window.innerHeight * 0.92 && rect.bottom > 0;
+
+          if (inViewport) {
+            reveal(element);
+          } else {
+            observer.observe(element);
+          }
+        });
+      });
+    }
+
     scaleAll();
+    initRevealMotion();
     window.addEventListener('resize', scaleAll);
   </script>
 
