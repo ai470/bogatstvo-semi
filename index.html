@@ -853,7 +853,9 @@
     }
     .s4__card-photo--1 { top: 338px; }
     .s4__card-photo--2 { top: 613px; }
-    .s4__card-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+    .s4__card-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 82%; }
+    .s4__card-photo--1 img { object-position: center 82%; }
+    .s4__card-photo--2 img { object-position: center 86%; }
 
     /* Card headings */
     .s4__card-title {
@@ -2018,7 +2020,9 @@
 
     /* Photos */
     .s4__card-photo {
-      width: 100% !important; height: 200px !important;
+      width: min(100%, 520px) !important; height: auto !important;
+      aspect-ratio: 4 / 3;
+      align-self: center;
       border-radius: 16px;
       margin-bottom: 14px;
       overflow: hidden;
