@@ -78,7 +78,7 @@
       <!-- CTA: glow + button + label -->
       <div class="hero__cta-wrap">
         <div class="cta-glow"></div>
-        <button class="cta-btn" type="button">
+        <button class="cta-btn" type="button" data-prereg-scroll>
           <img src="assets/cta-btn.svg" alt="">
         </button>
         <span class="cta-label">Забронировать место</span>
@@ -284,7 +284,7 @@
     <p class="s4__quote">После форума вы едете домой и впервые можете поговорить на одном языке. Вы — про стратегию рода. Они — про свою роль в ней</p>
 
     <!-- CTA button -->
-    <div class="s4__cta-wrap">
+    <div class="s4__cta-wrap" data-prereg-scroll role="button" tabindex="0" aria-label="Забронировать места для семьи">
       <img src="assets/s4-cta-btn.svg" alt="">
       <span class="s4__cta-label">Забронировать места для семьи</span>
     </div>
@@ -459,8 +459,8 @@
     <p class="s6__pricing-1">Игра входит в тарифы <span class="green">«Архитектор» и «Династия»</span></p>
     <p class="s6__pricing-2">В тарифах «Участник» и «Основатель» — можно добавить к заказу</p>
 
-    <div class="s6__cta"><img src="assets/s6-btn.svg" alt=""></div>
-    <p class="s6__cta-text">перейти к тарифам</p>
+    <div class="s6__cta" data-prereg-scroll role="button" tabindex="0" aria-label="Перейти к тарифам"><img src="assets/s6-btn.svg" alt=""></div>
+    <p class="s6__cta-text" data-prereg-scroll>перейти к тарифам</p>
 
   </section>
   </div>
@@ -781,7 +781,7 @@
   </div>
 
   <!-- S11 Тарифы -->
-  <div class="s11-viewport">
+  <div class="s11-viewport" id="prereg-section">
   <section class="s11">
     <div class="s11__bg"><img src="assets/s11-bg.png" alt=""></div>
     <p class="s11__title">Выберите свой<br>формат участия</p>
@@ -1083,6 +1083,19 @@
       Array.prototype.forEach.call(document.querySelectorAll('[data-prereg-open]'), function (el) {
         el.addEventListener('click', function (ev) { ev.preventDefault(); openWidget(); });
       });
+
+      // All page CTAs smooth-scroll to the pre-registration block.
+      var preregSection = document.getElementById('prereg-section');
+      function scrollToPrereg() {
+        if (preregSection) preregSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      Array.prototype.forEach.call(document.querySelectorAll('[data-prereg-scroll]'), function (el) {
+        el.addEventListener('click', function (ev) { ev.preventDefault(); scrollToPrereg(); });
+        el.addEventListener('keydown', function (ev) {
+          if (ev.key === 'Enter' || ev.key === ' ' || ev.key === 'Spacebar') { ev.preventDefault(); scrollToPrereg(); }
+        });
+      });
+
       closeBtn.addEventListener('click', closeWidget);
       document.addEventListener('keydown', function (e) {
         if ((e.key === 'Escape' || e.key === 'Esc') && overlay.classList.contains('is-open')) closeWidget();
