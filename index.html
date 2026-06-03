@@ -999,10 +999,12 @@
 
   <!-- ===== Pre-registration full-frame widget (GetCourse) ===== -->
   <div class="prereg" id="prereg" role="dialog" aria-modal="true" aria-label="Лист предзаписи" aria-hidden="true">
-    <button type="button" class="prereg__close" id="prereg-close" aria-label="Закрыть">
-      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5 19 19 M19 5 5 19"/></svg>
-    </button>
-    <div class="prereg__body" id="prereg-body"><!-- GetCourse iframe is preloaded here --></div>
+    <div class="prereg__dialog">
+      <button type="button" class="prereg__close" id="prereg-close" aria-label="Закрыть">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5 19 19 M19 5 5 19"/></svg>
+      </button>
+      <div class="prereg__body" id="prereg-body"><!-- GetCourse iframe is preloaded here --></div>
+    </div>
   </div>
 
   <!-- Pre-registration widget: preload + UTM forwarding + full-frame open + height sync -->

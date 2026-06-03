@@ -3365,28 +3365,44 @@
   ═══════════════════════════════════════════════════════════════════ */
   .prereg {
     position: fixed; inset: 0; z-index: 100000;
-    background: #fff;
+    display: flex; align-items: center; justify-content: center;
+    padding: 24px; box-sizing: border-box;
+    background: rgba(13,18,33,0.55);
     opacity: 0; visibility: hidden; pointer-events: none;
     transition: opacity var(--motion-medium) var(--motion-ease),
                 visibility var(--motion-medium) var(--motion-ease);
   }
   .prereg.is-open { opacity: 1; visibility: visible; pointer-events: auto; }
 
-  /* Scrollable layer — no max-width, no padding, no radius, no shadow */
+  /* Centered modal box — capped width/height, rounded, with shadow */
+  .prereg__dialog {
+    position: relative;
+    width: 100%; max-width: 560px; max-height: 90vh;
+    display: flex; flex-direction: column;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 30px 90px rgba(13,18,33,0.45);
+    overflow: hidden;
+    transform: scale(0.96);
+    transition: transform var(--motion-medium) var(--motion-ease);
+  }
+  .prereg.is-open .prereg__dialog { transform: scale(1); }
+
+  /* Scrollable layer inside the modal */
   .prereg__body {
-    position: absolute; inset: 0;
+    flex: 1 1 auto;
     overflow-y: auto; -webkit-overflow-scrolling: touch;
     background: #fff;
   }
   .prereg__iframe {
-    display: block; width: 100%; height: 100vh;
+    display: block; width: 100%; height: 600px;
     margin: 0; border: 0; background: #fff;
   }
 
-  /* Fixed, noticeable close cross — top right */
+  /* Close cross — anchored to the modal's top-right corner */
   .prereg__close {
-    position: fixed; top: 18px; right: 18px; z-index: 100001;
-    width: 52px; height: 52px; padding: 0;
+    position: absolute; top: 14px; right: 14px; z-index: 2;
+    width: 44px; height: 44px; padding: 0;
     display: flex; align-items: center; justify-content: center;
     border-radius: 999px;
     background: linear-gradient(157deg,#172545,#2e416b,#172646);
