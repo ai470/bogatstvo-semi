@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="s11-viewport">
+  <section class="s11">
+    <div class="s11__bg"><img src="assets/s11-bg.png" alt=""></div>
+    <p class="s11__title">Выберите свой<br>формат участия</p>
+    <p class="s11__sub">В данный момент продажа билетов еще не началась, но вы можете оставить заявку и попасть в лист предзаписи по кнопке ниже ⬇️</p>
+    <button type="button" class="s11__prereg-btn" data-prereg-open>Записаться в лист предзаписи</button>
+  </section>
+  </div>
+  <script>
+    function scale(){
+      var vw=window.innerWidth, S11_H=680;
+      var s=document.querySelector('.s11'), vp=document.querySelector('.s11-viewport');
+      if(vw<=767){ vp.style.height='auto'; s.style.transform='none'; return; }
+      var sc=vw/1600;
+      s.style.transform='scale('+sc+')';
+      vp.style.height=(S11_H*sc)+'px';
+    }
+    scale(); window.addEventListener('resize',scale);
+  </script>
+</body>
+</html>

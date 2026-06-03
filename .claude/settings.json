@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e \"const fs=require\\('fs'\\);for\\(const f of ['index.html','styles.css']\\){const s=fs.readFileSync\\(f,'utf8'\\);console.log\\(f,'CRLF',\\(s.match\\(/\\\\r\\\\n/g\\)||[]\\).length,'loneLF',\\(s.match\\(/\\(?<!\\\\r\\)\\\\n/g\\)||[]\\).length\\);}\")",
+      "Bash(node -e ' *)",
+      "Bash(node --check __check.js)"
+    ]
+  }
+}
