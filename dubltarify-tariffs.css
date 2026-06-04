@@ -53,25 +53,25 @@
 }
 
 .tariff-card--founder {
-  background: url('../assets/s11-card-1.png') center top / cover no-repeat;
+  background: url('assets/s11-card-1.png') center top / cover no-repeat;
 }
 
 .tariff-card--strateg {
   background:
     linear-gradient(180deg, rgba(1,12,6,0.14) 0%, rgba(1,12,6,0.34) 100%),
-    url('../assets/s11-card-2.png') center top / cover no-repeat;
+    url('assets/s11-card-2.png') center top / cover no-repeat;
 }
 
 .tariff-card--legacy {
   background:
     linear-gradient(180deg, rgba(35,20,0,0.18) 0%, rgba(35,20,0,0.38) 100%),
-    url('../assets/s11-card-3.png') center top / cover no-repeat;
+    url('assets/s11-card-3.png') center top / cover no-repeat;
 }
 
 .tariff-card--dynasty {
   background:
     linear-gradient(180deg, rgba(12,18,35,0.16) 0%, rgba(12,18,35,0.34) 100%),
-    url('../assets/s11-card-4.png') center top / cover no-repeat;
+    url('assets/s11-card-4.png') center top / cover no-repeat;
 }
 
 .tariff-card--dark {
