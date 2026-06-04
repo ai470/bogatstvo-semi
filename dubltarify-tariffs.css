@@ -20,11 +20,12 @@
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 18px;
+  align-items: start;
 }
 
 .tariff-card {
   position: relative;
-  min-height: 720px;
+  height: auto;
   padding: 24px 22px 26px;
   border-radius: 30px;
   overflow: hidden;
