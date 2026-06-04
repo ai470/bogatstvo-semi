@@ -24,7 +24,7 @@
 
 .tariff-card {
   position: relative;
-  min-height: 780px;
+  min-height: 720px;
   padding: 24px 22px 26px;
   border-radius: 30px;
   overflow: hidden;
@@ -189,29 +189,29 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  margin: 0 0 22px;
+  gap: 9px;
+  margin: 0 0 18px;
   padding: 0;
 }
 
 .tariff-card__feature {
   display: flex;
   align-items: flex-start;
-  gap: 7px;
-  font-size: 12.5px;
+  gap: 8px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 1.28;
+  line-height: 1.32;
 }
 
 .tariff-card__feature img {
-  width: 15px;
-  height: 15px;
-  margin-top: 1px;
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
   flex-shrink: 0;
 }
 
 .tariff-card__price-block {
-  margin-top: auto;
+  margin-top: 10px;
   padding-top: 18px;
   border-top: 1px solid currentColor;
 }
