@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Богатство Семьи — Тарифы</title>
+  <base href="../">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="alternate icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&family=Manrope:wght@400;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="dubltarify/tariffs.css">
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+      (function(m,e,t,r,i,k,a){
+          m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+          m[i].l=1*new Date();
+          for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+          k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+      })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109448035', 'ym');
+
+      ym(109448035, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/109448035" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+</head>
+<body class="page-tariffs">
+
+  <div class="hero-viewport">
+  <section class="hero">
+
+    <!-- Background texture (local) -->
+    <img class="bg-texture" src="assets/bg-texture.png" alt="">
+
+    <!-- Dark gradient overlays (×2 to deepen) -->
+    <div class="overlay"></div>
+    <div class="overlay"></div>
+
+    <!-- Glow orbs -->
+    <div class="glow glow--1"></div>
+    <div class="glow glow--2"></div>
+
+    <!-- Bottom ellipse glow -->
+    <div class="ellipse-glow">
+      <img src="assets/ellipse.svg" alt="">
+    </div>
+
+    <!-- Portraits: BEFORE wave so wave renders on top of them -->
+    <div class="portrait-dmitry"><img src="assets/dmitry.png" alt="Дмитрий Тарасов"></div>
+    <div class="portrait-tatyana"><img src="assets/tatyana.png" alt="Татьяна Волкова"></div>
+
+    <!-- Bottom wave: inline SVG — viewBox показывает только верхние 188px кривой -->
+    <div class="wave">
+      <svg viewBox="0 0 1930.5 188" preserveAspectRatio="none"
+           fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0C0 0 605.5 110 960 110C1314.5 110 1920 0 1920 0L1930.5 188H0Z" fill="white"/>
+      </svg>
+    </div>
+
+    <!-- ─── Content wrapper (desktop: absolute overlay; mobile: flex column) ─── -->
+    <div class="hero__content">
+
+      <!-- Badge -->
+      <div class="hero__badge">
+        <div class="badge"><span class="badge__text">26 сентября в 10:00 мск / г. Москва</span></div>
+      </div>
+
+      <!-- Logo -->
+      <div class="logo">
+        <img src="assets/logo.svg" alt="Богатство Семьи Форум">
+      </div>
+
+      <!-- Tagline -->
+      <p class="tagline">
+        Один день, который задаст финансовую траекторию вашей семьи на 50 лет вперёд
+      </p>
+
+      <!-- CTA: glow + button + label -->
+      <div class="hero__cta-wrap">
+        <div class="cta-glow"></div>
+        <button class="cta-btn" type="button" data-prereg-scroll>
+          <img src="assets/cta-btn.svg" alt="">
+        </button>
+        <span class="cta-label" data-prereg-scroll role="button" tabindex="0" aria-label="Забронировать место">Забронировать место</span>
+      </div>
+
+      <!-- Seats -->
+      <div class="hero__seats">
+        <div class="seats-icon"><img src="assets/user-icon.svg" alt=""></div>
+        <span class="seats-text">Количество мест ограничено</span>
+      </div>
+
+      <!-- Section title -->
+      <h2 class="section-title">Организаторы форума</h2>
+
+      <!-- Mobile-only speaker badges (desktop: display:none) -->
+      <div class="m-speaker-badges">
+        <div class="m-speaker-badge">
+          <img src="assets/icon-speaker-tatyana.svg" class="m-badge-icon" alt="">
+          <div class="m-badge-info">
+            <span class="m-badge-name">Татьяна Волкова</span>
+            <span class="m-badge-role">эксперт по личному капиталу</span>
+          </div>
+        </div>
+        <div class="m-speaker-badge">
+          <img src="assets/icon-speaker-dmitry.svg" class="m-badge-icon" alt="">
+          <div class="m-badge-info">
+            <span class="m-badge-name">Дмитрий Тарасов</span>
+            <span class="m-badge-role">профессиональный инвестор</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Speaker cards -->
+      <div class="hero__cards">
+        <div class="hero__card hero__card--tatyana">
+          <div class="card-rect card-rect--tatyana"></div>
+          <img class="card-icon card-icon--tatyana" src="assets/icon-speaker-tatyana.svg" alt="">
+          <span class="card-name card-name--tatyana">Татьяна Волкова</span>
+          <span class="card-role card-role--tatyana">эксперт по личному капиталу</span>
+        </div>
+        <div class="hero__card hero__card--dmitry">
+          <div class="card-rect card-rect--dmitry"></div>
+          <img class="card-icon card-icon--dmitry" src="assets/icon-speaker-dmitry.svg" alt="">
+          <span class="card-name card-name--dmitry">Дмитрий Тарасов</span>
+          <span class="card-role card-role--dmitry">профессиональный инвестор</span>
+        </div>
+      </div>
+
+    </div><!-- /hero__content -->
+
+  </section>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       SECTION 2 — Только малая часть семей
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="s2-viewport">
+  <section class="s2">
+
+    <!-- Background image -->
+    <div class="s2__bg">
+      <img src="assets/s2-bg.png" alt="">
+    </div>
+
+    <!-- Ellipse glows (CSS radial gradients) -->
+    <div class="s2__ellipse s2__ellipse--a"></div>
+    <div class="s2__ellipse s2__ellipse--c"></div>
+
+    <!-- White fades -->
+    <div class="s2__fade-top"></div>
+    <div class="s2__fade-right"></div>
+    <div class="s2__fade-bottom"></div>
+
+    <!-- Gray box (behind right column) -->
+    <div class="s2__gray-box"></div>
+
+    <!-- Golden bottom strip -->
+    <div class="s2__gold-strip"></div>
+
+    <!-- Title -->
+    <h2 class="s2__title">Только малая часть семей сохраняют капитал к третьему поколению</h2>
+
+    <!-- Subtitle -->
+    <p class="s2__subtitle">Остальные начинают с нуля — снова и снова</p>
+
+    <!-- Green badge -->
+    <div class="s2__badge"></div>
+    <span class="s2__badge-text">За этим стоит конкретная причина</span>
+
+    <!-- Left body text -->
+    <p class="s2__body-left">
+      Наши родители дали нам характер и волю. Но один навык не передали: как думать горизонтом в 50 лет. Как превращать заработанное в фундамент для следующих поколений
+    </p>
+
+    <!-- Right column -->
+    <div class="s2__location-icon"><img src="assets/location.svg" alt=""></div>
+    <p class="s2__body-right-1">Цепочка прервалась.<br>И сейчас мы в уникальной точке</p>
+    <p class="s2__body-right-2">Мы — первые в своих семьях, кто задаёт вопрос: <strong>«Что останется от нас через три поколения?»</strong></p>
+
+    <!-- Chart icon + bottom tagline -->
+    <div class="s2__chart-icon"><img src="assets/chart.svg" alt=""></div>
+    <p class="s2__tagline">У нас есть ресурсы, энергия и амбиция. Осталось добавить систему</p>
+
+  </section>
+  </div>
+
+  <div class="s3-viewport">
+  <section class="s3">
+
+    <!-- Background -->
+    <div class="s3__bg"><img src="assets/s3-bg.png" alt=""></div>
+
+    <!-- Title -->
+    <h2 class="s3__title">Именно в этом — наша сила</h2>
+
+    <!-- Green badge -->
+    <div class="s3__badge"></div>
+    <span class="s3__badge-text">Форум «Богатство семьи» — это система, которой у вас ещё не было</span>
+
+    <!-- Glass cards -->
+    <div class="s3__card s3__card--1"></div>
+    <div class="s3__card s3__card--2"></div>
+    <div class="s3__card s3__card--3"></div>
+
+    <!-- Icons -->
+    <div class="s3__icon s3__icon--graph">   <img src="assets/icon-graph.svg"    alt=""></div>
+    <div class="s3__icon s3__icon--category"><img src="assets/icon-category.svg" alt=""></div>
+    <div class="s3__icon s3__icon--user">    <img src="assets/icon-3user.svg"    alt=""></div>
+
+    <!-- Card labels -->
+    <p class="s3__card-text s3__card-text--1">Через осознанные решения</p>
+    <p class="s3__card-text s3__card-text--2">Через выстроенную стратегию</p>
+    <p class="s3__card-text s3__card-text--3">Через семью, которая работает как команда</p>
+
+    <!-- Bottom texts -->
+    <p class="s3__bottom-1">Мы выбираем думать поколениями — уже сейчас, уже сегодня</p>
+    <p class="s3__bottom-2">И этот форум — точка старта</p>
+
+  </section>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       SECTION 4 — Один форум. Вся семья
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="s4-viewport">
+  <section class="s4">
+
+    <!-- Background -->
+    <div class="s4__bg"><img src="assets/s4-bg.png" alt=""></div>
+
+    <!-- Gold beige container -->
+    <div class="s4__gold-box"></div>
+
+    <!-- Title & subtitle -->
+    <h2 class="s4__title">Один форум. Вся семья</h2>
+    <p class="s4__subtitle">Пока вы строите стратегию рода — ваши дети учатся думать как преемники</p>
+
+    <!-- Card 1: Основной зал -->
+    <div class="s4__card s4__card--1"></div>
+    <div class="s4__card-photo s4__card-photo--1"><img src="assets/s4-photo-main.png" alt=""></div>
+    <p class="s4__card-title s4__card-title--1">Основной зал → для вас</p>
+    <p class="s4__card-sub s4__card-sub--1">4 спикера. Модель «4 капитала»</p>
+    <p class="s4__card-body s4__card-body--1">Практические инструменты для семейной стратегии, финансового планирования и передачи ценностей</p>
+    <div class="s4__tick"><img src="assets/icon-tick.svg" alt=""></div>
+    <p class="s4__tick-text">Вы уйдёте с готовой Конституцией семьи</p>
+
+    <!-- Card 2: Зал преемников -->
+    <div class="s4__card s4__card--2"></div>
+    <div class="s4__card-photo s4__card-photo--2"><img src="assets/s4-photo-heir.png" alt=""></div>
+    <p class="s4__card-title s4__card-title--2">Зал преемников → для ваших детей (14-21 год)</p>
+    <p class="s4__card-sub s4__card-sub--2">Отдельная программа. Свои спикеры. Свой язык</p>
+
+    <!-- Section: Что будет -->
+    <p class="s4__section-head s4__section-head--what">Что будет:</p>
+
+    <!-- 4-icon row -->
+    <div class="s4__icon-item s4__icon-graph">
+      <img src="assets/icon-graph.svg" alt="">
+      <p>Как устроены деньги в семье — без занудства и нотаций</p>
+    </div>
+    <div class="s4__icon-item s4__icon-wallet">
+      <img src="assets/icon-wallet.svg" alt="">
+      <p>Что значит быть преемником, а не просто наследником</p>
+    </div>
+    <div class="s4__icon-item s4__icon-category">
+      <img src="assets/icon-category.svg" alt="">
+      <p>Как принимать решения, от которых зависят другие</p>
+    </div>
+    <div class="s4__icon-item s4__icon-shield">
+      <img src="assets/icon-shield.svg" alt="">
+      <p><strong>Практикум:</strong> первый финансовый план на свои цели</p>
+    </div>
+
+    <!-- Section: Почему важно -->
+    <p class="s4__section-head s4__section-head--why">Почему это важно:</p>
+    <div class="s4__dashed-box"></div>
+    <p class="s4__why-text-1">На форуме вы создадите Конституцию семьи — документ с вашими ценностями, правилами и финансовой стратегией рода. Но документ без понимания — макулатура. Поэтому ваши дети в соседнем зале учатся читать его как свой</p>
+    <div class="s4__user-icon"><img src="assets/icon-3user.svg" alt=""></div>
+    <p class="s4__why-text-2">Зал преемников — это место, где ваш ребёнок впервые осознаёт: <strong>семья — это не только поддержка, это команда с общей целью</strong></p>
+    <div class="s4__book-photo"><img src="assets/s4-photo-book.png" alt=""></div>
+
+    <!-- Bottom quote -->
+    <p class="s4__quote">После форума вы едете домой и впервые можете поговорить на одном языке. Вы — про стратегию рода. Они — про свою роль в ней</p>
+
+    <!-- CTA button -->
+    <div class="s4__cta-wrap" data-prereg-scroll role="button" tabindex="0" aria-label="Забронировать места для семьи">
+      <img src="assets/s4-cta-btn.svg" alt="">
+      <span class="s4__cta-label">Забронировать места для семьи</span>
+    </div>
+
+  </section>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       SECTION 5 — Модель «4 капитала семьи»
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="s5-viewport">
+  <section class="s5">
+
+    <div class="s5__texture"><img src="assets/s5-bg-texture.png" alt=""></div>
+    <div class="s5__pill"></div>
+    <h2 class="s5__title">Модель «4 капитала семьи»</h2>
+    <div class="s5__subtitle">
+      <p>Богатство семьи — это четыре капитала, которые усиливают друг друга.</p>
+      <p>Когда все четыре капитала работают вместе — семья становится устойчивой</p>
+    </div>
+    <p class="s5__desc">На форуме вы пройдёте через каждый из них — с экспертами, практиками и конкретными инструментами</p>
+
+    <div class="s5__tab s5__tab--01"></div>
+    <div class="s5__tab s5__tab--02"></div>
+    <div class="s5__tab s5__tab--03"></div>
+    <div class="s5__tab s5__tab--04"></div>
+
+    <p class="s5__num s5__num--01">01</p>
+    <p class="s5__num s5__num--02">02</p>
+    <p class="s5__num s5__num--03">03</p>
+    <p class="s5__num s5__num--04">04</p>
+
+    <div class="s5__card s5__card--01"></div>
+    <div class="s5__card s5__card--02"></div>
+    <div class="s5__card s5__card--03"></div>
+    <div class="s5__card s5__card--04"></div>
+
+    <!-- CARD 01: Социальный капитал (orange) -->
+    <div class="s5__icon s5__icon--01" style="left:304px;top:532px;"><img src="assets/s5-icon-social.svg" alt=""></div>
+    <p class="s5__card-title s5__card-title--01">Социальный капитал</p>
+    <p class="s5__card-tag s5__card-tag--01">→ Фамилия как валюта</p>
+    <p class="s5__card-desc s5__card-desc--01">Репутация и связи — единственный актив, который усиливается при передаче следующему поколению. Каждое знакомство родителей — это дверь, которая откроется для их детей</p>
+    <div class="s5__box s5__box--s01">
+      <p class="s5__box-head s5__box-head--01">Что будет на сессии:</p>
+      <div class="s5__box-icon"><img src="assets/s5-arrow1.svg" alt="" style="transform:rotate(-90deg)"></div>
+      <p class="s5__box-text">живой диалог с экспертом о том, как создавать связи, которые переживут любой кризис. Двухраундовый нетворкинг: сначала — знакомство за пределами должностей и статусов. Потом — обмен возможностями и идеями</p>
+    </div>
+    <div class="s5__box s5__box--e01">
+      <p class="s5__box-head s5__box-head--01">Вы уйдёте с:</p>
+      <div class="s5__box-icon"><img src="assets/s5-tick1.svg" alt=""></div>
+      <p class="s5__box-text">первыми контактами людей, которые мыслят так же. Это фундамент вашего социального капитала</p>
+    </div>
+
+    <!-- CARD 02: Финансовый капитал (green) -->
+    <div class="s5__icon s5__icon--02" style="left:862px;top:532px;"><img src="assets/s5-icon-wallet1.svg" alt=""></div>
+    <p class="s5__card-title s5__card-title--02">Финансовый капитал</p>
+    <p class="s5__card-tag s5__card-tag--02">→ Формула богатства вместо формулы бедности</p>
+    <p class="s5__card-desc s5__card-desc--02">Богатство создаётся, когда разница между доходами и расходами систематически направляется в активы. Каждый месяц, каждый год, каждое десятилетие</p>
+    <div class="s5__box s5__box--s02">
+      <p class="s5__box-head s5__box-head--02">Что будет на сессии:</p>
+      <div class="s5__box-icon"><img src="assets/s5-arrow2.svg" alt="" style="transform:rotate(-90deg)"></div>
+      <p class="s5__box-text">диалог с финансовым экспертом: сложный процент, архитектура пассивного дохода, финансовое воспитание детей — с какого возраста и каким языком</p>
+    </div>
+    <div class="s5__box s5__box--e02">
+      <p class="s5__box-head s5__box-head--02">Вы уйдёте с:</p>
+      <div class="s5__box-icon"><img src="assets/s5-tick2.svg" alt=""></div>
+      <p class="s5__box-text">ясным пониманием своей формулы — и конкретным планом, как переключить её в режим накопления</p>
+    </div>
+
+    <!-- CARD 03: Интеллектуальный капитал (gray) -->
+    <div class="s5__icon s5__icon--03" style="left:304px;top:1279px;"><img src="assets/s5-icon-wallet2.svg" alt=""></div>
+    <p class="s5__card-title s5__card-title--03">Интеллектуальный капитал</p>
+    <p class="s5__card-tag s5__card-tag--03">→ Опыт, который передаётся по наследству</p>
+    <p class="s5__card-desc s5__card-desc--03">Оцифрованный опыт побед и провалов, культурный код, способ принимать решения в кризисе. Всё, что обычно остаётся «в голове» у старшего поколения — и уходит вместе с ним</p>
+    <div class="s5__box s5__box--s03">
+      <p class="s5__box-head s5__box-head--03">Что будет на сессии:</p>
+      <div class="s5__box-icon"><img src="assets/s5-arrow3.svg" alt="" style="transform:rotate(-90deg)"></div>
+      <p class="s5__box-text">диалог с экспертом: как восстановить историю рода, найти скрытые ресурсы семьи, перевести интуитивные знания в понятные правила</p>
+    </div>
+    <div class="s5__box s5__box--e03">
+      <p class="s5__box-head s5__box-head--03">Вы уйдёте с:</p>
+      <div class="s5__box-icon"><img src="assets/s5-tick3.svg" alt=""></div>
+      <p class="s5__box-text">картой интеллектуального капитала вашего рода — сильные стороны, паттерны, точки развития</p>
+    </div>
+
+    <!-- CARD 04: Человеческий капитал (gold) -->
+    <div class="s5__icon s5__icon--04" style="left:862px;top:1279px;"><img src="assets/s5-icon-wallet3.svg" alt=""></div>
+    <p class="s5__card-title s5__card-title--04">Человеческий капитал</p>
+    <p class="s5__card-tag s5__card-tag--04">→ Люди — основа всего</p>
+    <p class="s5__card-desc s5__card-desc--04a">Здоровье, энергия, отношения внутри семьи, способность каждого найти своё призвание. Это ядро, которое питает все остальные капиталы</p>
+    <p class="s5__card-desc s5__card-desc--04b">Когда семья становится местом, где можно снять броню, услышать и быть услышанным — рождается сила, которую невозможно купить за деньги</p>
+    <div class="s5__box s5__box--s04">
+      <p class="s5__box-head s5__box-head--04">Что будет на сессии:</p>
+      <div class="s5__box-icon"><img src="assets/s5-arrow4.svg" alt="" style="transform:rotate(-90deg)"></div>
+      <p class="s5__box-text">диалог с экспертом: здоровье как стратегический актив, роли и призвание каждого в семье, культура открытого диалога</p>
+    </div>
+    <div class="s5__box s5__box--e04">
+      <p class="s5__box-head s5__box-head--04">Вы уйдёте с:</p>
+      <div class="s5__box-icon"><img src="assets/s5-tick4.svg" alt=""></div>
+      <p class="s5__box-text">черновиком Конституции вашей семьи. Первым — и самым важным</p>
+    </div>
+
+  </section>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       SECTION 6 — Игра «Дельта»
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="s6-viewport">
+  <section class="s6">
+
+    <div class="s6__texture"><img src="assets/s6-bg-texture.png" alt=""></div>
+    <div class="s6__fade"></div>
+
+    <h2 class="s6__title">Форум закончится.<br>Игра останется с вашей семьёй</h2>
+    <p class="s6__subtitle"><span class="green">«Дельта»</span> — настольная игра, которая превращает идеи форума в семейную практику</p>
+
+    <!-- Cards -->
+    <div class="s6__card s6__card--left"></div>
+    <div class="s6__card s6__card--right"></div>
+
+    <!-- Left card: Что это -->
+    <div class="s6__card-icon"><img src="assets/s6-icon-game.svg" alt=""></div>
+    <p class="s6__card-title s6__card-title--left">Что это:</p>
+    <p class="s6__card-desc">Настольная игра для всей семьи — от детей до родителей. Не викторина и не монополия. Это симулятор семейных финансовых решений, где каждый ход — совместный выбор</p>
+    <div class="s6__game-bg"><img src="assets/s6-game-img-bg.png" alt=""></div>
+    <div class="s6__game-box"><img src="assets/s6-game-box.png" alt=""></div>
+
+    <!-- Right card: Зачем она нужна -->
+    <p class="s6__card-title s6__card-title--right">Зачем она нужна:</p>
+
+    <div class="s6__tick-icon s6__tick-icon--1"><img src="assets/s6-icon-tick.svg" alt=""></div>
+    <p class="s6__tick-head s6__tick-head--1">Закрепляет</p>
+    <p class="s6__tick-desc s6__tick-desc--1">Всё, что вы узнали на форуме — модель 4 капиталов, принципы стратегии — проживается заново за игровым столом</p>
+
+    <div class="s6__tick-icon s6__tick-icon--2"><img src="assets/s6-icon-tick.svg" alt=""></div>
+    <p class="s6__tick-head s6__tick-head--2">Вовлекает наследников</p>
+    <p class="s6__tick-desc s6__tick-desc--2">Дети, которые были в зале преемников, продолжают разговор дома — но уже через игру, а не через лекцию</p>
+
+    <div class="s6__tick-icon s6__tick-icon--3"><img src="assets/s6-icon-tick.svg" alt=""></div>
+    <p class="s6__tick-head s6__tick-head--3">Возвращает к теме</p>
+    <p class="s6__tick-desc s6__tick-desc--3">Одна партия — и вы снова внутри семейной стратегии. Без усилий, без назначенных встреч</p>
+
+    <div class="s6__tick-icon s6__tick-icon--4"><img src="assets/s6-icon-tick.svg" alt=""></div>
+    <p class="s6__tick-head s6__tick-head--4">Учит решать вместе</p>
+    <p class="s6__tick-desc s6__tick-desc--4">Каждый ход требует обсуждения. Семья учится договариваться — на ставках, которые пока игровые</p>
+
+    <!-- Gold section -->
+    <div class="s6__gold-box"></div>
+    <p class="s6__gold-title">Три продукта — одна система. Каждый усиливает остальные</p>
+
+    <div class="s6__sub-card s6__sub-card--1"></div>
+    <div class="s6__sub-card s6__sub-card--2"></div>
+    <div class="s6__sub-card s6__sub-card--3"></div>
+
+    <div class="s6__sub-ellipse s6__sub-ellipse--1"><img src="assets/s6-icon-ellipse.svg" alt=""></div>
+    <div class="s6__sub-ellipse s6__sub-ellipse--2"><img src="assets/s6-icon-ellipse.svg" alt=""></div>
+    <div class="s6__sub-ellipse s6__sub-ellipse--3"><img src="assets/s6-icon-ellipse.svg" alt=""></div>
+
+    <div class="s6__sub-icon s6__sub-icon--paper"><img src="assets/s6-icon-paper.svg" alt=""></div>
+    <div class="s6__sub-icon s6__sub-icon--forum"><img src="assets/s6-icon-forum.svg" alt=""></div>
+    <div class="s6__sub-icon s6__sub-icon--game"><img src="assets/s6-icon-game2.svg" alt=""></div>
+
+    <p class="s6__sub-label s6__sub-label--1">Книга «Богатство семьи»</p>
+    <p class="s6__sub-label s6__sub-label--2">Форум «Богатство семьи»</p>
+    <p class="s6__sub-label s6__sub-label--3">Игра «Дельта»</p>
+    <p class="s6__sub-text s6__sub-text--1">→ формирует понимание</p>
+    <p class="s6__sub-text s6__sub-text--2">→ создаёт опыт</p>
+    <p class="s6__sub-text s6__sub-text--3">→ закрепляет практику</p>
+
+    <!-- Pricing & CTA -->
+    <p class="s6__pricing-1">Игра входит в тарифы <span class="green">«Архитектор» и «Династия»</span></p>
+    <p class="s6__pricing-2">В тарифах «Участник» и «Основатель» — можно добавить к заказу</p>
+
+    <div class="s6__cta" data-prereg-scroll role="button" tabindex="0" aria-label="Перейти к тарифам"><img src="assets/s6-btn.svg" alt=""></div>
+    <p class="s6__cta-text" data-prereg-scroll>перейти к тарифам</p>
+
+  </section>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       SECTION 7 — Что вы заберёте с форума / Для кого этот форум
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="s7-viewport">
+  <section class="s7">
+
+    <div class="s7__texture"><img src="assets/s7-bg.png" alt=""></div>
+    <div class="s7__fade"></div>
+
+    <!-- Title block 1 -->
+    <p class="s7__title-1">Что вы заберёте с форума</p>
+    <p class="s7__subtitle">Один день — шесть конкретных результатов</p>
+
+    <!-- Result cards -->
+    <div class="s7__rcard s7__rcard--01"></div>
+    <div class="s7__rcard s7__rcard--02"></div>
+    <div class="s7__rcard s7__rcard--03"></div>
+    <div class="s7__rcard s7__rcard--04"></div>
+
+    <div class="s7__remoji s7__remoji--01"><img src="assets/s7-icon-01.png" alt=""></div>
+    <div class="s7__remoji s7__remoji--02"><img src="assets/s7-icon-02.png" alt=""></div>
+    <div class="s7__remoji s7__remoji--03"><img src="assets/s7-icon-03.png" alt=""></div>
+    <div class="s7__remoji s7__remoji--04"><img src="assets/s7-icon-04.png" alt=""></div>
+
+    <p class="s7__rnum s7__rnum--01">01</p>
+    <p class="s7__rnum s7__rnum--02">02</p>
+    <p class="s7__rnum s7__rnum--03">03</p>
+    <p class="s7__rnum s7__rnum--04">04</p>
+
+    <p class="s7__rtitle s7__rtitle--01">Конституция вашей семьи: Версия 1.0</p>
+    <p class="s7__rtitle s7__rtitle--02">Новые связи с семьями, которые мыслят так же</p>
+    <p class="s7__rtitle s7__rtitle--03">Общий язык с партнёром</p>
+    <p class="s7__rtitle s7__rtitle--04">Книга «Богатство семьи» <span class="s7__rtitle-sub">с автографами авторов*</span></p>
+
+    <p class="s7__rdesc s7__rdesc--01">Главные ценности, правила, традиции, способ решения конфликтов — первый документ вашей династии, созданный вместе с партнёром прямо на форуме</p>
+    <p class="s7__rdesc s7__rdesc--02">Два раунда нетворкинга, обмен контактами, видео-кружочки друг другу в мессенджер. Ваш социальный капитал начинает расти уже в первый день</p>
+    <p class="s7__rdesc s7__rdesc--03">После форума вы будете говорить об одном и том же — одними словами. Это самый ценный результат дня</p>
+    <p class="s7__rdesc s7__rdesc--04">Полная концепция четырёх капиталов в одном издании. Фундамент, к которому вы будете возвращаться снова и снова</p>
+    <p class="s7__rdesc-note">*Входит в тариф 3 и 4</p>
+
+    <!-- Title block 2 -->
+    <p class="s7__title-2">Для кого этот форум</p>
+    <p class="s7__subtitle-2">Вы узнаете себя</p>
+
+    <!-- Audience cards -->
+    <div class="s7__acard s7__acard--1"></div>
+    <div class="s7__acard s7__acard--2"></div>
+    <div class="s7__acard s7__acard--3"></div>
+    <div class="s7__acard s7__acard--4"></div>
+
+    <div class="s7__aphoto s7__aphoto--1"><img src="assets/s7-photo-1.jpg" alt=""></div>
+    <div class="s7__aphoto s7__aphoto--2"><img src="assets/s7-photo-2.jpg" alt=""></div>
+    <div class="s7__aphoto s7__aphoto--3"><img src="assets/s7-photo-3.jpg" alt=""></div>
+    <div class="s7__aphoto s7__aphoto--4"><img src="assets/s7-photo-4.jpg" alt=""></div>
+
+    <p class="s7__anum s7__anum--1">// 1</p>
+    <p class="s7__anum s7__anum--2">// 2</p>
+    <p class="s7__anum s7__anum--3">// 3</p>
+    <p class="s7__anum s7__anum--4">// 4</p>
+
+    <p class="s7__atitle s7__atitle--1">Вы уже построили</p>
+    <p class="s7__atitle s7__atitle--2">Вы чувствуете: пора</p>
+    <p class="s7__atitle s7__atitle--3">Вы в начале пути — и хотите сделать правильно с первого раза</p>
+    <p class="s7__atitle s7__atitle--4">Вашему ребёнку 14–21 год</p>
+
+    <p class="s7__adesc s7__adesc--1">Бизнес, карьера, доход — всё на месте. Сейчас пришло время превратить заработанное в систему, которая будет работать и через 30, и через 50 лет. Вы готовы мыслить масштабом династии — и ищете модель, как это сделать</p>
+    <p class="s7__adesc s7__adesc--2">Пора говорить с партнёром о ценностях, стратегии, будущем — открыто и на одном языке. Вы знаете, что ваша семья способна на большее. Вам нужно пространство, где этот разговор произойдёт естественно — и приведёт к конкретным решениям</p>
+    <p class="s7__adesc s7__adesc--3">Капитал ещё впереди, но мышление уже работает на долгую дистанцию. Вы хотите заложить фундамент семьи, в которой о деньгах, ценностях и будущем говорят открыто — с самого начала. Пока другие «разберутся потом», вы начинаете сейчас</p>
+    <p class="s7__adesc s7__adesc--4">Он уже принимает решения — но пока не понимает, как устроена семья как система. Вы не хотите однажды просто «передать активы». Вы хотите, чтобы он пришёл к этому моменту готовым — с пониманием, ответственностью и своей ролью. Два зала форума — это место, где вы начинаете этот разговор. Не за кухонным столом, а в среде, где это естественно</p>
+
+    <!-- Bottom text -->
+    <p class="s7__bottom">Вы на разных этапах. Вопрос — один.<br><span class="s7__bottom-accent">Этот форум — место, где ответ находит вся семья</span></p>
+
+  </section>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       SECTION 8 — Люди, которые проходят этот путь сами
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="s8-viewport">
+  <section class="s8">
+
+    <!-- Left: text -->
+    <p class="s8__title">Люди, которые проходят этот путь сами</p>
+    <p class="s8__author">Татьяна Волкова и Дмитрий Тарасов</p>
+
+    <div class="s8__bullet s8__bullet--1">
+      <div class="s8__bullet-icon"><img src="assets/s8-arrow.svg" alt=""></div>
+      <p class="s8__bullet-text s8__bullet-text--1">Соавторы книги «Богатство семьи». Бизнес-партнёры, которые объединили экспертизу в одну модель — и проверили её на собственных семьях</p>
+    </div>
+    <div class="s8__bullet s8__bullet--2">
+      <div class="s8__bullet-icon"><img src="assets/s8-arrow.svg" alt=""></div>
+      <p class="s8__bullet-text s8__bullet-text--2">Дмитрий строит династийную стратегию со своей семьёй. Татьяна — со своей. Каждый прошёл этот путь изнутри: от первых вопросов «что мы оставим детям?» до работающей системы четырёх капиталов</p>
+    </div>
+
+    <p class="s8__bold">Именно потому что за моделью стоят две разные семьи с разным укладом, разным опытом и разными вызовами — она работает универсально</p>
+
+    <!-- Gold box -->
+    <div class="s8__gold-box"></div>
+    <div class="s8__star"><img src="assets/s8-star.svg" alt=""></div>
+    <p class="s8__gold-text">На форуме — открывают день, задают рамку и представляют книгу</p>
+
+    <!-- Right: photo -->
+    <div class="s8__photo-card">
+      <div class="s8__photo-gradient"></div>
+      <div class="s8__photo-subtract"><img src="assets/s8-subtract.png" alt=""></div>
+      <img class="s8__photo-img" src="assets/s8-photo.jpg" alt="Татьяна Волкова и Дмитрий Тарасов">
+    </div>
+
+  </section>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       SECTION 9 — Эксперты форума
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="s9-viewport">
+  <section class="s9">
+
+    <p class="s9__title">Эксперты форума</p>
+
+    <!-- Background images -->
+    <div class="s9__bg s9__bg--tatiana"></div>
+    <div class="s9__bg s9__bg--dmitry"></div>
+
+    <!-- Green question boxes -->
+    <div class="s9__qbox s9__qbox--tatiana"></div>
+    <p class="s9__qtext s9__qtext--tatiana">Ключевой вопрос сессии: «Как запустить формулу богатства, которая будет работать поколениями?»</p>
+
+    <div class="s9__qbox s9__qbox--dmitry"></div>
+    <p class="s9__qtext s9__qtext--dmitry">Ключевой вопрос сессии: «Как превратить фамилию в актив, который откроет двери вашим детям?»</p>
+
+    <!-- ── Татьяна Волкова ── -->
+    <p class="s9__name s9__name--tatiana">Татьяна Волкова</p>
+    <p class="s9__subtitle">Эксперт по созданию личного капитала</p>
+
+    <!-- Pills left col (Tatiana) -->
+    <div class="s9__pill s9__pill--t1"></div>
+    <div class="s9__star" style="left:301px;top:289px"><img src="assets/s9-icon-12years.svg" alt=""></div>
+    <p class="s9__ptext s9__ptext--t1" style="left:323px;top:285px;width:259px"><b>Более 12 лет</b> занимается финансовым образованием населения</p>
+
+    <div class="s9__pill s9__pill--t2"></div>
+    <div class="s9__star" style="left:301px;top:389px"><img src="assets/s9-icon-entrepreneur.svg" alt=""></div>
+    <p class="s9__ptext s9__ptext--t2" style="left:323px;top:385px;width:251px">Серийный предприниматель, инвестор в ценные бумаги, недвижимость и криптовалюту</p>
+
+    <div class="s9__pill s9__pill--t3"></div>
+    <div class="s9__star" style="left:301px;top:564px"><img src="assets/s9-icon-sources.svg" alt=""></div>
+    <p class="s9__ptext s9__ptext--t3" style="left:323px;top:560px;width:251px"><b>Более 20 источников</b> пассивного дохода</p>
+
+    <div class="s9__pill s9__pill--t4"></div>
+    <div class="s9__star" style="left:301px;top:684px"><img src="assets/s9-icon-book.svg" alt=""></div>
+    <p class="s9__ptext s9__ptext--t4" style="left:323px;top:680px;width:224px"><b>Автор мгновенного бестселлера «5 капиталов»</b></p>
+
+    <!-- Pills right col (Tatiana) -->
+    <div class="s9__pill s9__pill--t5"></div>
+    <div class="s9__star" style="left:659px;top:289px"><img src="assets/s9-icon-graduates.svg" alt=""></div>
+    <p class="s9__ptext s9__ptext--t5" style="left:681px;top:285px;width:259px">Эксперт по созданию личного капитала, <b>более 70 000 выпускников</b></p>
+
+    <div class="s9__pill s9__pill--t6"></div>
+    <div class="s9__star" style="left:659px;top:389px"><img src="assets/s9-icon-smi.svg" alt=""></div>
+    <p class="s9__ptext s9__ptext--t6" style="left:681px;top:385px;width:261px"><b>Эксперт федеральных СМИ —</b> Первый канал, Москва24, РБК, «Известия», «Коммерсант», Газета.Ru, Lenta.Ru, Российская газета, Аргументы и факты, РИА Новости и др.</p>
+
+    <div class="s9__pill s9__pill--t7"></div>
+    <div class="s9__star" style="left:659px;top:564px"><img src="assets/s9-icon-materials.svg" alt=""></div>
+    <p class="s9__ptext s9__ptext--t7" style="left:681px;top:560px;width:290px">За 2025 год вышло <b>более 2 500 материалов</b> в СМИ с комментариями Татьяны Волковой</p>
+
+    <!-- Tatiana photo -->
+    <div class="s9__photo-wrap s9__photo-wrap--tatiana">
+      <img class="s9__photo" src="assets/s9-photo-tatiana.png" alt="Татьяна Волкова">
+    </div>
+    <p class="s9__mission"><b>Миссия:</b> Сделать сложные финансовые инструменты доступными и понятными для каждого</p>
+
+    <!-- Media logos -->
+    <div class="s9__logo-card s9__logo-card--1"><img src="assets/s9-logo-1.png" alt="Первый канал"></div>
+    <div class="s9__logo-card s9__logo-card--2"><img src="assets/s9-logo-2.png" alt="Москва24"></div>
+    <div class="s9__logo-card s9__logo-card--3"><img src="assets/s9-logo-3.png" alt="РБК"></div>
+    <div class="s9__logo-card s9__logo-card--4"><img src="assets/s9-logo-4.png" alt="РИА Новости"></div>
+    <div class="s9__logo-card s9__logo-card--5"><img src="assets/s9-logo-5.png" alt="Коммерсант"></div>
+
+    <!-- ── Дмитрий Тарасов ── -->
+    <p class="s9__name s9__name--dmitry">Дмитрий Тарасов</p>
+    <p class="s9__subtitle s9__subtitle--dmitry">Профессиональный инвестор</p>
+
+    <!-- Pills left col (Dmitry) -->
+    <div class="s9__pill s9__pill--d1"></div>
+    <div class="s9__star" style="left:301px;top:1150px"><img src="assets/s9-icon-investor25.svg" alt=""></div>
+    <p class="s9__ptext s9__ptext--d1" style="left:323px;top:1146px;width:279px"><b>25+ лет</b> профессиональный инвестор</p>
+
+    <div class="s9__pill s9__pill--d2"></div>
+    <div class="s9__star" style="left:301px;top:1250px"><img src="assets/s9-icon-mgu.svg" alt=""></div>
+    <p class="s9__ptext s9__ptext--d2" style="left:323px;top:1246px;width:279px">Преподаватель экономического факультета МГУ им. М.В. Ломоносова (авторские курсы: приватный банкинг, прямые и венчурные инвестиции)</p>
+
+    <div class="s9__pill s9__pill--d3"></div>
+    <div class="s9__star" style="left:301px;top:1385px"><img src="assets/s9-icon-book-dmitry.svg" alt=""></div>
+    <p class="s9__ptext s9__ptext--d3" style="left:323px;top:1381px;width:279px">Автор бестселлера «От золота до биткоина»</p>
+
+    <div class="s9__pill s9__pill--d4"></div>
+    <div class="s9__star" style="left:301px;top:1485px"><img src="assets/s9-icon-znanie.svg" alt=""></div>
+    <p class="s9__ptext s9__ptext--d4" style="left:323px;top:1481px;width:279px">Почётный лектор Российского общества «Знание»</p>
+
+    <!-- Pills right col (Dmitry) -->
+    <div class="s9__pill s9__pill--d5"></div>
+    <div class="s9__star" style="left:659px;top:1150px"><img src="assets/s9-icon-mld150.svg" alt=""></div>
+    <p class="s9__ptext s9__ptext--d5" style="left:681px;top:1146px;width:279px"><b>150+ млрд. рублей</b> под управлением</p>
+
+    <div class="s9__pill s9__pill--d6"></div>
+    <div class="s9__star" style="left:659px;top:1250px"><img src="assets/s9-icon-union-fathers.svg" alt=""></div>
+    <p class="s9__ptext s9__ptext--d6" style="left:681px;top:1246px;width:279px">Начальник Федерального штаба, ВОО «СОЮЗ ОТЦОВ»</p>
+
+    <div class="s9__pill s9__pill--d7"></div>
+    <div class="s9__star" style="left:659px;top:1385px"><img src="assets/s9-icon-5children.svg" alt=""></div>
+    <p class="s9__ptext s9__ptext--d7" style="left:681px;top:1381px;width:279px">Отец пятерых детей</p>
+
+    <div class="s9__pill s9__pill--d8"></div>
+    <div class="s9__star" style="left:659px;top:1485px"><img src="assets/s9-icon-parents-committee.svg" alt=""></div>
+    <p class="s9__ptext s9__ptext--d8" style="left:681px;top:1481px;width:279px">Руководитель рабочей группы Всероссийского родительского комитета (профориентация)</p>
+
+    <!-- Dmitry photo -->
+    <div class="s9__photo-wrap s9__photo-wrap--dmitry">
+      <img class="s9__photo" src="assets/s9-photo-dmitry.png" alt="Дмитрий Тарасов">
+    </div>
+
+    <!-- Dmitry org logos -->
+    <div class="s9__logo-card s9__logo-card--d1"><img src="assets/s9-dlogo-mgu.png"    alt="МГУ"></div>
+    <div class="s9__logo-card s9__logo-card--d2"><img src="assets/s9-dlogo-soyuz.png"  alt="СОЮЗ ОТЦОВ"></div>
+    <div class="s9__logo-card s9__logo-card--d3"><img src="assets/s9-dlogo-alpina.png" alt="Альпина"></div>
+    <div class="s9__logo-card s9__logo-card--d4"><img src="assets/s9-dlogo-znanie.png" alt="Знание"></div>
+    <div class="s9__logo-card s9__logo-card--d5"><img src="assets/s9-dlogo-vrk.png"    alt="ВРК"></div>
+    <div class="s9__logo-card s9__logo-card--d6"><img src="assets/s9-dlogo-infi.png"   alt="ИНФИ"></div>
+
+  </section>
+  </div>
+
+  <!-- S10 -->
+  <div class="s10-viewport">
+  <section class="s10">
+    <div class="s10__bg"><img src="assets/s10-bg-texture.png" alt=""></div>
+    <p class="s10__sup">Один день от первого кофе до Конституции семьи:</p>
+    <p class="s10__h s10__h--1">Как устроен форум</p>
+    <div class="s10__icard s10__icard--1"></div><div class="s10__icard s10__icard--2"></div>
+    <div class="s10__icard s10__icard--3"></div><div class="s10__icard s10__icard--4"></div>
+    <div class="s10__icon s10__icon--1"><img src="assets/s10-icon-megaphone.png" alt=""></div>
+    <div class="s10__icon s10__icon--2"><img src="assets/s10-icon-pen.png" alt=""></div>
+    <div class="s10__icon s10__icon--3"><img src="assets/s10-icon-group.png" alt=""></div>
+    <div class="s10__icon s10__icon--4"><img src="assets/s10-icon-notebook.png" alt=""></div>
+    <p class="s10__ctext s10__ctext--1"><b>Каждая сессия — живой диалог эксперта и интервьюера.</b> Вы слышите историю, задаёте вопросы, включаетесь в дискуссию</p>
+    <p class="s10__ctext s10__ctext--2"><b>После каждого диалога — практика в парах и группах:</b> вы работаете с воркбуком, заполняете карту, создаёте документы своей семьи</p>
+    <p class="s10__ctext s10__ctext--3">После каждой сессии вы меняетесь местами в зале — <b>к вечеру вы познакомитесь с максимальным количеством семей.</b> У каждого участника — именной бейдж, воркбук и ручка</p>
+    <p class="s10__ctext s10__ctext--4">День завершается презентацией книги «Богатство семьи», автограф-сессией и камерной концертной программой</p>
+    <div class="s10__photo s10__photo--timing"><img src="assets/s10-photo-timing.png" alt=""></div>
+    <p class="s10__h s10__h--2">Тайминг форума</p>
+    <div class="s10__tbox s10__tbox--1"></div>
+    <div class="s10__div" style="top:1372px"></div><div class="s10__div" style="top:1523px"></div>
+    <div class="s10__div" style="top:1739px"></div><div class="s10__div" style="top:1885px"></div>
+    <div class="s10__div" style="top:2047px"></div><div class="s10__div" style="top:2193px"></div>
+    <div class="s10__div" style="top:2355px"></div><div class="s10__div" style="top:2501px"></div>
+    <div class="s10__div" style="top:2663px"></div><div class="s10__div" style="top:2825px"></div>
+    <div class="s10__badge" style="top:1275px"><span class="s10__time">10:00</span></div>
+    <p class="s10__etext" style="top:1286px">Сбор гостей, регистрация участников, приветственный кофе</p>
+    <div class="s10__badge" style="top:1423px"><span class="s10__time">10:30</span></div>
+    <p class="s10__etext" style="top:1421px"><b>Открытие форума.</b><br>Приветственное слово Дмитрия Тарасова и Татьяны Волковой</p>
+    <p class="s10__etitle" style="top:1572px">Сессия 1. Социальный капитал (60 минут)</p>
+    <div class="s10__badge" style="top:1607px"><span class="s10__time">11:30</span></div>
+    <p class="s10__edesc" style="top:1610px;width:677px;white-space:normal">Формат: живой диалог эксперта и интервьюера <span class="s10__edesc--muted">(журналист / медийная персона)</span>, обсуждение ключевой проблемы темы и поиск решений. Ответы на вопросы аудитории</p>
+    <div class="s10__badge" style="top:1788px"><span class="s10__time">12:30–12:45</span></div>
+    <p class="s10__etext" style="top:1799px">Перерыв</p>
+    <p class="s10__etitle" style="top:1934px">Сессия 2. Финансовый капитал (60 минут)</p>
+    <div class="s10__badge" style="top:1942px"><span class="s10__time">11:30</span></div>
+    <p class="s10__edesc" style="top:1972px">Формат: живой диалог эксперта и интервьюера + вопросы аудитории</p>
+    <div class="s10__badge" style="top:2096px"><span class="s10__time">13:45</span></div>
+    <p class="s10__etext" style="top:2107px">Обеденный перерыв</p>
+    <p class="s10__etitle" style="top:2242px">Сессия 3. Интеллектуальный капитал (60 минут)</p>
+    <div class="s10__badge" style="top:2250px"><span class="s10__time">15:00</span></div>
+    <p class="s10__edesc" style="top:2280px">Формат: открытый диалог эксперта и интервьюера + вопросы аудитории</p>
+    <div class="s10__badge" style="top:2404px"><span class="s10__time">16:00–16:15</span></div>
+    <p class="s10__etext" style="top:2415px">Перерыв</p>
+    <p class="s10__etitle" style="top:2550px">Сессия 4. Человеческий капитал (60 минут)</p>
+    <div class="s10__badge" style="top:2558px"><span class="s10__time">16:15</span></div>
+    <p class="s10__edesc" style="top:2588px">Формат: живой диалог эксперта и интервьюера</p>
+    <p class="s10__etitle" style="top:2712px">Презентация книги «Богатство семьи»</p>
+    <div class="s10__badge" style="top:2720px"><span class="s10__time">17:15–17:30</span></div>
+    <p class="s10__edesc" style="top:2750px">Выступают: Дмитрий Тарасов и Татьяна Волкова</p>
+    <p class="s10__etitle" style="top:2874px">Концертная программа и завершение форума</p>
+    <div class="s10__badge" style="top:2882px"><span class="s10__time">17:30</span></div>
+    <p class="s10__edesc" style="top:2912px">Формат форума: живые диалоги экспертов и интервьюеров</p>
+    <div class="s10__photo s10__photo--heirs"><img src="assets/s10-photo-heirs.png" alt=""></div>
+    <div class="s10__glow"></div>
+    <p class="s10__h s10__h--3">Зал преемников</p>
+    <div class="s10__tbox s10__tbox--2"></div>
+    <div class="s10__div" style="top:3772px"></div><div class="s10__div" style="top:3918px"></div>
+    <div class="s10__div" style="top:4064px"></div><div class="s10__div" style="top:4210px"></div>
+    <div class="s10__div" style="top:4356px"></div><div class="s10__div" style="top:4502px"></div>
+    <div class="s10__div" style="top:4648px"></div>
+    <div class="s10__badge" style="top:3675px"><span class="s10__time">09:30</span></div>
+    <p class="s10__etext" style="top:3686px">Знакомство. Кто такой преемник?</p>
+    <div class="s10__badge" style="top:3821px"><span class="s10__time">10:00</span></div>
+    <p class="s10__etext" style="top:3832px">Как устроены деньги в семье</p>
+    <div class="s10__badge" style="top:3967px"><span class="s10__time">11:15</span></div>
+    <p class="s10__etext" style="top:3978px">Решения, от которых зависят другие</p>
+    <div class="s10__badge" style="top:4113px"><span class="s10__time">12:30</span></div>
+    <p class="s10__etext" style="top:4124px">Обед вместе с родителями</p>
+    <div class="s10__badge" style="top:4259px"><span class="s10__time">11:30</span></div>
+    <p class="s10__etext" style="top:4270px">Окружение и связи: твой первый капитал</p>
+    <div class="s10__badge" style="top:4405px"><span class="s10__time">14:45</span></div>
+    <p class="s10__etext" style="top:4416px">Мой первый финансовый план</p>
+    <div class="s10__badge" style="top:4551px"><span class="s10__time">16:00</span></div>
+    <p class="s10__etext" style="top:4562px">Совместная сессия с родителями</p>
+    <div class="s10__badge" style="top:4697px"><span class="s10__time">16:00–16:15</span></div>
+    <p class="s10__etext" style="top:4708px">Перерыв</p>
+    <div class="s10__footer">
+      <p class="s10__footer-title">Полный день — с 10:00 до 18:30</p>
+      <p class="s10__footer-sub">Обед, кофе-брейки и все материалы включены в стоимость билета</p>
+    </div>
+  </section>
+  </div>
+
+  <!-- S11 Тарифы -->
+  <div class="s11-viewport" id="prereg-section">
+  <section class="s11 s11--tariffs">
+    <div class="s11__bg"><img src="assets/s11-bg.png" alt=""></div>
+    <p class="s11__title">Выберите свой<br>формат участия</p>
+    <p class="s11__sub">Форум создан для совместного опыта. Поэтому каждый <b>второй билет — на 30% дешевле.</b> Для партнера, друга, брата, коллеги — любого, с кем вы хотите пройти этот день</p>
+
+    <div class="tariff-cards" aria-label="Тарифы участия">
+      <article class="tariff-card tariff-card--light tariff-card--online" id="tariff-online">
+        <div class="tariff-card__top">
+          <p class="tariff-card__label">Тариф 1</p>
+          <p class="tariff-card__seat">300 мест</p>
+        </div>
+        <h3 class="tariff-card__name">Онлайн</h3>
+        <p class="tariff-card__what">Что входит:</p>
+        <ul class="tariff-card__features">
+          <li class="tariff-card__feature"><img src="assets/s11-tick-dark.svg" alt=""><span>Онлайн-трансляция форума</span></li>
+          <li class="tariff-card__feature"><img src="assets/s11-tick-dark.svg" alt=""><span>Воркбук «Конституция семьи» в электронном виде</span></li>
+        </ul>
+        <div class="tariff-card__price-block">
+          <p class="tariff-card__price-label">Стоимость билета 1 этап</p>
+          <p class="tariff-card__price">3 900 ₽</p>
+          <p class="tariff-card__stage">с 1.07.26 — 4 400 ₽</p>
+          <p class="tariff-card__stage">с 1.08.26 — 4 900 ₽</p>
+        </div>
+        <div class="tariff-card__actions">
+          <button type="button" class="tariff-card__btn tariff-card__btn--primary tariff-card__btn--dark" data-prereg-open>Забронировать</button>
+          <button type="button" class="tariff-card__btn tariff-card__btn--outline tariff-card__btn--outline-dark" data-prereg-open>Оформить в рассрочку</button>
+        </div>
+      </article>
+
+      <article class="tariff-card tariff-card--light tariff-card--founder" id="tariff-founder">
+        <div class="tariff-card__top">
+          <p class="tariff-card__label">Тариф 2</p>
+          <p class="tariff-card__seat">500 мест</p>
+        </div>
+        <h3 class="tariff-card__name">Основатель</h3>
+        <p class="tariff-card__what">Что входит:</p>
+        <ul class="tariff-card__features">
+          <li class="tariff-card__feature"><img src="assets/s11-tick-dark.svg" alt=""><span>Онлайн-трансляция форума</span></li>
+          <li class="tariff-card__feature"><img src="assets/s11-tick-dark.svg" alt=""><span>Воркбук «Конституция семьи» в электронном виде</span></li>
+          <li class="tariff-card__feature"><img src="assets/s11-tick-dark.svg" alt=""><span>4 сессии основного зала</span></li>
+          <li class="tariff-card__feature"><img src="assets/s11-tick-dark.svg" alt=""><span>Telegram-чат участников</span></li>
+          <li class="tariff-card__feature"><img src="assets/s11-tick-dark.svg" alt=""><span>Кофе-брейк</span></li>
+        </ul>
+        <div class="tariff-card__price-block">
+          <p class="tariff-card__price-label">Стоимость билета 1 этап</p>
+          <p class="tariff-card__price">6 900 ₽</p>
+          <p class="tariff-card__stage">с 1.07.26 — 7 900 ₽</p>
+          <p class="tariff-card__stage">с 1.08.26 — 9 900 ₽</p>
+        </div>
+        <div class="tariff-card__actions">
+          <button type="button" class="tariff-card__btn tariff-card__btn--primary tariff-card__btn--dark" data-prereg-open>Забронировать</button>
+          <button type="button" class="tariff-card__btn tariff-card__btn--outline tariff-card__btn--outline-dark" data-prereg-open>Оформить в рассрочку</button>
+        </div>
+      </article>
+
+      <article class="tariff-card tariff-card--dark tariff-card--strateg" id="tariff-strateg">
+        <div class="tariff-card__badge tariff-card__badge--hot">
+          <img src="assets/s11-icon-fire.svg" alt="">
+          <span>Хит продаж</span>
+        </div>
+        <div class="tariff-card__top">
+          <p class="tariff-card__label">Тариф 3</p>
+          <p class="tariff-card__seat">230 мест</p>
+        </div>
+        <h3 class="tariff-card__name">Стратег</h3>
+        <p class="tariff-card__what">Что входит:</p>
+        <ul class="tariff-card__features">
+          <li class="tariff-card__feature"><img src="assets/s11-tick-light.svg" alt=""><span>Онлайн-трансляция форума</span></li>
+          <li class="tariff-card__feature"><img src="assets/s11-tick-light.svg" alt=""><span>Воркбук «Конституция семьи» в печатном виде</span></li>
+          <li class="tariff-card__feature"><img src="assets/s11-tick-light.svg" alt=""><span>4 сессии основного зала</span></li>
+          <li class="tariff-card__feature"><img src="assets/s11-tick-light.svg" alt=""><span>Telegram-чат участников</span></li>
+          <li class="tariff-card__feature"><img src="assets/s11-tick-light.svg" alt=""><span>Кофе-брейк</span></li>
+          <li class="tariff-card__feature"><img src="assets/s11-tick-light.svg" alt=""><span>Записи сессий на 90 дней</span></li>
+          <li class="tariff-card__feature"><img src="assets/s11-tick-light.svg" alt=""><span>Конспект форума</span></li>
+        </ul>
+        <div class="tariff-card__price-block">
+          <p class="tariff-card__price-label">Стоимость билета 1 этап</p>
+          <p class="tariff-card__price">12 900 ₽</p>
+          <p class="tariff-card__stage">с 1.07.26 — 14 900 ₽</p>
+          <p class="tariff-card__stage">с 1.08.26 — 16 900 ₽</p>
+        </div>
+        <div class="tariff-card__actions">
+          <button type="button" class="tariff-card__btn tariff-card__btn--primary tariff-card__btn--gold" data-prereg-open>Получить доступ</button>
+          <button type="button" class="tariff-card__btn tariff-card__btn--outline tariff-card__btn--outline-gold" data-prereg-open>Оформить в рассрочку</button>
+        </div>
+      </article>
+
+      <article class="tariff-card tariff-card--dark tariff-card--legacy" id="tariff-legacy">
+        <div class="tariff-card__top">
+          <p class="tariff-card__label">Тариф 4</p>
+          <p class="tariff-card__seat">100 мест</p>
+        </div>
+        <h3 class="tariff-card__name">Наследие</h3>
+        <p class="tariff-card__what">Все из тарифа «Стратег», плюс:</p>
+        <ul class="tariff-card__features">
+          <li class="tariff-card__feature"><img src="assets/s11-tick-light.svg" alt=""><span>Книга «Богатство семьи» с автографами</span></li>
+          <li class="tariff-card__feature"><img src="assets/s11-tick-light.svg" alt=""><span>Приоритетные места</span></li>
+          <li class="tariff-card__feature"><img src="assets/s11-tick-light.svg" alt=""><span>Игра «Дельта»</span></li>
+        </ul>
+        <div class="tariff-card__price-block">
+          <p class="tariff-card__price-label">Стоимость билета 1 этап</p>
+          <p class="tariff-card__price">22 900 ₽</p>
+          <p class="tariff-card__stage">с 1.07.26 — 25 900 ₽</p>
+          <p class="tariff-card__stage">с 1.08.26 — 28 900 ₽</p>
+        </div>
+        <div class="tariff-card__actions">
+          <button type="button" class="tariff-card__btn tariff-card__btn--primary tariff-card__btn--gold" data-prereg-open>Получить доступ</button>
+          <button type="button" class="tariff-card__btn tariff-card__btn--outline tariff-card__btn--outline-gold" data-prereg-open>Оформить в рассрочку</button>
+        </div>
+      </article>
+
+      <article class="tariff-card tariff-card--dark tariff-card--dynasty" id="tariff-dynasty">
+        <div class="tariff-card__badge tariff-card__badge--rec">
+          <img src="assets/s11-icon-heart.svg" alt="">
+          <span>Рекомендуемый</span>
+        </div>
+        <div class="tariff-card__top">
+          <p class="tariff-card__label">Тариф 5</p>
+          <p class="tariff-card__seat">20 мест</p>
+        </div>
+        <h3 class="tariff-card__name">Династия</h3>
+        <p class="tariff-card__what">Все из тарифа «Наследие», плюс:</p>
+        <ul class="tariff-card__features">
+          <li class="tariff-card__feature"><img src="assets/s11-tick-gray.svg" alt=""><span>Воркбук в печатном виде с автографом</span></li>
+          <li class="tariff-card__feature"><img src="assets/s11-tick-gray.svg" alt=""><span>Групповой разбор с экспертом онлайн, 30 минут</span></li>
+          <li class="tariff-card__feature"><img src="assets/s11-tick-gray.svg" alt=""><span>Фото со спикерами</span></li>
+          <li class="tariff-card__feature"><img src="assets/s11-tick-gray.svg" alt=""><span>Закрытый ужин со спикерами</span></li>
+        </ul>
+        <div class="tariff-card__price-block">
+          <p class="tariff-card__price-label">Стоимость билета 1 этап</p>
+          <p class="tariff-card__price">50 000 ₽</p>
+          <p class="tariff-card__stage">с 1.07.26 — 55 000 ₽</p>
+          <p class="tariff-card__stage">с 1.08.26 — 60 000 ₽</p>
+        </div>
+        <div class="tariff-card__actions">
+          <button type="button" class="tariff-card__btn tariff-card__btn--primary tariff-card__btn--gold" data-prereg-open>Получить доступ</button>
+          <button type="button" class="tariff-card__btn tariff-card__btn--outline tariff-card__btn--outline-gold" data-prereg-open>Оформить в рассрочку</button>
+        </div>
+      </article>
+    </div>
+  </section>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-container footer-grid">
+      <div class="footer-col">
+        <p class="footer-title">Мы в соцсетях</p>
+        <div class="footer-socials">
+          <a href="https://vk.ru/club238168164" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24">
+              <path d="M13.2 17.5c-5.1 0-8-3.5-8.1-9.3h2.6c.1 4.2 1.9 6 3.4 6.4V8.2h2.5v3.7c1.5-.2 3-1.8 3.5-3.7h2.5a7 7 0 0 1-3.2 4.6 7.2 7.2 0 0 1 3.8 4.7h-2.8c-.5-1.8-1.9-3.2-3.8-3.4v3.4h-.4Z" />
+            </svg>
+            <span>VK</span>
+          </a>
+          <a href="https://t.me/family_wealth_forum" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24Zm5.6 7.9-1.8 8.5c-.1.6-.5.8-1 .5l-2.8-2.1-1.4 1.3c-.1.2-.3.3-.6.3l.2-2.9 5.2-4.7c.2-.2-.1-.3-.4-.1l-6.4 4-2.8-.9c-.6-.2-.6-.6.1-.8l10.9-4.2c.5-.2 1 .1.8 1.1Z" />
+            </svg>
+            <span>Telegram</span>
+          </a>
+          <a href="https://max.ru/volkovacapital" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 46 42">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M21.4701 41.58C17.3601 41.58 15.4501 40.98 12.1301 38.58C10.0301 41.28 3.38008 43.39 3.09008 39.78C3.09008 37.07 2.49008 34.78 1.81008 32.28C1.00008 29.2 0.0800781 25.77 0.0800781 20.8C0.0800781 8.93 9.82008 0 21.3601 0C32.9101 0 41.9601 9.37 41.9601 20.91C41.9787 26.3666 39.8316 31.6076 35.9902 35.4829C32.1487 39.3581 26.9266 41.5509 21.4701 41.58ZM21.6401 10.26C16.0201 9.97 11.6401 13.86 10.6701 19.96C9.87008 25.01 11.2901 31.16 12.5001 31.48C13.0801 31.62 14.5401 30.44 15.4501 29.53C16.9548 30.5695 18.7071 31.1938 20.5301 31.34C23.3293 31.4746 26.0697 30.5057 28.1622 28.6414C30.2546 26.777 31.5321 24.1662 31.7201 21.37C31.8295 18.568 30.8346 15.8351 28.9495 13.7592C27.0643 11.6833 24.4396 10.4303 21.6401 10.27V10.26Z" />
+            </svg>
+            <span>Макс</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-title">Документы</p>
+        <nav class="footer-documents">
+          <a href="politika.pdf" target="_blank" rel="noopener">Политика обработки персональных данных</a>
+          <a href="sog_reklama.pdf" target="_blank" rel="noopener">Согласие на получение рекламы</a>
+          <a href="sog_shoot.pdf" target="_blank" rel="noopener">Соглашение на съемку</a>
+        </nav>
+        <div class="footer-company">
+          <p>ООО «Синтера»</p>
+          <p>ИНН: 9713030131</p>
+          <p>ОГРН: 1257700386338</p>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-title">Контакты</p>
+        <div class="footer-contacts">
+          <a href="tel:+79651366352" class="footer-link-tel">+7 965 136 63 52</a>
+          <a href="mailto:inbox@sintera.site">inbox@sintera.site</a>
+          <a href="https://t.me/+79651366352" target="_blank" rel="noopener">Telegram</a>
+          <a href="https://api.whatsapp.com/send/?phone=79651366352&text&type=phone_number&app_absent=0" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://tvolkova.bitrix24site.ru/crm_form_forsite/" target="_blank" rel="noopener" class="footer-link-form">Форма обратной связи</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const HERO_W = 1600, HERO_H = 792;
+    const S2_H   = 859;
+    const S3_H   = 520;
+    const S4_H   = 1800;
+    const S5_H   = 2040;
+    const S6_H   = 1600;
+    const S7_H   = 1950;
+    const S8_H   = 760;
+    const S9_H   = 1820;
+    const S10_H  = 5174;
+    const S11_H  = 1240;
+
+    const sections = [
+      ['.s2', '.s2-viewport', S2_H],
+      ['.s3', '.s3-viewport', S3_H],
+      ['.s4', '.s4-viewport', S4_H],
+      ['.s5', '.s5-viewport', S5_H],
+      ['.s6', '.s6-viewport', S6_H],
+      ['.s7', '.s7-viewport', S7_H],
+      ['.s8', '.s8-viewport', S8_H],
+      ['.s9', '.s9-viewport', S9_H],
+      ['.s10', '.s10-viewport', S10_H],
+      ['.s11', '.s11-viewport', S11_H],
+    ];
+
+    function scaleSections(scale) {
+      sections.forEach(([sectionSelector, viewportSelector, height]) => {
+        document.querySelector(sectionSelector).style.transform = `scale(${scale})`;
+        document.querySelector(viewportSelector).style.height = (height * scale) + 'px';
+      });
+    }
+
+    function scaleAll() {
+      const vw  = window.innerWidth;
+      const vh  = window.innerHeight;
+      const mob = vw <= 767;
+
+      if (mob) {
+        // ── Mobile ──────────────────────────────────────────────────
+        // Hero: CSS flex handles layout, no JS transform needed
+        const hero = document.querySelector('.hero');
+        hero.style.transform = 'none';
+        hero.style.left = '0';
+        hero.style.top  = '0';
+        document.querySelector('.hero-viewport').style.height = 'auto';
+
+        // S2–S11 пока без мобильного макета — масштабируем по десктопной ширине
+        const ds = vw / HERO_W;
+        scaleSections(ds);
+
+      } else {
+        // ── Desktop ─────────────────────────────────────────────────
+        const heroScale  = Math.max(vw / HERO_W, vh / HERO_H);
+        const hero       = document.querySelector('.hero');
+        const scaledHeroW = HERO_W * heroScale;
+        const scaledHeroH = HERO_H * heroScale;
+        hero.style.transform = `scale(${heroScale})`;
+        hero.style.left = ((vw - scaledHeroW) / 2) + 'px';
+        hero.style.top  = ((vh - scaledHeroH) / 2) + 'px';
+        document.querySelector('.hero-viewport').style.height = vh + 'px';
+
+        const s2Scale = vw / HERO_W;
+        scaleSections(s2Scale);
+      }
+    }
+
+    function initRevealMotion() {
+      const selectors = [
+        '.badge', '.logo', '.tagline', '.cta-btn', '.cta-label', '.seats-icon', '.seats-text', '.portrait-tatyana', '.portrait-dmitry', '.card-rect', '.card-icon', '.card-name', '.card-role', '.section-title', '.m-speaker-badge',
+        '.s2__title', '.s2__subtitle', '.s2__tagline', '.s2__badge', '.s2__body-left', '.s2__body-right-1', '.s2__body-right-2', '.s2__location-icon', '.s2__chart-icon',
+        '.s3__badge', '.s3__title', '.s3__card', '.s3__icon', '.s3__card-text', '.s3__bottom-1', '.s3__bottom-2',
+        '.s4__title', '.s4__subtitle', '.s4__card', '.s4__card-photo', '.s4__card-title', '.s4__card-sub', '.s4__card-body', '.s4__tick', '.s4__tick-text', '.s4__section-head', '.s4__icon-item', '.s4__why-text-1', '.s4__user-icon', '.s4__why-text-2', '.s4__book-photo', '.s4__quote', '.s4__cta-wrap',
+        '.s5__title', '.s5__subtitle', '.s5__desc', '.s5__pill', '.s5__tab', '.s5__num', '.s5__card', '.s5__icon', '.s5__card-title', '.s5__card-tag', '.s5__card-desc', '.s5__box', '.s5__box-head', '.s5__box-icon', '.s5__box-text',
+        '.s6__title', '.s6__subtitle', '.s6__card', '.s6__card-icon', '.s6__card-title', '.s6__card-desc', '.s6__game-bg', '.s6__game-box', '.s6__tick-icon', '.s6__tick-head', '.s6__tick-desc', '.s6__gold-box', '.s6__gold-title', '.s6__sub-card', '.s6__sub-icon', '.s6__sub-label', '.s6__sub-text', '.s6__pricing-1', '.s6__pricing-2', '.s6__cta', '.s6__cta-text',
+        '.s7__title-1', '.s7__subtitle', '.s7__rcard', '.s7__rnum', '.s7__remoji', '.s7__rtitle', '.s7__rdesc', '.s7__rdesc-note', '.s7__aphoto', '.s7__title-2', '.s7__subtitle-2', '.s7__acard', '.s7__anum', '.s7__atitle', '.s7__adesc', '.s7__bottom',
+        '.s8__title', '.s8__author', '.s8__bullet', '.s8__bold', '.s8__gold-box', '.s8__star', '.s8__gold-text', '.s8__photo-card',
+        '.s9__title', '.s9__qbox', '.s9__qtext', '.s9__star', '.s9__photo-wrap', '.s9__name', '.s9__subtitle', '.s9__pill', '.s9__ptext', '.s9__logo-card', '.s9__mission',
+        '.s10__sup', '.s10__h', '.s10__icard', '.s10__icon', '.s10__ctext', '.s10__photo', '.s10__tbox', '.s10__time', '.s10__etext', '.s10__etitle', '.s10__edesc', '.s10__footer', '.s10__footer-title', '.s10__footer-sub',
+        '.s11__title', '.s11__sub', '.s11__card', '.s11__badge-wrap', '.s11__badge-icon', '.s11__badge-text', '.s11__tlabel', '.s11__tname', '.s11__what', '.s11__feature', '.s11__tick', '.s11__ftext', '.s11__price', '.s11__btn', '.s11__prereg-btn', '.tariff-card', '.tariff-card__badge', '.tariff-card__label', '.tariff-card__seat', '.tariff-card__name', '.tariff-card__what', '.tariff-card__feature', '.tariff-card__price-label', '.tariff-card__price', '.tariff-card__stage', '.tariff-card__btn', '.m-s11-badge-top', '.m-s11-card', '.m-s11-inner', '.m-s11-tlabel', '.m-s11-tname', '.m-s11-divider', '.m-s11-what', '.m-s11-features li', '.m-s11-price', '.m-s11-btn',
+        '.footer-col', '.footer-title', '.footer-socials a', '.footer-documents a', '.footer-contacts a', '.footer-company'
+      ];
+
+      const seen = new Set();
+      const elements = [];
+
+      selectors.forEach((selector) => {
+        document.querySelectorAll(selector).forEach((element) => {
+          if (!seen.has(element) && element.getClientRects().length > 0) {
+            seen.add(element);
+            elements.push(element);
+          }
+        });
+      });
+
+      if (!elements.length) return;
+
+      const reveal = (element) => {
+        let cleaned = false;
+        const cleanup = () => {
+          if (cleaned) return;
+          cleaned = true;
+          element.classList.remove('reveal', 'is-visible');
+          element.removeEventListener('transitionend', onTransitionEnd);
+        };
+        const onTransitionEnd = (event) => {
+          if (event.target === element) cleanup();
+        };
+
+        element.classList.add('is-visible');
+        element.addEventListener('transitionend', onTransitionEnd);
+        window.setTimeout(cleanup, 760);
+      };
+
+      elements.forEach((element) => element.classList.add('reveal'));
+
+      if (!('IntersectionObserver' in window)) {
+        elements.forEach(reveal);
+        return;
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            reveal(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        rootMargin: '0px 0px -10% 0px',
+        threshold: 0.08
+      });
+
+      requestAnimationFrame(() => {
+        elements.forEach((element) => {
+          const rect = element.getBoundingClientRect();
+          const inViewport = rect.top < window.innerHeight * 0.92 && rect.bottom > 0;
+
+          if (inViewport) {
+            reveal(element);
+          } else {
+            observer.observe(element);
+          }
+        });
+      });
+    }
+
+    scaleAll();
+    initRevealMotion();
+    window.addEventListener('resize', scaleAll);
+  </script>
+
+
+  <!-- ===== Pre-registration full-frame widget (GetCourse) ===== -->
+  <div class="prereg" id="prereg" role="dialog" aria-modal="true" aria-label="Лист предзаписи" aria-hidden="true">
+    <div class="prereg__dialog">
+      <button type="button" class="prereg__close" id="prereg-close" aria-label="Закрыть">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5 19 19 M19 5 5 19"/></svg>
+      </button>
+      <div class="prereg__body" id="prereg-body"><!-- GetCourse iframe is preloaded here --></div>
+    </div>
+  </div>
+
+  <!-- Pre-registration widget: preload + UTM forwarding + full-frame open + height sync -->
+  <script>
+    (function () {
+      var WIDGET_BASE = 'https://fincontour.ru/pl/lite/widget/widget?id=1613589';
+      var WIDGET_UNIQ = '92d40fc09c2f8651bd216cb34f111e295abfe0d4';
+
+      // Shared URL helper — forwards page-level tracking (utm_* + ref) into the
+      // widget src exactly like the native GetCourse script does: names are
+      // lowercased and the widget's own service id is never overwritten.
+      function withTracking(baseSrc) {
+        var src;
+        try { src = new URL(baseSrc, window.location.href); }
+        catch (err) { return baseSrc; }
+        new URLSearchParams(window.location.search).forEach(function (value, rawKey) {
+          var key = rawKey.toLowerCase();
+          if (key === 'id') return;
+          if (key === 'ref' || key.indexOf('utm_') === 0) src.searchParams.set(key, value);
+        });
+        return src.toString();
+      }
+
+      var overlay  = document.getElementById('prereg');
+      var host     = document.getElementById('prereg-body');
+      var closeBtn = document.getElementById('prereg-close');
+      if (!overlay || !host || !closeBtn) return;
+
+      // Preload the iframe on first load so the CTA opens an already-ready widget.
+      var iframe = document.createElement('iframe');
+      iframe.className = 'prereg__iframe';
+      iframe.title = 'Лист предзаписи';
+      iframe.setAttribute('allowfullscreen', 'allowfullscreen');
+      iframe.src = withTracking(WIDGET_BASE);
+      host.appendChild(iframe);
+
+      // GetCourse posts { uniqName, height, ... } with the real content height —
+      // size the iframe to it so there is no huge white tail below the form.
+      window.addEventListener('message', function (e) {
+        var data = e.data;
+        if (!data || data.uniqName !== WIDGET_UNIQ) return;
+        var h = parseInt(data.height, 10);
+        if (h > 0) iframe.style.height = h + 'px';
+      });
+
+      var lastFocus = null, scrollLocked = false, htmlOv = '', bodyOv = '';
+      function lockScroll() {
+        if (scrollLocked) return;
+        htmlOv = document.documentElement.style.overflow;
+        bodyOv = document.body.style.overflow;
+        document.documentElement.style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden';
+        scrollLocked = true;
+      }
+      function unlockScroll() {
+        if (!scrollLocked) return;
+        document.documentElement.style.overflow = htmlOv;
+        document.body.style.overflow = bodyOv;
+        scrollLocked = false;
+      }
+      function openWidget() {
+        lastFocus = document.activeElement;
+        overlay.classList.add('is-open');
+        overlay.setAttribute('aria-hidden', 'false');
+        lockScroll();
+        host.scrollTop = 0;
+        closeBtn.focus();
+      }
+      function closeWidget() {
+        overlay.classList.remove('is-open');
+        overlay.setAttribute('aria-hidden', 'true');
+        unlockScroll();
+        if (lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus();
+      }
+
+      Array.prototype.forEach.call(document.querySelectorAll('[data-prereg-open]'), function (el) {
+        el.addEventListener('click', function (ev) { ev.preventDefault(); openWidget(); });
+      });
+
+      // All page CTAs smooth-scroll to the pre-registration block.
+      var preregSection = document.getElementById('prereg-section');
+      function scrollToPrereg() {
+        if (preregSection) preregSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      Array.prototype.forEach.call(document.querySelectorAll('[data-prereg-scroll]'), function (el) {
+        el.addEventListener('click', function (ev) { ev.preventDefault(); scrollToPrereg(); });
+        el.addEventListener('keydown', function (ev) {
+          if (ev.key === 'Enter' || ev.key === ' ' || ev.key === 'Spacebar') { ev.preventDefault(); scrollToPrereg(); }
+        });
+      });
+
+      closeBtn.addEventListener('click', closeWidget);
+      document.addEventListener('keydown', function (e) {
+        if ((e.key === 'Escape' || e.key === 'Esc') && overlay.classList.contains('is-open')) closeWidget();
+      });
+    })();
+  </script>
+
+</body>
+</html>
