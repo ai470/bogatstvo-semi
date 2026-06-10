@@ -2860,6 +2860,7 @@
       text-align: center; margin-bottom: 0; color: rgba(0,0,0,0.7);
     }
     .s11__prereg-btn {
+      position: relative !important; left: auto !important; top: auto !important;
       width: 100%; max-width: 360px; min-height: 64px;
       margin: 26px auto 0; box-sizing: border-box;
       padding: 14px 24px;
