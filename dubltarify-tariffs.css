@@ -120,24 +120,16 @@
 
 .tariff-card__top {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 12px;
-  margin-bottom: 12px;
+  margin-bottom: 18px;
 }
 
-.tariff-card__label,
 .tariff-card__seat,
 .tariff-card__price-label,
 .tariff-card__stage {
   margin: 0;
-}
-
-.tariff-card__label {
-  font-size: 13px;
-  font-weight: 700;
-  line-height: 1.2;
-  opacity: 0.62;
 }
 
 .tariff-card__seat {
@@ -151,6 +143,7 @@
   font-weight: 700;
   line-height: 1;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .tariff-card--light .tariff-card__seat {
@@ -164,11 +157,12 @@
 }
 
 .tariff-card__name {
-  margin: 0 0 18px;
+  margin: 0;
   font-size: 24px;
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
+  min-width: 0;
 }
 
 .tariff-card--light .tariff-card__name {
@@ -617,7 +611,7 @@
 
   .tariff-card__name {
     font-size: 25px;
-    margin-bottom: 16px;
+    margin: 0;
   }
 
   .tariff-card__what {
