@@ -789,7 +789,7 @@
     <p class="s11__sub">Форум создан для совместного опыта. Поэтому каждый <b>второй билет — на 30% дешевле.</b> Для партнера, друга, брата, коллеги — любого, с кем вы хотите пройти этот день</p>
 
     <div class="tariff-cards tariff-cards--main" aria-label="Тарифы участия">
-      <article class="tariff-card tariff-card--light tariff-card--founder" id="tariff-founder">
+      <article class="tariff-card tariff-card--light tariff-card--founder" id="tariff-founder" data-gc-widget="founder">
         <div class="tariff-card__top">
           <p class="tariff-card__label">Тариф 2</p>
           <p class="tariff-card__seat">500 мест</p>
@@ -815,7 +815,7 @@
         </div>
       </article>
 
-      <article class="tariff-card tariff-card--dark tariff-card--strateg" id="tariff-strateg">
+      <article class="tariff-card tariff-card--dark tariff-card--strateg" id="tariff-strateg" data-gc-widget="strateg">
         <div class="tariff-card__badge tariff-card__badge--hot">
           <img src="assets/s11-icon-fire.svg" alt="">
           <span>Хит продаж</span>
@@ -847,7 +847,7 @@
         </div>
       </article>
 
-      <article class="tariff-card tariff-card--dark tariff-card--legacy" id="tariff-legacy">
+      <article class="tariff-card tariff-card--dark tariff-card--legacy" id="tariff-legacy" data-gc-widget="legacy">
         <div class="tariff-card__top">
           <p class="tariff-card__label">Тариф 4</p>
           <p class="tariff-card__seat">100 мест</p>
@@ -871,7 +871,7 @@
         </div>
       </article>
 
-      <article class="tariff-card tariff-card--dark tariff-card--dynasty" id="tariff-dynasty">
+      <article class="tariff-card tariff-card--dark tariff-card--dynasty" id="tariff-dynasty" data-gc-widget="dynasty">
         <div class="tariff-card__badge tariff-card__badge--rec">
           <img src="assets/s11-icon-heart.svg" alt="">
           <span>Рекомендуемый</span>
@@ -901,7 +901,7 @@
       </article>
     </div>
 
-    <article class="tariff-addon" id="tariff-heirs">
+    <article class="tariff-addon" id="tariff-heirs" data-gc-widget="heirs">
       <div class="tariff-addon__head">
         <div>
           <p class="tariff-addon__label">Малый зал / 1 этаж</p>
@@ -1143,21 +1143,29 @@
   </script>
 
 
-  <!-- ===== Pre-registration full-frame widget (GetCourse) ===== -->
-  <div class="prereg" id="prereg" role="dialog" aria-modal="true" aria-label="Лист предзаписи" aria-hidden="true">
+  <!-- ===== GetCourse full-frame widget ===== -->
+  <div class="prereg" id="prereg" role="dialog" aria-modal="true" aria-label="Форма GetCourse" aria-hidden="true">
     <div class="prereg__dialog">
       <button type="button" class="prereg__close" id="prereg-close" aria-label="Закрыть">
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5 19 19 M19 5 5 19"/></svg>
       </button>
-      <div class="prereg__body" id="prereg-body"><!-- GetCourse iframe is preloaded here --></div>
+      <div class="prereg__body" id="prereg-body"><!-- GetCourse iframes are preloaded here --></div>
     </div>
   </div>
 
-  <!-- Pre-registration widget: preload + UTM forwarding + full-frame open + height sync -->
+  <!-- GetCourse widgets: tariff-specific preload + UTM forwarding + full-frame open + height sync -->
   <script>
     (function () {
-      var WIDGET_BASE = 'https://fincontour.ru/pl/lite/widget/widget?id=1613589';
-      var WIDGET_UNIQ = '92d40fc09c2f8651bd216cb34f111e295abfe0d4';
+      var WIDGET_ORIGIN = 'https://fincontour.ru/pl/lite/widget/widget';
+      var WIDGETS = {
+        prereg:  { id: '1613589', uniq: '92d40fc09c2f8651bd216cb34f111e295abfe0d4', title: 'Лист предзаписи' },
+        online:  { id: '1615185', uniq: '7253b91cb34c3bf70b8654530a3c7730d3b5e31e', title: 'Тариф Онлайн' },
+        founder: { id: '1615186', uniq: '3c6869c6654b7ab2f6eada7df40494906acbc1aa', title: 'Тариф Основатель' },
+        strateg: { id: '1615189', uniq: '6c5c97a29d274a7ccdcffbefa4fbe4d0245998bc', title: 'Тариф Стратег' },
+        legacy:  { id: '1615190', uniq: '0ff4628f8d08330228e31def2c705984df266447', title: 'Тариф Наследие' },
+        dynasty: { id: '1615191', uniq: '92df808b6f676c654b83cc7b617abb7dbffd9669', title: 'Тариф Династия' },
+        heirs:   { id: '1615219', uniq: '6cc11af41eb6273857999998ee54b0bdee6322e3', title: 'Тариф Наследники' }
+      };
 
       // Shared URL helper — forwards page-level tracking (utm_* + ref) into the
       // widget src exactly like the native GetCourse script does: names are
@@ -1179,21 +1187,57 @@
       var closeBtn = document.getElementById('prereg-close');
       if (!overlay || !host || !closeBtn) return;
 
-      // Preload the iframe on first load so the CTA opens an already-ready widget.
-      var iframe = document.createElement('iframe');
-      iframe.className = 'prereg__iframe';
-      iframe.title = 'Лист предзаписи';
-      iframe.setAttribute('allowfullscreen', 'allowfullscreen');
-      iframe.src = withTracking(WIDGET_BASE);
-      host.appendChild(iframe);
+      var iframes = {};
+      var uniqToKey = {};
+      Object.keys(WIDGETS).forEach(function (key) {
+        uniqToKey[WIDGETS[key].uniq] = key;
+      });
+
+      function widgetSrc(config) {
+        return withTracking(WIDGET_ORIGIN + '?id=' + encodeURIComponent(config.id));
+      }
+
+      function ensureIframe(key) {
+        var config = WIDGETS[key] || WIDGETS.prereg;
+        key = WIDGETS[key] ? key : 'prereg';
+        if (iframes[key]) return iframes[key];
+
+        var iframe = document.createElement('iframe');
+        iframe.className = 'prereg__iframe';
+        iframe.title = config.title;
+        iframe.setAttribute('allowfullscreen', 'allowfullscreen');
+        iframe.style.display = 'none';
+        iframe.src = widgetSrc(config);
+        host.appendChild(iframe);
+        iframes[key] = iframe;
+        return iframe;
+      }
+
+      function showIframe(key) {
+        key = WIDGETS[key] ? key : 'prereg';
+        var iframe = ensureIframe(key);
+        overlay.setAttribute('aria-label', WIDGETS[key].title);
+        Object.keys(iframes).forEach(function (iframeKey) {
+          iframes[iframeKey].style.display = iframeKey === key ? 'block' : 'none';
+        });
+        return iframe;
+      }
+
+      // Preload only widgets that are wired to visible page buttons.
+      Array.prototype.forEach.call(document.querySelectorAll('[data-prereg-open]'), function (el) {
+        var holder = el.closest && el.closest('[data-gc-widget]');
+        var key = holder ? holder.getAttribute('data-gc-widget') : el.getAttribute('data-gc-widget');
+        if (key && WIDGETS[key]) ensureIframe(key);
+      });
 
       // GetCourse posts { uniqName, height, ... } with the real content height —
-      // size the iframe to it so there is no huge white tail below the form.
+      // size the active tariff iframe to it so there is no white tail below the form.
       window.addEventListener('message', function (e) {
         var data = e.data;
-        if (!data || data.uniqName !== WIDGET_UNIQ) return;
+        if (!data || !uniqToKey[data.uniqName]) return;
         var h = parseInt(data.height, 10);
-        if (h > 0) iframe.style.height = h + 'px';
+        var iframe = iframes[uniqToKey[data.uniqName]];
+        if (iframe && h > 0) iframe.style.height = h + 'px';
       });
 
       var lastFocus = null, scrollLocked = false, htmlOv = '', bodyOv = '';
@@ -1211,8 +1255,9 @@
         document.body.style.overflow = bodyOv;
         scrollLocked = false;
       }
-      function openWidget() {
+      function openWidget(key) {
         lastFocus = document.activeElement;
+        showIframe(key || 'prereg');
         overlay.classList.add('is-open');
         overlay.setAttribute('aria-hidden', 'false');
         lockScroll();
@@ -1227,7 +1272,12 @@
       }
 
       Array.prototype.forEach.call(document.querySelectorAll('[data-prereg-open]'), function (el) {
-        el.addEventListener('click', function (ev) { ev.preventDefault(); openWidget(); });
+        el.addEventListener('click', function (ev) {
+          ev.preventDefault();
+          var holder = el.closest && el.closest('[data-gc-widget]');
+          var key = el.getAttribute('data-gc-widget') || (holder && holder.getAttribute('data-gc-widget')) || 'prereg';
+          openWidget(key);
+        });
       });
 
       // All page CTAs smooth-scroll to the pre-registration block.
