@@ -1514,7 +1514,7 @@
     .s10__footer-title { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 25px; color: white; line-height: 1.55; margin: 0; }
     .s10__footer-sub   { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 20px; color: white; line-height: 1.55; margin: 0; }
 
-    /* ── S11 Тарифы ── */
+    /* ── S11 Форматы ── */
     .s11-viewport { position: relative; width: 100vw; overflow: hidden; }
     .s11 { position: absolute; width: 1600px; height: 1840px; background: white; overflow: hidden; transform-origin: top left; }
     .s11__bg { position: absolute; left: 0; top: 0; width: 1600px; height: 100%; pointer-events: none; }
@@ -2839,7 +2839,7 @@
     .s10__footer-title { font-size: 16px !important; }
     .s10__footer-sub   { font-size: 13px !important; }
 
-    /* ─── S11 mobile — карточки тарифов как на десктопе ────────────────── */
+    /* ─── S11 mobile — карточки форматов как на десктопе ────────────────── */
     .s11-viewport { height: auto !important; }
     .s11 {
       position: relative !important; width: 100% !important; height: auto !important;
