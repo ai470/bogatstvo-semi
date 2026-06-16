@@ -1,12 +1,15 @@
-.page-tariffs .s11 {
+.page-tariffs .s11,
+.s11.s11--tariffs {
   height: 1840px;
 }
 
-.page-tariffs .s11__title {
+.page-tariffs .s11__title,
+.s11.s11--tariffs .s11__title {
   top: 104px;
 }
 
-.page-tariffs .s11__sub {
+.page-tariffs .s11__sub,
+.s11.s11--tariffs .s11__sub {
   left: 392px;
   top: 242px;
   width: 816px;
@@ -21,6 +24,12 @@
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 18px;
   align-items: start;
+}
+
+.tariff-cards--main {
+  left: 216px;
+  width: 1168px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .tariff-card {

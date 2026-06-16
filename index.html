@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&family=Manrope:wght@400;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="dubltarify-tariffs.css">
   <!-- Yandex.Metrika counter -->
   <script type="text/javascript">
       (function(m,e,t,r,i,k,a){
@@ -782,11 +783,155 @@
 
   <!-- S11 Тарифы -->
   <div class="s11-viewport" id="prereg-section">
-  <section class="s11">
+  <section class="s11 s11--tariffs">
     <div class="s11__bg"><img src="assets/s11-bg.png" alt=""></div>
     <p class="s11__title">Выберите свой<br>формат участия</p>
-    <p class="s11__sub">В данный момент продажа билетов еще не началась, но вы можете оставить заявку и попасть в лист предзаписи по кнопке ниже ⬇️</p>
-    <button type="button" class="s11__prereg-btn" data-prereg-open>Записаться в лист предзаписи</button>
+    <p class="s11__sub">Форум создан для совместного опыта. Поэтому каждый <b>второй билет — на 30% дешевле.</b> Для партнера, друга, брата, коллеги — любого, с кем вы хотите пройти этот день</p>
+
+    <div class="tariff-cards tariff-cards--main" aria-label="Тарифы участия">
+      <article class="tariff-card tariff-card--light tariff-card--founder" id="tariff-founder">
+        <div class="tariff-card__top">
+          <p class="tariff-card__label">Тариф 2</p>
+          <p class="tariff-card__seat">500 мест</p>
+        </div>
+        <h3 class="tariff-card__name">Основатель</h3>
+        <p class="tariff-card__what">Что входит:</p>
+        <ul class="tariff-card__features">
+          <li class="tariff-card__feature"><img src="assets/s11-tick-dark.svg" alt=""><span>Онлайн-трансляция форума</span></li>
+          <li class="tariff-card__feature"><img src="assets/s11-tick-dark.svg" alt=""><span>Воркбук «Конституция семьи» в электронном виде</span></li>
+          <li class="tariff-card__feature"><img src="assets/s11-tick-dark.svg" alt=""><span>4 сессии основного зала</span></li>
+          <li class="tariff-card__feature"><img src="assets/s11-tick-dark.svg" alt=""><span>Telegram-чат участников</span></li>
+          <li class="tariff-card__feature"><img src="assets/s11-tick-dark.svg" alt=""><span>Кофе-брейк</span></li>
+        </ul>
+        <div class="tariff-card__price-block">
+          <p class="tariff-card__price-label">Стоимость билета 1 этап</p>
+          <p class="tariff-card__price">6 900 ₽</p>
+          <p class="tariff-card__stage">с 1.07.26 — 7 900 ₽</p>
+          <p class="tariff-card__stage">с 1.08.26 — 9 900 ₽</p>
+        </div>
+        <div class="tariff-card__actions">
+          <button type="button" class="tariff-card__btn tariff-card__btn--primary tariff-card__btn--dark" data-prereg-open>Забронировать</button>
+          <button type="button" class="tariff-card__btn tariff-card__btn--outline tariff-card__btn--outline-dark" data-prereg-open>Оформить в рассрочку</button>
+        </div>
+      </article>
+
+      <article class="tariff-card tariff-card--dark tariff-card--strateg" id="tariff-strateg">
+        <div class="tariff-card__badge tariff-card__badge--hot">
+          <img src="assets/s11-icon-fire.svg" alt="">
+          <span>Хит продаж</span>
+        </div>
+        <div class="tariff-card__top">
+          <p class="tariff-card__label">Тариф 3</p>
+          <p class="tariff-card__seat">230 мест</p>
+        </div>
+        <h3 class="tariff-card__name">Стратег</h3>
+        <p class="tariff-card__what">Что входит:</p>
+        <ul class="tariff-card__features">
+          <li class="tariff-card__feature"><img src="assets/s11-tick-light.svg" alt=""><span>Онлайн-трансляция форума</span></li>
+          <li class="tariff-card__feature"><img src="assets/s11-tick-light.svg" alt=""><span>Воркбук «Конституция семьи» в печатном виде</span></li>
+          <li class="tariff-card__feature"><img src="assets/s11-tick-light.svg" alt=""><span>4 сессии основного зала</span></li>
+          <li class="tariff-card__feature"><img src="assets/s11-tick-light.svg" alt=""><span>Telegram-чат участников</span></li>
+          <li class="tariff-card__feature"><img src="assets/s11-tick-light.svg" alt=""><span>Кофе-брейк</span></li>
+          <li class="tariff-card__feature"><img src="assets/s11-tick-light.svg" alt=""><span>Записи сессий на 90 дней</span></li>
+          <li class="tariff-card__feature"><img src="assets/s11-tick-light.svg" alt=""><span>Конспект форума</span></li>
+        </ul>
+        <div class="tariff-card__price-block">
+          <p class="tariff-card__price-label">Стоимость билета 1 этап</p>
+          <p class="tariff-card__price">12 900 ₽</p>
+          <p class="tariff-card__stage">с 1.07.26 — 14 900 ₽</p>
+          <p class="tariff-card__stage">с 1.08.26 — 16 900 ₽</p>
+        </div>
+        <div class="tariff-card__actions">
+          <button type="button" class="tariff-card__btn tariff-card__btn--primary tariff-card__btn--gold" data-prereg-open>Получить доступ</button>
+          <button type="button" class="tariff-card__btn tariff-card__btn--outline tariff-card__btn--outline-gold" data-prereg-open>Оформить в рассрочку</button>
+        </div>
+      </article>
+
+      <article class="tariff-card tariff-card--dark tariff-card--legacy" id="tariff-legacy">
+        <div class="tariff-card__top">
+          <p class="tariff-card__label">Тариф 4</p>
+          <p class="tariff-card__seat">100 мест</p>
+        </div>
+        <h3 class="tariff-card__name">Наследие</h3>
+        <p class="tariff-card__what">Все из тарифа «Стратег», плюс:</p>
+        <ul class="tariff-card__features">
+          <li class="tariff-card__feature"><img src="assets/s11-tick-light.svg" alt=""><span>Книга «Богатство семьи» с автографами</span></li>
+          <li class="tariff-card__feature"><img src="assets/s11-tick-light.svg" alt=""><span>Приоритетные места</span></li>
+          <li class="tariff-card__feature"><img src="assets/s11-tick-light.svg" alt=""><span>Игра «Дельта»</span></li>
+        </ul>
+        <div class="tariff-card__price-block">
+          <p class="tariff-card__price-label">Стоимость билета 1 этап</p>
+          <p class="tariff-card__price">22 900 ₽</p>
+          <p class="tariff-card__stage">с 1.07.26 — 25 900 ₽</p>
+          <p class="tariff-card__stage">с 1.08.26 — 28 900 ₽</p>
+        </div>
+        <div class="tariff-card__actions">
+          <button type="button" class="tariff-card__btn tariff-card__btn--primary tariff-card__btn--gold" data-prereg-open>Получить доступ</button>
+          <button type="button" class="tariff-card__btn tariff-card__btn--outline tariff-card__btn--outline-gold" data-prereg-open>Оформить в рассрочку</button>
+        </div>
+      </article>
+
+      <article class="tariff-card tariff-card--dark tariff-card--dynasty" id="tariff-dynasty">
+        <div class="tariff-card__badge tariff-card__badge--rec">
+          <img src="assets/s11-icon-heart.svg" alt="">
+          <span>Рекомендуемый</span>
+        </div>
+        <div class="tariff-card__top">
+          <p class="tariff-card__label">Тариф 5</p>
+          <p class="tariff-card__seat">20 мест</p>
+        </div>
+        <h3 class="tariff-card__name">Династия</h3>
+        <p class="tariff-card__what">Все из тарифа «Наследие», плюс:</p>
+        <ul class="tariff-card__features">
+          <li class="tariff-card__feature"><img src="assets/s11-tick-gray.svg" alt=""><span>Воркбук в печатном виде с автографом</span></li>
+          <li class="tariff-card__feature"><img src="assets/s11-tick-gray.svg" alt=""><span>Групповой разбор с экспертом онлайн, 30 минут</span></li>
+          <li class="tariff-card__feature"><img src="assets/s11-tick-gray.svg" alt=""><span>Фото со спикерами</span></li>
+          <li class="tariff-card__feature"><img src="assets/s11-tick-gray.svg" alt=""><span>Закрытый ужин со спикерами</span></li>
+        </ul>
+        <div class="tariff-card__price-block">
+          <p class="tariff-card__price-label">Стоимость билета 1 этап</p>
+          <p class="tariff-card__price">50 000 ₽</p>
+          <p class="tariff-card__stage">с 1.07.26 — 55 000 ₽</p>
+          <p class="tariff-card__stage">с 1.08.26 — 60 000 ₽</p>
+        </div>
+        <div class="tariff-card__actions">
+          <button type="button" class="tariff-card__btn tariff-card__btn--primary tariff-card__btn--gold" data-prereg-open>Получить доступ</button>
+          <button type="button" class="tariff-card__btn tariff-card__btn--outline tariff-card__btn--outline-gold" data-prereg-open>Оформить в рассрочку</button>
+        </div>
+      </article>
+    </div>
+
+    <article class="tariff-addon" id="tariff-heirs">
+      <div class="tariff-addon__head">
+        <div>
+          <p class="tariff-addon__label">Малый зал / 1 этаж</p>
+          <h3 class="tariff-addon__title">Тариф «Наследники»</h3>
+          <p class="tariff-addon__sub">Запись спикеров и материалы для самостоятельного прохождения</p>
+        </div>
+        <div class="tariff-addon__meta">
+          <p class="tariff-addon__meta-value">100</p>
+          <p class="tariff-addon__meta-label">мест</p>
+        </div>
+      </div>
+
+      <div class="tariff-addon__body">
+        <ul class="tariff-addon__features">
+          <li><span class="tariff-addon__icon">→</span><span>Записи сессий на 90 дней</span></li>
+          <li><span class="tariff-addon__icon">→</span><span>Сертификат участника, именной: «Прошел программу подготовки преемника», в электронном виде</span></li>
+          <li><span class="tariff-addon__icon">→</span><span>Доступ к материалам малого зала после форума</span></li>
+          <li><span class="tariff-addon__icon tariff-addon__icon--muted">×</span><span>Онлайн-трансляция не входит</span></li>
+        </ul>
+
+        <div class="tariff-addon__side">
+          <p class="tariff-addon__price-label">Стоимость билета</p>
+          <p class="tariff-addon__price">9 900 ₽</p>
+          <button type="button" class="tariff-addon__btn" data-prereg-open>Получить доступ</button>
+          <button type="button" class="tariff-addon__btn tariff-addon__btn--outline" data-prereg-open>Оформить в рассрочку</button>
+        </div>
+      </div>
+
+      <img class="tariff-addon__key" src="key.webp" alt="">
+    </article>
   </section>
   </div>
 
@@ -856,7 +1001,7 @@
     const S8_H   = 760;
     const S9_H   = 1820;
     const S10_H  = 5174;
-    const S11_H  = 680;
+    const S11_H  = 1840;
 
     const sections = [
       ['.s2', '.s2-viewport', S2_H],
@@ -924,7 +1069,7 @@
         '.s8__title', '.s8__author', '.s8__bullet', '.s8__bold', '.s8__gold-box', '.s8__star', '.s8__gold-text', '.s8__photo-card',
         '.s9__title', '.s9__qbox', '.s9__qtext', '.s9__star', '.s9__photo-wrap', '.s9__name', '.s9__subtitle', '.s9__pill', '.s9__ptext', '.s9__logo-card', '.s9__mission',
         '.s10__sup', '.s10__h', '.s10__icard', '.s10__icon', '.s10__ctext', '.s10__photo', '.s10__tbox', '.s10__time', '.s10__etext', '.s10__etitle', '.s10__edesc', '.s10__footer', '.s10__footer-title', '.s10__footer-sub',
-        '.s11__title', '.s11__sub', '.s11__card', '.s11__badge-wrap', '.s11__badge-icon', '.s11__badge-text', '.s11__tlabel', '.s11__tname', '.s11__what', '.s11__feature', '.s11__tick', '.s11__ftext', '.s11__price', '.s11__btn', '.s11__prereg-btn', '.m-s11-badge-top', '.m-s11-card', '.m-s11-inner', '.m-s11-tlabel', '.m-s11-tname', '.m-s11-divider', '.m-s11-what', '.m-s11-features li', '.m-s11-price', '.m-s11-btn',
+        '.s11__title', '.s11__sub', '.s11__card', '.s11__badge-wrap', '.s11__badge-icon', '.s11__badge-text', '.s11__tlabel', '.s11__tname', '.s11__what', '.s11__feature', '.s11__tick', '.s11__ftext', '.s11__price', '.s11__btn', '.s11__prereg-btn', '.tariff-card', '.tariff-card__badge', '.tariff-card__label', '.tariff-card__seat', '.tariff-card__name', '.tariff-card__what', '.tariff-card__feature', '.tariff-card__price-label', '.tariff-card__price', '.tariff-card__stage', '.tariff-card__btn', '.tariff-addon', '.tariff-addon__label', '.tariff-addon__title', '.tariff-addon__sub', '.tariff-addon__meta', '.tariff-addon__features li', '.tariff-addon__side', '.tariff-addon__price', '.tariff-addon__btn', '.m-s11-badge-top', '.m-s11-card', '.m-s11-inner', '.m-s11-tlabel', '.m-s11-tname', '.m-s11-divider', '.m-s11-what', '.m-s11-features li', '.m-s11-price', '.m-s11-btn',
         '.footer-col', '.footer-title', '.footer-socials a', '.footer-documents a', '.footer-contacts a', '.footer-company'
       ];
 
