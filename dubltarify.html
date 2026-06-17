@@ -31,7 +31,7 @@
   <section class="hero">
 
     <!-- Background texture (local) -->
-    <img class="bg-texture" src="assets/bg-texture.png" alt="">
+    <img decoding="async" class="bg-texture" src="assets/bg-texture.png" alt="">
 
     <!-- Dark gradient overlays (×2 to deepen) -->
     <div class="overlay"></div>
@@ -43,12 +43,12 @@
 
     <!-- Bottom ellipse glow -->
     <div class="ellipse-glow">
-      <img src="assets/ellipse.svg" alt="">
+      <img decoding="async" src="assets/ellipse.svg" alt="">
     </div>
 
     <!-- Portraits: BEFORE wave so wave renders on top of them -->
-    <div class="portrait-dmitry"><img src="assets/dmitry.png" alt="Дмитрий Тарасов"></div>
-    <div class="portrait-tatyana"><img src="assets/tatyana.png" alt="Татьяна Волкова"></div>
+    <div class="portrait-dmitry"><img decoding="async" src="assets/dmitry.png" alt="Дмитрий Тарасов"></div>
+    <div class="portrait-tatyana"><img decoding="async" src="assets/tatyana.png" alt="Татьяна Волкова"></div>
 
     <!-- Bottom wave: inline SVG — viewBox показывает только верхние 188px кривой -->
     <div class="wave">
@@ -68,7 +68,7 @@
 
       <!-- Logo -->
       <div class="logo">
-        <img src="assets/logo.svg" alt="Богатство Семьи Форум">
+        <img decoding="async" src="assets/logo.svg" alt="Богатство Семьи Форум">
       </div>
 
       <!-- Tagline -->
@@ -80,14 +80,14 @@
       <div class="hero__cta-wrap">
         <div class="cta-glow"></div>
         <button class="cta-btn" type="button" data-prereg-scroll>
-          <img src="assets/cta-btn.svg" alt="">
+          <img decoding="async" src="assets/cta-btn.svg" alt="">
         </button>
         <span class="cta-label" data-prereg-scroll role="button" tabindex="0" aria-label="Забронировать место">Забронировать место</span>
       </div>
 
       <!-- Seats -->
       <div class="hero__seats">
-        <div class="seats-icon"><img src="assets/user-icon.svg" alt=""></div>
+        <div class="seats-icon"><img decoding="async" src="assets/user-icon.svg" alt=""></div>
         <span class="seats-text">Количество мест ограничено</span>
       </div>
 
@@ -97,14 +97,14 @@
       <!-- Mobile-only speaker badges (desktop: display:none) -->
       <div class="m-speaker-badges">
         <div class="m-speaker-badge">
-          <img src="assets/icon-speaker-tatyana.svg" class="m-badge-icon" alt="">
+          <img decoding="async" src="assets/icon-speaker-tatyana.svg" class="m-badge-icon" alt="">
           <div class="m-badge-info">
             <span class="m-badge-name">Татьяна Волкова</span>
             <span class="m-badge-role">эксперт по личному капиталу</span>
           </div>
         </div>
         <div class="m-speaker-badge">
-          <img src="assets/icon-speaker-dmitry.svg" class="m-badge-icon" alt="">
+          <img decoding="async" src="assets/icon-speaker-dmitry.svg" class="m-badge-icon" alt="">
           <div class="m-badge-info">
             <span class="m-badge-name">Дмитрий Тарасов</span>
             <span class="m-badge-role">профессиональный инвестор</span>
@@ -116,13 +116,13 @@
       <div class="hero__cards">
         <div class="hero__card hero__card--tatyana">
           <div class="card-rect card-rect--tatyana"></div>
-          <img class="card-icon card-icon--tatyana" src="assets/icon-speaker-tatyana.svg" alt="">
+          <img decoding="async" class="card-icon card-icon--tatyana" src="assets/icon-speaker-tatyana.svg" alt="">
           <span class="card-name card-name--tatyana">Татьяна Волкова</span>
           <span class="card-role card-role--tatyana">эксперт по личному капиталу</span>
         </div>
         <div class="hero__card hero__card--dmitry">
           <div class="card-rect card-rect--dmitry"></div>
-          <img class="card-icon card-icon--dmitry" src="assets/icon-speaker-dmitry.svg" alt="">
+          <img decoding="async" class="card-icon card-icon--dmitry" src="assets/icon-speaker-dmitry.svg" alt="">
           <span class="card-name card-name--dmitry">Дмитрий Тарасов</span>
           <span class="card-role card-role--dmitry">профессиональный инвестор</span>
         </div>
@@ -141,7 +141,7 @@
 
     <!-- Background image -->
     <div class="s2__bg">
-      <img src="assets/s2-bg.png" alt="">
+      <img decoding="async" loading="lazy" src="assets/s2-bg.png" alt="">
     </div>
 
     <!-- Ellipse glows (CSS radial gradients) -->
@@ -175,12 +175,12 @@
     </p>
 
     <!-- Right column -->
-    <div class="s2__location-icon"><img src="assets/location.svg" alt=""></div>
+    <div class="s2__location-icon"><img decoding="async" loading="lazy" src="assets/location.svg" alt=""></div>
     <p class="s2__body-right-1">Цепочка прервалась.<br>И сейчас мы в уникальной точке</p>
     <p class="s2__body-right-2">Мы — первые в своих семьях, кто задаёт вопрос: <strong>«Что останется от нас через три поколения?»</strong></p>
 
     <!-- Chart icon + bottom tagline -->
-    <div class="s2__chart-icon"><img src="assets/chart.svg" alt=""></div>
+    <div class="s2__chart-icon"><img decoding="async" loading="lazy" src="assets/chart.svg" alt=""></div>
     <p class="s2__tagline">У нас есть ресурсы, энергия и амбиция. Осталось добавить систему</p>
 
   </section>
@@ -190,7 +190,7 @@
   <section class="s3">
 
     <!-- Background -->
-    <div class="s3__bg"><img src="assets/s3-bg.png" alt=""></div>
+    <div class="s3__bg"><img decoding="async" loading="lazy" src="assets/s3-bg.png" alt=""></div>
 
     <!-- Title -->
     <h2 class="s3__title">Именно в этом — наша сила</h2>
@@ -205,9 +205,9 @@
     <div class="s3__card s3__card--3"></div>
 
     <!-- Icons -->
-    <div class="s3__icon s3__icon--graph">   <img src="assets/icon-graph.svg"    alt=""></div>
-    <div class="s3__icon s3__icon--category"><img src="assets/icon-category.svg" alt=""></div>
-    <div class="s3__icon s3__icon--user">    <img src="assets/icon-3user.svg"    alt=""></div>
+    <div class="s3__icon s3__icon--graph">   <img decoding="async" loading="lazy" src="assets/icon-graph.svg"    alt=""></div>
+    <div class="s3__icon s3__icon--category"><img decoding="async" loading="lazy" src="assets/icon-category.svg" alt=""></div>
+    <div class="s3__icon s3__icon--user">    <img decoding="async" loading="lazy" src="assets/icon-3user.svg"    alt=""></div>
 
     <!-- Card labels -->
     <p class="s3__card-text s3__card-text--1">Через осознанные решения</p>
@@ -228,7 +228,7 @@
   <section class="s4">
 
     <!-- Background -->
-    <div class="s4__bg"><img src="assets/s4-bg.png" alt=""></div>
+    <div class="s4__bg"><img decoding="async" loading="lazy" src="assets/s4-bg.png" alt=""></div>
 
     <!-- Gold beige container -->
     <div class="s4__gold-box"></div>
@@ -239,16 +239,16 @@
 
     <!-- Card 1: Основной зал -->
     <div class="s4__card s4__card--1"></div>
-    <div class="s4__card-photo s4__card-photo--1"><img src="assets/s4-photo-main.png" alt=""></div>
+    <div class="s4__card-photo s4__card-photo--1"><img decoding="async" loading="lazy" src="assets/s4-photo-main.png" alt=""></div>
     <p class="s4__card-title s4__card-title--1">Основной зал → для вас</p>
     <p class="s4__card-sub s4__card-sub--1">4 спикера. Модель «4 капитала»</p>
     <p class="s4__card-body s4__card-body--1">Практические инструменты для семейной стратегии, финансового планирования и передачи ценностей</p>
-    <div class="s4__tick"><img src="assets/icon-tick.svg" alt=""></div>
+    <div class="s4__tick"><img decoding="async" loading="lazy" src="assets/icon-tick.svg" alt=""></div>
     <p class="s4__tick-text">Вы уйдёте с готовой Конституцией семьи</p>
 
     <!-- Card 2: Зал преемников -->
     <div class="s4__card s4__card--2"></div>
-    <div class="s4__card-photo s4__card-photo--2"><img src="assets/s4-photo-heir.png" alt=""></div>
+    <div class="s4__card-photo s4__card-photo--2"><img decoding="async" loading="lazy" src="assets/s4-photo-heir.png" alt=""></div>
     <p class="s4__card-title s4__card-title--2">Зал преемников → для ваших детей (14-21 год)</p>
     <p class="s4__card-sub s4__card-sub--2">Отдельная программа. Свои спикеры. Свой язык</p>
 
@@ -257,19 +257,19 @@
 
     <!-- 4-icon row -->
     <div class="s4__icon-item s4__icon-graph">
-      <img src="assets/icon-graph.svg" alt="">
+      <img decoding="async" loading="lazy" src="assets/icon-graph.svg" alt="">
       <p>Как устроены деньги в семье — без занудства и нотаций</p>
     </div>
     <div class="s4__icon-item s4__icon-wallet">
-      <img src="assets/icon-wallet.svg" alt="">
+      <img decoding="async" loading="lazy" src="assets/icon-wallet.svg" alt="">
       <p>Что значит быть преемником, а не просто наследником</p>
     </div>
     <div class="s4__icon-item s4__icon-category">
-      <img src="assets/icon-category.svg" alt="">
+      <img decoding="async" loading="lazy" src="assets/icon-category.svg" alt="">
       <p>Как принимать решения, от которых зависят другие</p>
     </div>
     <div class="s4__icon-item s4__icon-shield">
-      <img src="assets/icon-shield.svg" alt="">
+      <img decoding="async" loading="lazy" src="assets/icon-shield.svg" alt="">
       <p><strong>Практикум:</strong> первый финансовый план на свои цели</p>
     </div>
 
@@ -277,16 +277,16 @@
     <p class="s4__section-head s4__section-head--why">Почему это важно:</p>
     <div class="s4__dashed-box"></div>
     <p class="s4__why-text-1">На форуме вы создадите Конституцию семьи — документ с вашими ценностями, правилами и финансовой стратегией рода. Но документ без понимания — макулатура. Поэтому ваши дети в соседнем зале учатся читать его как свой</p>
-    <div class="s4__user-icon"><img src="assets/icon-3user.svg" alt=""></div>
+    <div class="s4__user-icon"><img decoding="async" loading="lazy" src="assets/icon-3user.svg" alt=""></div>
     <p class="s4__why-text-2">Зал преемников — это место, где ваш ребёнок впервые осознаёт: <strong>семья — это не только поддержка, это команда с общей целью</strong></p>
-    <div class="s4__book-photo"><img src="assets/s4-photo-book.png" alt=""></div>
+    <div class="s4__book-photo"><img decoding="async" loading="lazy" src="assets/s4-photo-book.png" alt=""></div>
 
     <!-- Bottom quote -->
     <p class="s4__quote">После форума вы едете домой и впервые можете поговорить на одном языке. Вы — про стратегию рода. Они — про свою роль в ней</p>
 
     <!-- CTA button -->
     <div class="s4__cta-wrap" data-prereg-scroll role="button" tabindex="0" aria-label="Забронировать места для семьи">
-      <img src="assets/s4-cta-btn.svg" alt="">
+      <img decoding="async" loading="lazy" src="assets/s4-cta-btn.svg" alt="">
       <span class="s4__cta-label">Забронировать места для семьи</span>
     </div>
 
@@ -299,7 +299,7 @@
   <div class="s5-viewport">
   <section class="s5">
 
-    <div class="s5__texture"><img src="assets/s5-bg-texture.png" alt=""></div>
+    <div class="s5__texture"><img decoding="async" loading="lazy" src="assets/s5-bg-texture.png" alt=""></div>
     <div class="s5__pill"></div>
     <h2 class="s5__title">Модель «4 капитала семьи»</h2>
     <div class="s5__subtitle">
@@ -324,67 +324,67 @@
     <div class="s5__card s5__card--04"></div>
 
     <!-- CARD 01: Социальный капитал (orange) -->
-    <div class="s5__icon s5__icon--01" style="left:304px;top:532px;"><img src="assets/s5-icon-social.svg" alt=""></div>
+    <div class="s5__icon s5__icon--01" style="left:304px;top:532px;"><img decoding="async" loading="lazy" src="assets/s5-icon-social.svg" alt=""></div>
     <p class="s5__card-title s5__card-title--01">Социальный капитал</p>
     <p class="s5__card-tag s5__card-tag--01">→ Фамилия как валюта</p>
     <p class="s5__card-desc s5__card-desc--01">Репутация и связи — единственный актив, который усиливается при передаче следующему поколению. Каждое знакомство родителей — это дверь, которая откроется для их детей</p>
     <div class="s5__box s5__box--s01">
       <p class="s5__box-head s5__box-head--01">Что будет на сессии:</p>
-      <div class="s5__box-icon"><img src="assets/s5-arrow1.svg" alt="" style="transform:rotate(-90deg)"></div>
+      <div class="s5__box-icon"><img decoding="async" loading="lazy" src="assets/s5-arrow1.svg" alt="" style="transform:rotate(-90deg)"></div>
       <p class="s5__box-text">живой диалог с экспертом о том, как создавать связи, которые переживут любой кризис. Двухраундовый нетворкинг: сначала — знакомство за пределами должностей и статусов. Потом — обмен возможностями и идеями</p>
     </div>
     <div class="s5__box s5__box--e01">
       <p class="s5__box-head s5__box-head--01">Вы уйдёте с:</p>
-      <div class="s5__box-icon"><img src="assets/s5-tick1.svg" alt=""></div>
+      <div class="s5__box-icon"><img decoding="async" loading="lazy" src="assets/s5-tick1.svg" alt=""></div>
       <p class="s5__box-text">первыми контактами людей, которые мыслят так же. Это фундамент вашего социального капитала</p>
     </div>
 
     <!-- CARD 02: Финансовый капитал (green) -->
-    <div class="s5__icon s5__icon--02" style="left:862px;top:532px;"><img src="assets/s5-icon-wallet1.svg" alt=""></div>
+    <div class="s5__icon s5__icon--02" style="left:862px;top:532px;"><img decoding="async" loading="lazy" src="assets/s5-icon-wallet1.svg" alt=""></div>
     <p class="s5__card-title s5__card-title--02">Финансовый капитал</p>
     <p class="s5__card-tag s5__card-tag--02">→ Формула богатства вместо формулы бедности</p>
     <p class="s5__card-desc s5__card-desc--02">Богатство создаётся, когда разница между доходами и расходами систематически направляется в активы. Каждый месяц, каждый год, каждое десятилетие</p>
     <div class="s5__box s5__box--s02">
       <p class="s5__box-head s5__box-head--02">Что будет на сессии:</p>
-      <div class="s5__box-icon"><img src="assets/s5-arrow2.svg" alt="" style="transform:rotate(-90deg)"></div>
+      <div class="s5__box-icon"><img decoding="async" loading="lazy" src="assets/s5-arrow2.svg" alt="" style="transform:rotate(-90deg)"></div>
       <p class="s5__box-text">диалог с финансовым экспертом: сложный процент, архитектура пассивного дохода, финансовое воспитание детей — с какого возраста и каким языком</p>
     </div>
     <div class="s5__box s5__box--e02">
       <p class="s5__box-head s5__box-head--02">Вы уйдёте с:</p>
-      <div class="s5__box-icon"><img src="assets/s5-tick2.svg" alt=""></div>
+      <div class="s5__box-icon"><img decoding="async" loading="lazy" src="assets/s5-tick2.svg" alt=""></div>
       <p class="s5__box-text">ясным пониманием своей формулы — и конкретным планом, как переключить её в режим накопления</p>
     </div>
 
     <!-- CARD 03: Интеллектуальный капитал (gray) -->
-    <div class="s5__icon s5__icon--03" style="left:304px;top:1279px;"><img src="assets/s5-icon-wallet2.svg" alt=""></div>
+    <div class="s5__icon s5__icon--03" style="left:304px;top:1279px;"><img decoding="async" loading="lazy" src="assets/s5-icon-wallet2.svg" alt=""></div>
     <p class="s5__card-title s5__card-title--03">Интеллектуальный капитал</p>
     <p class="s5__card-tag s5__card-tag--03">→ Опыт, который передаётся по наследству</p>
     <p class="s5__card-desc s5__card-desc--03">Оцифрованный опыт побед и провалов, культурный код, способ принимать решения в кризисе. Всё, что обычно остаётся «в голове» у старшего поколения — и уходит вместе с ним</p>
     <div class="s5__box s5__box--s03">
       <p class="s5__box-head s5__box-head--03">Что будет на сессии:</p>
-      <div class="s5__box-icon"><img src="assets/s5-arrow3.svg" alt="" style="transform:rotate(-90deg)"></div>
+      <div class="s5__box-icon"><img decoding="async" loading="lazy" src="assets/s5-arrow3.svg" alt="" style="transform:rotate(-90deg)"></div>
       <p class="s5__box-text">диалог с экспертом: как восстановить историю рода, найти скрытые ресурсы семьи, перевести интуитивные знания в понятные правила</p>
     </div>
     <div class="s5__box s5__box--e03">
       <p class="s5__box-head s5__box-head--03">Вы уйдёте с:</p>
-      <div class="s5__box-icon"><img src="assets/s5-tick3.svg" alt=""></div>
+      <div class="s5__box-icon"><img decoding="async" loading="lazy" src="assets/s5-tick3.svg" alt=""></div>
       <p class="s5__box-text">картой интеллектуального капитала вашего рода — сильные стороны, паттерны, точки развития</p>
     </div>
 
     <!-- CARD 04: Человеческий капитал (gold) -->
-    <div class="s5__icon s5__icon--04" style="left:862px;top:1279px;"><img src="assets/s5-icon-wallet3.svg" alt=""></div>
+    <div class="s5__icon s5__icon--04" style="left:862px;top:1279px;"><img decoding="async" loading="lazy" src="assets/s5-icon-wallet3.svg" alt=""></div>
     <p class="s5__card-title s5__card-title--04">Человеческий капитал</p>
     <p class="s5__card-tag s5__card-tag--04">→ Люди — основа всего</p>
     <p class="s5__card-desc s5__card-desc--04a">Здоровье, энергия, отношения внутри семьи, способность каждого найти своё призвание. Это ядро, которое питает все остальные капиталы</p>
     <p class="s5__card-desc s5__card-desc--04b">Когда семья становится местом, где можно снять броню, услышать и быть услышанным — рождается сила, которую невозможно купить за деньги</p>
     <div class="s5__box s5__box--s04">
       <p class="s5__box-head s5__box-head--04">Что будет на сессии:</p>
-      <div class="s5__box-icon"><img src="assets/s5-arrow4.svg" alt="" style="transform:rotate(-90deg)"></div>
+      <div class="s5__box-icon"><img decoding="async" loading="lazy" src="assets/s5-arrow4.svg" alt="" style="transform:rotate(-90deg)"></div>
       <p class="s5__box-text">диалог с экспертом: здоровье как стратегический актив, роли и призвание каждого в семье, культура открытого диалога</p>
     </div>
     <div class="s5__box s5__box--e04">
       <p class="s5__box-head s5__box-head--04">Вы уйдёте с:</p>
-      <div class="s5__box-icon"><img src="assets/s5-tick4.svg" alt=""></div>
+      <div class="s5__box-icon"><img decoding="async" loading="lazy" src="assets/s5-tick4.svg" alt=""></div>
       <p class="s5__box-text">черновиком Конституции вашей семьи. Первым — и самым важным</p>
     </div>
 
@@ -397,7 +397,7 @@
   <div class="s6-viewport">
   <section class="s6">
 
-    <div class="s6__texture"><img src="assets/s6-bg-texture.png" alt=""></div>
+    <div class="s6__texture"><img decoding="async" loading="lazy" src="assets/s6-bg-texture.png" alt=""></div>
     <div class="s6__fade"></div>
 
     <h2 class="s6__title">Форум закончится.<br>Игра останется с вашей семьёй</h2>
@@ -408,28 +408,28 @@
     <div class="s6__card s6__card--right"></div>
 
     <!-- Left card: Что это -->
-    <div class="s6__card-icon"><img src="assets/s6-icon-game.svg" alt=""></div>
+    <div class="s6__card-icon"><img decoding="async" loading="lazy" src="assets/s6-icon-game.svg" alt=""></div>
     <p class="s6__card-title s6__card-title--left">Что это:</p>
     <p class="s6__card-desc">Настольная игра для всей семьи — от детей до родителей. Не викторина и не монополия. Это симулятор семейных финансовых решений, где каждый ход — совместный выбор</p>
-    <div class="s6__game-bg"><img src="assets/s6-game-img-bg.png" alt=""></div>
-    <div class="s6__game-box"><img src="assets/s6-game-box.png" alt=""></div>
+    <div class="s6__game-bg"><img decoding="async" loading="lazy" src="assets/s6-game-img-bg.png" alt=""></div>
+    <div class="s6__game-box"><img decoding="async" loading="lazy" src="assets/s6-game-box.png" alt=""></div>
 
     <!-- Right card: Зачем она нужна -->
     <p class="s6__card-title s6__card-title--right">Зачем она нужна:</p>
 
-    <div class="s6__tick-icon s6__tick-icon--1"><img src="assets/s6-icon-tick.svg" alt=""></div>
+    <div class="s6__tick-icon s6__tick-icon--1"><img decoding="async" loading="lazy" src="assets/s6-icon-tick.svg" alt=""></div>
     <p class="s6__tick-head s6__tick-head--1">Закрепляет</p>
     <p class="s6__tick-desc s6__tick-desc--1">Всё, что вы узнали на форуме — модель 4 капиталов, принципы стратегии — проживается заново за игровым столом</p>
 
-    <div class="s6__tick-icon s6__tick-icon--2"><img src="assets/s6-icon-tick.svg" alt=""></div>
+    <div class="s6__tick-icon s6__tick-icon--2"><img decoding="async" loading="lazy" src="assets/s6-icon-tick.svg" alt=""></div>
     <p class="s6__tick-head s6__tick-head--2">Вовлекает наследников</p>
     <p class="s6__tick-desc s6__tick-desc--2">Дети, которые были в зале преемников, продолжают разговор дома — но уже через игру, а не через лекцию</p>
 
-    <div class="s6__tick-icon s6__tick-icon--3"><img src="assets/s6-icon-tick.svg" alt=""></div>
+    <div class="s6__tick-icon s6__tick-icon--3"><img decoding="async" loading="lazy" src="assets/s6-icon-tick.svg" alt=""></div>
     <p class="s6__tick-head s6__tick-head--3">Возвращает к теме</p>
     <p class="s6__tick-desc s6__tick-desc--3">Одна партия — и вы снова внутри семейной стратегии. Без усилий, без назначенных встреч</p>
 
-    <div class="s6__tick-icon s6__tick-icon--4"><img src="assets/s6-icon-tick.svg" alt=""></div>
+    <div class="s6__tick-icon s6__tick-icon--4"><img decoding="async" loading="lazy" src="assets/s6-icon-tick.svg" alt=""></div>
     <p class="s6__tick-head s6__tick-head--4">Учит решать вместе</p>
     <p class="s6__tick-desc s6__tick-desc--4">Каждый ход требует обсуждения. Семья учится договариваться — на ставках, которые пока игровые</p>
 
@@ -441,13 +441,13 @@
     <div class="s6__sub-card s6__sub-card--2"></div>
     <div class="s6__sub-card s6__sub-card--3"></div>
 
-    <div class="s6__sub-ellipse s6__sub-ellipse--1"><img src="assets/s6-icon-ellipse.svg" alt=""></div>
-    <div class="s6__sub-ellipse s6__sub-ellipse--2"><img src="assets/s6-icon-ellipse.svg" alt=""></div>
-    <div class="s6__sub-ellipse s6__sub-ellipse--3"><img src="assets/s6-icon-ellipse.svg" alt=""></div>
+    <div class="s6__sub-ellipse s6__sub-ellipse--1"><img decoding="async" loading="lazy" src="assets/s6-icon-ellipse.svg" alt=""></div>
+    <div class="s6__sub-ellipse s6__sub-ellipse--2"><img decoding="async" loading="lazy" src="assets/s6-icon-ellipse.svg" alt=""></div>
+    <div class="s6__sub-ellipse s6__sub-ellipse--3"><img decoding="async" loading="lazy" src="assets/s6-icon-ellipse.svg" alt=""></div>
 
-    <div class="s6__sub-icon s6__sub-icon--paper"><img src="assets/s6-icon-paper.svg" alt=""></div>
-    <div class="s6__sub-icon s6__sub-icon--forum"><img src="assets/s6-icon-forum.svg" alt=""></div>
-    <div class="s6__sub-icon s6__sub-icon--game"><img src="assets/s6-icon-game2.svg" alt=""></div>
+    <div class="s6__sub-icon s6__sub-icon--paper"><img decoding="async" loading="lazy" src="assets/s6-icon-paper.svg" alt=""></div>
+    <div class="s6__sub-icon s6__sub-icon--forum"><img decoding="async" loading="lazy" src="assets/s6-icon-forum.svg" alt=""></div>
+    <div class="s6__sub-icon s6__sub-icon--game"><img decoding="async" loading="lazy" src="assets/s6-icon-game2.svg" alt=""></div>
 
     <p class="s6__sub-label s6__sub-label--1">Книга «Богатство семьи»</p>
     <p class="s6__sub-label s6__sub-label--2">Форум «Богатство семьи»</p>
@@ -460,7 +460,7 @@
     <p class="s6__pricing-1">Игра входит в форматы <span class="green">«Архитектор» и «Династия»</span></p>
     <p class="s6__pricing-2">В форматах «Участник» и «Основатель» — можно добавить к заказу</p>
 
-    <div class="s6__cta" data-prereg-scroll role="button" tabindex="0" aria-label="Перейти к форматам"><img src="assets/s6-btn.svg" alt=""></div>
+    <div class="s6__cta" data-prereg-scroll role="button" tabindex="0" aria-label="Перейти к форматам"><img decoding="async" loading="lazy" src="assets/s6-btn.svg" alt=""></div>
     <p class="s6__cta-text" data-prereg-scroll>перейти к форматам</p>
 
   </section>
@@ -472,7 +472,7 @@
   <div class="s7-viewport">
   <section class="s7">
 
-    <div class="s7__texture"><img src="assets/s7-bg.png" alt=""></div>
+    <div class="s7__texture"><img decoding="async" loading="lazy" src="assets/s7-bg.png" alt=""></div>
     <div class="s7__fade"></div>
 
     <!-- Title block 1 -->
@@ -485,10 +485,10 @@
     <div class="s7__rcard s7__rcard--03"></div>
     <div class="s7__rcard s7__rcard--04"></div>
 
-    <div class="s7__remoji s7__remoji--01"><img src="assets/s7-icon-01.png" alt=""></div>
-    <div class="s7__remoji s7__remoji--02"><img src="assets/s7-icon-02.png" alt=""></div>
-    <div class="s7__remoji s7__remoji--03"><img src="assets/s7-icon-03.png" alt=""></div>
-    <div class="s7__remoji s7__remoji--04"><img src="assets/s7-icon-04.png" alt=""></div>
+    <div class="s7__remoji s7__remoji--01"><img decoding="async" loading="lazy" src="assets/s7-icon-01.png" alt=""></div>
+    <div class="s7__remoji s7__remoji--02"><img decoding="async" loading="lazy" src="assets/s7-icon-02.png" alt=""></div>
+    <div class="s7__remoji s7__remoji--03"><img decoding="async" loading="lazy" src="assets/s7-icon-03.png" alt=""></div>
+    <div class="s7__remoji s7__remoji--04"><img decoding="async" loading="lazy" src="assets/s7-icon-04.png" alt=""></div>
 
     <p class="s7__rnum s7__rnum--01">01</p>
     <p class="s7__rnum s7__rnum--02">02</p>
@@ -516,10 +516,10 @@
     <div class="s7__acard s7__acard--3"></div>
     <div class="s7__acard s7__acard--4"></div>
 
-    <div class="s7__aphoto s7__aphoto--1"><img src="assets/s7-photo-1.jpg" alt=""></div>
-    <div class="s7__aphoto s7__aphoto--2"><img src="assets/s7-photo-2.jpg" alt=""></div>
-    <div class="s7__aphoto s7__aphoto--3"><img src="assets/s7-photo-3.jpg" alt=""></div>
-    <div class="s7__aphoto s7__aphoto--4"><img src="assets/s7-photo-4.jpg" alt=""></div>
+    <div class="s7__aphoto s7__aphoto--1"><img decoding="async" loading="lazy" src="assets/s7-photo-1.jpg" alt=""></div>
+    <div class="s7__aphoto s7__aphoto--2"><img decoding="async" loading="lazy" src="assets/s7-photo-2.jpg" alt=""></div>
+    <div class="s7__aphoto s7__aphoto--3"><img decoding="async" loading="lazy" src="assets/s7-photo-3.jpg" alt=""></div>
+    <div class="s7__aphoto s7__aphoto--4"><img decoding="async" loading="lazy" src="assets/s7-photo-4.jpg" alt=""></div>
 
     <p class="s7__anum s7__anum--1">// 1</p>
     <p class="s7__anum s7__anum--2">// 2</p>
@@ -553,11 +553,11 @@
     <p class="s8__author">Татьяна Волкова и Дмитрий Тарасов</p>
 
     <div class="s8__bullet s8__bullet--1">
-      <div class="s8__bullet-icon"><img src="assets/s8-arrow.svg" alt=""></div>
+      <div class="s8__bullet-icon"><img decoding="async" loading="lazy" src="assets/s8-arrow.svg" alt=""></div>
       <p class="s8__bullet-text s8__bullet-text--1">Соавторы книги «Богатство семьи». Бизнес-партнёры, которые объединили экспертизу в одну модель — и проверили её на собственных семьях</p>
     </div>
     <div class="s8__bullet s8__bullet--2">
-      <div class="s8__bullet-icon"><img src="assets/s8-arrow.svg" alt=""></div>
+      <div class="s8__bullet-icon"><img decoding="async" loading="lazy" src="assets/s8-arrow.svg" alt=""></div>
       <p class="s8__bullet-text s8__bullet-text--2">Дмитрий строит династийную стратегию со своей семьёй. Татьяна — со своей. Каждый прошёл этот путь изнутри: от первых вопросов «что мы оставим детям?» до работающей системы четырёх капиталов</p>
     </div>
 
@@ -565,14 +565,14 @@
 
     <!-- Gold box -->
     <div class="s8__gold-box"></div>
-    <div class="s8__star"><img src="assets/s8-star.svg" alt=""></div>
+    <div class="s8__star"><img decoding="async" loading="lazy" src="assets/s8-star.svg" alt=""></div>
     <p class="s8__gold-text">На форуме — открывают день, задают рамку и представляют книгу</p>
 
     <!-- Right: photo -->
     <div class="s8__photo-card">
       <div class="s8__photo-gradient"></div>
-      <div class="s8__photo-subtract"><img src="assets/s8-subtract.png" alt=""></div>
-      <img class="s8__photo-img" src="assets/s8-photo.jpg" alt="Татьяна Волкова и Дмитрий Тарасов">
+      <div class="s8__photo-subtract"><img decoding="async" loading="lazy" src="assets/s8-subtract.png" alt=""></div>
+      <img decoding="async" loading="lazy" class="s8__photo-img" src="assets/s8-photo.jpg" alt="Татьяна Волкова и Дмитрий Тарасов">
     </div>
 
   </section>
@@ -603,50 +603,50 @@
 
     <!-- Pills left col (Tatiana) -->
     <div class="s9__pill s9__pill--t1"></div>
-    <div class="s9__star" style="left:301px;top:289px"><img src="assets/s9-icon-12years.svg" alt=""></div>
+    <div class="s9__star" style="left:301px;top:289px"><img decoding="async" loading="lazy" src="assets/s9-icon-12years.svg" alt=""></div>
     <p class="s9__ptext s9__ptext--t1" style="left:323px;top:285px;width:259px"><b>Более 12 лет</b> занимается финансовым образованием населения</p>
 
     <div class="s9__pill s9__pill--t2"></div>
-    <div class="s9__star" style="left:301px;top:389px"><img src="assets/s9-icon-entrepreneur.svg" alt=""></div>
+    <div class="s9__star" style="left:301px;top:389px"><img decoding="async" loading="lazy" src="assets/s9-icon-entrepreneur.svg" alt=""></div>
     <p class="s9__ptext s9__ptext--t2" style="left:323px;top:385px;width:251px">Серийный предприниматель, инвестор в ценные бумаги, недвижимость и криптовалюту</p>
 
     <div class="s9__pill s9__pill--t3"></div>
-    <div class="s9__star" style="left:301px;top:564px"><img src="assets/s9-icon-sources.svg" alt=""></div>
+    <div class="s9__star" style="left:301px;top:564px"><img decoding="async" loading="lazy" src="assets/s9-icon-sources.svg" alt=""></div>
     <p class="s9__ptext s9__ptext--t3" style="left:323px;top:560px;width:251px"><b>Более 20 источников</b> пассивного дохода</p>
 
     <div class="s9__pill s9__pill--t4"></div>
-    <div class="s9__star" style="left:301px;top:684px"><img src="assets/s9-icon-book.svg" alt=""></div>
+    <div class="s9__star" style="left:301px;top:684px"><img decoding="async" loading="lazy" src="assets/s9-icon-book.svg" alt=""></div>
     <p class="s9__ptext s9__ptext--t4" style="left:323px;top:680px;width:224px"><b>Автор мгновенного бестселлера «5 капиталов»</b></p>
 
     <!-- Pills right col (Tatiana) -->
     <div class="s9__pill s9__pill--t5"></div>
-    <div class="s9__star" style="left:659px;top:289px"><img src="assets/s9-icon-graduates.svg" alt=""></div>
+    <div class="s9__star" style="left:659px;top:289px"><img decoding="async" loading="lazy" src="assets/s9-icon-graduates.svg" alt=""></div>
     <p class="s9__ptext s9__ptext--t5" style="left:681px;top:285px;width:259px">Эксперт по созданию личного капитала, <b>более 70 000 выпускников</b></p>
 
     <div class="s9__pill s9__pill--t6"></div>
-    <div class="s9__star" style="left:659px;top:389px"><img src="assets/s9-icon-smi.svg" alt=""></div>
+    <div class="s9__star" style="left:659px;top:389px"><img decoding="async" loading="lazy" src="assets/s9-icon-smi.svg" alt=""></div>
     <p class="s9__ptext s9__ptext--t6" style="left:681px;top:385px;width:261px"><b>Эксперт федеральных СМИ —</b> Первый канал, Москва24, РБК, «Известия», «Коммерсант», Газета.Ru, Lenta.Ru, Российская газета, Аргументы и факты, РИА Новости и др.</p>
 
     <div class="s9__pill s9__pill--t7"></div>
-    <div class="s9__star" style="left:659px;top:564px"><img src="assets/s9-icon-materials.svg" alt=""></div>
+    <div class="s9__star" style="left:659px;top:564px"><img decoding="async" loading="lazy" src="assets/s9-icon-materials.svg" alt=""></div>
     <p class="s9__ptext s9__ptext--t7" style="left:681px;top:560px;width:290px">За 2025 год вышло <b>более 2 500 материалов</b> в СМИ с комментариями Татьяны Волковой</p>
 
     <div class="s9__pill s9__pill--t8"></div>
-    <div class="s9__star" style="left:659px;top:684px"><img src="assets/s9-icon-3children.svg" alt=""></div>
+    <div class="s9__star" style="left:659px;top:684px"><img decoding="async" loading="lazy" src="assets/s9-icon-3children.svg" alt=""></div>
     <p class="s9__ptext s9__ptext--t8" style="left:681px;top:680px;width:279px">Мать троих детей</p>
 
     <!-- Tatiana photo -->
     <div class="s9__photo-wrap s9__photo-wrap--tatiana">
-      <img class="s9__photo" src="assets/s9-photo-tatiana.png" alt="Татьяна Волкова">
+      <img decoding="async" loading="lazy" class="s9__photo" src="assets/s9-photo-tatiana.png" alt="Татьяна Волкова">
     </div>
     <p class="s9__mission"><b>Миссия:</b> Сделать сложные финансовые инструменты доступными и понятными для каждого</p>
 
     <!-- Media logos -->
-    <div class="s9__logo-card s9__logo-card--1"><img src="assets/s9-logo-1.png" alt="Первый канал"></div>
-    <div class="s9__logo-card s9__logo-card--2"><img src="assets/s9-logo-2.png" alt="Москва24"></div>
-    <div class="s9__logo-card s9__logo-card--3"><img src="assets/s9-logo-3.png" alt="РБК"></div>
-    <div class="s9__logo-card s9__logo-card--4"><img src="assets/s9-logo-4.png" alt="РИА Новости"></div>
-    <div class="s9__logo-card s9__logo-card--5"><img src="assets/s9-logo-5.png" alt="Коммерсант"></div>
+    <div class="s9__logo-card s9__logo-card--1"><img decoding="async" loading="lazy" src="assets/s9-logo-1.png" alt="Первый канал"></div>
+    <div class="s9__logo-card s9__logo-card--2"><img decoding="async" loading="lazy" src="assets/s9-logo-2.png" alt="Москва24"></div>
+    <div class="s9__logo-card s9__logo-card--3"><img decoding="async" loading="lazy" src="assets/s9-logo-3.png" alt="РБК"></div>
+    <div class="s9__logo-card s9__logo-card--4"><img decoding="async" loading="lazy" src="assets/s9-logo-4.png" alt="РИА Новости"></div>
+    <div class="s9__logo-card s9__logo-card--5"><img decoding="async" loading="lazy" src="assets/s9-logo-5.png" alt="Коммерсант"></div>
 
     <!-- ── Дмитрий Тарасов ── -->
     <p class="s9__name s9__name--dmitry">Дмитрий Тарасов</p>
@@ -654,50 +654,50 @@
 
     <!-- Pills left col (Dmitry) -->
     <div class="s9__pill s9__pill--d1"></div>
-    <div class="s9__star" style="left:301px;top:1150px"><img src="assets/s9-icon-investor25.svg" alt=""></div>
+    <div class="s9__star" style="left:301px;top:1150px"><img decoding="async" loading="lazy" src="assets/s9-icon-investor25.svg" alt=""></div>
     <p class="s9__ptext s9__ptext--d1" style="left:323px;top:1146px;width:279px"><b>25+ лет</b> профессиональный инвестор</p>
 
     <div class="s9__pill s9__pill--d2"></div>
-    <div class="s9__star" style="left:301px;top:1250px"><img src="assets/s9-icon-mgu.svg" alt=""></div>
+    <div class="s9__star" style="left:301px;top:1250px"><img decoding="async" loading="lazy" src="assets/s9-icon-mgu.svg" alt=""></div>
     <p class="s9__ptext s9__ptext--d2" style="left:323px;top:1246px;width:279px">Преподаватель экономического факультета МГУ им. М.В. Ломоносова (авторские курсы: приватный банкинг, прямые и венчурные инвестиции)</p>
 
     <div class="s9__pill s9__pill--d3"></div>
-    <div class="s9__star" style="left:301px;top:1385px"><img src="assets/s9-icon-book-dmitry.svg" alt=""></div>
+    <div class="s9__star" style="left:301px;top:1385px"><img decoding="async" loading="lazy" src="assets/s9-icon-book-dmitry.svg" alt=""></div>
     <p class="s9__ptext s9__ptext--d3" style="left:323px;top:1381px;width:279px">Автор бестселлера «От золота до биткоина»</p>
 
     <div class="s9__pill s9__pill--d4"></div>
-    <div class="s9__star" style="left:301px;top:1485px"><img src="assets/s9-icon-znanie.svg" alt=""></div>
+    <div class="s9__star" style="left:301px;top:1485px"><img decoding="async" loading="lazy" src="assets/s9-icon-znanie.svg" alt=""></div>
     <p class="s9__ptext s9__ptext--d4" style="left:323px;top:1481px;width:279px">Почётный лектор Российского общества «Знание»</p>
 
     <!-- Pills right col (Dmitry) -->
     <div class="s9__pill s9__pill--d5"></div>
-    <div class="s9__star" style="left:659px;top:1150px"><img src="assets/s9-icon-mld150.svg" alt=""></div>
+    <div class="s9__star" style="left:659px;top:1150px"><img decoding="async" loading="lazy" src="assets/s9-icon-mld150.svg" alt=""></div>
     <p class="s9__ptext s9__ptext--d5" style="left:681px;top:1146px;width:279px"><b>150+ млрд. рублей</b> под управлением</p>
 
     <div class="s9__pill s9__pill--d6"></div>
-    <div class="s9__star" style="left:659px;top:1250px"><img src="assets/s9-icon-union-fathers.svg" alt=""></div>
+    <div class="s9__star" style="left:659px;top:1250px"><img decoding="async" loading="lazy" src="assets/s9-icon-union-fathers.svg" alt=""></div>
     <p class="s9__ptext s9__ptext--d6" style="left:681px;top:1246px;width:279px">Начальник Федерального штаба, ВОО «СОЮЗ ОТЦОВ»</p>
 
     <div class="s9__pill s9__pill--d7"></div>
-    <div class="s9__star" style="left:659px;top:1385px"><img src="assets/s9-icon-5children.svg" alt=""></div>
+    <div class="s9__star" style="left:659px;top:1385px"><img decoding="async" loading="lazy" src="assets/s9-icon-5children.svg" alt=""></div>
     <p class="s9__ptext s9__ptext--d7" style="left:681px;top:1381px;width:279px">Отец пятерых детей</p>
 
     <div class="s9__pill s9__pill--d8"></div>
-    <div class="s9__star" style="left:659px;top:1485px"><img src="assets/s9-icon-parents-committee.svg" alt=""></div>
+    <div class="s9__star" style="left:659px;top:1485px"><img decoding="async" loading="lazy" src="assets/s9-icon-parents-committee.svg" alt=""></div>
     <p class="s9__ptext s9__ptext--d8" style="left:681px;top:1481px;width:279px">Руководитель рабочей группы Всероссийского родительского комитета (профориентация)</p>
 
     <!-- Dmitry photo -->
     <div class="s9__photo-wrap s9__photo-wrap--dmitry">
-      <img class="s9__photo" src="assets/s9-photo-dmitry.png" alt="Дмитрий Тарасов">
+      <img decoding="async" loading="lazy" class="s9__photo" src="assets/s9-photo-dmitry.png" alt="Дмитрий Тарасов">
     </div>
 
     <!-- Dmitry org logos -->
-    <div class="s9__logo-card s9__logo-card--d1"><img src="assets/s9-dlogo-mgu.png"    alt="МГУ"></div>
-    <div class="s9__logo-card s9__logo-card--d2"><img src="assets/s9-dlogo-soyuz.png"  alt="СОЮЗ ОТЦОВ"></div>
-    <div class="s9__logo-card s9__logo-card--d3"><img src="assets/s9-dlogo-alpina.png" alt="Альпина"></div>
-    <div class="s9__logo-card s9__logo-card--d4"><img src="assets/s9-dlogo-znanie.png" alt="Знание"></div>
-    <div class="s9__logo-card s9__logo-card--d5"><img src="assets/s9-dlogo-vrk.png"    alt="ВРК"></div>
-    <div class="s9__logo-card s9__logo-card--d6"><img src="assets/s9-dlogo-infi.png"   alt="ИНФИ"></div>
+    <div class="s9__logo-card s9__logo-card--d1"><img decoding="async" loading="lazy" src="assets/s9-dlogo-mgu.png"    alt="МГУ"></div>
+    <div class="s9__logo-card s9__logo-card--d2"><img decoding="async" loading="lazy" src="assets/s9-dlogo-soyuz.png"  alt="СОЮЗ ОТЦОВ"></div>
+    <div class="s9__logo-card s9__logo-card--d3"><img decoding="async" loading="lazy" src="assets/s9-dlogo-alpina.png" alt="Альпина"></div>
+    <div class="s9__logo-card s9__logo-card--d4"><img decoding="async" loading="lazy" src="assets/s9-dlogo-znanie.png" alt="Знание"></div>
+    <div class="s9__logo-card s9__logo-card--d5"><img decoding="async" loading="lazy" src="assets/s9-dlogo-vrk.png"    alt="ВРК"></div>
+    <div class="s9__logo-card s9__logo-card--d6"><img decoding="async" loading="lazy" src="assets/s9-dlogo-infi.png"   alt="ИНФИ"></div>
 
   </section>
   </div>
@@ -705,20 +705,20 @@
   <!-- S10 -->
   <div class="s10-viewport">
   <section class="s10">
-    <div class="s10__bg"><img src="assets/s10-bg-texture.png" alt=""></div>
+    <div class="s10__bg"><img decoding="async" loading="lazy" src="assets/s10-bg-texture.png" alt=""></div>
     <p class="s10__sup">Один день от первого кофе до Конституции семьи:</p>
     <p class="s10__h s10__h--1">Как устроен форум</p>
     <div class="s10__icard s10__icard--1"></div><div class="s10__icard s10__icard--2"></div>
     <div class="s10__icard s10__icard--3"></div><div class="s10__icard s10__icard--4"></div>
-    <div class="s10__icon s10__icon--1"><img src="assets/s10-icon-megaphone.png" alt=""></div>
-    <div class="s10__icon s10__icon--2"><img src="assets/s10-icon-pen.png" alt=""></div>
-    <div class="s10__icon s10__icon--3"><img src="assets/s10-icon-group.png" alt=""></div>
-    <div class="s10__icon s10__icon--4"><img src="assets/s10-icon-notebook.png" alt=""></div>
+    <div class="s10__icon s10__icon--1"><img decoding="async" loading="lazy" src="assets/s10-icon-megaphone.png" alt=""></div>
+    <div class="s10__icon s10__icon--2"><img decoding="async" loading="lazy" src="assets/s10-icon-pen.png" alt=""></div>
+    <div class="s10__icon s10__icon--3"><img decoding="async" loading="lazy" src="assets/s10-icon-group.png" alt=""></div>
+    <div class="s10__icon s10__icon--4"><img decoding="async" loading="lazy" src="assets/s10-icon-notebook.png" alt=""></div>
     <p class="s10__ctext s10__ctext--1"><b>Каждая сессия — живой диалог эксперта и интервьюера.</b> Вы слышите историю, задаёте вопросы, включаетесь в дискуссию</p>
     <p class="s10__ctext s10__ctext--2"><b>После каждого диалога — практика в парах и группах:</b> вы работаете с воркбуком, заполняете карту, создаёте документы своей семьи</p>
     <p class="s10__ctext s10__ctext--3">После каждой сессии вы меняетесь местами в зале — <b>к вечеру вы познакомитесь с максимальным количеством семей.</b> У каждого участника — именной бейдж, воркбук и ручка</p>
     <p class="s10__ctext s10__ctext--4">День завершается презентацией книги «Богатство семьи», автограф-сессией и камерной концертной программой</p>
-    <div class="s10__photo s10__photo--timing"><img src="assets/s10-photo-timing.png" alt=""></div>
+    <div class="s10__photo s10__photo--timing"><img decoding="async" loading="lazy" src="assets/s10-photo-timing.png" alt=""></div>
     <p class="s10__h s10__h--2">Тайминг форума</p>
     <div class="s10__tbox s10__tbox--1"></div>
     <div class="s10__div" style="top:1372px"></div><div class="s10__div" style="top:1523px"></div>
@@ -754,7 +754,7 @@
     <p class="s10__etitle" style="top:2874px">Концертная программа и завершение форума</p>
     <div class="s10__badge" style="top:2882px"><span class="s10__time">17:30</span></div>
     <p class="s10__edesc" style="top:2912px">Формат форума: живые диалоги экспертов и интервьюеров</p>
-    <div class="s10__photo s10__photo--heirs"><img src="assets/s10-photo-heirs.png" alt=""></div>
+    <div class="s10__photo s10__photo--heirs"><img decoding="async" loading="lazy" src="assets/s10-photo-heirs.png" alt=""></div>
     <div class="s10__glow"></div>
     <p class="s10__h s10__h--3">Зал преемников</p>
     <div class="s10__tbox s10__tbox--2"></div>
@@ -788,7 +788,7 @@
   <!-- S11 Форматы -->
   <div class="s11-viewport" id="prereg-section">
   <section class="s11 s11--tariffs">
-    <div class="s11__bg"><img src="assets/s11-bg.png" alt=""></div>
+    <div class="s11__bg"><img decoding="async" loading="lazy" src="assets/s11-bg.png" alt=""></div>
     <p class="s11__title">Выберите свой<br>формат участия</p>
     <p class="s11__sub">Форум создан для совместного опыта. Поэтому каждый <b>второй билет — на 30% дешевле.</b> Для партнера, друга, брата, коллеги — любого, с кем вы хотите пройти этот день</p>
 
@@ -800,8 +800,8 @@
         </div>
         <p class="tariff-card__what">Что входит:</p>
         <ul class="tariff-card__features">
-          <li class="tariff-card__feature"><img src="assets/s11-tick-dark.svg" alt=""><span>Онлайн-трансляция форума</span></li>
-          <li class="tariff-card__feature"><img src="assets/s11-tick-dark.svg" alt=""><span>Воркбук «Конституция семьи» в электронном виде</span></li>
+          <li class="tariff-card__feature"><img decoding="async" loading="lazy" src="assets/s11-tick-dark.svg" alt=""><span>Онлайн-трансляция форума</span></li>
+          <li class="tariff-card__feature"><img decoding="async" loading="lazy" src="assets/s11-tick-dark.svg" alt=""><span>Воркбук «Конституция семьи» в электронном виде</span></li>
         </ul>
         <div class="tariff-card__price-block">
           <p class="tariff-card__price-label">Стоимость билета 1 этап</p>
@@ -822,11 +822,11 @@
         </div>
         <p class="tariff-card__what">Что входит:</p>
         <ul class="tariff-card__features">
-          <li class="tariff-card__feature"><img src="assets/s11-tick-dark.svg" alt=""><span>Онлайн-трансляция форума</span></li>
-          <li class="tariff-card__feature"><img src="assets/s11-tick-dark.svg" alt=""><span>Воркбук «Конституция семьи» в электронном виде</span></li>
-          <li class="tariff-card__feature"><img src="assets/s11-tick-dark.svg" alt=""><span>4 сессии основного зала</span></li>
-          <li class="tariff-card__feature"><img src="assets/s11-tick-dark.svg" alt=""><span>Telegram-чат участников</span></li>
-          <li class="tariff-card__feature"><img src="assets/s11-tick-dark.svg" alt=""><span>Кофе-брейк</span></li>
+          <li class="tariff-card__feature"><img decoding="async" loading="lazy" src="assets/s11-tick-dark.svg" alt=""><span>Онлайн-трансляция форума</span></li>
+          <li class="tariff-card__feature"><img decoding="async" loading="lazy" src="assets/s11-tick-dark.svg" alt=""><span>Воркбук «Конституция семьи» в электронном виде</span></li>
+          <li class="tariff-card__feature"><img decoding="async" loading="lazy" src="assets/s11-tick-dark.svg" alt=""><span>4 сессии основного зала</span></li>
+          <li class="tariff-card__feature"><img decoding="async" loading="lazy" src="assets/s11-tick-dark.svg" alt=""><span>Telegram-чат участников</span></li>
+          <li class="tariff-card__feature"><img decoding="async" loading="lazy" src="assets/s11-tick-dark.svg" alt=""><span>Кофе-брейк</span></li>
         </ul>
         <div class="tariff-card__price-block">
           <p class="tariff-card__price-label">Стоимость билета 1 этап</p>
@@ -842,7 +842,7 @@
 
       <article class="tariff-card tariff-card--dark tariff-card--strateg" id="tariff-strateg">
         <div class="tariff-card__badge tariff-card__badge--hot">
-          <img src="assets/s11-icon-fire.svg" alt="">
+          <img decoding="async" loading="lazy" src="assets/s11-icon-fire.svg" alt="">
           <span>Хит продаж</span>
         </div>
         <div class="tariff-card__top">
@@ -851,13 +851,13 @@
         </div>
         <p class="tariff-card__what">Что входит:</p>
         <ul class="tariff-card__features">
-          <li class="tariff-card__feature"><img src="assets/s11-tick-light.svg" alt=""><span>Онлайн-трансляция форума</span></li>
-          <li class="tariff-card__feature"><img src="assets/s11-tick-light.svg" alt=""><span>Воркбук «Конституция семьи» в печатном виде</span></li>
-          <li class="tariff-card__feature"><img src="assets/s11-tick-light.svg" alt=""><span>4 сессии основного зала</span></li>
-          <li class="tariff-card__feature"><img src="assets/s11-tick-light.svg" alt=""><span>Telegram-чат участников</span></li>
-          <li class="tariff-card__feature"><img src="assets/s11-tick-light.svg" alt=""><span>Кофе-брейк</span></li>
-          <li class="tariff-card__feature"><img src="assets/s11-tick-light.svg" alt=""><span>Записи сессий на 90 дней</span></li>
-          <li class="tariff-card__feature"><img src="assets/s11-tick-light.svg" alt=""><span>Конспект форума</span></li>
+          <li class="tariff-card__feature"><img decoding="async" loading="lazy" src="assets/s11-tick-light.svg" alt=""><span>Онлайн-трансляция форума</span></li>
+          <li class="tariff-card__feature"><img decoding="async" loading="lazy" src="assets/s11-tick-light.svg" alt=""><span>Воркбук «Конституция семьи» в печатном виде</span></li>
+          <li class="tariff-card__feature"><img decoding="async" loading="lazy" src="assets/s11-tick-light.svg" alt=""><span>4 сессии основного зала</span></li>
+          <li class="tariff-card__feature"><img decoding="async" loading="lazy" src="assets/s11-tick-light.svg" alt=""><span>Telegram-чат участников</span></li>
+          <li class="tariff-card__feature"><img decoding="async" loading="lazy" src="assets/s11-tick-light.svg" alt=""><span>Кофе-брейк</span></li>
+          <li class="tariff-card__feature"><img decoding="async" loading="lazy" src="assets/s11-tick-light.svg" alt=""><span>Записи сессий на 90 дней</span></li>
+          <li class="tariff-card__feature"><img decoding="async" loading="lazy" src="assets/s11-tick-light.svg" alt=""><span>Конспект форума</span></li>
         </ul>
         <div class="tariff-card__price-block">
           <p class="tariff-card__price-label">Стоимость билета 1 этап</p>
@@ -878,9 +878,9 @@
         </div>
         <p class="tariff-card__what">Все из формата «Стратег», плюс:</p>
         <ul class="tariff-card__features">
-          <li class="tariff-card__feature"><img src="assets/s11-tick-light.svg" alt=""><span>Книга «Богатство семьи» с автографами</span></li>
-          <li class="tariff-card__feature"><img src="assets/s11-tick-light.svg" alt=""><span>Приоритетные места</span></li>
-          <li class="tariff-card__feature"><img src="assets/s11-tick-light.svg" alt=""><span>Игра «Дельта»</span></li>
+          <li class="tariff-card__feature"><img decoding="async" loading="lazy" src="assets/s11-tick-light.svg" alt=""><span>Книга «Богатство семьи» с автографами</span></li>
+          <li class="tariff-card__feature"><img decoding="async" loading="lazy" src="assets/s11-tick-light.svg" alt=""><span>Приоритетные места</span></li>
+          <li class="tariff-card__feature"><img decoding="async" loading="lazy" src="assets/s11-tick-light.svg" alt=""><span>Игра «Дельта»</span></li>
         </ul>
         <div class="tariff-card__price-block">
           <p class="tariff-card__price-label">Стоимость билета 1 этап</p>
@@ -896,7 +896,7 @@
 
       <article class="tariff-card tariff-card--dark tariff-card--dynasty" id="tariff-dynasty">
         <div class="tariff-card__badge tariff-card__badge--rec">
-          <img src="assets/s11-icon-heart.svg" alt="">
+          <img decoding="async" loading="lazy" src="assets/s11-icon-heart.svg" alt="">
           <span>Рекомендуемый</span>
         </div>
         <div class="tariff-card__top">
@@ -905,10 +905,10 @@
         </div>
         <p class="tariff-card__what">Все из формата «Наследие», плюс:</p>
         <ul class="tariff-card__features">
-          <li class="tariff-card__feature"><img src="assets/s11-tick-gray.svg" alt=""><span>Воркбук в печатном виде с автографом</span></li>
-          <li class="tariff-card__feature"><img src="assets/s11-tick-gray.svg" alt=""><span>Групповой разбор с экспертом онлайн, 30 минут</span></li>
-          <li class="tariff-card__feature"><img src="assets/s11-tick-gray.svg" alt=""><span>Фото со спикерами</span></li>
-          <li class="tariff-card__feature"><img src="assets/s11-tick-gray.svg" alt=""><span>Закрытый ужин со спикерами</span></li>
+          <li class="tariff-card__feature"><img decoding="async" loading="lazy" src="assets/s11-tick-gray.svg" alt=""><span>Воркбук в печатном виде с автографом</span></li>
+          <li class="tariff-card__feature"><img decoding="async" loading="lazy" src="assets/s11-tick-gray.svg" alt=""><span>Групповой разбор с экспертом онлайн, 30 минут</span></li>
+          <li class="tariff-card__feature"><img decoding="async" loading="lazy" src="assets/s11-tick-gray.svg" alt=""><span>Фото со спикерами</span></li>
+          <li class="tariff-card__feature"><img decoding="async" loading="lazy" src="assets/s11-tick-gray.svg" alt=""><span>Закрытый ужин со спикерами</span></li>
         </ul>
         <div class="tariff-card__price-block">
           <p class="tariff-card__price-label">Стоимость билета 1 этап</p>
@@ -952,7 +952,7 @@
         </div>
       </div>
 
-      <img class="tariff-addon__key" src="key.webp" alt="">
+      <img decoding="async" loading="lazy" class="tariff-addon__key" src="key.webp" alt="">
     </article>
   </section>
   </div>
