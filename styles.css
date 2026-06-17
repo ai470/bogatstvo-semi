@@ -1431,6 +1431,7 @@
     .s9__pill--t5 { left: 637px; top: 263px; height: 85px; }
     .s9__pill--t6 { left: 637px; top: 363px; height: 160px; }
     .s9__pill--t7 { left: 637px; top: 538px; height: 105px; }
+    .s9__pill--t8 { left: 637px; top: 658px; height: 85px; }
 
     /* Dmitry pills — left col */
     .s9__pill--d1 { left: 279px; top: 1124px; height: 85px; }
@@ -2678,6 +2679,7 @@
     .s9__ptext--t5::before { background-image: url('assets/s9-icon-graduates.svg'); }
     .s9__ptext--t6::before { background-image: url('assets/s9-icon-smi.svg'); }
     .s9__ptext--t7::before { background-image: url('assets/s9-icon-materials.svg'); }
+    .s9__ptext--t8::before { background-image: url('assets/s9-icon-3children.svg'); }
 
     .s9__ptext--d1::before { background-image: url('assets/s9-icon-investor25.svg'); }
     .s9__ptext--d2::before { background-image: url('assets/s9-icon-mgu.svg'); }
