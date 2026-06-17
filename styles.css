@@ -1765,10 +1765,10 @@
 
     /* Mobile card photos via background-image */
     .hero__card--tatyana {
-      background: url('assets/tatyana.png') top center / cover no-repeat;
+      background: url('assets/tatyana.webp') top center / cover no-repeat;
     }
     .hero__card--dmitry {
-      background: url('assets/dmitry.png') top center / cover no-repeat;
+      background: url('assets/dmitry.webp') top center / cover no-repeat;
     }
 
     /* ── S2 ─────────────────────────────────────────────────────────────── */
@@ -2900,9 +2900,9 @@
 
     /* Фоны карточек */
     .m-s11-card--1 { background: #f7f7f7; border-radius: 24px; }
-    .m-s11-card--2 { background: url('assets/s11-card-2.png') center top / cover no-repeat; border-radius: 24px; }
-    .m-s11-card--3 { background: url('assets/s11-card-3.png') center top / cover no-repeat; border-radius: 24px; }
-    .m-s11-card--4 { background: url('assets/s11-card-4.png') center top / cover no-repeat; border-radius: 24px; }
+    .m-s11-card--2 { background: url('assets/s11-card-2.webp') center top / cover no-repeat; border-radius: 24px; }
+    .m-s11-card--3 { background: url('assets/s11-card-3.webp') center top / cover no-repeat; border-radius: 24px; }
+    .m-s11-card--4 { background: url('assets/s11-card-4.webp') center top / cover no-repeat; border-radius: 24px; }
 
     /* Бейдж сверху карточки (Хит / Рекомендуемый) */
     .m-s11-badge-top {
