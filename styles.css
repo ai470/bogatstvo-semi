@@ -244,11 +244,37 @@
       cursor: pointer;
     }
 
+    /* ─── ADDRESS ──────────────────────────────────────────────────────── */
+    .address-icon {
+      position: absolute;
+      left: 214px;
+      top: 542.73px;
+      width: 25.943px;
+      height: 25.943px;
+      opacity: 0.55;
+      --fill-0: white;
+    }
+    .address-icon img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    .address-text {
+      position: absolute;
+      left: 254px;
+      top: 544.89px;
+      color: rgba(255,255,255,0.85);
+      font-family: 'Inter', sans-serif;
+      font-size: 16.215px;
+      font-weight: 400;
+      white-space: nowrap;
+    }
+
     /* ─── SEATS ────────────────────────────────────────────────────────── */
     .seats-icon {
       position: absolute;
       left: 214px;
-      top: 542.73px;
+      top: 582.73px;
       width: 25.943px;
       height: 25.943px;
       opacity: 0.3;
@@ -261,7 +287,7 @@
     .seats-text {
       position: absolute;
       left: 254px;
-      top: 544.89px;
+      top: 584.89px;
       color: rgba(255,255,255,0.6);
       font-family: 'Inter', sans-serif;
       font-size: 16.215px;
@@ -347,6 +373,7 @@
     .hero__content  { position: absolute; top: 0; left: 0; width: 1600px; height: 792px; }
     .hero__badge    { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
     .hero__cta-wrap { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    .hero__address  { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; }
     .hero__seats    { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; }
     .hero__cards    { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; }
     .hero__card     { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; }
@@ -1698,6 +1725,32 @@
       transform: translate(-50%, -50%) !important;
       font-size: 11.5px !important;
       letter-spacing: 0.5px !important;
+      white-space: nowrap;
+    }
+
+    /* Address row */
+    .hero__address {
+      position: relative !important;
+      top: auto !important; left: auto !important;
+      width: auto !important; height: auto !important;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+    .address-icon {
+      position: relative !important;
+      left: auto !important; top: auto !important;
+      width: 18px !important; height: 18px !important;
+      flex-shrink: 0;
+      opacity: 0.55;
+      --fill-0: white;
+    }
+    .address-text {
+      position: relative !important;
+      left: auto !important; top: auto !important;
+      font-size: 13px !important;
+      color: rgba(255,255,255,0.85);
       white-space: nowrap;
     }
 
