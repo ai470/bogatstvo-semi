@@ -1544,7 +1544,7 @@
 
     /* ── S11 Форматы ── */
     .s11-viewport { position: relative; width: 100vw; overflow: hidden; }
-    .s11 { position: absolute; width: 1600px; height: 1840px; background: white; overflow: hidden; transform-origin: top left; }
+    .s11 { position: absolute; width: 1600px; height: 2820px; background: white; overflow: hidden; transform-origin: top left; }
     .s11__bg { position: absolute; left: 0; top: 0; width: 1600px; height: 100%; pointer-events: none; }
     .s11__bg img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
     .s11__title { position: absolute; left: 0; top: 123px; width: 1600px; text-align: center; font-family: 'Playfair Display', serif; font-weight: 700; font-size: 44px; line-height: 1.2; color: #378755; margin: 0; }
@@ -1608,35 +1608,14 @@
     /* ═══════════════════════════════════════════════════════════════════
        SECTION 12 — Партнёры и место проведения  1600×980px
     ═══════════════════════════════════════════════════════════════════ */
-    .s12-viewport {
-      position: relative;
-      width: 100vw;
-      overflow: hidden;
-    }
     .s12 {
       position: absolute;
-      top: 0;
+      top: 1840px;
       left: 0;
       width: 1600px;
       height: 980px;
-      background: white;
+      background: transparent;
       overflow: hidden;
-      transform-origin: top left;
-    }
-    .s12__bg {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 1600px;
-      height: 100%;
-      pointer-events: none;
-    }
-    .s12__bg img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
     }
     .s12__partners-title {
       position: absolute;
