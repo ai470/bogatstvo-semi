@@ -1737,10 +1737,10 @@
     }
     .s12__card-details {
       font-family: 'Inter', sans-serif;
-      font-size: 17px;
-      font-weight: 500;
+      font-size: 20px;
+      font-weight: 600;
       color: #394f7b;
-      margin-bottom: 12px;
+      margin-bottom: 28px;
       line-height: 1.4;
     }
     .s12__card-metro {
@@ -3456,10 +3456,10 @@
     }
     .s12__card-details {
       font-family: 'Inter', sans-serif;
-      font-size: 15px;
-      font-weight: 500;
+      font-size: 18px;
+      font-weight: 600;
       color: #394f7b;
-      margin-bottom: 10px;
+      margin-bottom: 24px;
       line-height: 1.4;
     }
     .s12__card-metro {
