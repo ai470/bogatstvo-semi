@@ -1943,7 +1943,7 @@
       left: auto !important; top: auto !important;
       font-size: 13px !important;
       color: rgba(255,255,255,0.85);
-      white-space: nowrap;
+      white-space: normal;
     }
 
     /* Seats row */
