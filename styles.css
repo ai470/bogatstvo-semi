@@ -269,6 +269,9 @@
       font-weight: 400;
       white-space: nowrap;
     }
+    .addr-break {
+      display: none;
+    }
 
     /* ─── SEATS ────────────────────────────────────────────────────────── */
     .seats-icon {
@@ -1944,6 +1947,9 @@
       font-size: 13px !important;
       color: rgba(255,255,255,0.85);
       white-space: normal;
+    }
+    .addr-break {
+      display: inline;
     }
 
     /* Seats row */
