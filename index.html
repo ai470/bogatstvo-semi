@@ -1332,6 +1332,7 @@
       function openWidget(key) {
         lastFocus = document.activeElement;
         showIframe(key || 'prereg');
+        if (window._tmr) window._tmr.push({ type: 'reachGoal', id: 3785577, goal: 'lead' });
         overlay.classList.add('is-open');
         overlay.setAttribute('aria-hidden', 'false');
         lockScroll();
